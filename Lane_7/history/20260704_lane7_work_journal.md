@@ -113,3 +113,50 @@ Boundaries preserved:
 - No model download/delete.
 - No tracker action.
 - No new autonomous lane wakeups.
+
+## 2026-07-04T11:44:00Z - PM follow-up: queue closure and lane worktree inventory
+
+Material state changes since the previous follow-up:
+
+- `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_lease.json` remains `free`.
+- `C:\Comfy_UI\EC2_Mirror\20260628_211600` and `C:\Comfy_UI\_ec2sd\20260701_125027` are still absent.
+- C: free space is now about `161.920 GB`.
+- `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests` has no active pending request files; `processed` queue includes:
+  - `20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json`
+  - `20260704_162424_Lane_3_to_Lane_4_main_flow_runtime_visibility.json`
+  - `20260704_162555_Lane_2_strict_body_contact_zero_off_validation.json`
+  - `20260704_163052_Lane_3_to_Lane_4_main_flow_auxiliary_runtime_visibility.json`
+  - `20260704_163216_Lane_1_current_hash_main_flow_runtime_validation.json`
+  - `20260704_164031_Lane_1_current_hash_auxiliary_runtime_visibility_addendum.json`
+  - `20260704_164209_lane3_to_lane5_top500_batch0_audit.json`
+- Lane-thread inventory from local worktrees shows:
+  - Lane 1 has staged additions (`A`) only in `requests`.
+  - Lane 2 has untracked evidence file in `evidence_records`.
+  - Lane 3 has a modified PM status file and two new untracked request/evidence files.
+  - Lane 4 is clean.
+  - Lane 5 has one untracked status report.
+  - Lane 6 has modified history and untracked hand-review/report files.
+  - Lane 7 is clean.
+
+Actions taken:
+
+- Wrote a compact PM follow-up status capturing current queue closure, storage posture, and lane worktree inventory.
+
+Blockers:
+
+- Lane 4 remains blocked on repeated AWS auth refresh for final stopped-instance verification before any further runtime handoffs.
+- Lane 2, 3, and 6 remain with owner-local uncommitted work; no owner-lane intervention is performed from Lane 7.
+
+Next owner action:
+
+- Lane 4: complete `aws login` and either confirm final stopped/no-public endpoint evidence or reopen lease and stop EC2 instance if still running, then continue queued runtime processing.
+- Lane 5: review Lane 3 top500 dry manifest request at `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\requests\20260704_164209_lane3_to_lane5_top500_batch0_audit.json`.
+
+Evidence / commit:
+
+- Dashboard update: `C:\Comfy_UI_Lora\5_session_worktrees\Lane_7\Lane_7\reports\20260704_114447_lane7_pm_followup_status.md`
+- Processed request queue snapshot: `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\processed`
+- Lane status snapshots used:
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_4\Lane_4\evidence\lane4_pm_status_20260704T163939Z.md`
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_2\Lane_2\reports\20260704_164031_lane2_runtime_handoff_pm_status.md`
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\reports\20260704_163956_lane3_pm_status.md`
