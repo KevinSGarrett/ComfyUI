@@ -363,3 +363,47 @@ Actions taken:
   - `C:\Comfy_UI_Lora\5_sessions\Main\reports\20260704_115057_lane7_compact_delta_dashboard.md`
   - `C:\Comfy_UI_Lora\5_sessions\Lane_7\reports\20260704_115057_lane7_compact_delta_dashboard.md`
 - Preserved all boundaries: no owner-lane authority actions, no EC2 mutation, no model movement, no artifact deletion, no tracker edits.
+
+## 2026-07-04T18:53:44Z - Compact end-to-end resync with expanded queue/state
+
+Material state changes since the previous follow-up:
+
+- Fresh lane status reads:
+  - `Lane 1`: `...\\reports\\20260704_173100_lane1_pm_status.md` (runtime blockers unchanged for 5 hands + model refs).
+  - `Lane 2`: `...\\reports\\20260704_180800_lane2_status.md` (contact-mask request remains active; same-scene split masks unresolved).
+  - `Lane 3`: `...\\reports\\20260704_170300_main_flow_compatibility_matrix.md` (9 missing runtime refs at current hash).
+  - `Lane 4`: `...\\evidence\\lane4_pm_status_20260704T163939Z.md` (proof blocked by AWS auth expiry after stop proof attempt).
+  - `Lane 5`: `...\\reports\\20260704_175900_lane5_status.md` (no tracker movement; hand/contact remains blocked).
+  - `Lane 6`: `...\\reports\\20260704_173300_lane6_v1_1_state_checkpoint.md` (v1.1 request remains queued).
+- EC2 lease remains `free`; C: storage check is stable at about `164.46 GB` free (`17.3%`).
+- `C:\Comfy_UI\EC2_Mirror\20260628_211600` and `C:\Comfy_UI\_ec2sd\20260701_125027` still absent.
+- Shared-state queue expanded to 13 pending requests; two additions (`lane1_to_lane4_current_hash_runtime_gap_reassertion_20260704_170200.json` and `20260704_171100_Lane_3_to_Lane_4_main_flow_model_ref_runtime_visibility_map_update.json`) are now present and prioritized for current-hash processing.
+- `C:\Comfy_UI_Lora\5_sessions` untracked inventory now at 79, with top-level concentration by lane:
+  - `Lane_1:31`, `Lane_2:21`, `Lane_5:3`, `Lane_6:4`, `Lane_7:6`, `Main:14`.
+
+Actions taken:
+
+- Created `Lane_7/reports/20260704_115344_lane7_compact_delta_dashboard.md`.
+- Created `Lane_7/storage_reports/20260704_115344_lane7_storage_pressure_report.md`.
+- Created `Lane_7/reports/20260704_115344_lane7_shared_artifact_catalog.md`.
+- Updated this work journal entry to preserve continuity and route history.
+- No owner-lane authority actions were taken (no EC2 start/stop, no cleanup apply, no downloads, no tracker edits).
+
+Blocker state and next owner actions:
+
+- EC2 stopped/no-public-IP final proof still blocked pending `aws login` + `describe-instances` by Lane 4.
+- Main Flow remains release-blocked by runtime asset visibility gaps and strict hand/contact proof.
+- Lane 4 to process current-hash runtime queue next in priority order; Lane 5 and Lane 2 to provide strict hand-contact blockers resolution as evidence becomes available.
+
+## 2026-07-04T18:55:00Z - Re-sync, report refresh, and mirrored end-state refresh
+
+- Latest lane status files and shared-state signals were re-read from all lane worktrees and `5_sessions`.
+- `C:` free storage is currently `164.432 GB` (`17.28%` of `951.646 GB`); both previously reported stale snapshot candidates remain absent.
+- EC2 lease remains free and current, with pending queue size still `13`.
+- Created fresh compact dashboard, storage report, catalog, and usage-limit resume packet:
+  - `reports/20260704_185500_lane7_compact_end_to_end_dashboard.md`
+  - `storage_reports/20260704_185500_lane7_storage_pressure_report.md`
+  - `reports/20260704_185500_lane7_shared_artifact_catalog.md`
+  - `resume_packets/20260704_185500_usage_limit_resume_packet.md`
+- Mirrored these coordination artifacts into `C:\Comfy_UI_Lora\5_sessions\Main` and `C:\Comfy_UI_Lora\5_sessions\Lane_7` for owner visibility.
+- No owner-lane boundaries were crossed: no EC2 start/stop, no cleanup apply, no model movement, no tracker edits.
