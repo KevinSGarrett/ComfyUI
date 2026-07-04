@@ -1,0 +1,47 @@
+{
+  "issue_id": "lane5_preserved_blockers_20260704_162036",
+  "lane_id": "Lane_5",
+  "created_at_utc": "2026-07-04T16:20:36.759232Z",
+  "status": "open_preserved_blockers",
+  "canonical_workflow": {
+    "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d"
+  },
+  "tracker_snapshot_created": false,
+  "preserved_rows": [
+    "ART-0914",
+    "IMPL-00079",
+    "IMPL-00419",
+    "SETUP-0042",
+    "SETUP-0127",
+    "WFLOW-00053"
+  ],
+  "blockers": [
+    {
+      "category": "mask_asset_visibility",
+      "description": "Current Main Flow still lacks four per-hand masks for nodes 1051-1054.",
+      "next_action": "Lane 2 supplies the four PNGs or substitute paths approved by Lane 1."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "character_b_body_mask.png remains zero-valued; optional for actor_hand_only_contact_v1 but not full actor-body collision QA.",
+      "next_action": "Lane 2 supplies trustworthy same-scene actor body segmentation when full collision QA is required."
+    },
+    {
+      "category": "model_visibility",
+      "description": "Lane 1 reports qwen_3_4b.safetensors and z_image_turbo_bf16.safetensors unresolved.",
+      "next_action": "Lane 3 returns direct visibility/load evidence or corrected dropdown-relative names."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "No live ComfyUI generation/load validates current 273158... Main Flow hash.",
+      "next_action": "Lane 4 validates after dependencies are supplied in a justified EC2 lease window."
+    },
+    {
+      "category": "ec2_llm_endpoint",
+      "description": "No EC2 private OpenAI-compatible LLM endpoint responded on checked loopback ports.",
+      "next_action": "Lane 3 supplies EC2 LLM service/model deploy path; Lane 4 retests /v1/models and sentinel chat."
+    }
+  ],
+  "evidence_record": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\lane5_continuous_evidence_intake_evidence_20260704_162036.json"
+}
