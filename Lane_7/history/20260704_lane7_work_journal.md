@@ -297,3 +297,36 @@ Next owner action:
   - `lane1_to_lane4_current_hash_aux_runtime_and_model_visibility_20260704_164737.json`
   - `20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json`
 - For each unresolved runtime ref, return path/existence/hash/load evidence or sanctioned remediation ownership mapping.
+
+## 2026-07-04T11:49:15Z - PM follow-up: new local llm route recheck, queue still unchanged
+
+Material state changes since the previous follow-up:
+
+- Lane 1 published updated status:
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_1\Lane_1\reports\20260704_165045_lane1_pm_status.md`
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_1\Lane_1\issues\lane1_current_hash_lane3_recheck_bridge_pending_20260704_164816.json`
+- Lane 3 added local LLM-route recheck evidence:
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\evidence\20260704_114851_llm_route_status_recheck.md`
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\evidence\20260704_114851_llm_route_status_recheck.json`
+  - Findings: local Ollama endpoint reachable; chat completion timed out; qwen3-class model still missing.
+- Shared EC2 queue entries are unchanged from the prior checkpoint and still include:
+  - `lane1_to_lane4_current_hash_aux_runtime_and_model_visibility_20260704_164737.json`
+  - `20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json`
+  - reprompt `lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json`
+- C: free space is about `164.382 GB`; cleanup targets remain absent.
+
+Actions taken:
+
+- Logged a follow-up checkpoint to propagate the new Lane 1/Lane 3 status deltas and preserve blocker continuity.
+
+Blockers:
+
+- Lane 4 remains blocked by AWS auth/session for final stopped/no-public-IP proof.
+- Runtime-gap blockers for `hand_yolov8n.pt`, `sam_vit_b_01ec64.pth`, `dw-ll_ucoco_384_bs5.torchscript.pt` remain unresolved.
+- qwen3-class local LLM route remains unresolved for Lane 3 route criteria.
+
+Next owner action:
+
+- Lane 4: complete `aws login`, process queued runtime requests, and provide requested runtime visibility proofs or sanctioned remediation.
+- Lane 1: continue lane-bridge waiting state until the above proofs arrive.
+- Lane 3: decide whether qwen3-class dependency is required for its current ownership path and route via EC2/local install policy.
