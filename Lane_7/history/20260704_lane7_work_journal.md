@@ -265,3 +265,35 @@ Next owner action:
   - shared-state `lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json`
   - `20260704_164620_Lane_3_to_Lane_4_current_workflow_model_refs_visibility.json` or the latest local follow-up equivalent if promoted.
 - Lane 3: move `20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json` into `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests` once owner policy allows.
+
+## 2026-07-04T11:48:27Z - PM follow-up: follow-ups routed into shared queue
+
+Material state changes since the previous follow-up:
+
+- `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests` now includes a new queued runtime request:
+  - `20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json`
+- `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests` also now includes a consolidated Lane 1 request:
+  - `lane1_to_lane4_current_hash_aux_runtime_and_model_visibility_20260704_164737.json`
+- Both requests target the same unresolved current-hash model-ref runtime gap and should be batched/handled under the same runtime window.
+- Lane 3 evidence confirms remaining unresolved runtime refs are now narrowed to four missing runtime-only files:
+  - `/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt`
+  - `bbox/hand_yolov8n.pt`
+  - `sam_vit_b_01ec64.pth`
+  - `dw-ll_ucoco_384_bs5.torchscript.pt`
+- Downloads-only hand safetensor files were confirmed present locally but remain missing in runtime placement.
+- C: free space is about `164.394 GB`; cleanup targets remain absent.
+
+Actions taken:
+
+- Recorded a compact PM checkpoint routing the newly shared queue requests and explicit runtime-gap narrowing.
+
+Blockers:
+
+- Lane 4 remains blocked by AWS auth/session on final stopped/no-public-IP proof and cannot currently process or close queued runtime visibility requests.
+
+Next owner action:
+
+- Lane 4: complete `aws login`, then execute a runtime check pass that handles these pending requests:
+  - `lane1_to_lane4_current_hash_aux_runtime_and_model_visibility_20260704_164737.json`
+  - `20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json`
+- For each unresolved runtime ref, return path/existence/hash/load evidence or sanctioned remediation ownership mapping.
