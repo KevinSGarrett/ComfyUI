@@ -2,6 +2,7 @@
   "issue_id": "lane6_v1_1_runtime_gap_blocker_20260704_181200",
   "lane_id": "Lane_6",
   "created_at_utc": "2026-07-04T18:12:00Z",
+  "last_rechecked_utc": "2026-07-04T18:13:00Z",
   "status": "blocked",
   "category": "runtime_dependency",
   "summary": "Lane 6 SDXL v1.1 candidate request 20260704_162157 remains unprocessed in shared EC2 queue; no remote artifact was returned for strict media QA.",
