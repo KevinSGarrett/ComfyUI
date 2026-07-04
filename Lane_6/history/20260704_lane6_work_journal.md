@@ -101,3 +101,16 @@
 - Verification report: `C:\Comfy_UI_Lora\AI_Front\examples\validation_reports\wave42_request_runner_bundle_verification_20260704_164142.json`
 - Result: pass on schema validation, manifest linkage, main-flow consistency, artifact integrity, policy boundary, and runtime-blocker boundary.
 - Runtime/generate candidate remains blocked; no visual media generated or reviewed in this slice.
+
+## 2026-07-04T16:46:00Z - Lane 4 Runtime Candidate Received, QA Pending
+
+- Processed Lane 4 response for the earlier `160530` SDXL safe adult clothed candidate request was discovered in shared state.
+- New evidence shows one remote image generated on EC2:
+  - path: `/home/ubuntu/ComfyUI/output/wave42_sdxl_safe_adult_clothed_low_vram_v1_00001_.png`
+  - SHA256: `de8e72ee8787b82f211c484d084c81a707b073e963046d707396d5110315d203`
+  - bytes: `869783`
+- Lane 4 confirms RealVisXL checkpoint visibility and endpoint health checks succeeded.
+- Remaining blockers remain:
+  - AWS auth expired after stop request, so final stopped/no-public-IP proof is blocked.
+  - Candidate image is remote-only and was not visually reviewed.
+- v1.1 request remains pending in shared queue (`20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json`); no v1.1 media handoff yet.
