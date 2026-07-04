@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane3-main-flow-current-workflow-auxiliary-refs-20260704-163052",
+  "lane_id": "Lane_3",
+  "created_at_utc": "2026-07-04T16:30:52Z",
+  "claim": {
+    "summary": "Direct parsing of the current canonical Main Flow found 38 unique model-like strings. The 26 Lane 1 requested refs overlap and are locally resolved; 3 additional active SDXL LoRAs are also locally present; 3 active auxiliary detector/preprocessor models are missing locally and require Lane 4 runtime/source verification.",
+    "status": "blocked",
+    "requirement_ids": [
+      "Lane_3.MainFlow.CurrentWorkflowDirectParse",
+      "Lane_3.AuxiliaryModelVisibility",
+      "Lane_4.RuntimeVisibilityRequest"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "lane1_request_path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane3_main_flow_model_visibility_20260704_105550.json",
+    "workflow_model_like_string_count": 38,
+    "lane1_request_ref_count": 26,
+    "overlap_count": 26,
+    "additional_workflow_string_count": 12,
+    "additional_active_reference_count": 6,
+    "additional_metadata_only_string_count": 6,
+    "checked_roots": [
+      "C:\\Comfy_UI\\models",
+      "C:\\Comfy_UI\\Runtime_Data\\models",
+      "C:\\Comfy_UI_Lora\\models",
+      "C:\\Comfy_UI\\custom_nodes",
+      "C:\\Comfy_UI\\ComfyUI\\models"
+    ]
+  },
+  "runtime": {
+    "ec2_state_before": "not_checked_by_lane_3",
+    "ec2_state_after": "not_changed_by_lane_3",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "notes": "Lane 3 did not start, stop, or query EC2 runtime state."
+  },
+  "models": [
+    {
+      "name": "bbox/hand_yolov8n.pt",
+      "family": "ultralytics_detector",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\ultralytics\\bbox\\hand_yolov8n.pt",
+      "sha256": "f3f23b865741cc8373a76dfac31a71ffd71356a480ca43266f294815b608e174",
+      "role": "UltralyticsDetectorProvider",
+      "visibility_evidence": "missing_in_checked_local_roots; workflow metadata lists EC2 path /home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "load_result": "blocked_pending_lane4_runtime_or_restore"
+    },
+    {
+      "name": "sam_vit_b_01ec64.pth",
+      "family": "sam_segment_anything",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\sams\\sam_vit_b_01ec64.pth",
+      "role": "SAMLoader",
+      "visibility_evidence": "missing_in_checked_local_roots",
+      "load_result": "blocked_pending_lane4_runtime_or_source"
+    },
+    {
+      "name": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "family": "dwpose_preprocessor",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\dwpose\\dw-ll_ucoco_384_bs5.torchscript.pt",
+      "role": "DWPreprocessor",
+      "visibility_evidence": "missing_in_checked_local_roots",
+      "load_result": "blocked_pending_lane4_runtime_or_source"
+    },
+    {
+      "name": "wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+      "family": "sdxl_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\pose_camera\\sdxl_adult_male_Double_Kiss_POV.safetensors",
+      "sha256": "81DFDDB3246862A1353222A96B128AC0FE9E6113483563DBFF7283A08487D6CD",
+      "role": "LoraLoader",
+      "size_bytes": 228454548,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+      "family": "sdxl_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\skin_imperfections\\sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+      "sha256": "344FD9735F04CCBDAAFD2D0F7C2AB4CF8BD7F39CDF07675A9D71A47396471E3A",
+      "role": "LoraLoader",
+      "size_bytes": 228458596,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "family": "sdxl_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\skin_texture\\sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "sha256": "3234F2819F7DFC73E14C88EB3633E1D9BF671D22D4D269648C4BEBF453E3F198",
+      "role": "LoraLoader",
+      "size_bytes": 228459156,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_163052_main_flow_current_workflow_auxiliary_refs.md",
+      "type": "direct_workflow_parse_addendum",
+      "description": "Human-readable addendum for current workflow-only auxiliary references beyond Lane 1's 26-name request."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\requests\\20260704_163052_Lane_3_to_Lane_4_main_flow_auxiliary_runtime_visibility.json",
+      "type": "lane4_runtime_visibility_request",
+      "description": "Narrow Lane 4 request for strict hand/body-contact auxiliary runtime assets and additional active SDXL LoRA catalog visibility."
+    }
+  ],
+  "qa": {
+    "verdict": "blocked",
+    "checks": [
+      {
+        "name": "direct_workflow_parse",
+        "result": "pass",
+        "notes": "Current workflow parse found 38 unique model-like strings, including all 26 Lane 1 requested refs."
+      },
+      {
+        "name": "lane1_overlap",
+        "result": "pass",
+        "notes": "All 26 Lane 1 requested refs overlap the current canonical workflow parse."
+      },
+      {
+        "name": "additional_sdxl_loras_present",
+        "result": "pass",
+        "notes": "Three additional active SDXL LoRA refs are present under C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42."
+      },
+      {
+        "name": "auxiliary_detector_assets",
+        "result": "blocked",
+        "notes": "hand_yolov8n.pt, sam_vit_b_01ec64.pth, and dw-ll_ucoco_384_bs5.torchscript.pt were not found in checked local roots."
+      },
+      {
+        "name": "metadata_only_strings_classified",
+        "result": "provisional",
+        "notes": "Six additional strings are registry/evidence metadata rather than active widget values; Lane 4 can confirm no runtime loader depends on these literal absolute source paths."
+      }
+    ],
+    "failure_reasons": [
+      "Strict hand/body-contact auxiliary detector/preprocessor files are missing from checked local roots."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [
+      "Current canonical workflow directly contains all 26 Lane 1 requested refs already covered by Lane 3 local placement evidence.",
+      "Three additional active SDXL LoRA refs are locally present with SHA256 hashes."
+    ],
+    "does_not_prove_rows": [
+      "hand_yolov8n.pt is available to the live ComfyUI runtime.",
+      "sam_vit_b_01ec64.pth is available to the live ComfyUI runtime.",
+      "dw-ll_ucoco_384_bs5.torchscript.pt is available to the live ComfyUI runtime.",
+      "The live runtime can load strict hand/body-contact detector/preprocessor nodes."
+    ],
+    "promotion_decision": "preserve_blocker"
+  },
+  "blockers": [
+    {
+      "category": "missing_auxiliary_runtime_asset",
+      "description": "Current Main Flow active node 973 references bbox/hand_yolov8n.pt, but Lane 3 found no local copy in checked roots.",
+      "next_action": "Lane 4 should verify whether EC2/live ComfyUI already has /home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt with SHA256 f3f23b865741cc8373a76dfac31a71ffd71356a480ca43266f294815b608e174, or provide the sanctioned restore/source path."
+    },
+    {
+      "category": "missing_auxiliary_runtime_asset",
+      "description": "Current Main Flow active node 975 references sam_vit_b_01ec64.pth, but Lane 3 found no local copy in checked roots.",
+      "next_action": "Lane 4 should verify live runtime visibility or provide the sanctioned source/install path for the SAM model."
+    },
+    {
+      "category": "missing_auxiliary_runtime_asset",
+      "description": "Current Main Flow active nodes 978 and 1040 reference dw-ll_ucoco_384_bs5.torchscript.pt, but Lane 3 found no local copy in checked roots.",
+      "next_action": "Lane 4 should verify live runtime visibility or provide the sanctioned source/install path for the DWPose model."
+    }
+  ]
+}

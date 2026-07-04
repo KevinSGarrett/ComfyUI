@@ -1,0 +1,78 @@
+{
+  "request_id": "lane3-to-lane4-main-flow-auxiliary-runtime-visibility-20260704-163052",
+  "created_at_utc": "2026-07-04T16:30:52Z",
+  "from_lane": "Lane_3",
+  "to_lane": "Lane_4",
+  "priority": "high",
+  "subject": "Verify current Main Flow auxiliary model visibility beyond Lane 1's 26 resolved refs",
+  "context": {
+    "canonical_workflow": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "canonical_workflow_sha256_at_lane3_direct_parse": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "lane3_addendum_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_163052_main_flow_current_workflow_auxiliary_refs_evidence.json",
+    "lane3_addendum_report": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_163052_main_flow_current_workflow_auxiliary_refs.md",
+    "lane3_summary": "The 26 Lane 1 requested refs are locally resolved. Direct parsing of the current workflow found 3 active auxiliary detector/preprocessor assets missing locally and 3 additional active SDXL LoRAs already present locally."
+  },
+  "constraints": [
+    "Do not start or stop EC2 on behalf of Lane 3.",
+    "Do not print secrets from C:\\Comfy_UI\\.env.",
+    "Do not commit ignored live state from Main\\shared_state\\ec2_requests.",
+    "Treat Lane 3 local path/hash evidence as file placement only; runtime dropdown/catalog/load visibility still needs proof."
+  ],
+  "requested_checks": [
+    {
+      "loader_or_node": "UltralyticsDetectorProvider",
+      "node_ids": [
+        973
+      ],
+      "expected_name": "bbox/hand_yolov8n.pt",
+      "expected_ec2_path_from_workflow_metadata": "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "expected_sha256_from_workflow_metadata": "f3f23b865741cc8373a76dfac31a71ffd71356a480ca43266f294815b608e174",
+      "requested_evidence": "Confirm whether live ComfyUI/EC2 has this detector model at the expected path or visible to the node. If missing, return sanctioned source/restore action."
+    },
+    {
+      "loader_or_node": "SAMLoader",
+      "node_ids": [
+        975
+      ],
+      "expected_name": "sam_vit_b_01ec64.pth",
+      "requested_evidence": "Confirm whether live ComfyUI has this SAM model visible/loadable. If missing, return sanctioned source/install path."
+    },
+    {
+      "loader_or_node": "DWPreprocessor",
+      "node_ids": [
+        978,
+        1040
+      ],
+      "expected_name": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "requested_evidence": "Confirm whether live ComfyUI has this DWPose model visible/loadable. If missing, return sanctioned source/install path."
+    },
+    {
+      "loader_or_node": "LoraLoader_or_rgthree_lora_stack",
+      "node_ids": [
+        411,
+        505,
+        686,
+        742
+      ],
+      "expected_names": [
+        "wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+        "wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+        "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors"
+      ],
+      "requested_evidence": "Confirm these additional active SDXL LoRA names appear in the live LoRA catalog/dropdown. Lane 3 has local path/hash evidence for all three."
+    }
+  ],
+  "minimum_acceptance": [
+    "Classify each auxiliary asset as runtime-visible, missing, or visible under an alternate path/display name.",
+    "For missing auxiliary assets, provide exact sanctioned source/restore path and owner lane.",
+    "Confirm whether the six metadata-only source strings identified by Lane 3 are non-runtime metadata and do not require dropdown visibility.",
+    "Record the workflow hash observed by Lane 4 so drift can be compared against Lane 3's 5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9 parse."
+  ],
+  "lane3_assessment": {
+    "lane1_26_refs_local_file_blocker": "resolved",
+    "additional_sdxl_loras_local_file_blocker": "resolved",
+    "auxiliary_detector_preprocessor_blocker": "open",
+    "runtime_visibility_status": "pending_lane4",
+    "tracker_decision": "preserve_blocker"
+  }
+}
