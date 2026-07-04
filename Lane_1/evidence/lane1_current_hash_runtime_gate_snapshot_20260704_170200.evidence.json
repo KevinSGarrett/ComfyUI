@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane1_current_hash_runtime_gate_snapshot_20260704_170200",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T17:02:00Z",
+  "claim": {
+    "summary": "Re-run of Main Flow canonical graph static checks confirms no structural changes plus unchanged runtime-critical visibility gaps for 4 unresolved refs.",
+    "status": "blocked",
+    "requirement_ids": [
+      "mainflow:json",
+      "mainflow:nodes_links",
+      "mainflow:loadimage_refs",
+      "mainflow:model_refs",
+      "mainflow:runtime_visibility"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "settings": {
+      "validation_scope": "active graph + unresolved runtime-critical refs",
+      "validation_time_utc": "2026-07-04T17:02:00Z"
+    }
+  },
+  "models": [
+    {
+      "name": "hand_yolov8n.pt",
+      "family": "ultralytics-detector",
+      "path": "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "role": "auxiliary_detector",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json",
+      "load_result": "not_visible_runtime"
+    },
+    {
+      "name": "sam_vit_b_01ec64.pth",
+      "family": "sam",
+      "path": "/home/ubuntu/ComfyUI/models/sams/sam_vit_b_01ec64.pth",
+      "role": "segmentation_backbone",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json",
+      "load_result": "not_visible_runtime"
+    },
+    {
+      "name": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "family": "dwpose-model",
+      "path": "/home/ubuntu/ComfyUI/models/dwpose/dw-ll_ucoco_384_bs5.torchscript.pt",
+      "role": "pose_model",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json",
+      "load_result": "not_visible_runtime"
+    },
+    {
+      "name": "yolox_l.onnx",
+      "family": "dwpose-model",
+      "path": "/home/ubuntu/ComfyUI/models/dwpose/yolox_l.onnx",
+      "role": "pose_decoder",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json",
+      "load_result": "not_visible_runtime"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+      "type": "workflow",
+      "description": "Primary workflow used for this validation slice"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\issues\\lane1_runtime_gap_blocker_20260704_170200.json",
+      "type": "issue",
+      "description": "Current-lane blocker artifact for runtime-critical unresolved refs."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\lane1_to_lane4_current_hash_aux_runtime_and_model_visibility_20260704_164737.json",
+      "type": "request",
+      "description": "Lane 1 request to Lane 4 for runtime visibility checks."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json",
+      "type": "request",
+      "description": "Lane 3 follow-up to Lane 4 clarifying unresolved refs."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_165000_workflow_missing_refs_runtime_visibility_check_evidence.json",
+      "type": "evidence",
+      "description": "Runtime/data-availability matrix confirming 4 missing refs remain."
+    }
+  ],
+  "qa": {
+    "verdict": "blocked",
+    "checks": [
+      {
+        "name": "json_parse",
+        "result": "pass",
+        "notes": "Main Flow file is parseable JSON."
+      },
+      {
+        "name": "node_link_integrity",
+        "result": "pass",
+        "notes": "Validated node_count=769, link_count=1137, no dangling link source/destination IDs."
+      },
+      {
+        "name": "loadimage_reference_resolution",
+        "result": "pass",
+        "notes": "Known workflow LoadImage path checks for node_ids 1051-1054 and general graph check are present in Input_References (zero/off placeholders exist)."
+      },
+      {
+        "name": "runtime_gap_visibility",
+        "result": "blocked",
+        "notes": "No runtime-visible evidence for /home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt, /home/ubuntu/ComfyUI/models/sams/sam_vit_b_01ec64.pth, /home/ubuntu/ComfyUI/models/dwpose/dw-ll_ucoco_384_bs5.torchscript.pt, /home/ubuntu/ComfyUI/models/dwpose/yolox_l.onnx."
+      }
+    ],
+    "failure_reasons": [
+      "Lane 3 re-check confirms 4 of 9 model refs are not present in runtime data paths or download mirrors."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [
+      "lane1_loadimage_resolution_1051_1054",
+      "lane1_workflow_graph_integrity_20260704"
+    ],
+    "does_not_prove_rows": [
+      "lane1_runtime_readiness_main_flow_auxiliary_models"
+    ],
+    "promotion_decision": "preserve_blocker"
+  },
+  "blockers": [
+    {
+      "category": "runtime_visibility_missing",
+      "description": "Four runtime-critical model refs required by Main Flow remain unresolved in runtime mirrors and required runtime check evidence is still missing.",
+      "next_action": "Lane 4 must provide exact runtime path, sha256, and load/test result for each unresolved ref, or route explicit install/remediation action plus owner."
+    }
+  ]
+}

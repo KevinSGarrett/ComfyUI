@@ -1,0 +1,88 @@
+{
+  "request_id": "lane1-to-lane4-current-hash-runtime-gap-reassertion-20260704_170200",
+  "created_at_utc": "2026-07-04T17:02:00Z",
+  "from_lane": "Lane_1",
+  "to_lane": "Lane_4",
+  "priority": "high_when_next_runtime_window_available",
+  "subject": "Current Hash: reassert unresolved runtime visibility blocker (4 refs)",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+  "required_missing_refs": [
+    {
+      "node_ids": [
+        973
+      ],
+      "reference": "bbox/hand_yolov8n.pt",
+      "runtime_path": "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "expected_sha256": "f3f23b865741cc8373a76dfac31a71ffd71356a480ca43266f294815b608e174"
+    },
+    {
+      "node_ids": [
+        975
+      ],
+      "reference": "sam_vit_b_01ec64.pth",
+      "runtime_path": "/home/ubuntu/ComfyUI/models/sams/sam_vit_b_01ec64.pth"
+    },
+    {
+      "node_ids": [
+        978,
+        1040
+      ],
+      "reference": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "runtime_path": "/home/ubuntu/ComfyUI/models/dwpose/dw-ll_ucoco_384_bs5.torchscript.pt"
+    },
+    {
+      "node_ids": [
+        978,
+        1040
+      ],
+      "reference": "yolox_l.onnx",
+      "runtime_path": "/home/ubuntu/ComfyUI/models/dwpose/yolox_l.onnx"
+    },
+    {
+      "node_ids": [
+        499
+      ],
+      "reference": "C:\\Comfy_UI_Lora\\downloads\\Hands\\Better hands flux v1.0.safetensors",
+      "runtime_path": "/home/ubuntu/ComfyUI/models/handsext"
+    },
+    {
+      "node_ids": [
+        499
+      ],
+      "reference": "C:\\Comfy_UI_Lora\\downloads\\Hands\\Detailed_Hands-000001.safetensors",
+      "runtime_path": "/home/ubuntu/ComfyUI/models/handsext"
+    },
+    {
+      "node_ids": [
+        499
+      ],
+      "reference": "C:\\Comfy_UI_Lora\\downloads\\Hands\\feminine_hands.safetensors",
+      "runtime_path": "/home/ubuntu/ComfyUI/models/handsext"
+    },
+    {
+      "node_ids": [
+        499
+      ],
+      "reference": "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hand v2.safetensors",
+      "runtime_path": "/home/ubuntu/ComfyUI/models/handsext"
+    },
+    {
+      "node_ids": [
+        499
+      ],
+      "reference": "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hands.safetensors",
+      "runtime_path": "/home/ubuntu/ComfyUI/models/handsext"
+    }
+  ],
+  "minimum_acceptance": [
+    "For each item, return runtime-visible path, size/sha256, and ComfyUI load test result.",
+    "If one or more assets are unavailable, return exact sanctioned install route + owner responsible."
+  ],
+  "evidence_references": [
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_165000_workflow_missing_refs_runtime_visibility_check_evidence.json",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_current_hash_runtime_gate_snapshot_20260704_170200.evidence.json",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\issues\\lane1_runtime_gap_blocker_20260704_170200.json"
+  ],
+  "notes": "This is a follow-up to existing requests (164031, 164737) and Lane 3 recheck (165000). No workflow edit is being requested in this slice."
+}

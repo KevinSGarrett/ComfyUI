@@ -50,3 +50,13 @@
 - Consumed Lane 3 26-name model evidence and recorded current workflow has 29 unique model references, with 3 extra Wave42 SDXL LoRAs outside Lane 3's 26-name set.
 - Created Lane 4 current-hash runtime validation request `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_163216_Lane_1_current_hash_main_flow_runtime_validation.json` without starting/stopping EC2.
 - Evidence: `C:\Comfy_UI_Lora\5_sessions\Lane_1\evidence\lane1_current_hash_reference_closure_20260704_163216.evidence.json`; schema validation: valid.
+
+## 2026-07-04T17:02:45Z - Runtime gate re-run and Lane 4 reassertion
+
+- Re-ran local structural validation on canonical Main Flow hash and confirmed parseability, 
+ode_count=769, link_count=1137, and zero dangling link IDs. Missing/blocked runtime refs remain limited to critical assets not visible in runtime.
+- Confirmed nodes 1051-1054 resolve correctly to exact-name zero/off per-hand masks produced under C:\Comfy_UI\Input_References\main_flow\body_contact_slots.
+- Added Lane 1 issue artifact lane1_runtime_gap_blocker_20260704_170200.json and evidence artifact lane1_current_hash_runtime_gate_snapshot_20260704_170200.evidence.json.
+- Reissued Lane 4 runtime-gap request with explicit refs (lane1_to_lane4_current_hash_runtime_gap_reassertion_20260704_170200.json) in Lane_1\requests and shared 5_sessions\Main\shared_state\ec2_requests.
+- No workflow edits made in this slice; no backup required because file remains unchanged.
+- PM status and checkpoint updated at 20260704_170245_lane1_pm_status.md.

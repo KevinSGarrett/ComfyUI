@@ -1,0 +1,22 @@
+{
+  "issue_id": "lane1_runtime_gap_blocker_20260704_170200",
+  "created_at_utc": "2026-07-04T17:02:00Z",
+  "lane_id": "Lane_1",
+  "status": "open_external_dependency",
+  "objective": "Close Main Flow current-hash runtime readiness by resolving 4 unresolved runtime-critical model paths.",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+  "blockers": [
+    {
+      "category": "runtime_visibility_missing",
+      "severity": "high",
+      "description": "Hand/pose runtime files are missing in EC2 Runtime_Data scope: hand_yolov8n.pt, sam_vit_b_01ec64.pth, dw-ll_ucoco_384_bs5.torchscript.pt, yolox_l.onnx.",
+      "evidence": [
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json",
+        "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_165000_workflow_missing_refs_runtime_visibility_check_evidence.json",
+        "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_current_hash_runtime_gate_snapshot_20260704_170200.evidence.json"
+      ],
+      "next_action": "Lane 4 must return runtime path, size/hash, and ComfyUI/load behavior for each path, or explicit install/ownership routing."
+    }
+  ]
+}
