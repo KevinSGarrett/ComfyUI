@@ -1,0 +1,126 @@
+﻿{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_pose_depth_requirements_update_evidence_20260704_181500",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:58:00Z",
+  "claim": {
+    "summary": "Lane 2 refreshed pose/depth control preflight from the 20260704_181500 local spatial contact/QA re-run for Main Flow handoff.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_main_flow_spatial_asset_audit_20260704_181500",
+      "lane2_contact_mask_pixel_qa_20260704_181500",
+      "lane2_contact_pair_graph_20260704_175000",
+      "lane2_collision_deformation_requirements_update_20260704_175500",
+      "lane2_to_lane1_strict_hand_reference_20260704_160416"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "prompt_text": "Contact control and pose/depth preflight constraints for strict body-contact runtime path.",
+    "settings": {
+      "run_id": "20260704_181500",
+      "runtime_required": "current-hash runtime validation required",
+      "mode": "pose_depth_preflight_update"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "local spatial and mask QA only"
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_181500\\lane2_main_flow_spatial_asset_audit_20260704_181500.json",
+      "type": "main_flow_spatial_asset_audit",
+      "size_bytes": 140517,
+      "sha256": "0D546B34F890F60BA48049D05A3CCFA9192D401B036C390643F950879A055475",
+      "description": "Spatial revalidation at run 20260704_181500."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_181500\\lane2_contact_mask_pixel_qa_20260704_181500.json",
+      "type": "contact_mask_pixel_qa_artifact",
+      "size_bytes": 25826,
+      "sha256": "2AAB6B10BA6A02F1DBA7CBBE5E5AA32E7B4CB8B3FB96FC317BDFC998E3BCC502",
+      "description": "Mask geometry preflight for contact edges at run 20260704_181500."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\contact_physics\\20260704_175000_lane2_contact_pair_graph\\lane2_contact_pair_graph_20260704_175000.json",
+      "type": "contact_pair_graph",
+      "size_bytes": 7225,
+      "sha256": "5904A396EEC6DC7122C3692201748472454917D8831613C75F86AF23905BCCBF",
+      "description": "Latest canonical contact-edge graph snapshot carried into this handoff."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\contact_physics\\20260704_175500_lane2_collision_deformation\\lane2_collision_deformation_requirements_update_20260704_175500.json",
+      "type": "collision_deformation_profile",
+      "size_bytes": 7352,
+      "sha256": "A0558EDC9E40186CE588155B70BBF1F6B012429E550FB4AF133EEB6CBAEB6F88",
+      "description": "Contact-pair collision/deformation threshold profile and blockers."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "pose_depth_thresholds",
+        "result": "pass",
+        "notes": "Local overlap/containment thresholds and pressure/indentation minima remain at fallback-acceptance levels only; runtime visual acceptance still pending."
+      },
+      {
+        "name": "per_hand_named_edges_blocked",
+        "result": "pass",
+        "notes": "Named per-hand edges still blocked because nodes 1051-1054 are zero/off placeholders."
+      },
+      {
+        "name": "actor_body_zero_policy",
+        "result": "pass",
+        "notes": "Node 1009 actor-body mask remains zero/off and continues as intentional fallback-only for actor_hand_only_contact_v1."
+      },
+      {
+        "name": "strict_hand_reference_resolved",
+        "result": "pass",
+        "notes": "strict_hand_detail_input.png exists and is present with sha256 72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D."
+      },
+      {
+        "name": "runtime_visual_dependency",
+        "result": "not_applicable",
+        "notes": "This update packet contains no runtime ComfyUI output or strict hand/contact visual QA results."
+      }
+    ],
+    "failure_reasons": [
+      "Same-scene nonzero per-hand left/right split masks remain unavailable for nodes 1051-1054.",
+      "Node 1009 actor-body source remains zero/off and full actor-body collision/deformation checks are incomplete.",
+      "Runtime strict visual/depth ordering acceptance remains a Lane 4+Lane 5 dependency."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "named_left_right_contact_pair_completion_rows",
+      "full_actor_body_collision_rows",
+      "strict_visual_acceptance_rows",
+      "runtime_generation_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "Nodes 1051-1054 remain zero/off placeholders; named edges cannot be trusted beyond fallback actor-hand mode.",
+      "next_action": "Provide same-scene nonzero character A/B per-hand split masks before unblocking B.left/right named edges."
+    },
+    {
+      "category": "actor_body_segmentation_source",
+      "description": "character_b_body_mask.png remains zero/off for full actor-body collision/deformation checks.",
+      "next_action": "Provide trustworthy same-scene actor-body source (node 1009) or keep actor-body collision intentionally disabled."
+    },
+    {
+      "category": "runtime_visual_acceptance",
+      "description": "No strict visual hand/contact or depth occlusion acceptance has been run in this slice.",
+      "next_action": "Lane 4 runtime run with strict-hand review and Lane 5 visual review are still required for final acceptance."
+    }
+  ]
+}

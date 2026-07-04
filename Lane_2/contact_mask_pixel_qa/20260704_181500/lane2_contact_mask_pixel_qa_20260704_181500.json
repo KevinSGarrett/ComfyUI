@@ -1,0 +1,912 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "lane2_contact_mask_pixel_qa_20260704_181500",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:55:15Z",
+  "workflow": {
+    "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9"
+  },
+  "slot_root": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots",
+  "summary": {
+    "mask_count": 15,
+    "image_reference_count": 4,
+    "contact_edges_checked": 6,
+    "provisional_pass_edges": [
+      "fallback_actor_hand_to_receiver_butt",
+      "fallback_actor_hand_to_receiver_breast"
+    ],
+    "blocked_edges": [
+      "B.left_to_A.left_breast_side_push",
+      "B.right_to_A.right_breast_side_push",
+      "B.left_to_A.left_butt_squeeze",
+      "B.right_to_A.right_butt_squeeze"
+    ],
+    "zero_mask_ids": [
+      "character_a_left_hand",
+      "character_a_right_hand",
+      "character_b_left_hand",
+      "character_b_right_hand",
+      "character_b_body"
+    ]
+  },
+  "mask_records": {
+    "character_a_body": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_body_mask.png",
+      "exists": true,
+      "size_bytes": 15603,
+      "sha256": "BEC9CAA7F1B126EAFDDA652CCA8D763F26C8E6ACF4744A431C804BF592C2B04F",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 312165,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.29770374,
+      "luma_min": 0,
+      "luma_max": 180,
+      "bbox": [
+        279,
+        229,
+        752,
+        922
+      ],
+      "centroid": [
+        515.0,
+        575.0
+      ],
+      "connected_component_count": 1,
+      "largest_components": [
+        {
+          "area": 312165,
+          "bbox": [
+            279,
+            229,
+            752,
+            922
+          ],
+          "centroid": [
+            515.0,
+            575.0
+          ]
+        }
+      ]
+    },
+    "character_a_receiver_breast": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_receiver_breast_mask.png",
+      "exists": true,
+      "size_bytes": 15155,
+      "sha256": "5FE00AEED75C2AD3CD992256251B0ABA2457A85F276DBA0B834EBB0DCAFF1E2F",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 86064,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.08207703,
+      "luma_min": 0,
+      "luma_max": 255,
+      "bbox": [
+        311,
+        341,
+        695,
+        605
+      ],
+      "centroid": [
+        502.5,
+        472.5
+      ],
+      "connected_component_count": 1,
+      "largest_components": [
+        {
+          "area": 86064,
+          "bbox": [
+            311,
+            341,
+            695,
+            605
+          ],
+          "centroid": [
+            502.5,
+            472.5
+          ]
+        }
+      ]
+    },
+    "character_a_receiver_butt": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_receiver_butt_mask.png",
+      "exists": true,
+      "size_bytes": 13930,
+      "sha256": "C3CD9E2CA4687790A7E32FFFA377ACDD729244A9BA428BE7421698F39839A47E",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 38506,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.03672218,
+      "luma_min": 0,
+      "luma_max": 255,
+      "bbox": [
+        411,
+        373,
+        633,
+        583
+      ],
+      "centroid": [
+        518.604,
+        478.716
+      ],
+      "connected_component_count": 1,
+      "largest_components": [
+        {
+          "area": 38506,
+          "bbox": [
+            411,
+            373,
+            633,
+            583
+          ],
+          "centroid": [
+            518.604,
+            478.716
+          ]
+        }
+      ]
+    },
+    "character_a_left_hand": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+      "exists": true,
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 0,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.0,
+      "luma_min": 0,
+      "luma_max": 0,
+      "bbox": null,
+      "centroid": null,
+      "connected_component_count": 0,
+      "largest_components": []
+    },
+    "character_a_right_hand": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+      "exists": true,
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 0,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.0,
+      "luma_min": 0,
+      "luma_max": 0,
+      "bbox": null,
+      "centroid": null,
+      "connected_component_count": 0,
+      "largest_components": []
+    },
+    "character_b_left_hand": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+      "exists": true,
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 0,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.0,
+      "luma_min": 0,
+      "luma_max": 0,
+      "bbox": null,
+      "centroid": null,
+      "connected_component_count": 0,
+      "largest_components": []
+    },
+    "character_b_right_hand": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png",
+      "exists": true,
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 0,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.0,
+      "luma_min": 0,
+      "luma_max": 0,
+      "bbox": null,
+      "centroid": null,
+      "connected_component_count": 0,
+      "largest_components": []
+    },
+    "character_b_actor_hand": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_actor_hand_mask.png",
+      "exists": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 3184,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.0030365,
+      "luma_min": 0,
+      "luma_max": 255,
+      "bbox": [
+        415,
+        380,
+        516,
+        472
+      ],
+      "centroid": [
+        470.37,
+        426.062
+      ],
+      "connected_component_count": 3,
+      "largest_components": [
+        {
+          "area": 2661,
+          "bbox": [
+            442,
+            402,
+            516,
+            472
+          ],
+          "centroid": [
+            477.411,
+            430.489
+          ]
+        },
+        {
+          "area": 391,
+          "bbox": [
+            415,
+            380,
+            443,
+            402
+          ],
+          "centroid": [
+            430.793,
+            388.156
+          ]
+        },
+        {
+          "area": 132,
+          "bbox": [
+            440,
+            443,
+            452,
+            457
+          ],
+          "centroid": [
+            445.659,
+            449.091
+          ]
+        }
+      ]
+    },
+    "character_b_body": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png",
+      "exists": true,
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 0,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.0,
+      "luma_min": 0,
+      "luma_max": 0,
+      "bbox": null,
+      "centroid": null,
+      "connected_component_count": 0,
+      "largest_components": []
+    },
+    "hand_contact": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\hand_contact_mask.png",
+      "exists": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 3184,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.0030365,
+      "luma_min": 0,
+      "luma_max": 255,
+      "bbox": [
+        415,
+        380,
+        516,
+        472
+      ],
+      "centroid": [
+        470.37,
+        426.062
+      ],
+      "connected_component_count": 3,
+      "largest_components": [
+        {
+          "area": 2661,
+          "bbox": [
+            442,
+            402,
+            516,
+            472
+          ],
+          "centroid": [
+            477.411,
+            430.489
+          ]
+        },
+        {
+          "area": 391,
+          "bbox": [
+            415,
+            380,
+            443,
+            402
+          ],
+          "centroid": [
+            430.793,
+            388.156
+          ]
+        },
+        {
+          "area": 132,
+          "bbox": [
+            440,
+            443,
+            452,
+            457
+          ],
+          "centroid": [
+            445.659,
+            449.091
+          ]
+        }
+      ]
+    },
+    "contact_zone": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_zone_mask.png",
+      "exists": true,
+      "size_bytes": 7649,
+      "sha256": "F04671541F44CC067C8FD0BFD4281075C6E9206779254E755C33D0BC3F4EC15C",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 9617,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.00917149,
+      "luma_min": 0,
+      "luma_max": 255,
+      "bbox": [
+        407,
+        367,
+        530,
+        486
+      ],
+      "centroid": [
+        468.455,
+        426.844
+      ],
+      "connected_component_count": 1,
+      "largest_components": [
+        {
+          "area": 9617,
+          "bbox": [
+            407,
+            367,
+            530,
+            486
+          ],
+          "centroid": [
+            468.455,
+            426.844
+          ]
+        }
+      ]
+    },
+    "occlusion_order": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\interaction_occlusion_order_mask.png",
+      "exists": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 3184,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.0030365,
+      "luma_min": 0,
+      "luma_max": 255,
+      "bbox": [
+        415,
+        380,
+        516,
+        472
+      ],
+      "centroid": [
+        470.37,
+        426.062
+      ],
+      "connected_component_count": 3,
+      "largest_components": [
+        {
+          "area": 2661,
+          "bbox": [
+            442,
+            402,
+            516,
+            472
+          ],
+          "centroid": [
+            477.411,
+            430.489
+          ]
+        },
+        {
+          "area": 391,
+          "bbox": [
+            415,
+            380,
+            443,
+            402
+          ],
+          "centroid": [
+            430.793,
+            388.156
+          ]
+        },
+        {
+          "area": 132,
+          "bbox": [
+            440,
+            443,
+            452,
+            457
+          ],
+          "centroid": [
+            445.659,
+            449.091
+          ]
+        }
+      ]
+    },
+    "pressure": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_pressure_map.png",
+      "exists": true,
+      "size_bytes": 10256,
+      "sha256": "0C1CE45071D6C3462EC588F18B9D033882471A5F72C1D73D14264E1369C36F90",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 9719,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.00926876,
+      "luma_min": 0,
+      "luma_max": 255,
+      "bbox": [
+        406,
+        370,
+        531,
+        483
+      ],
+      "centroid": [
+        468.034,
+        426.131
+      ],
+      "connected_component_count": 1,
+      "largest_components": [
+        {
+          "area": 9719,
+          "bbox": [
+            406,
+            370,
+            531,
+            483
+          ],
+          "centroid": [
+            468.034,
+            426.131
+          ]
+        }
+      ]
+    },
+    "indentation": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_indentation_mask.png",
+      "exists": true,
+      "size_bytes": 8879,
+      "sha256": "17BB25F206E0EFFE45FD457AB0DB9BC153B5716C77F2A1BB9281CF32E5BF4C68",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 8123,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.0077467,
+      "luma_min": 0,
+      "luma_max": 255,
+      "bbox": [
+        408,
+        376,
+        526,
+        483
+      ],
+      "centroid": [
+        468.17,
+        427.498
+      ],
+      "connected_component_count": 1,
+      "largest_components": [
+        {
+          "area": 8123,
+          "bbox": [
+            408,
+            376,
+            526,
+            483
+          ],
+          "centroid": [
+            468.17,
+            427.498
+          ]
+        }
+      ]
+    },
+    "contact_shadow": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_shadow_mask.png",
+      "exists": true,
+      "size_bytes": 9093,
+      "sha256": "95B008DE7E81885336DEFEAC79C7213F217AD85670477B4AB38F859BE7774A89",
+      "width": 1024,
+      "height": 1024,
+      "nonzero_pixels": 8708,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.0083046,
+      "luma_min": 0,
+      "luma_max": 183,
+      "bbox": [
+        412,
+        374,
+        533,
+        489
+      ],
+      "centroid": [
+        473.513,
+        431.64
+      ],
+      "connected_component_count": 1,
+      "largest_components": [
+        {
+          "area": 8708,
+          "bbox": [
+            412,
+            374,
+            533,
+            489
+          ],
+          "centroid": [
+            473.513,
+            431.64
+          ]
+        }
+      ]
+    }
+  },
+  "image_records": {
+    "body_contact_base": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\body_contact_base_input.png",
+      "exists": true,
+      "size_bytes": 662866,
+      "sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "luma_min": 1,
+      "luma_max": 233,
+      "luma_mean": 129.649384,
+      "luma_std": 37.523705,
+      "nonzero_pixels": 1048576,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 1.0
+    },
+    "contact_pose_reference": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_pose_reference.png",
+      "exists": true,
+      "size_bytes": 662866,
+      "sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "luma_min": 1,
+      "luma_max": 233,
+      "luma_mean": 129.649384,
+      "luma_std": 37.523705,
+      "nonzero_pixels": 1048576,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 1.0
+    },
+    "depth_reference": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_contact_depth_reference.png",
+      "exists": true,
+      "size_bytes": 126165,
+      "sha256": "F69E5F4CEEAA26AE04E18BBADBF597733D9D69D04C2354309741E815963337B0",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "luma_min": 0,
+      "luma_max": 211,
+      "luma_mean": 136.524834,
+      "luma_std": 33.833924,
+      "nonzero_pixels": 1045372,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 0.99694443
+    },
+    "normal_reference": {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_normal_reference.png",
+      "exists": true,
+      "size_bytes": 12097,
+      "sha256": "FA42A970EA2CA568C5CD8120B26B119E45646BB7485028BAE6DE68DE8934B69A",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "luma_min": 136,
+      "luma_max": 181,
+      "luma_mean": 136.20124,
+      "luma_std": 2.552388,
+      "nonzero_pixels": 1048576,
+      "pixel_count": 1048576,
+      "nonzero_ratio": 1.0
+    }
+  },
+  "per_hand_split_feasibility": {
+    "combined_actor_hand_component_count": 3,
+    "combined_actor_hand_components": [
+      {
+        "area": 2661,
+        "bbox": [
+          442,
+          402,
+          516,
+          472
+        ],
+        "centroid": [
+          477.411,
+          430.489
+        ]
+      },
+      {
+        "area": 391,
+        "bbox": [
+          415,
+          380,
+          443,
+          402
+        ],
+        "centroid": [
+          430.793,
+          388.156
+        ]
+      },
+      {
+        "area": 132,
+        "bbox": [
+          440,
+          443,
+          452,
+          457
+        ],
+        "centroid": [
+          445.659,
+          449.091
+        ]
+      }
+    ],
+    "can_truthfully_split_into_left_right_from_current_mask_only": false,
+    "reason": "The active combined actor-hand mask has no reliable Character A/B left/right labels; zero/off per-hand placeholders avoid inventing geometry."
+  },
+  "contact_edge_metrics": [
+    {
+      "edge_id": "fallback_actor_hand_to_receiver_butt",
+      "actor_mask": "character_b_actor_hand",
+      "receiver_mask": "character_a_receiver_butt",
+      "status_rule": "fallback_actor_hand_only",
+      "verdict": "provisional_pass_for_mask_geometry",
+      "reason": "actor hand has required overlap with contact zone; runtime visual/depth interpretation still unproven",
+      "areas": {
+        "actor": 3184,
+        "receiver": 38506,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      },
+      "ratios": {
+        "actor_contact_overlap_over_actor": 1.0,
+        "actor_contact_overlap_over_contact": 0.33108038,
+        "receiver_contact_overlap_over_contact": 0.92388479,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 0.99916814,
+        "pressure_inside_character_a_body_and_receiver": 0.92468361,
+        "indentation_inside_character_a_body_and_receiver": 0.96368337,
+        "occlusion_overlap_over_actor": 1.0
+      },
+      "depth_luma": {
+        "actor_mean": 9.767588,
+        "receiver_mean": 57.814341,
+        "contact_mean": 35.891546,
+        "pressure_mean": 38.05978,
+        "note": "Depth luma convention is not interpreted as absolute foreground/background without runtime model context."
+      }
+    },
+    {
+      "edge_id": "fallback_actor_hand_to_receiver_breast",
+      "actor_mask": "character_b_actor_hand",
+      "receiver_mask": "character_a_receiver_breast",
+      "status_rule": "fallback_actor_hand_only",
+      "verdict": "provisional_pass_for_mask_geometry",
+      "reason": "actor hand has required overlap with contact zone; runtime visual/depth interpretation still unproven",
+      "areas": {
+        "actor": 3184,
+        "receiver": 86064,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      },
+      "ratios": {
+        "actor_contact_overlap_over_actor": 1.0,
+        "actor_contact_overlap_over_contact": 0.33108038,
+        "receiver_contact_overlap_over_contact": 1.0,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 1.0,
+        "pressure_inside_character_a_body_and_receiver": 1.0,
+        "indentation_inside_character_a_body_and_receiver": 1.0,
+        "occlusion_overlap_over_actor": 1.0
+      },
+      "depth_luma": {
+        "actor_mean": 9.767588,
+        "receiver_mean": 102.583984,
+        "contact_mean": 35.891546,
+        "pressure_mean": 38.05978,
+        "note": "Depth luma convention is not interpreted as absolute foreground/background without runtime model context."
+      }
+    },
+    {
+      "edge_id": "B.left_to_A.left_breast_side_push",
+      "actor_mask": "character_b_left_hand",
+      "receiver_mask": "character_a_receiver_breast",
+      "status_rule": "per_hand_split_required",
+      "verdict": "blocked",
+      "reason": "actor mask is zero/off",
+      "areas": {
+        "actor": 0,
+        "receiver": 86064,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      },
+      "ratios": {
+        "actor_contact_overlap_over_actor": null,
+        "actor_contact_overlap_over_contact": 0.0,
+        "receiver_contact_overlap_over_contact": 1.0,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 1.0,
+        "pressure_inside_character_a_body_and_receiver": 1.0,
+        "indentation_inside_character_a_body_and_receiver": 1.0,
+        "occlusion_overlap_over_actor": null
+      },
+      "depth_luma": {
+        "actor_mean": null,
+        "receiver_mean": 102.583984,
+        "contact_mean": 35.891546,
+        "pressure_mean": 38.05978,
+        "note": "Depth luma convention is not interpreted as absolute foreground/background without runtime model context."
+      }
+    },
+    {
+      "edge_id": "B.right_to_A.right_breast_side_push",
+      "actor_mask": "character_b_right_hand",
+      "receiver_mask": "character_a_receiver_breast",
+      "status_rule": "per_hand_split_required",
+      "verdict": "blocked",
+      "reason": "actor mask is zero/off",
+      "areas": {
+        "actor": 0,
+        "receiver": 86064,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      },
+      "ratios": {
+        "actor_contact_overlap_over_actor": null,
+        "actor_contact_overlap_over_contact": 0.0,
+        "receiver_contact_overlap_over_contact": 1.0,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 1.0,
+        "pressure_inside_character_a_body_and_receiver": 1.0,
+        "indentation_inside_character_a_body_and_receiver": 1.0,
+        "occlusion_overlap_over_actor": null
+      },
+      "depth_luma": {
+        "actor_mean": null,
+        "receiver_mean": 102.583984,
+        "contact_mean": 35.891546,
+        "pressure_mean": 38.05978,
+        "note": "Depth luma convention is not interpreted as absolute foreground/background without runtime model context."
+      }
+    },
+    {
+      "edge_id": "B.left_to_A.left_butt_squeeze",
+      "actor_mask": "character_b_left_hand",
+      "receiver_mask": "character_a_receiver_butt",
+      "status_rule": "per_hand_split_required",
+      "verdict": "blocked",
+      "reason": "actor mask is zero/off",
+      "areas": {
+        "actor": 0,
+        "receiver": 38506,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      },
+      "ratios": {
+        "actor_contact_overlap_over_actor": null,
+        "actor_contact_overlap_over_contact": 0.0,
+        "receiver_contact_overlap_over_contact": 0.92388479,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 0.99916814,
+        "pressure_inside_character_a_body_and_receiver": 0.92468361,
+        "indentation_inside_character_a_body_and_receiver": 0.96368337,
+        "occlusion_overlap_over_actor": null
+      },
+      "depth_luma": {
+        "actor_mean": null,
+        "receiver_mean": 57.814341,
+        "contact_mean": 35.891546,
+        "pressure_mean": 38.05978,
+        "note": "Depth luma convention is not interpreted as absolute foreground/background without runtime model context."
+      }
+    },
+    {
+      "edge_id": "B.right_to_A.right_butt_squeeze",
+      "actor_mask": "character_b_right_hand",
+      "receiver_mask": "character_a_receiver_butt",
+      "status_rule": "per_hand_split_required",
+      "verdict": "blocked",
+      "reason": "actor mask is zero/off",
+      "areas": {
+        "actor": 0,
+        "receiver": 38506,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      },
+      "ratios": {
+        "actor_contact_overlap_over_actor": null,
+        "actor_contact_overlap_over_contact": 0.0,
+        "receiver_contact_overlap_over_contact": 0.92388479,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 0.99916814,
+        "pressure_inside_character_a_body_and_receiver": 0.92468361,
+        "indentation_inside_character_a_body_and_receiver": 0.96368337,
+        "occlusion_overlap_over_actor": null
+      },
+      "depth_luma": {
+        "actor_mean": null,
+        "receiver_mean": 57.814341,
+        "contact_mean": 35.891546,
+        "pressure_mean": 38.05978,
+        "note": "Depth luma convention is not interpreted as absolute foreground/background without runtime model context."
+      }
+    }
+  ],
+  "collision_and_deformation_checks": {
+    "fallback_actor_hand_overlap_threshold": "actor_contact_overlap_over_actor >= 0.06",
+    "contact_zone_containment_target": ">= 0.92 inside dilated(actor_hand, receiver_surface, contact_shadow)",
+    "pressure_indent_receiver_target": ">= 0.97 inside character_a_body and selected receiver surface",
+    "runtime_visual_required": true
+  },
+  "blockers": [
+    {
+      "category": "per_hand_split_masks",
+      "description": "Nodes 1051-1054 resolve to files but the masks are zero/off placeholders.",
+      "next_action": "Provide same-scene nonzero left/right hand split masks before accepting per-hand contact-pair QA."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "character_b_body_mask.png remains zero/off and cannot support full actor-body collision QA.",
+      "next_action": "Provide a trustworthy same-scene actor body segmentation source when full actor-body collision QA is required."
+    }
+  ],
+  "limitations": [
+    "This is a local mask/depth pixel QA pass only.",
+    "No live ComfyUI execution was performed.",
+    "No final generated output or hand anatomy was visually accepted.",
+    "Depth luma is summarized but not interpreted as absolute foreground/background without runtime context."
+  ]
+}
