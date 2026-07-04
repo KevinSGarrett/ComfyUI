@@ -28,8 +28,8 @@ try {
   $hasHead = ($LASTEXITCODE -eq 0)
 
   if (-not $hasHead) {
-    git add README.md .gitignore .githooks Main Lane_1 Lane_2 Lane_3 Lane_4 Lane_5 Lane_6
-    git commit -m "Add six-lane Codex coordination scaffold"
+    git add README.md .gitignore .githooks Main Lane_1 Lane_2 Lane_3 Lane_4 Lane_5 Lane_6 Lane_7
+    git commit -m "Add Codex coordination scaffold"
   }
 
   $lanes = @(
@@ -38,7 +38,8 @@ try {
     @{ Path = "Lane_3"; Branch = "lane/lane-3-model-assets" },
     @{ Path = "Lane_4"; Branch = "lane/lane-4-runtime-ec2" },
     @{ Path = "Lane_5"; Branch = "lane/lane-5-qa-tracker" },
-    @{ Path = "Lane_6"; Branch = "lane/lane-6-generation-presets" }
+    @{ Path = "Lane_6"; Branch = "lane/lane-6-generation-presets" },
+    @{ Path = "Lane_7"; Branch = "lane/lane-7-integration-history" }
   )
 
   foreach ($lane in $lanes) {

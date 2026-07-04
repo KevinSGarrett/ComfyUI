@@ -2,7 +2,7 @@
 
 ## Scope
 
-This is a six-lane Codex Desktop operating system for the Wave42 ComfyUI hyperrealism project. The lane count is exactly six:
+This is a Codex Desktop operating system for the Wave42 ComfyUI hyperrealism project. It has six builder lanes plus Lane 7 integration/history:
 
 - `Lane_1`: Main Flow architecture and workflow graph wiring.
 - `Lane_2`: Spatial, pose, mask, contact, and soft-body control design.
@@ -10,6 +10,7 @@ This is a six-lane Codex Desktop operating system for the Wave42 ComfyUI hyperre
 - `Lane_4`: EC2 runtime, deployment, sync, and live ComfyUI validation.
 - `Lane_5`: QA, evidence ingestion, tracker promotion, and audit.
 - `Lane_6`: Generation presets, candidate media, tuning, and comparison.
+- `Lane_7`: Cross-lane integration, end-to-end release history, usage-limit resume packets, storage-pressure reporting, and dashboard documentation.
 
 All lanes share the same project roots:
 
@@ -27,8 +28,9 @@ Each session must start by reading:
 2. `C:\Comfy_UI_Lora\5_sessions\Main\LANE_BOUNDARIES.md`
 3. `C:\Comfy_UI_Lora\5_sessions\Main\EC2_LEASE_PROTOCOL.md`
 4. `C:\Comfy_UI_Lora\5_sessions\Main\SELF_HOSTED_LLM_POLICY.md` if touching AI/LLM or AI front-end work.
-5. Its own `Lane_X\LANE_INSTRUCTIONS.md`
-6. Any relevant current tracker, manifest, workflow, or evidence file it will use.
+5. `C:\Comfy_UI_Lora\5_sessions\Main\STRICT_AUTONOMOUS_QA_PROTOCOL.md`
+6. Its own `Lane_X\LANE_INSTRUCTIONS.md`
+7. Any relevant current tracker, manifest, workflow, or evidence file it will use.
 
 ## Non-Negotiable Rules
 
@@ -40,6 +42,8 @@ Each session must start by reading:
 - Do not bypass legal, credential, provider, paid-access, account-owner, or rights-holder constraints.
 - Preserve real blockers honestly. Remove only false blockers and paperwork-only blockers.
 - Every generated artifact, runtime result, model test, preset, or promotion must be evidence-backed.
+- Every lane must maintain continuous history and status reporting as defined in `STRICT_AUTONOMOUS_QA_PROTOCOL.md`.
+- Any hand, finger, contact, pose, mask, body-interaction, candidate media, or hand-adjacent claim must include strict hand review or an explicit `not_visually_reviewed` / `manual_review_required` limitation.
 
 ## AI/LLM Provider Policy
 

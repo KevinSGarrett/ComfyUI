@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "record_type": "strict_qa_status_event",
+  "lane_id": "Lane_X",
+  "created_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "model_effort": {
+    "model": "gpt-5.5",
+    "reasoning_effort": "xhigh"
+  },
+  "main_flow_reference": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "event_type": "slice_start | work_event | qa_event | hand_review | issue | blocker | fix | slice_closeout",
+  "summary": "",
+  "work_performed": [],
+  "completed": [],
+  "in_progress": [],
+  "about_to_complete": [],
+  "tests_run": [],
+  "test_results": [],
+  "issues_or_blockers": [],
+  "fixes_implemented": [],
+  "files_changed": [],
+  "evidence_paths": [],
+  "commits": [],
+  "next_actions": []
+}

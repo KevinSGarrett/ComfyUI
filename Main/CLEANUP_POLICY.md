@@ -17,7 +17,15 @@ Cleanup scripts may operate only inside these roots unless a lane-specific claim
 - `C:\Comfy_UI_Lora\5_sessions\Lane_4\scratch`
 - `C:\Comfy_UI_Lora\5_sessions\Lane_5\scratch`
 - `C:\Comfy_UI_Lora\5_sessions\Lane_6\scratch`
+- `C:\Comfy_UI_Lora\5_sessions\Lane_7\scratch`
 - `C:\Comfy_UI_Lora\5_session_worktrees\*\tmp`
+
+Under storage pressure, Lane 4 may also clean old date-stamped EC2 mirror snapshots only through `safe_cleanup.ps1 -IncludeEc2MirrorSnapshots`:
+
+- `C:\Comfy_UI\EC2_Mirror\YYYYMMDD_HHMMSS`
+- `C:\Comfy_UI\_ec2sd\YYYYMMDD_HHMMSS`
+
+These snapshots are cleanup candidates only if they are older than the selected cutoff, are not part of an active EC2 lease/live sync, and Lane 4 records a cleanup evidence manifest.
 
 ## Protected Roots
 
@@ -41,13 +49,27 @@ Never delete from these roots via automated cleanup:
 2. Record candidate paths, sizes, and age.
 3. Confirm all candidates are under allowed roots.
 4. Confirm no candidate path is under a protected root.
-5. Delete only with an explicit `-Apply` run.
-6. Save a cleanup evidence record.
+5. For EC2 mirror snapshots, confirm the shared EC2 lease is not held before applying cleanup.
+6. Delete only with an explicit `-Apply` run.
+7. Save a cleanup evidence record.
 
 Use:
 
 ```powershell
 C:\Comfy_UI_Lora\5_sessions\Main\scripts\safe_cleanup.ps1 -Lane Lane_4 -OlderThanDays 7
 C:\Comfy_UI_Lora\5_sessions\Main\scripts\safe_cleanup.ps1 -Lane Lane_4 -OlderThanDays 7 -Apply
+C:\Comfy_UI_Lora\5_sessions\Main\scripts\safe_cleanup.ps1 -Lane Lane_4 -OlderThanDays 1 -IncludeEc2MirrorSnapshots -SummaryOnly
+C:\Comfy_UI_Lora\5_sessions\Main\scripts\safe_cleanup.ps1 -Lane Lane_4 -OlderThanDays 1 -IncludeEc2MirrorSnapshots -SummaryOnly -Apply
 ```
 
+## Usage Limit Awareness
+
+Codex Desktop usage limits can pause or stop lane progress. If a lane stops because the 5-hour or weekly usage window is exhausted, record a blocker with:
+
+- lane id
+- active task
+- last evidence/report path
+- exact next prompt to send after the user resets usage
+- whether EC2 or local runtime is still active
+
+Usage reset is manual. Do not treat a usage stop as completed project work.

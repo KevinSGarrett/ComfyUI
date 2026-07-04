@@ -25,7 +25,7 @@ foreach ($file in $requiredFiles) {
   }
 }
 
-foreach ($i in 1..6) {
+foreach ($i in 1..7) {
   $laneDir = Join-Path $SessionRoot "Lane_$i"
   $laneFile = Join-Path $laneDir "LANE_INSTRUCTIONS.md"
   if (-not (Test-Path -Path $laneDir -PathType Container)) {
@@ -60,4 +60,4 @@ if ($failures.Count -gt 0) {
   exit 1
 }
 
-Write-Host "Six-lane session system verified."
+Write-Host "Lane session system verified."

@@ -1,6 +1,6 @@
-# Wave42 Six-Lane Codex Desktop Control Root
+# Wave42 Codex Desktop Control Root
 
-This directory coordinates six separate Codex Desktop sessions working on the same ComfyUI/Wave42 system.
+This directory coordinates six builder Codex Desktop sessions plus one integration/history lane working on the same ComfyUI/Wave42 system.
 
 Canonical paths:
 
@@ -22,4 +22,4 @@ Start here:
 7. Use `Main\scripts\ec2_lease.ps1` before any EC2 live-window work.
 8. Write evidence using `Main\schemas\evidence_record.schema.json`.
 
-The six-lane split is intentional. Do not collapse lane ownership just because another lane is idle. If a lane needs work owned by another lane, it writes a request under its lane `requests` folder or under `Main\shared_state\ec2_requests` for runtime work.
+The lane split is intentional. Do not collapse lane ownership just because another lane is idle. If a lane needs work owned by another lane, it writes a request under its lane `requests` folder or under `Main\shared_state\ec2_requests` for runtime work. Lane 7 exists to integrate, document, monitor usage/storage risk, and prepare end-to-end release/resume packets; it does not replace the six owner lanes.

@@ -1,6 +1,6 @@
 # Main Shared Directory
 
-This is the global instruction and coordination directory for all six Codex Desktop lanes.
+This is the global instruction and coordination directory for the six builder Codex Desktop lanes plus Lane 7 integration/history.
 
 Important files:
 

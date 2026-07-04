@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "record_type": "hand_review",
+  "lane_id": "Lane_X",
+  "created_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "model_effort": {
+    "model": "gpt-5.5",
+    "reasoning_effort": "xhigh"
+  },
+  "main_flow_reference": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "review_scope": {
+    "media_or_artifact_paths": [],
+    "workflow_nodes": [],
+    "mask_paths": [],
+    "pose_depth_control_paths": [],
+    "runtime_evidence_paths": []
+  },
+  "review_type": "actual_media | input_control_image | mask_pose_depth | workflow_structure_only | runtime_metadata_only",
+  "verdict": "pass | pass_with_limitations | manual_review_required | not_visually_reviewed | blocked | fail",
+  "checks": {
+    "hand_count_and_left_right_identity": "not_checked",
+    "finger_count_continuity_separation": "not_checked",
+    "thumb_and_palm_orientation": "not_checked",
+    "wrist_connection": "not_checked",
+    "hand_scale": "not_checked",
+    "per_hand_mask_alignment": "not_checked",
+    "contact_zone_alignment": "not_checked",
+    "pose_depth_normal_consistency": "not_checked",
+    "occlusion_ordering": "not_checked",
+    "collision_or_interpenetration": "not_checked",
+    "soft_body_deformation": "not_checked",
+    "fused_missing_extra_fingers": "not_checked"
+  },
+  "issues": [],
+  "limitations": [],
+  "evidence_sha256": [],
+  "tracker_rows_supported": [],
+  "tracker_rows_not_supported": [],
+  "next_actions": []
+}

@@ -1,6 +1,6 @@
 # Lane Boundaries
 
-These are hard write boundaries for six concurrent Codex Desktop sessions. A lane may read broadly, but writes are limited to its owned paths unless the shared claim protocol is used.
+These are hard write boundaries for concurrent Codex Desktop sessions. A lane may read broadly, but writes are limited to its owned paths unless the shared claim protocol is used.
 
 ## Main Flow Convergence Rule
 
@@ -9,6 +9,14 @@ The whole system is organized around the canonical Main Flow:
 `C:\Comfy_UI\Implementation\workflows\ui\WAVE42_MAIN_FLOW_20260702.json`
 
 Lane work may cover the broader system, but it must keep producing Main Flow-facing outputs: workflow repairs, asset/model/runtime visibility evidence, Lane 1 wiring requests, Lane 4 runtime requests, Lane 5 tracker/evidence decisions, or Lane 6 presets/candidates that can be traced back to the Main Flow. Side documents and inventories are intermediate work, not final lane completion, when a Main Flow-facing next action remains.
+
+## Strict QA And History Rule
+
+All lanes must follow:
+
+`C:\Comfy_UI_Lora\5_sessions\Main\STRICT_AUTONOMOUS_QA_PROTOCOL.md`
+
+This includes continuous lane journals, frequent status reports, issue/blocker records, QA/test evidence, and strict hand review for every hand/contact/candidate/media-related claim. These records belong in each lane's owned `history`, `reports`, `issues`, and `hand_reviews` subfolders under its worktree and shared session mirror when practical.
 
 ## Lane 1: Main Flow Architecture
 
@@ -163,6 +171,33 @@ Forbidden without request/claim:
 Minimum outcome: candidate outputs with QA/provenance, named presets, comparison evidence, or exact blocker.
 
 LLM note: Lane 6 may integrate AI front-end behavior and prompt/preset assistance only through the self-hosted LLM contract unless a documented fallback is approved.
+
+## Lane 7: Integration, Release History, Operations Watch
+
+Mission: keep the end-to-end picture coherent across all lanes: continuous history, release readiness, usage-limit resume packets, storage-pressure reports, dashboard summaries, and cross-lane issue tracking.
+
+Owned write areas:
+
+- `C:\Comfy_UI\Implementation\docs`
+- `C:\Comfy_UI\Implementation\manifests\integration_status`
+- `C:\Comfy_UI\Implementation\evidence\integration_review`
+- `C:\Comfy_UI_Lora\5_sessions\Main\reports`
+- `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\resume_packets`
+- `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\storage_reports`
+- `C:\Comfy_UI_Lora\5_sessions\Lane_7`
+
+Forbidden without request/claim:
+
+- Direct Main Flow edits.
+- Tracker promotions or re-blocks.
+- EC2 start/stop.
+- Model downloads or deletion.
+- Generated media deletion.
+- Broad EC2 mirror cleanup apply runs.
+
+Minimum outcome: an end-to-end status dashboard, cross-lane issue/resume packet, storage pressure report, release-readiness rollup, or exact blocker routed to the owning lane.
+
+Lane 7 may recommend cleanup, runtime, tracker, workflow, model, or candidate actions, but the owning lane must execute them.
 
 ## Shared Claim Rule
 

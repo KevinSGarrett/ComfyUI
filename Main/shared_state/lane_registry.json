@@ -42,7 +42,7 @@
       "lane_id": "Lane_3",
       "name": "Models LoRAs Civitai Assets",
       "model": "gpt-5.5",
-      "reasoning_effort": "high",
+      "reasoning_effort": "xhigh",
       "branch": "lane/lane-3-model-assets",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3",
       "owned_write_roots": [
@@ -63,7 +63,7 @@
       "lane_id": "Lane_4",
       "name": "EC2 Runtime Deployment Sync",
       "model": "gpt-5.5",
-      "reasoning_effort": "high",
+      "reasoning_effort": "xhigh",
       "branch": "lane/lane-4-runtime-ec2",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4",
       "owned_write_roots": [
@@ -99,7 +99,7 @@
       "lane_id": "Lane_6",
       "name": "Generation Presets Candidate Media",
       "model": "gpt-5.5",
-      "reasoning_effort": "high",
+      "reasoning_effort": "xhigh",
       "branch": "lane/lane-6-generation-presets",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_6",
       "owned_write_roots": [
@@ -113,6 +113,24 @@
         "C:\\Comfy_UI_Lora\\5_sessions\\Lane_6"
       ],
       "forbidden_actions": ["ec2_start_stop", "tracker_promotion", "direct_main_flow_edit", "model_download_without_lane3_request", "external_llm_default_dependency"]
+    },
+    {
+      "lane_id": "Lane_7",
+      "name": "Integration Release History Operations Watch",
+      "model": "gpt-5.5",
+      "reasoning_effort": "xhigh",
+      "branch": "lane/lane-7-integration-history",
+      "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_7",
+      "owned_write_roots": [
+        "C:\\Comfy_UI\\Implementation\\docs",
+        "C:\\Comfy_UI\\Implementation\\manifests\\integration_status",
+        "C:\\Comfy_UI\\Implementation\\evidence\\integration_review",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\reports",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\resume_packets",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\storage_reports",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Lane_7"
+      ],
+      "forbidden_actions": ["ec2_start_stop", "tracker_promotion", "direct_main_flow_edit", "model_download", "model_delete", "generated_media_delete", "ec2_mirror_cleanup_apply"]
     }
   ]
 }
