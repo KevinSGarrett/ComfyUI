@@ -160,3 +160,36 @@ Evidence / commit:
   - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_4\Lane_4\evidence\lane4_pm_status_20260704T163939Z.md`
   - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_2\Lane_2\reports\20260704_164031_lane2_runtime_handoff_pm_status.md`
   - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\reports\20260704_163956_lane3_pm_status.md`
+
+## 2026-07-04T11:45:42Z - PM follow-up: new Lane 1 reprompt request and updated lane status
+
+Material state changes since the previous follow-up:
+
+- New queued EC2 request is now present:
+  - `lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json`
+- C: free space check is now about `164.476 GB`.
+- New PM statuses observed:
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_1\Lane_1\reports\20260704_164527_lane1_pm_status.md`
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_5\Lane_5\reports\20260704_164447_lane5_status.md`
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_6\Lane_6\reports\20260704_164400_lane6_request_runner_bundle_verification_status.md`
+
+Actions taken:
+
+- Wrote compact PM follow-up routing the newly queued Lane 1 reprompt and latest lane status posture to owner lanes.
+
+Blockers:
+
+- Lane 4 continues on AWS auth-refresh blockage for final stopped-instance proof and therefore cannot run/close the pending current-hash runtime visibility checks.
+- Lane 1 auxiliary current-hash runtime check remains dependent on Lane 4 processing.
+
+Next owner action:
+
+- Lane 4: complete `aws login`, then process `lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json` in the next approved current-hash runtime window.
+- Lane 5: continue strict visual/per-hand/body-contact evidence support work and keep blocker-aware rows explicit.
+- Lane 6: maintain verification boundary for request-runner integrity and do not present non-existent candidate media.
+
+Evidence / commit:
+
+- New reprompt request: `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json`
+- Shared queue snapshot: `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests` and `...\\processed`
+- This report and journal update.
