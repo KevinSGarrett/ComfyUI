@@ -1,0 +1,19 @@
+﻿{
+    "evidence_type":  "model_runtime_visibility_recheck",
+    "lane_id":  "Lane_3",
+    "source":  "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "source_sha256":  "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "timestamp_utc":  "2026-07-04T17:00:48Z",
+    "total_refs":  39,
+    "found_refs":  34,
+    "missing_refs":  5,
+    "rows_path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_172400_main_flow_runtime_recheck.json",
+    "scan_csv_path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\reports\\20260704_172400_main_flow_runtime_visibility_scan.csv",
+    "missing_refs_list":  [
+                              "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+                              "bbox/hand_yolov8n.pt",
+                              "dw-ll_ucoco_384_bs5.torchscript.pt",
+                              "sam_vit_b_01ec64.pth",
+                              "yolox_l.onnx"
+                          ]
+}

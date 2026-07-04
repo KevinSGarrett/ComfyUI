@@ -1,0 +1,27 @@
+{
+    "evidence_type":  "llm_local_selfhosted_smoke",
+    "lane_id":  "Lane_3",
+    "timestamp_utc":  "2026-07-04T17:00:53Z",
+    "base_url":  "http://127.0.0.1:11434",
+    "checks":  [
+                   {
+                       "check":  "version",
+                       "ok":  true,
+                       "status":  "200",
+                       "details":  "{\"version\":\"0.30.11\"}"
+                   },
+                   {
+                       "check":  "tags",
+                       "ok":  true,
+                       "status":  "200",
+                       "details":  "3 models"
+                   },
+                   {
+                       "check":  "chat",
+                       "ok":  true,
+                       "status":  "200",
+                       "details":  "Ok"
+                   }
+               ],
+    "next_steps":  "Use same base for AI_LLM_Intelligence_Plan unless local model availability changes."
+}
