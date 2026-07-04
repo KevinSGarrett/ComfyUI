@@ -1,0 +1,56 @@
+# Live coordination state
+Main/shared_state/ec2_lease.json
+Main/shared_state/*.lock
+Main/shared_state/claims/*.json
+Main/shared_state/ec2_requests/*.json
+Main/shared_state/lane_status/*.json
+
+# Lane scratch/output areas
+Lane_*/scratch/
+Lane_*/tmp/
+Lane_*/downloads/
+Lane_*/runtime_logs/
+
+# Secrets and credentials
+.env
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Large or generated media/model files
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.bin
+*.gguf
+*.zip
+*.7z
+*.rar
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.flac
+
+# Python/Node/editor noise
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+

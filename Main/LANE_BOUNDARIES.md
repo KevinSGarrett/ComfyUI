@@ -1,0 +1,178 @@
+# Lane Boundaries
+
+These are hard write boundaries for six concurrent Codex Desktop sessions. A lane may read broadly, but writes are limited to its owned paths unless the shared claim protocol is used.
+
+## Lane 1: Main Flow Architecture
+
+Mission: repair, wire, validate, and preserve the canonical Main Flow workflow graph.
+
+Owned write areas:
+
+- `C:\Comfy_UI\Implementation\workflows`
+- `C:\Comfy_UI\Implementation\workflow_backups`
+- `C:\Comfy_UI\Implementation\evidence\workflow_validation`
+- `C:\Comfy_UI_Lora\5_sessions\Lane_1`
+
+May modify only with backup first:
+
+- `C:\Comfy_UI\Implementation\workflows\ui\WAVE42_MAIN_FLOW_20260702.json`
+
+Forbidden without request/claim:
+
+- Tracker CSV status columns.
+- EC2 start/stop.
+- Model downloads or deletion.
+- Generated media cleanup.
+
+Minimum outcome: a graph change, graph validation, or exact blocker with workflow/evidence references.
+
+## Lane 2: Spatial, Pose, Mask, Contact, Soft-Body Controls
+
+Mission: design and validate the explicit spatial truth layer: pose, masks, depth, contact-pair graphs, collision checks, and localized deformation controls.
+
+Owned write areas:
+
+- `C:\Comfy_UI\Implementation\evidence\spatial_validation`
+- `C:\Comfy_UI\Implementation\evidence\mask_validation`
+- `C:\Comfy_UI\Implementation\evidence\contact_physics`
+- `C:\Comfy_UI\Layout_Images`
+- `C:\Comfy_UI\Input_References`
+- `C:\Comfy_UI_Lora\5_sessions\Lane_2`
+
+Forbidden without request/claim:
+
+- Direct Main Flow edits.
+- Tracker promotions.
+- EC2 start/stop.
+- Model deletion.
+
+Minimum outcome: mask/pose/contact evidence, a Lane 1 wiring request, or exact blocker.
+
+## Lane 3: Models, LoRAs, Civitai, Assets
+
+Mission: verify, acquire, classify, hash, deploy-readiness-check, and compatibility-test model assets.
+
+Owned write areas:
+
+- `C:\Comfy_UI\Implementation\manifests\civitai_model_acquisition`
+- `C:\Comfy_UI\Implementation\evidence\model_asset_validation`
+- `C:\Comfy_UI\Implementation\evidence\model_tests`
+- `C:\Comfy_UI\Implementation\evidence\llm_runtime`
+- `C:\Comfy_UI\Runtime_Data\models`
+- `C:\Comfy_UI_Lora\models`
+- `C:\Comfy_UI_Lora\AI_LLM_Intelligence_Plan`
+- `C:\Comfy_UI_Lora\Model_Organize`
+- `C:\Comfy_UI_Lora\Organizaion_Model`
+- `C:\Comfy_UI_Lora\5_sessions\Lane_3`
+
+Forbidden without request/claim:
+
+- Workflow edits.
+- Tracker promotions.
+- EC2 start/stop.
+- Broad Civitai mirroring.
+- Committing model binaries.
+
+Minimum outcome: model existence/load/visibility evidence, model-test evidence, a clean blocker, or a compatibility table update.
+
+LLM note: Lane 3 owns self-hosted LLM model selection, local model inventory, compatibility, quantization, endpoint requirements, and evidence that an LLM model can load locally or on EC2. External LLM APIs are fallback only.
+
+## Lane 4: EC2 Runtime, Deployment, Sync
+
+Mission: own all live EC2 runtime windows, deployment, sync, ComfyUI endpoint validation, and cost-control state.
+
+Owned write areas:
+
+- `C:\Comfy_UI\Implementation\deployment`
+- `C:\Comfy_UI\Implementation\sync_bundles`
+- `C:\Comfy_UI\Implementation\evidence\runtime`
+- `C:\Comfy_UI\Implementation\evidence\ec2`
+- `C:\Comfy_UI\EC2_Mirror`
+- `C:\Comfy_UI\_ec2sd`
+- `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests`
+- `C:\Comfy_UI_Lora\5_sessions\Lane_4`
+
+Exclusive authority:
+
+- Acquire/release the EC2 lease.
+- Start EC2.
+- Stop EC2.
+- Run deployment or live ComfyUI endpoint checks.
+
+Forbidden:
+
+- Stopping EC2 while another active lease owner exists.
+- Printing credentials or tokens.
+- Terminating unrelated processes.
+- Runtime claims without endpoint/output evidence.
+
+Minimum outcome: live validation evidence, stopped-cost state proof, or exact AWS/runtime blocker.
+
+## Lane 5: QA, Evidence, Tracker Promotion
+
+Mission: enforce strict QA, evidence ingestion, tracker promotion, rolling promotion-quality audit, and honest re-blocking.
+
+Owned write areas:
+
+- `C:\Comfy_UI\Implementation\evidence`
+- `C:\Comfy_UI\Implementation\trackers`
+- `C:\Comfy_UI\Implementation\manifests`
+- `C:\Comfy_UI\Implementation\docs`
+- `C:\Comfy_UI\Items`
+- `C:\Comfy_UI_Lora\5_sessions\Lane_5`
+
+Forbidden without request/claim:
+
+- Main Flow edits.
+- EC2 start/stop.
+- Model downloads.
+- Generated media deletion.
+
+Minimum outcome: QA verdicts, evidence-to-tracker mapping, audited promotions, re-blocks, or exact blocker.
+
+## Lane 6: Candidate Generation, Presets, Tuning
+
+Mission: produce, compare, score, tune, and preserve image/video/audio generation candidates and settings presets.
+
+Owned write areas:
+
+- `C:\Comfy_UI\Generated_Outputs`
+- `C:\Comfy_UI\outputs`
+- `C:\Comfy_UI\Implementation\presets`
+- `C:\Comfy_UI\Implementation\settings`
+- `C:\Comfy_UI\Implementation\evidence\generation_preset_lab`
+- `C:\Comfy_UI\Implementation\manifests\generation_preset_lab`
+- `C:\Comfy_UI_Lora\AI_Front`
+- `C:\Comfy_UI_Lora\5_sessions\Lane_6`
+
+Forbidden without request/claim:
+
+- Tracker promotions.
+- Main Flow edits.
+- EC2 start/stop.
+- Model downloads beyond a Lane 3 request.
+
+Minimum outcome: candidate outputs with QA/provenance, named presets, comparison evidence, or exact blocker.
+
+LLM note: Lane 6 may integrate AI front-end behavior and prompt/preset assistance only through the self-hosted LLM contract unless a documented fallback is approved.
+
+## Shared Claim Rule
+
+If a lane needs to write outside its owned area, it must create a claim file in:
+
+`C:\Comfy_UI_Lora\5_sessions\Main\shared_state\claims`
+
+Claim filename format:
+
+`YYYYMMDD_HHMMSS_Lane_X_short-purpose.json`
+
+Claim fields:
+
+- `lane_id`
+- `target_path`
+- `purpose`
+- `expires_at_utc`
+- `risk`
+- `expected_outputs`
+
+Claims do not grant EC2 authority. EC2 authority is only through the EC2 lease protocol.

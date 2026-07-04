@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "lease_state": "free",
+  "owner_lane": null,
+  "purpose": null,
+  "acquired_at_utc": null,
+  "expires_at_utc": null,
+  "last_heartbeat_utc": null,
+  "ec2_instance_id": "i-0560bf8d143f93bb1",
+  "notes": "Live lease state is stored in ec2_lease.json and ignored by Git."
+}
+

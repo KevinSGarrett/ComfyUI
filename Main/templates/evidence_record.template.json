@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "YYYYMMDD_HHMMSS_Lane_X_short_name",
+  "lane_id": "Lane_X",
+  "created_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "claim": {
+    "summary": "",
+    "status": "provisional",
+    "requirement_ids": []
+  },
+  "inputs": {
+    "workflow_path": "",
+    "workflow_sha256": "",
+    "prompt_path": "",
+    "prompt_text": "",
+    "negative_prompt_text": "",
+    "seed": null,
+    "settings": {}
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "",
+    "ec2_state_after": "",
+    "comfyui_url": "",
+    "endpoints_checked": [],
+    "aws_auth_status": ""
+  },
+  "models": [],
+  "artifacts": [],
+  "qa": {
+    "verdict": "provisional",
+    "score": null,
+    "checks": [],
+    "failure_reasons": []
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": []
+}
+

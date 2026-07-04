@@ -1,0 +1,3 @@
+#!/bin/sh
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File Main/scripts/pre_commit_check.ps1
+

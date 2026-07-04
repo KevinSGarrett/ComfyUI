@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Wave42 Evidence Record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "evidence_id",
+    "lane_id",
+    "created_at_utc",
+    "claim",
+    "artifacts",
+    "qa",
+    "tracker_mapping"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "evidence_id": { "type": "string" },
+    "lane_id": { "type": "string", "pattern": "^Lane_[1-6]$" },
+    "created_at_utc": { "type": "string" },
+    "claim": {
+      "type": "object",
+      "required": ["summary", "status"],
+      "properties": {
+        "summary": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["passed", "failed", "provisional", "blocked", "informational"]
+        },
+        "requirement_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "inputs": {
+      "type": "object",
+      "properties": {
+        "workflow_path": { "type": "string" },
+        "workflow_sha256": { "type": "string" },
+        "prompt_path": { "type": "string" },
+        "prompt_text": { "type": "string" },
+        "negative_prompt_text": { "type": "string" },
+        "seed": {},
+        "settings": { "type": "object" }
+      },
+      "additionalProperties": true
+    },
+    "runtime": {
+      "type": "object",
+      "properties": {
+        "ec2_instance_id": { "type": "string" },
+        "ec2_state_before": { "type": "string" },
+        "ec2_state_after": { "type": "string" },
+        "comfyui_url": { "type": "string" },
+        "endpoints_checked": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "aws_auth_status": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "family", "path", "role"],
+        "properties": {
+          "name": { "type": "string" },
+          "family": { "type": "string" },
+          "path": { "type": "string" },
+          "sha256": { "type": "string" },
+          "role": { "type": "string" },
+          "strength": {},
+          "visibility_evidence": { "type": "string" },
+          "load_result": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "type"],
+        "properties": {
+          "path": { "type": "string" },
+          "type": { "type": "string" },
+          "size_bytes": { "type": "integer" },
+          "sha256": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "qa": {
+      "type": "object",
+      "required": ["verdict", "checks"],
+      "properties": {
+        "verdict": {
+          "type": "string",
+          "enum": ["pass", "fail", "provisional", "blocked", "not_applicable"]
+        },
+        "score": { "type": "number" },
+        "checks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "result"],
+            "properties": {
+              "name": { "type": "string" },
+              "result": {
+                "type": "string",
+                "enum": ["pass", "fail", "provisional", "blocked", "not_applicable"]
+              },
+              "notes": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        },
+        "failure_reasons": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "tracker_mapping": {
+      "type": "object",
+      "required": ["proves_rows", "does_not_prove_rows"],
+      "properties": {
+        "proves_rows": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "does_not_prove_rows": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "promotion_decision": {
+          "type": "string",
+          "enum": ["promote", "preserve_blocker", "reblock", "needs_more_evidence", "not_applicable"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "description", "next_action"],
+        "properties": {
+          "category": { "type": "string" },
+          "description": { "type": "string" },
+          "next_action": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
+

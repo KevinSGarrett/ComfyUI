@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0",
+  "session_root": "C:\\Comfy_UI_Lora\\5_sessions",
+  "project_root": "C:\\Comfy_UI",
+  "lora_root": "C:\\Comfy_UI_Lora",
+  "github_repo": "KevinSGarrett/ComfyUI",
+  "ec2_instance_id": "i-0560bf8d143f93bb1",
+  "lanes": [
+    {
+      "lane_id": "Lane_1",
+      "name": "Main Flow Architecture",
+      "branch": "lane/lane-1-main-flow",
+      "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1",
+      "owned_write_roots": [
+        "C:\\Comfy_UI\\Implementation\\workflows",
+        "C:\\Comfy_UI\\Implementation\\workflow_backups",
+        "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1"
+      ],
+      "forbidden_actions": ["ec2_start_stop", "tracker_promotion", "model_delete"]
+    },
+    {
+      "lane_id": "Lane_2",
+      "name": "Spatial Pose Mask Contact Controls",
+      "branch": "lane/lane-2-spatial-contact",
+      "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2",
+      "owned_write_roots": [
+        "C:\\Comfy_UI\\Implementation\\evidence\\spatial_validation",
+        "C:\\Comfy_UI\\Implementation\\evidence\\mask_validation",
+        "C:\\Comfy_UI\\Implementation\\evidence\\contact_physics",
+        "C:\\Comfy_UI\\Layout_Images",
+        "C:\\Comfy_UI\\Input_References",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2"
+      ],
+      "forbidden_actions": ["ec2_start_stop", "tracker_promotion", "direct_main_flow_edit"]
+    },
+    {
+      "lane_id": "Lane_3",
+      "name": "Models LoRAs Civitai Assets",
+      "branch": "lane/lane-3-model-assets",
+      "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3",
+      "owned_write_roots": [
+        "C:\\Comfy_UI\\Implementation\\manifests\\civitai_model_acquisition",
+        "C:\\Comfy_UI\\Implementation\\evidence\\model_asset_validation",
+        "C:\\Comfy_UI\\Implementation\\evidence\\model_tests",
+        "C:\\Comfy_UI\\Implementation\\evidence\\llm_runtime",
+        "C:\\Comfy_UI\\Runtime_Data\\models",
+        "C:\\Comfy_UI_Lora\\models",
+        "C:\\Comfy_UI_Lora\\AI_LLM_Intelligence_Plan",
+        "C:\\Comfy_UI_Lora\\Model_Organize",
+        "C:\\Comfy_UI_Lora\\Organizaion_Model",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Lane_3"
+      ],
+      "forbidden_actions": ["ec2_start_stop", "tracker_promotion", "direct_main_flow_edit", "broad_civitai_mirror", "external_llm_default_dependency"]
+    },
+    {
+      "lane_id": "Lane_4",
+      "name": "EC2 Runtime Deployment Sync",
+      "branch": "lane/lane-4-runtime-ec2",
+      "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4",
+      "owned_write_roots": [
+        "C:\\Comfy_UI\\Implementation\\deployment",
+        "C:\\Comfy_UI\\Implementation\\sync_bundles",
+        "C:\\Comfy_UI\\Implementation\\evidence\\runtime",
+        "C:\\Comfy_UI\\Implementation\\evidence\\ec2",
+        "C:\\Comfy_UI\\EC2_Mirror",
+        "C:\\Comfy_UI\\_ec2sd",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Lane_4"
+      ],
+      "exclusive_actions": ["ec2_lease", "ec2_start", "ec2_stop", "live_comfyui_validation"]
+    },
+    {
+      "lane_id": "Lane_5",
+      "name": "QA Evidence Tracker Promotion",
+      "branch": "lane/lane-5-qa-tracker",
+      "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_5",
+      "owned_write_roots": [
+        "C:\\Comfy_UI\\Implementation\\evidence",
+        "C:\\Comfy_UI\\Implementation\\trackers",
+        "C:\\Comfy_UI\\Implementation\\manifests",
+        "C:\\Comfy_UI\\Implementation\\docs",
+        "C:\\Comfy_UI\\Items",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Lane_5"
+      ],
+      "forbidden_actions": ["ec2_start_stop", "direct_main_flow_edit", "model_download"]
+    },
+    {
+      "lane_id": "Lane_6",
+      "name": "Generation Presets Candidate Media",
+      "branch": "lane/lane-6-generation-presets",
+      "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_6",
+      "owned_write_roots": [
+        "C:\\Comfy_UI\\Generated_Outputs",
+        "C:\\Comfy_UI\\outputs",
+        "C:\\Comfy_UI\\Implementation\\presets",
+        "C:\\Comfy_UI\\Implementation\\settings",
+        "C:\\Comfy_UI\\Implementation\\evidence\\generation_preset_lab",
+        "C:\\Comfy_UI\\Implementation\\manifests\\generation_preset_lab",
+        "C:\\Comfy_UI_Lora\\AI_Front",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Lane_6"
+      ],
+      "forbidden_actions": ["ec2_start_stop", "tracker_promotion", "direct_main_flow_edit", "model_download_without_lane3_request", "external_llm_default_dependency"]
+    }
+  ]
+}
