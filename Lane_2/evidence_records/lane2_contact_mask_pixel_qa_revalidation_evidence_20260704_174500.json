@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_contact_mask_pixel_qa_revalidation_evidence_20260704_174500",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:46:05Z",
+  "claim": {
+    "summary": "Re-run contact mask pixel QA against the same canonical Main Flow hash confirmed stable provisional status: actor-hand fallback edges remain geometrically passable, while named per-hand edges and actor-body collision remain blocked due to zero-off per-hand split masks and node 1009 body mask.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_contact_mask_pixel_qa_20260704_174500",
+      "lane2_pose_depth_requirements_update_evidence_20260704_164200",
+      "lane2_per_hand_zero_off_placeholders_20260704_162555"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "slot_root": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots",
+    "prompt_text": "Local spatial truth revalidation for strict body-contact mask edges.",
+    "settings": {
+      "runtime_required": "current-hash runtime validation still required before acceptance",
+      "run_id": "20260704_174500",
+      "model_effort_context": "critical-mode documentation handoff and evidence normalization only"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "no live ComfyUI execution; local pixel metrics only"
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_174500\\lane2_contact_mask_pixel_qa_20260704_174500.json",
+      "type": "contact_mask_pixel_qa_artifact",
+      "size_bytes": 25826,
+      "sha256": "7C498CD4B950F0AD9D7346D1A1AC8971C7E4AF80066FF37C357193358BB9A2B8",
+      "description": "Re-run pixel QA artifact showing unchanged provisional pass/blocked contact edges."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\tools\\contact_mask_pixel_qa.py",
+      "type": "reusable_contact_mask_pixel_qa_tool",
+      "size_bytes": 16144,
+      "sha256": "0CCF5F462C5A9A5B99F60CB95CCD87BFEB91C2D822A1506FF68A584E2665DFC3",
+      "description": "Reusable local mask/depth QA utility used for this revalidation."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_pose_depth_control_requirements_update_20260704_164200.md",
+      "type": "lane1_pose_depth_requirements_request",
+      "size_bytes": 2359,
+      "sha256": "F35C1E438B6EB79079829EBB758217E5CFC666460CA44556B969D12B69665F8E",
+      "description": "Active Lane 1 request defining provisional preflight thresholds and blockers."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane4_requests\\lane2_to_lane4_strict_body_contact_runtime_acceptance_20260704_164031.json",
+      "type": "lane4_runtime_acceptance_request",
+      "size_bytes": 4376,
+      "sha256": "3A493256097CE014D1F508F91B9CDD1F2CAC0FCD6725F0FC2BFF4B9CF54D4393",
+      "description": "Outstanding runtime acceptance request for strict body-contact semantics."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "provisional_fallback_edges",
+        "result": "pass",
+        "notes": "Fallback actor-hand-to-receiver butt and breast edge checks still meet overlap/contact-zone targets in the local preflight."
+      },
+      {
+        "name": "named_per_hand_edges",
+        "result": "blocked",
+        "notes": "Left/right named edges remain blocked because both named hand split masks are zero/off placeholders."
+      },
+      {
+        "name": "per_hand_split_feasibility",
+        "result": "blocked",
+        "notes": "Combined actor-hand mask cannot be truthfully split into reliable Character A/B left-right masks from current scene references."
+      },
+      {
+        "name": "actor_body_collision",
+        "result": "blocked",
+        "notes": "character_b_body_mask remains zero/off and cannot support full body collision/deformation checks."
+      },
+      {
+        "name": "runtime_visual_validation",
+        "result": "not_applicable",
+        "notes": "No live ComfyUI execution was performed in this lane."
+      }
+    ],
+    "failure_reasons": [
+      "Named left/right per-hand contact-pair quality remains blocked by same-scene zero/off masks.",
+      "Full actor-body collision/deformation validation remains blocked by node 1009 source."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "strict_visual_acceptance_rows",
+      "named_left_right_contact_pair_completion_rows",
+      "full_actor_body_collision_rows",
+      "runtime_generation_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "Per-hand split inputs remain zero/off placeholders.",
+      "next_action": "Deliver same-scene nonzero character_b_left_hand and character_b_right_hand masks (and optional A-side hand masks) before lifting named edge blockers."
+    },
+    {
+      "category": "actor_body_segmentation_source",
+      "description": "Node 1009 character_b_body_mask remains zero/off.",
+      "next_action": "Provide trusted actor-body source for full collision/deformation checks or keep actor-body collision disabled."
+    },
+    {
+      "category": "runtime_visual_validation",
+      "description": "Local QA does not include rendered depth ordering or hand anatomy acceptance.",
+      "next_action": "Lane 4 should run approved runtime handoff and Lane 5 should review visual outputs for final acceptance."
+    }
+  ]
+}

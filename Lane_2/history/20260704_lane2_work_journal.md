@@ -68,3 +68,11 @@
   - `lane2_to_lane4_strict_body_contact_runtime_acceptance_20260704_164031.json`
   - `20260704_164031_lane2_runtime_handoff_pm_status.md`
 - Did not run any new contact geometry tests; this is a packaging/hand-off evidence normalization slice pending existing Lane 1/Lane 4 runtime acceptance.
+
+## 2026-07-04T16:46:05Z - Contact mask pixel QA revalidation
+
+- Re-ran `Lane_2/tools/contact_mask_pixel_qa.py` at run id `20260704_174500` against the current Main Flow hash and active `C:\Comfy_UI\Input_References\main_flow\body_contact_slots`.
+- Revalidated that provisional fallback actor-hand edges remain supported while named per-hand edges and actor-body collision remain blocked by unchanged zero/off placeholders.
+- Produced a fresh evidence record: `Lane_2\\evidence_records\\lane2_contact_mask_pixel_qa_revalidation_evidence_20260704_174500.json`.
+- Mirrored both the revalidation run artifact and the fresh evidence into `C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_174500_lane2_contact_mask_pixel_qa`.
+- No runtime/visual acceptance decision was made in this lane; strict visual/contact final acceptance remains deferred to Lane 4/Lane 5 after approved live validation.
