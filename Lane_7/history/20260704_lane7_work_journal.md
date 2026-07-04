@@ -235,3 +235,33 @@ Evidence / commit:
 
 - New request: `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_164620_Lane_3_to_Lane_4_current_workflow_model_refs_visibility.json`
 - Lane 3 evidence record: `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\evidence\20260704_164604_main_flow_current_workflow_ref_visibility_recheck_evidence.json`
+
+## 2026-07-04T11:47:48Z - PM follow-up: lane-level follow-up request and queue stall
+
+Material state changes since the previous follow-up:
+
+- Lane 1 posted an updated PM status:
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_1\Lane_1\reports\20260704_164700_lane1_pm_status.md`
+- Lane 3 created a local follow-up request clarification:
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\requests\20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json`
+- The unresolved/runtime-gap evidence in that request is now explicitly split into:
+  - unresolved_in_runtime: `hand_yolov8n.pt`, `dw-ll_ucoco_384_bs5.torchscript.pt`, `sam_vit_b_01ec64.pth`, and ultralytics bbox path
+  - present-only-in-downloads: 5 hand checkpoints under `C:\Comfy_UI_Lora\downloads\Hands\...`
+- Shared EC2 queue snapshot still has no new shared-state request entry for the `165000` follow-up request; the existing pending Lane 1 reprompt remains first in queue.
+- EC2 lease remains `free`; C: now about `164.407 GB`.
+
+Actions taken:
+
+- Recorded updated cross-lane delta and clarified routing for the outstanding model-ref gap request.
+
+Blockers:
+
+- Lane 4 remains blocked by AWS auth/session on final stopped/no-public-IP proof, so it cannot close/reply to pending runtime visibility queue items yet.
+- The `165000` Lane 3 follow-up request has not yet been in shared_state queue, which blocks immediate owner action execution until routed.
+
+Next owner action:
+
+- Lane 4: complete `aws login`, then process:
+  - shared-state `lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json`
+  - `20260704_164620_Lane_3_to_Lane_4_current_workflow_model_refs_visibility.json` or the latest local follow-up equivalent if promoted.
+- Lane 3: move `20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json` into `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests` once owner policy allows.
