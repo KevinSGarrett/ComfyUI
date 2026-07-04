@@ -1,0 +1,505 @@
+{
+  "artifact_version": "1.0",
+  "artifact_id": "lane2_contact_control_artifact_20260704_154905",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T15:49:05Z",
+  "status": "provisional_structural_truth",
+  "safety_contract": {
+    "allowed_subjects": "clearly adult subjects only",
+    "consent_context_required": true,
+    "reject_if": [
+      "minor or ambiguous-age subject",
+      "coercive or non-consensual scenario",
+      "sexualized age ambiguity",
+      "source material provenance is unsafe or unclear"
+    ]
+  },
+  "source_state": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "B8D0899CE45845F97F8540DFB379D9E8FD8987B42A65A123D67A249880E72E13",
+    "workflow_last_write_utc": "2026-07-04T07:41:37Z",
+    "workflow_nodes_reviewed": "991-1050",
+    "lane2_evidence_directories_before": {
+      "spatial_validation": "missing",
+      "mask_validation": "missing",
+      "contact_physics": "missing"
+    },
+    "supporting_evidence_read": [
+      "C:\\Comfy_UI\\Implementation\\evidence\\tracker_promotion_boundary_intervention\\wave09_27_runtime_smoke_promotion_evidence_20260701_164322.json"
+    ],
+    "runtime_claim": "No Lane_2 runtime execution was performed. EC2 was not started or stopped."
+  },
+  "canvas_contract": {
+    "width": 1024,
+    "height": 1024,
+    "coordinate_origin": "top_left",
+    "mask_value_contract": "0.0 is excluded background; 1.0 is fully controlled region; antialiasing is allowed only at mask edges.",
+    "alignment_contract": "All masks, pose maps, depth maps, normal maps, and occlusion maps must share the same 1024x1024 pixel space before entering the strict body contact lane."
+  },
+  "roles": {
+    "character_a": {
+      "default_role": "receiver",
+      "required_masks": [
+        "character_a_body_mask",
+        "character_a_hand_mask",
+        "character_a_left_hand_mask",
+        "character_a_right_hand_mask",
+        "character_a_receiver_breast_mask",
+        "character_a_receiver_butt_mask"
+      ],
+      "qa_identity_rule": "Any receiver body deformation must remain inside character_a_body_mask and the active receiver contact submask."
+    },
+    "character_b": {
+      "default_role": "actor",
+      "required_masks": [
+        "character_b_body_mask",
+        "character_b_hand_mask",
+        "character_b_left_hand_mask",
+        "character_b_right_hand_mask",
+        "character_b_actor_hand_mask"
+      ],
+      "qa_identity_rule": "Actor hand masks must connect to visible wrists/forearms and must not be mistaken for character A hands."
+    }
+  },
+  "main_flow_current_slots": [
+    {
+      "slot_id": "body_contact_base_input",
+      "node_id": 999,
+      "node_type": "LoadImage",
+      "workflow_widget_path": "main_flow/body_contact_slots/body_contact_base_input.png",
+      "purpose": "image to be repaired/refined by the strict contact pass"
+    },
+    {
+      "slot_id": "contact_pose_reference",
+      "node_id": 1000,
+      "node_type": "LoadImage",
+      "workflow_widget_path": "main_flow/body_contact_slots/contact_pose_reference.png",
+      "purpose": "body plus hand pose guide for DWPose/OpenPose"
+    },
+    {
+      "slot_id": "soft_body_contact_depth_reference",
+      "node_id": 1001,
+      "node_type": "LoadImage",
+      "workflow_widget_path": "main_flow/body_contact_slots/soft_body_contact_depth_reference.png",
+      "purpose": "depth/volume guide for contact contour and occlusion"
+    },
+    {
+      "slot_id": "breast_contact_mask",
+      "node_id": 1002,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/breast_contact_mask.png",
+      "purpose": "union of active receiver breast contact zones"
+    },
+    {
+      "slot_id": "butt_contact_mask",
+      "node_id": 1003,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/butt_contact_mask.png",
+      "purpose": "union of active receiver butt contact zones"
+    },
+    {
+      "slot_id": "hand_contact_mask",
+      "node_id": 1004,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/hand_contact_mask.png",
+      "purpose": "all hand contact pixels, regardless of character ownership"
+    },
+    {
+      "slot_id": "character_a_hand_mask",
+      "node_id": 1005,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/character_a_hand_mask.png",
+      "purpose": "combined character A hands"
+    },
+    {
+      "slot_id": "character_b_hand_mask",
+      "node_id": 1006,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/character_b_hand_mask.png",
+      "purpose": "combined character B hands"
+    },
+    {
+      "slot_id": "contact_zone_mask",
+      "node_id": 1007,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/contact_zone_mask.png",
+      "purpose": "explicit final contact-zone union"
+    },
+    {
+      "slot_id": "character_a_body_mask",
+      "node_id": 1008,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/character_a_body_mask.png",
+      "purpose": "receiver body ownership"
+    },
+    {
+      "slot_id": "character_b_body_mask",
+      "node_id": 1009,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/character_b_body_mask.png",
+      "purpose": "actor body ownership"
+    },
+    {
+      "slot_id": "character_a_receiver_breast_mask",
+      "node_id": 1010,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/character_a_receiver_breast_mask.png",
+      "purpose": "localized receiver breast surface eligible for deformation"
+    },
+    {
+      "slot_id": "character_a_receiver_butt_mask",
+      "node_id": 1011,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/character_a_receiver_butt_mask.png",
+      "purpose": "localized receiver butt/hip surface eligible for deformation"
+    },
+    {
+      "slot_id": "character_b_actor_hand_mask",
+      "node_id": 1012,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/character_b_actor_hand_mask.png",
+      "purpose": "actor hand pixels that drive contact"
+    },
+    {
+      "slot_id": "interaction_occlusion_order_mask",
+      "node_id": 1013,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/interaction_occlusion_order_mask.png",
+      "purpose": "foreground/background ownership around contact boundaries"
+    },
+    {
+      "slot_id": "soft_body_pressure_map",
+      "node_id": 1014,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/soft_body_pressure_map.png",
+      "purpose": "pressure intensity gradient for local deformation"
+    },
+    {
+      "slot_id": "soft_body_indentation_mask",
+      "node_id": 1015,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/soft_body_indentation_mask.png",
+      "purpose": "indentation pixels, contained by receiver contact region"
+    },
+    {
+      "slot_id": "contact_shadow_mask",
+      "node_id": 1016,
+      "node_type": "LoadImageMask",
+      "workflow_widget_path": "main_flow/body_contact_slots/contact_shadow_mask.png",
+      "purpose": "thin contact-shadow band at palm/finger and body boundary"
+    },
+    {
+      "slot_id": "soft_body_normal_reference",
+      "node_id": 1017,
+      "node_type": "LoadImage",
+      "workflow_widget_path": "main_flow/body_contact_slots/soft_body_normal_reference.png",
+      "purpose": "normal-map reference for local contour and surface orientation"
+    }
+  ],
+  "required_new_per_hand_slots_for_lane1": [
+    {
+      "slot_id": "character_a_left_hand_mask",
+      "proposed_widget_path": "main_flow/body_contact_slots/character_a_left_hand_mask.png",
+      "derived_from_current_slot": "character_a_hand_mask",
+      "reason": "Per-hand QA needs left/right ownership, wrist continuity, and contact-pair separation."
+    },
+    {
+      "slot_id": "character_a_right_hand_mask",
+      "proposed_widget_path": "main_flow/body_contact_slots/character_a_right_hand_mask.png",
+      "derived_from_current_slot": "character_a_hand_mask",
+      "reason": "Per-hand QA needs left/right ownership, wrist continuity, and contact-pair separation."
+    },
+    {
+      "slot_id": "character_b_left_hand_mask",
+      "proposed_widget_path": "main_flow/body_contact_slots/character_b_left_hand_mask.png",
+      "derived_from_current_slot": "character_b_hand_mask",
+      "reason": "Actor hand contact must be distinguishable per hand before collision checks."
+    },
+    {
+      "slot_id": "character_b_right_hand_mask",
+      "proposed_widget_path": "main_flow/body_contact_slots/character_b_right_hand_mask.png",
+      "derived_from_current_slot": "character_b_hand_mask",
+      "reason": "Actor hand contact must be distinguishable per hand before collision checks."
+    }
+  ],
+  "mask_composition_order": [
+    "zero_canvas_1024",
+    "breast_contact_mask",
+    "butt_contact_mask",
+    "hand_contact_mask",
+    "character_a_hand_mask",
+    "character_b_hand_mask",
+    "character_a_receiver_breast_mask",
+    "character_a_receiver_butt_mask",
+    "character_b_actor_hand_mask",
+    "interaction_occlusion_order_mask",
+    "soft_body_pressure_map",
+    "soft_body_indentation_mask",
+    "contact_shadow_mask",
+    "contact_zone_mask"
+  ],
+  "pose_depth_normal_occlusion_requirements": {
+    "pose": {
+      "workflow_nodes": [
+        1000,
+        1040,
+        1041,
+        1042
+      ],
+      "runtime_order": "pose first",
+      "required_landmarks": [
+        "both shoulders",
+        "both elbows",
+        "both wrists",
+        "all visible fingers for active hands",
+        "receiver torso/hip landmarks near active contact zone"
+      ],
+      "qa_rules": [
+        "active hand joints must lie inside the owning hand mask or within 8 pixels of its edge",
+        "wrist-to-palm vector must point toward the contact zone for actor hand contact",
+        "hand mask must visibly connect to the matching wrist/forearm"
+      ]
+    },
+    "depth": {
+      "workflow_nodes": [
+        1001,
+        1043,
+        1044
+      ],
+      "runtime_order": "volume second",
+      "required_map": "soft_body_contact_depth_reference",
+      "qa_rules": [
+        "actor hand depth must be in front of receiver body at contact boundary",
+        "receiver surface depth must show smooth local displacement, not a hard cut",
+        "depth gradient must not invert across the pressure map unless occlusion mask marks a foreground hand edge"
+      ]
+    },
+    "normal": {
+      "workflow_nodes": [
+        1017,
+        1050
+      ],
+      "required_map": "soft_body_normal_reference",
+      "qa_rules": [
+        "normal map must preserve receiver surface direction outside indentation mask",
+        "inside indentation mask, normals may bend toward pressure center but must remain continuous at edge",
+        "normal reference save node should be enabled for QA captures when running validation"
+      ]
+    },
+    "occlusion": {
+      "workflow_nodes": [
+        1013,
+        1027
+      ],
+      "required_map": "interaction_occlusion_order_mask",
+      "qa_rules": [
+        "actor fingers/palm are foreground where they overlap receiver contact zones",
+        "receiver skin remains foreground outside the actor hand boundary",
+        "no contact-pair edge may have ambiguous ownership at the wrist or fingertip"
+      ]
+    }
+  },
+  "contact_pair_graph": {
+    "graph_id": "lane2_contact_pair_graph_v1",
+    "nodes": [
+      {
+        "id": "A.body",
+        "mask": "character_a_body_mask",
+        "role": "receiver_body"
+      },
+      {
+        "id": "A.breast.left",
+        "mask": "character_a_receiver_breast_mask",
+        "role": "receiver_contact_surface"
+      },
+      {
+        "id": "A.breast.right",
+        "mask": "character_a_receiver_breast_mask",
+        "role": "receiver_contact_surface"
+      },
+      {
+        "id": "A.butt.left",
+        "mask": "character_a_receiver_butt_mask",
+        "role": "receiver_contact_surface"
+      },
+      {
+        "id": "A.butt.right",
+        "mask": "character_a_receiver_butt_mask",
+        "role": "receiver_contact_surface"
+      },
+      {
+        "id": "B.hand.left",
+        "mask": "character_b_left_hand_mask",
+        "fallback_mask": "character_b_actor_hand_mask",
+        "role": "actor_contact_driver"
+      },
+      {
+        "id": "B.hand.right",
+        "mask": "character_b_right_hand_mask",
+        "fallback_mask": "character_b_actor_hand_mask",
+        "role": "actor_contact_driver"
+      }
+    ],
+    "edges": [
+      {
+        "id": "B.left_to_A.left_breast_side_push",
+        "from": "B.hand.left",
+        "to": "A.breast.left",
+        "contact_class": "side_push",
+        "required_masks": [
+          "character_b_left_hand_mask",
+          "character_a_receiver_breast_mask",
+          "contact_zone_mask",
+          "soft_body_pressure_map",
+          "contact_shadow_mask"
+        ],
+        "occlusion_order": "B.hand.left foreground over A.breast.left at contact boundary"
+      },
+      {
+        "id": "B.right_to_A.right_breast_side_push",
+        "from": "B.hand.right",
+        "to": "A.breast.right",
+        "contact_class": "side_push",
+        "required_masks": [
+          "character_b_right_hand_mask",
+          "character_a_receiver_breast_mask",
+          "contact_zone_mask",
+          "soft_body_pressure_map",
+          "contact_shadow_mask"
+        ],
+        "occlusion_order": "B.hand.right foreground over A.breast.right at contact boundary"
+      },
+      {
+        "id": "B.left_to_A.left_butt_squeeze",
+        "from": "B.hand.left",
+        "to": "A.butt.left",
+        "contact_class": "squeeze",
+        "required_masks": [
+          "character_b_left_hand_mask",
+          "character_a_receiver_butt_mask",
+          "contact_zone_mask",
+          "soft_body_pressure_map",
+          "soft_body_indentation_mask",
+          "contact_shadow_mask"
+        ],
+        "occlusion_order": "B.hand.left foreground except fingertips may wrap behind if occlusion mask marks them as hidden"
+      },
+      {
+        "id": "B.right_to_A.right_butt_squeeze",
+        "from": "B.hand.right",
+        "to": "A.butt.right",
+        "contact_class": "squeeze",
+        "required_masks": [
+          "character_b_right_hand_mask",
+          "character_a_receiver_butt_mask",
+          "contact_zone_mask",
+          "soft_body_pressure_map",
+          "soft_body_indentation_mask",
+          "contact_shadow_mask"
+        ],
+        "occlusion_order": "B.hand.right foreground except fingertips may wrap behind if occlusion mask marks them as hidden"
+      }
+    ],
+    "edge_activation_rule": "At least one edge must be explicitly selected in generation metadata; inactive edges must have empty or zero-valued contact-zone contribution."
+  },
+  "soft_body_control_mapping": {
+    "workflow_nodes": {
+      "hand_lora": 1036,
+      "openpose_apply": 1042,
+      "depth_volume_apply": 1044,
+      "sampler": 1045
+    },
+    "slider_defaults": {
+      "pressure": 0.45,
+      "deformation": 0.38,
+      "soft_body_spread": 0.3,
+      "volume_preservation": 0.72,
+      "upward_lift": 0.25,
+      "side_pull": 0.25,
+      "under_lift": 0.2,
+      "butt_spread": 0.2,
+      "contact_shadow": 0.55,
+      "collision_clearance": 0.65
+    },
+    "current_widget_values": {
+      "openpose_apply_strength": 0.74,
+      "openpose_start_percent": 0.0,
+      "openpose_end_percent": 0.86,
+      "depth_apply_strength": 0.48,
+      "depth_start_percent": 0.0,
+      "depth_end_percent": 0.76,
+      "sampler_steps": 34,
+      "sampler_cfg": 5.4,
+      "sampler_denoise": 0.31,
+      "hand_lora_model_strength": 0.16,
+      "hand_lora_clip_strength": 0.16
+    },
+    "recommended_binding_formula": {
+      "openpose_apply_strength": "clamp(0.62 + collision_clearance * 0.18, 0.62, 0.82)",
+      "depth_apply_strength": "clamp(0.34 + deformation * 0.22 + volume_preservation * 0.08, 0.34, 0.62)",
+      "sampler_denoise": "clamp(0.22 + deformation * 0.24, 0.22, 0.46)",
+      "hand_lora_strength": "clamp(0.10 + pressure * 0.12, 0.10, 0.22)",
+      "contact_shadow_prompt_weight": "clamp(0.40 + contact_shadow * 0.35, 0.40, 0.75)"
+    }
+  },
+  "collision_and_deformation_checks": [
+    {
+      "check_id": "mask_presence",
+      "result_type": "fail_if_missing",
+      "rule": "Every active contact edge must provide actor hand mask, receiver surface mask, contact_zone_mask, pressure_map, indentation_mask, contact_shadow_mask, depth reference, and occlusion_order_mask."
+    },
+    {
+      "check_id": "hand_receiver_overlap",
+      "result_type": "numeric",
+      "rule": "intersection(actor_hand_mask, contact_zone_mask) / area(actor_hand_mask) must be >= 0.06 for active edge contact crops.",
+      "minimum": 0.06
+    },
+    {
+      "check_id": "contact_zone_containment",
+      "result_type": "numeric",
+      "rule": "contact_zone_mask must be contained by union(actor_hand_mask, receiver_surface_mask, contact_shadow_mask) after 6 pixel dilation.",
+      "minimum_containment": 0.92
+    },
+    {
+      "check_id": "pressure_inside_receiver",
+      "result_type": "numeric",
+      "rule": "soft_body_pressure_map and soft_body_indentation_mask must be contained by character_a_body_mask and the selected receiver surface mask.",
+      "minimum_containment": 0.97
+    },
+    {
+      "check_id": "no_unmasked_deformation",
+      "result_type": "visual_or_pixel_diff",
+      "rule": "Outside combined contact mask, before/after repair pixel delta should remain under QA tolerance except normal denoise noise and global color drift."
+    },
+    {
+      "check_id": "occlusion_consistency",
+      "result_type": "fail_if_ambiguous",
+      "rule": "At each active hand/body boundary, occlusion_order_mask must identify foreground ownership and match depth ordering."
+    },
+    {
+      "check_id": "hand_anatomy",
+      "result_type": "fail_if_invalid",
+      "rule": "Both active hands must keep correct wrist attachment, scale, finger count, and plausible joint curvature in required crops."
+    },
+    {
+      "check_id": "video_temporal_lock",
+      "result_type": "video_only",
+      "rule": "For video, contact zone must remain locked to hand joints across frames with no sliding, popping, or body penetration."
+    }
+  ],
+  "lane1_wiring_requirements": [
+    "Add left/right per-hand LoadImageMask slots for character A and character B, or expose equivalent split masks upstream before node 1031.",
+    "Add QA preview/save nodes for each per-hand mask and each active contact-pair edge.",
+    "Attach this contact-pair graph as a note or metadata node near the strict body contact group.",
+    "Expose soft-body sliders as graph widgets/reroutes mapped to nodes 1036, 1042, 1044, and 1045.",
+    "Provide a runtime/API binding template that accepts all required mask, pose, depth, normal, and selected contact-pair inputs without manual graph edits."
+  ],
+  "validation_state": {
+    "structural_review": "passed",
+    "actual_mask_files_created": false,
+    "runtime_import_or_execution": "not_run_by_lane_2",
+    "next_runtime_owner": "Lane_4",
+    "next_graph_owner": "Lane_1",
+    "qa_owner": "Lane_5"
+  }
+}
