@@ -39,3 +39,12 @@ The handoff recommends preserving provisional status for the SDXL preset until L
 - Status: `20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json` remains in `ec2_requests` and not processed.
 - Prior v1 candidate produced a remote artifact on EC2 (`...v1_00001_.png`) but was not visually reviewed.
 - `lane6_to_lane5` handoff remains valid as **provisional/needs_more_evidence**, with pending visual QA and AWS stop-state follow-up.
+
+## Current Delta (2026-07-04T17:32:00Z)
+
+- `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\processed` still has no completion artifact for `20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json`.
+- Main Flow SHA currently observed by Lane 6 is `5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9`; existing v1.1 evidence file records the older creation hash, so hash parity should be confirmed in final completion.
+- New blocker artifacts added:
+  - `C:\Comfy_UI\Implementation\evidence\generation_preset_lab\wave42_sdxl_safe_adult_clothed_low_vram_v1_1_runtime_gap_20260704_173200.json`
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_6\Lane_6\issues\20260704_173200_lane6_v1_1_runtime_request_gap.json`
+- Updated `C:\Comfy_UI\Implementation\manifests\generation_preset_lab\wave42_sdxl_safe_adult_clothed_low_vram_v1_1_manifest_20260704_162157.json` with pending/runtime-blocker status and explicit Lane 4 completion action.

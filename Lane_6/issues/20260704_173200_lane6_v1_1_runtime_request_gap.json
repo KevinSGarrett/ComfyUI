@@ -1,0 +1,31 @@
+{
+  "issue_id": "20260704_173200_lane6_v1_1_runtime_request_gap",
+  "lane_id": "Lane_6",
+  "created_at_utc": "2026-07-04T17:32:00Z",
+  "category": "runtime",
+  "severity": "blocking_candidate_media_generation",
+  "summary": "Lane 6 v1.1 SDXL safe adult clothed runtime request remains uncompleted in shared_state/ec2_requests and no v1.1 candidate completion payload exists.",
+  "evidence": {
+    "pending_request": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json",
+    "check_time_utc": "2026-07-04T17:32:00Z",
+    "processed_matches": [],
+    "queue_location": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests",
+    "processed_dir": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\processed",
+    "lane4_status": "no completion record"
+  },
+  "main_flow": {
+    "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "current_sha256_observed": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9"
+  },
+  "next_action": "Lane_4 should close the v1.1 request by returning C:\\Comfy_UI\\Implementation\\evidence\\generation_preset_lab\\..._candidate_output_evidence.json and strict visual review evidence, or return a precise runtime/model blocker with the same request ID.",
+  "blocked_scope": [
+    "new real candidate image output for v1.1",
+    "strict hand/anatomy visual review",
+    "provenance completion for lane 5 acceptance"
+  ],
+  "unblocked_scope": [
+    "AI_Front self-hosted provider contract verification",
+    "schema-bound evidence packaging",
+    "preset traceability alignment"
+  ]
+}
