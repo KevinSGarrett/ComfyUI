@@ -59,3 +59,16 @@
 - Strict hand-review boundary remains `not_visually_reviewed`; no candidate media exists in this slice.
 - Canonical Main Flow hash for this slice: `5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9`.
 - Next work: continue toward preset/candidate runtime proof via Lane 4 request results or local ComfyUI availability; do not promote trackers from this trace-only evidence.
+
+## 2026-07-04T16:32:11Z - Request Runner Evidence Complete
+
+- Added `C:\Comfy_UI_Lora\AI_Front\src\self_hosted_llm_request_runner.py`.
+- Added provider request runner unit coverage; tests passed 7/7.
+- `py_compile` passed for adapter and request runner.
+- Created current-hash provider request `C:\Comfy_UI_Lora\AI_Front\examples\provider_requests\wave42_sdxl_safe_adult_clothed_low_vram_request_20260704_163146.json`.
+- Live local Ollama `qwen2.5:14b` request-runner execution generated `C:\Comfy_UI_Lora\AI_Front\examples\decision_traces\wave42_request_runner_trace_20260704_163146.json`.
+- Provider request and generated trace both validate against their AI_Front schemas.
+- Evidence written to `C:\Comfy_UI\Implementation\evidence\generation_preset_lab\wave42_ai_front_self_hosted_request_runner_evidence_20260704_163146.json`.
+- Manifest written to `C:\Comfy_UI\Implementation\manifests\generation_preset_lab\wave42_ai_front_self_hosted_request_runner_manifest_20260704_163146.json`.
+- No cloud provider used, no tracker promotion authorized, no Main Flow edit performed.
+- Candidate media remains blocked pending Lane 4 runtime output or local ComfyUI availability.
