@@ -127,3 +127,12 @@
 - Confirmed `Lane_4/Lane_4/requests` still has only `...160530...` and `...155047...` processed entries.
 - No new candidate artifact, no new QA evidence, no new visual review action possible in this lane slice.
 - Next action remains unchanged: wait for Lane 4 to execute v1.1 request and return output for strict hand/anatomy review.
+
+## 2026-07-04T17:38:00Z - Handoff Bundle Tightened, Manifest Status Refreshed
+
+- Updated `wave42_sdxl_safe_adult_clothed_low_vram_v1_1_manifest_20260704_162157.json` status to `runtime_pending_needs_more_evidence` and linked the v1.1 runtime-gap evidence artifact.
+- Added compact v1.1 follow-up notes to `lane5_audit_handoff_index_20260704.md`:
+  - confirms Main Flow SHA `5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9`
+  - reasserts `20260704_162157` request remains open and blocks candidate acceptance.
+- Added `20260704_173800_lane6_to_lane5_audit_handoff_update.json` as a single auditable Lane 5 handoff evidence index.
+- No self-hosted provider route or candidate generation settings were changed in this slice; still no generated v1.1 media available for visual/hand-review.

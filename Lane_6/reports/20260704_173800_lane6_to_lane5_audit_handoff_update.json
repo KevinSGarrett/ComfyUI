@@ -1,0 +1,103 @@
+{
+  "manifest_id": "lane6_to_lane5_audit_handoff_20260704_173800",
+  "lane_id": "Lane_6",
+  "created_at_utc": "2026-07-04T17:38:00Z",
+  "purpose": "Update Lane 5 handoff with evidence split between completed v1 SDXL EC2 output and unresolved v1.1 runtime request state.",
+  "canonical_main_flow": {
+    "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "edited_by_lane_6": false
+  },
+  "audit_items": [
+    {
+      "evidence_path": "C:\\Comfy_UI\\Implementation\\evidence\\generation_preset_lab\\wave42_ai_front_self_hosted_llm_qwen14b_text_planning_v1_evidence_20260704_155133.json",
+      "size_bytes": 6350,
+      "sha256": "A05550B589D3FEF8120317DA429417221592E246F8F7CFD8B739CEA8783E0A60",
+      "claim_status": "passed",
+      "audit_summary": "Local self-hosted Qwen 14B planning path proven through adapter probe evidence.",
+      "proves": [
+        "AI_Front text-planning can run on local OpenAI-compatible endpoint",
+        "cloud provider not required"
+      ],
+      "does_not_prove": [
+        "final candidate media",
+        "visual or hand/anatomy acceptance"
+      ]
+    },
+    {
+      "evidence_path": "C:\\Comfy_UI\\Implementation\\evidence\\generation_preset_lab\\wave42_ai_front_self_hosted_request_runner_evidence_20260704_164142.json",
+      "size_bytes": 9515,
+      "sha256": "815B3BCA603335C5A45941199A2B72C9984EB1ACBBE671391739213CE699FB36",
+      "claim_status": "passed",
+      "audit_summary": "Self-hosted provider-request runner validated with trace/schema checks and request framing for SDXL v1.1 preset.",
+      "proves": [
+        "provider request-to-trace execution works with schema and local-only path",
+        "self-hosted route can produce advisory decision trace"
+      ],
+      "does_not_prove": [
+        "candidate output existence",
+        "runtime media quality"
+      ]
+    },
+    {
+      "evidence_path": "C:\\Comfy_UI\\Implementation\\manifests\\generation_preset_lab\\wave42_sdxl_safe_adult_clothed_low_vram_v1_manifest_20260704_160530.json",
+      "size_bytes": 1812,
+      "sha256": "B5E8A451474E849D45F477073570B27ACE2658D0E9611B0C45D5C1E940F346E6",
+      "claim_status": "provisional",
+      "audit_summary": "v1 preset and request evidence are traceable and had a runtime candidate execution path on EC2.",
+      "proves": [
+        "named v1 preset exists",
+        "runtime request and execution artifact were prepared"
+      ],
+      "does_not_prove": [
+        "v1.1 completion",
+        "safety/QA acceptance"
+      ]
+    },
+    {
+      "evidence_path": "C:\\Comfy_UI\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_lane6_sdxl_candidate_runtime_20260704T163607Z.json",
+      "size_bytes": 12865,
+      "sha256": "C1A3E1F3AE3323F43C19AD8577BDB536480C687374130AE7FF85F22D4A5DCDAC",
+      "claim_status": "passed",
+      "audit_summary": "Lane 4 evidence confirms an EC2 SDXL generation for the earlier v1 request with remote image hash de8e72..., but no v1.1 evidence is present in this record.",
+      "proves": [
+        "real candidate generation succeeded on EC2 for v1 request",
+        "RealVisXL was visible and load-completed"
+      ],
+      "does_not_prove": [
+        "Lane 6 v1.1 request completion",
+        "visual acceptance",
+        "final stop-state proof for EC2 instance"
+      ]
+    },
+    {
+      "evidence_path": "C:\\Comfy_UI\\Implementation\\evidence\\generation_preset_lab\\wave42_sdxl_safe_adult_clothed_low_vram_v1_1_runtime_gap_20260704_173200.json",
+      "size_bytes": 7494,
+      "sha256": "24D8BFE14DB4E9BA5E5F21ED5CA8A7AED0AB7623121B91F2644A67B57BB80DEF",
+      "claim_status": "blocked",
+      "audit_summary": "Lane 6 created a new blocker artifact clarifying that the v1.1 request has no completion payload in ec2_requests/processed and no v1.1 media exists.",
+      "proves": [
+        "v1.1 runtime request still pending",
+        "next action remains unfulfilled"
+      ],
+      "does_not_prove": [
+        "candidate output",
+        "strict visual hand review",
+        "proven readiness for promotion"
+      ]
+    }
+  ],
+  "pending_external_actions": [
+    {
+      "owner": "Lane_4",
+      "request_path": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json",
+      "needed_result": "New completion payload for v1.1 candidate (hash + remote/local path + strict hand/anatomy review recommendation) OR a precise model/runtime blocker with same request id."
+    },
+    {
+      "owner": "Lane_4",
+      "request_path": "C:\\Comfy_UI\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_160530_Lane_6_sdxl_safe_adult_clothed_low_vram_candidate.json",
+      "needed_result": "If reused as fallback, explicit statement that this is v1 only and not a v1.1 substitute."
+    }
+  ],
+  "recommended_lane_5_action": "Preserve v1.1 as needs_more_evidence; audit v1 runtime output only as historical proof. Do not promote Lane 6 SDXL media claims until v1.1 completion and strict visual hand review are returned."
+}
