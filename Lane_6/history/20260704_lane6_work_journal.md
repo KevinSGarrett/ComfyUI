@@ -41,3 +41,21 @@
 - Live qwen2.5:14b adapter chat probe timed out before response.
 - Patched adapter to catch timeout/OSError/URLError as `ProviderRuntimeError` and added `--timeout-seconds` CLI option.
 - Next validation: rerun unit tests, run models-only live probe, then retry live chat with longer timeout.
+
+## 2026-07-04T16:25:00Z - Adapter Decision Trace Mode
+
+- Added `--decision-trace-out` CLI mode to `self_hosted_llm_adapter.py`.
+- Added trace JSON writer helper and unit coverage that validates written traces against `self_hosted_llm_decision_trace.schema.json`.
+- Next validation: unit tests, live trace generation, evidence package.
+
+## 2026-07-04T16:27:30Z - Trace Mode Evidence Complete
+
+- Unit tests passed: 5/5.
+- `py_compile` passed for `C:\Comfy_UI_Lora\AI_Front\src\self_hosted_llm_adapter.py`.
+- Live local Ollama `qwen2.5:14b` trace generation passed through `--decision-trace-out`.
+- Generated trace validates against `self_hosted_llm_decision_trace.schema.json`.
+- Evidence written to `C:\Comfy_UI\Implementation\evidence\generation_preset_lab\wave42_ai_front_self_hosted_trace_mode_evidence_20260704_162708.json`.
+- Manifest written to `C:\Comfy_UI\Implementation\manifests\generation_preset_lab\wave42_ai_front_self_hosted_trace_mode_manifest_20260704_162708.json`.
+- Strict hand-review boundary remains `not_visually_reviewed`; no candidate media exists in this slice.
+- Canonical Main Flow hash for this slice: `5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9`.
+- Next work: continue toward preset/candidate runtime proof via Lane 4 request results or local ComfyUI availability; do not promote trackers from this trace-only evidence.
