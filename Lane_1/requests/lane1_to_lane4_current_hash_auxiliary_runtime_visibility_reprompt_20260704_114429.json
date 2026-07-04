@@ -1,0 +1,49 @@
+{
+    "request_id":  "lane1-to-lane4-current-hash-auxiliary-runtime-visibility-reprompt-20260704_114433",
+    "created_at_utc":  "2026-07-04T16:44:33Z",
+    "from_lane":  "Lane_1",
+    "to_lane":  "Lane_4",
+    "priority":  "high_when_next_runtime_window_is_available",
+    "subject":  "Reconfirm runtime-visible auxiliary detector/preprocessor assets for current Main Flow hash",
+    "workflow_path":  "C:\\\\Comfy_UI\\\\Implementation\\\\workflows\\\\ui\\\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256":  "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+    "requested_checks":  [
+                             {
+                                 "reference":  "bbox/hand_yolov8n.pt",
+                                 "expected_runtime_path":  "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+                                 "node_ids":  [
+                                                  973
+                                              ],
+                                 "next_action":  "Need runtime existence + size/sha256 readback in current-hash ComfyUI container"
+                             },
+                             {
+                                 "reference":  "sam_vit_b_01ec64.pth",
+                                 "expected_runtime_path":  "/home/ubuntu/ComfyUI/models/sams/sam_vit_b_01ec64.pth",
+                                 "node_ids":  [
+                                                  975
+                                              ],
+                                 "next_action":  "Need runtime existence + size/sha256 readback in current-hash ComfyUI container"
+                             },
+                             {
+                                 "reference":  "dw-ll_ucoco_384_bs5.torchscript.pt",
+                                 "expected_runtime_path":  "/home/ubuntu/ComfyUI/models/dwpose/dw-ll_ucoco_384_bs5.torchscript.pt",
+                                 "node_ids":  [
+                                                  978,
+                                                  1040
+                                              ],
+                                 "next_action":  "Need runtime existence + size/sha256 readback in current-hash ComfyUI container"
+                             },
+                             {
+                                 "reference":  "yolox_l.onnx",
+                                 "expected_runtime_path":  "/home/ubuntu/ComfyUI/models/dwpose/yolox_l.onnx",
+                                 "node_ids":  [
+                                                  978,
+                                                  1040
+                                              ],
+                                 "next_action":  "Need runtime existence + ComfyUI DWPreprocessor load test for this file path"
+                             }
+                         ],
+    "minimum_acceptance":  [
+                               "For each item return runtime path, existence, and evidence-ready check output; if missing, provide exact sanctioned remediation path and owner."
+                           ]
+}
