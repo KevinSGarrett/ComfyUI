@@ -1,0 +1,30 @@
+{
+  "issue_id": "lane1_current_hash_remaining_runtime_visual_blockers_20260704_163216",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:32:16Z",
+  "status": "open",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "evidence": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_current_hash_reference_closure_20260704_163216.evidence.json",
+  "closed_or_improved": [
+    "missing LoadImage references for nodes 1051-1054 resolved as zero/off placeholders",
+    "missing local model references resolved in current Lane 1 validation"
+  ],
+  "blockers": [
+    {
+      "category": "per_hand_semantic_quality",
+      "description": "Nodes 1051-1054 now resolve but are all-zero/off placeholders, not same-scene left/right hand masks.",
+      "next_action": "Lane 2 should publish provenance for placeholder creation and later provide same-scene split masks if per-hand contact QA is required."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "Node 1009 actor body mask remains all-zero and optional only for actor_hand_only_contact_v1.",
+      "next_action": "Lane 2 should provide same-scene actor body segmentation before full actor-body collision QA."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "Current hash has not been executed or catalog-validated in live ComfyUI by Lane 4.",
+      "next_action": "Lane 4 should process the current-hash runtime request after active lease/storage constraints are safe."
+    }
+  ]
+}

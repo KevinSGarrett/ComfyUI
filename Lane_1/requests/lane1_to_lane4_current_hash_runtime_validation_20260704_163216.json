@@ -1,0 +1,29 @@
+{
+  "request_id": "lane1_to_lane4_current_hash_runtime_validation_20260704_163216",
+  "requesting_lane": "Lane_1",
+  "target_lane": "Lane_4",
+  "created_at_utc": "2026-07-04T16:32:16Z",
+  "priority": "after_active_lease_and_storage_cleanup_constraints",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "context": "Lane 1 current-hash structural validation now reports 0 missing LoadImage references and 0 missing model references. Per-hand files are zero/off placeholders; runtime proof still requires Lane 4. Lane 3 pending request used earlier hash 273158..., so target the current hash 5c67... for graph-version-specific runtime claims.",
+  "required_inputs": [
+    "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_current_hash_reference_closure_20260704_163216.evidence.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_current_hash_reference_closure_20260704_163216.validation.json",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_162424_main_flow_model_visibility_evidence.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_162424_Lane_3_to_Lane_4_main_flow_runtime_visibility.json"
+  ],
+  "requested_checks": [
+    "Verify the runtime sees current workflow hash 5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9 or record the exact deployed hash mismatch.",
+    "Verify /object_info or equivalent catalog visibility for the current 29 unique model references, including the 3 Wave42 SDXL LoRAs outside Lane 3's 26-name evidence set.",
+    "Run the smallest safe load/catalog smoke check for representative SDXL, Flux, Z-Image, ControlNet, VAE, upscale, text-encoder, and LoRA families, if runtime conditions allow.",
+    "If executing the workflow or a reduced prompt, record output paths/hashes and do not claim visual quality without Lane 5/Lane 6 strict review."
+  ],
+  "known_limitations": [
+    "Per-hand masks nodes 1051-1054 are zero/off placeholders, not proven aligned left/right masks.",
+    "Node 1009 actor body mask remains zero and optional only for actor_hand_only_contact_v1.",
+    "Storage pressure and EC2 lease/cost controls take precedence; do not start/stop EC2 outside Lane 4 protocol."
+  ],
+  "max_runtime_minutes": 45,
+  "stop_after_completion": true
+}

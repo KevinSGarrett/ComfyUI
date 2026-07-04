@@ -1,0 +1,470 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane1_current_hash_reference_closure_20260704_163216",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:32:16Z",
+  "claim": {
+    "summary": "Current-hash Main Flow structural validation now has 0 link/endpoint errors, 0 missing LoadImage references, and 0 missing model references. Nodes 1051-1054 resolve via zero/off placeholder masks, so file-reference readiness is structurally closed while per-hand visual/spatial quality and runtime execution remain unproven.",
+    "status": "provisional",
+    "requirement_ids": [
+      "main_flow_current_hash_reference_closure",
+      "lane2_per_hand_placeholder_observation",
+      "lane3_model_visibility_intake",
+      "lane4_runtime_request_current_hash"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+    "settings": {
+      "validation_command": "python validate_main_flow.py --workflow C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json --reference-root C:\\Comfy_UI\\Input_References --reference-root C:\\Comfy_UI\\input --reference-root C:\\Comfy_UI --model-root C:\\Comfy_UI\\models --model-root C:\\Comfy_UI\\Runtime_Data\\models --model-root C:\\Comfy_UI_Lora\\models",
+      "source_lane3_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_162424_main_flow_model_visibility_evidence.json",
+      "source_lane7_dashboard": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_7\\reports\\20260704_162442_lane7_end_to_end_dashboard.md",
+      "current_runtime_request": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_163216_Lane_1_current_hash_main_flow_runtime_validation.json"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_1",
+    "ec2_state_after": "not_checked_by_lane_1",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane1_runtime_action": "Lane 1 did not start or stop EC2 and did not call live endpoints."
+  },
+  "models": [
+    {
+      "name": "RealESRGAN_x4plus.pth",
+      "family": "upscale",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\upscale_models\\RealESRGAN_x4plus.pth",
+      "role": "UpscaleModelLoader",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "RealVisXL_V5.0_fp16.safetensors",
+      "family": "sdxl_checkpoint",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\checkpoints\\RealVisXL_V5.0_fp16.safetensors",
+      "role": "CheckpointLoaderSimple",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "ae.safetensors",
+      "family": "vae",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\vae\\ae.safetensors",
+      "role": "VAELoader",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "controlnet-canny-sdxl-1.0-small.safetensors",
+      "family": "controlnet",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\controlnet\\controlnet-canny-sdxl-1.0-small.safetensors",
+      "role": "ControlNetLoader",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "family": "controlnet",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\controlnet\\controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "role": "ControlNetLoader",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "controlnet-openpose-sdxl-1.0.safetensors",
+      "family": "controlnet",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\controlnet\\controlnet-openpose-sdxl-1.0.safetensors",
+      "role": "ControlNetLoader",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "flux1-dev-fp8.safetensors",
+      "family": "flux_checkpoint",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\checkpoints\\flux1-dev-fp8.safetensors",
+      "role": "CheckpointLoaderSimple",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "flux1-schnell-fp8.safetensors",
+      "family": "flux_checkpoint",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\checkpoints\\flux1-schnell-fp8.safetensors",
+      "role": "CheckpointLoaderSimple",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "qwen_3_4b.safetensors",
+      "family": "text_encoder",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\text_encoders\\qwen_3_4b.safetensors",
+      "role": "CLIPLoader",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_Oily_skin_style_v1.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_SWEATY.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_Sweaty_1.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_flux_sweat_v2.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_mascara-tears-v2.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Better_hands_flux_v1_0.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Detailed_Hands-000001.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Hand_v2.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_feminine_hands.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/skin/flux_skin_Bombshell_Flux_V3.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\skin\\flux_skin_Bombshell_Flux_V3.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/skin/flux_skin_FC-Bandeau.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\skin\\flux_skin_FC-Bandeau.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\skin\\flux_skin_OiledSkin_FluxDev.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\style\\flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\fluids\\sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\jewelry_accessories\\sdxl_jewelry_accessories_Hands.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\pose_camera\\sdxl_adult_male_Double_Kiss_POV.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\skin_imperfections\\sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "family": "lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\skin_texture\\sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    },
+    {
+      "name": "z_image_turbo_bf16.safetensors",
+      "family": "z_image_diffusion_model",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\diffusion_models\\z_image_turbo_bf16.safetensors",
+      "role": "UNETLoader",
+      "visibility_evidence": "present_in_lane1_current_hash_validation_model_roots",
+      "load_result": "runtime_load_pending_lane4"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+      "type": "current_canonical_workflow",
+      "size_bytes": 1309723,
+      "sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+      "description": "Current canonical Main Flow after Lane 1 spatial policy metadata patch."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_current_hash_reference_closure_20260704_163216.validation.json",
+      "type": "current_validation_report",
+      "size_bytes": 59886,
+      "sha256": "f1c6af6eecf5abf9c0104740f3283876835aeeec1cc80ab977fc9e44e2a8b2fc",
+      "description": "Current structural/model/LoadImage validation report."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_current_hash_reference_closure_20260704_163216.model_and_asset_coverage.json",
+      "type": "model_and_asset_coverage_report",
+      "size_bytes": 8068,
+      "sha256": "2db1af5e9305badc200882335700e65b855631e47458a659db6660dbaa82f954",
+      "description": "Focused report combining current validation, Lane 3 evidence, and per-hand placeholder metrics."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_162424_main_flow_model_visibility_evidence.json",
+      "type": "source_lane3_model_visibility_evidence",
+      "size_bytes": 17031,
+      "sha256": "a6ab87ff1c8c111545109837f6daf7cde43a2fc5e9f17463b775859ca2102ad5",
+      "description": "Lane 3 26-name local model path/hash evidence."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_162424_main_flow_model_visibility_reconciliation.md",
+      "type": "source_lane3_model_reconciliation_report",
+      "size_bytes": 8647,
+      "sha256": "a90cd29f524ad21bf86585f4234384770ce1dd1a9279630c04e85f3e081c25ad",
+      "description": "Lane 3 model reconciliation report."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_7\\reports\\20260704_162442_lane7_end_to_end_dashboard.md",
+      "type": "source_lane7_dashboard",
+      "size_bytes": 10206,
+      "sha256": "ee3c50d9795e83a79c4bd38917e7009f4c970109bdb9435c9e08e324872ce96f",
+      "description": "Lane 7 dashboard consumed and superseded for Lane 1 current hash."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane2_per_hand_placeholder_observation_20260704_163216.json",
+      "type": "lane2_response",
+      "size_bytes": 2752,
+      "sha256": "7e766abf2bbe243511d847e056a71917f520fc1d1c02d9401a0cfe4ac568e396",
+      "description": "Lane 1 observation/provenance request for per-hand placeholders."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane3_current_model_coverage_addendum_20260704_163216.json",
+      "type": "lane3_response",
+      "size_bytes": 1453,
+      "sha256": "316ed1b7c67c688a417d6ad5329a2b62160a2a1a90a2f17aa3acc76020452550",
+      "description": "Lane 1 current 29-name model coverage addendum for Lane 3."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane7_current_hash_update_20260704_163216.json",
+      "type": "lane7_response",
+      "size_bytes": 781,
+      "sha256": "a942b4c378479d104b249f9b302cd300366bb9006276d5d8ec7507160c0c55d0",
+      "description": "Lane 1 current hash/status update for Lane 7."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane4_current_hash_runtime_validation_20260704_163216.json",
+      "type": "lane4_runtime_request_copy",
+      "size_bytes": 2461,
+      "sha256": "70d79c8522a2f0809563847fbeb6b880d6cf3d8d9ddb34afd84e9b29afa2151e",
+      "description": "Lane 1 request copy for current-hash runtime validation."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_163216_Lane_1_current_hash_main_flow_runtime_validation.json",
+      "type": "ec2_runtime_request",
+      "size_bytes": 2379,
+      "sha256": "d578ed94976a2ebf16e5a81c49afd604617bc8816d297ec61de492d1aa306264",
+      "description": "Protocol-visible Lane 4 EC2/runtime request for current-hash validation; not committed by Lane 1 branch."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\hand_reviews\\lane1_current_hash_reference_closure_hand_review_20260704_163216.json",
+      "type": "hand_review_record",
+      "size_bytes": 1123,
+      "sha256": "8a05c617247c2ddbbf93147d49dca45b82ec876143857f60bf22c62faa552a6e",
+      "description": "Strict hand/contact review limitation for this non-visual validation slice."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+      "type": "resolved_zero_mask_placeholder",
+      "size_bytes": 3129,
+      "sha256": "d69112264db6c2c1b6f6bc930b7d7cf38c27a4fead1b5000259265c5405c66ef",
+      "description": "1024x1024 zero/off mask placeholder, nonzero_ratio=0.0"
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+      "type": "resolved_zero_mask_placeholder",
+      "size_bytes": 3129,
+      "sha256": "d69112264db6c2c1b6f6bc930b7d7cf38c27a4fead1b5000259265c5405c66ef",
+      "description": "1024x1024 zero/off mask placeholder, nonzero_ratio=0.0"
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+      "type": "resolved_zero_mask_placeholder",
+      "size_bytes": 3129,
+      "sha256": "d69112264db6c2c1b6f6bc930b7d7cf38c27a4fead1b5000259265c5405c66ef",
+      "description": "1024x1024 zero/off mask placeholder, nonzero_ratio=0.0"
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png",
+      "type": "resolved_zero_mask_placeholder",
+      "size_bytes": 3129,
+      "sha256": "d69112264db6c2c1b6f6bc930b7d7cf38c27a4fead1b5000259265c5405c66ef",
+      "description": "1024x1024 zero/off mask placeholder, nonzero_ratio=0.0"
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png",
+      "type": "resolved_zero_mask_placeholder",
+      "size_bytes": 3129,
+      "sha256": "d69112264db6c2c1b6f6bc930b7d7cf38c27a4fead1b5000259265c5405c66ef",
+      "description": "1024x1024 zero/off mask placeholder, nonzero_ratio=0.0"
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "workflow_json_valid",
+        "result": "pass",
+        "notes": "Workflow parsed successfully in current validation."
+      },
+      {
+        "name": "graph_structure",
+        "result": "pass",
+        "notes": "node_count=769; link_count=1137; endpoint_errors=0; active_input_errors=0"
+      },
+      {
+        "name": "load_image_references",
+        "result": "pass",
+        "notes": "90 LoadImage/LoadImageMask references checked; 0 missing."
+      },
+      {
+        "name": "model_filenames",
+        "result": "pass",
+        "notes": "71 model reference occurrences checked; 29 unique names; 0 missing under configured roots."
+      },
+      {
+        "name": "lane3_model_evidence_intake",
+        "result": "provisional",
+        "notes": "Lane 3 provides path/hash evidence for 26 names; current workflow has 29 unique names, with 3 extra Wave42 SDXL LoRAs resolved locally and covered by earlier Lane 4 LoRA visibility evidence."
+      },
+      {
+        "name": "per_hand_placeholder_files",
+        "result": "provisional",
+        "notes": "Nodes 1051-1054 resolve to all-zero 1024x1024 placeholder masks; provenance response requested from Lane 2."
+      },
+      {
+        "name": "runtime_validation",
+        "result": "not_applicable",
+        "notes": "No live ComfyUI runtime call by Lane 1; Lane 4 current-hash request created."
+      },
+      {
+        "name": "strict_hand_visual_review",
+        "result": "provisional",
+        "notes": "No generated media or overlay reviewed; per-hand zero placeholders do not prove hand quality."
+      }
+    ],
+    "failure_reasons": [
+      "Per-hand masks are zero/off placeholders and do not prove left/right hand alignment.",
+      "No Lane 2 materialization/provenance artifact was found for the placeholder creation at evidence time.",
+      "Node 1009 actor body mask remains zero and optional only for actor_hand_only_contact_v1.",
+      "Current-hash runtime execution and visual QA remain pending Lane 4/Lane 5/Lane 6."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [
+      "Current Main Flow local structural/reference validation: graph links clean, LoadImage references resolve, model filenames resolve under configured local roots."
+    ],
+    "does_not_prove_rows": [
+      "current Main Flow runtime execution",
+      "visual hand/contact quality",
+      "per-hand left/right spatial alignment",
+      "full actor-body collision QA",
+      "tracker promotion without Lane 5 audit"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "per_hand_semantic_quality",
+      "description": "Nodes 1051-1054 now resolve but are all-zero/off placeholders, not same-scene left/right hand masks.",
+      "next_action": "Lane 2 should publish provenance for placeholder creation and later provide same-scene split masks if per-hand contact QA is required."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "Node 1009 actor body mask remains all-zero and optional only for actor_hand_only_contact_v1.",
+      "next_action": "Lane 2 should provide same-scene actor body segmentation before full actor-body collision QA."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "Current hash has not been executed or catalog-validated in live ComfyUI by Lane 4.",
+      "next_action": "Lane 4 should process the current-hash runtime request after active lease/storage constraints are safe."
+    }
+  ]
+}

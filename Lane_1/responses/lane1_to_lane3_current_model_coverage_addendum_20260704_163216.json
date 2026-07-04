@@ -1,0 +1,19 @@
+{
+  "response_id": "lane1_to_lane3_current_model_coverage_addendum_20260704_163216",
+  "responding_lane": "Lane_1",
+  "target_lane": "Lane_3",
+  "created_at_utc": "2026-07-04T16:32:16Z",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "current_workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "source_lane3_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_162424_main_flow_model_visibility_evidence.json",
+  "lane3_evidence_workflow_sha256": "273158B6B84CEFC67A706AC1C4656D90CFBEBF04F0890A9230DD526475D5B96D",
+  "current_unique_model_reference_count": 29,
+  "lane3_evidence_unique_model_count": 26,
+  "current_refs_not_in_lane3_26_name_set": [
+    "wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+    "wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+    "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors"
+  ],
+  "lane1_current_validation_result": "0 missing model references under configured roots",
+  "requested_lane3_followup": "Please publish an addendum or confirm that the current 29 unique Main Flow model-reference set is covered, noting that the 3 extra Wave42 SDXL LoRAs were outside the 26-name Lane 3 evidence set but resolve locally and were included in earlier Lane 4 LoRA visibility evidence."
+}

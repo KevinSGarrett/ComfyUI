@@ -41,3 +41,12 @@
 - Nodes 1051-1054 semantics: exact-name zero/off placeholders or same-scene left/right split masks only.
 - Validation: workflow_sha256=5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9, node_count=769, link_count=1137, endpoint_errors=0, active_input_errors=0, missing_load_images=4, missing_model_refs=0.
 - Evidence: `C:\Comfy_UI_Lora\5_sessions\Lane_1\evidence\lane1_spatial_asset_policy_20260704_162635.evidence.json`; schema validation: valid.
+
+
+## 2026-07-04T16:32:16Z - Current hash reference closure validated
+
+- Re-ran Main Flow validator and observed workflow_sha256=5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9, node_count=769, link_count=1137, endpoint_errors=0, active_input_errors=0, missing_load_images=0, missing_model_refs=0.
+- Nodes 1051-1054 now resolve as exact-name all-zero/off placeholder masks; Lane 2 provenance follow-up requested.
+- Consumed Lane 3 26-name model evidence and recorded current workflow has 29 unique model references, with 3 extra Wave42 SDXL LoRAs outside Lane 3's 26-name set.
+- Created Lane 4 current-hash runtime validation request `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_163216_Lane_1_current_hash_main_flow_runtime_validation.json` without starting/stopping EC2.
+- Evidence: `C:\Comfy_UI_Lora\5_sessions\Lane_1\evidence\lane1_current_hash_reference_closure_20260704_163216.evidence.json`; schema validation: valid.

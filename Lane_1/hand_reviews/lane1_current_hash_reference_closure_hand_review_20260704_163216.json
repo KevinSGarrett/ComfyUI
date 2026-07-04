@@ -1,0 +1,19 @@
+{
+  "review_id": "lane1_current_hash_reference_closure_hand_review_20260704_163216",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:32:16Z",
+  "scope": "workflow/reference/model closure after zero/off per-hand placeholders appeared",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "verdict": "not_visually_reviewed",
+  "review_basis": "workflow structure, file existence, mask metrics, and model-root validation only",
+  "actual_generated_media_reviewed": [],
+  "checks": {
+    "per_hand_mask_alignment": "not_proven_zero_off_placeholders_only",
+    "left_right_hand_identity": "not_proven_zero_off_placeholders_only",
+    "contact_zone_alignment": "not_visually_reviewed",
+    "collision_or_interpenetration": "not_visually_reviewed",
+    "soft_body_deformation_consistency": "runtime_visual_review_required"
+  },
+  "notes": "All LoadImageMask files now resolve, but per-hand masks are all-zero placeholders and do not prove hand/contact quality."
+}
