@@ -1,0 +1,26 @@
+{
+  "issue_id": "lane1_spatial_asset_remaining_blockers_20260704_162635",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:26:35Z",
+  "status": "open",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "evidence": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_spatial_asset_policy_20260704_162635.evidence.json",
+  "blockers": [
+    {
+      "category": "missing_per_hand_placeholder_assets",
+      "description": "Nodes 1051-1054 still reference exact per-hand files that do not exist under configured reference roots.",
+      "next_action": "Lane 2 should materialize exact-name 1024x1024 all-zero/off placeholders or same-scene split masks at the four requested paths."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "Node 1009 character_b_body_mask.png is present but zero-valued and optional only for actor_hand_only_contact_v1.",
+      "next_action": "Lane 2 should provide same-scene actor body segmentation when full actor-body collision QA is required."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "Current workflow has not been executed in live ComfyUI after the spatial asset policy patch.",
+      "next_action": "After missing per-hand files resolve, Lane 4 should run current-hash runtime validation inside a lease window if requested."
+    }
+  ]
+}

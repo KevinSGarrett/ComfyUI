@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane1_spatial_asset_policy_20260704_162635",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:26:35Z",
+  "claim": {
+    "summary": "Lane 1 consumed Lane 2 spatial asset audit and patched Main Flow metadata to keep the current lower-hip-derived active slot group, forbid cross-scene strict side-push mask reuse, and define nodes 1051-1054 as exact-name zero/off placeholder or same-scene split override slots. Graph validation passes; runtime remains blocked by four missing per-hand files.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_to_lane1_spatial_asset_audit_request_20260704_162200",
+      "main_flow_spatial_asset_policy",
+      "nodes_1051_1054_per_hand_slots"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+    "settings": {
+      "backup_path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_spatial_asset_policy_20260704_112413.json",
+      "source_lane2_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_spatial_asset_audit_request_20260704_162200.md",
+      "source_lane2_artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162200\\lane2_main_flow_spatial_asset_audit_20260704_162200.json",
+      "validation_command": "python validate_main_flow.py --workflow C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json --reference-root C:\\Comfy_UI\\Input_References --reference-root C:\\Comfy_UI\\input --reference-root C:\\Comfy_UI --model-root C:\\Comfy_UI\\models --model-root C:\\Comfy_UI\\Runtime_Data\\models --model-root C:\\Comfy_UI_Lora\\models"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_1",
+    "ec2_state_after": "not_checked_by_lane_1",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane1_runtime_action": "EC2 was not started or stopped; no live endpoint was called."
+  },
+  "models": [],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+      "type": "patched_canonical_workflow",
+      "size_bytes": 1309723,
+      "sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+      "description": "Canonical Main Flow after spatial asset policy metadata patch."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_spatial_asset_policy_20260704_112413.json",
+      "type": "pre_patch_workflow_backup",
+      "size_bytes": 1300902,
+      "sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+      "description": "Timestamped backup before spatial asset policy patch."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_spatial_asset_policy_20260704_162635.post_validation.json",
+      "type": "post_patch_validation_report",
+      "size_bytes": 60431,
+      "sha256": "8271073523ca9c53914fcae2569aeabf898bd00c241c5f4e759627702ee7a5fb",
+      "description": "Full structural validation output after spatial asset policy patch."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_spatial_asset_policy_20260704_162635.policy_report.json",
+      "type": "spatial_asset_policy_report",
+      "size_bytes": 12181,
+      "sha256": "6d3d2924ebdd5e220de8d136bec2294b4fc32b6ed7a93e941d922ce1c899aba3",
+      "description": "Focused Lane 1 policy decision report for Lane 2 spatial audit."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_spatial_asset_audit_request_20260704_162200.md",
+      "type": "source_lane2_request",
+      "size_bytes": 2982,
+      "sha256": "d784a12c67200f43e5f1980b8722822729255c74b8742036309a90110efdc72f",
+      "description": "Lane 2 spatial asset audit request consumed by this patch."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162200\\lane2_main_flow_spatial_asset_audit_20260704_162200.json",
+      "type": "source_lane2_spatial_audit",
+      "size_bytes": 135301,
+      "sha256": "5e78529fb1a4e4c64d7380723388114dfd63991baf895f13616d0bb2ebeed8c4",
+      "description": "Lane 2 current Main Flow spatial asset audit artifact."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane2_spatial_asset_policy_decision_20260704_162635.json",
+      "type": "lane2_response",
+      "size_bytes": 3248,
+      "sha256": "f55530ccc6b1f921112cdff2cd07c8769e8d66cd799753754a01e4f8c77be385",
+      "description": "Lane 1 decision response to Lane 2 spatial asset audit."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane2_per_hand_zero_off_placeholders_20260704_162635.json",
+      "type": "lane2_dependency_request",
+      "size_bytes": 2372,
+      "sha256": "82869a6fca503b8e1c4f6b240fb6a03057f9393aecc78241cea839effcb6a8d5",
+      "description": "Exact request for per-hand zero/off placeholders or same-scene split masks."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane3_model_visibility_update_20260704_162635.json",
+      "type": "lane3_response",
+      "size_bytes": 1023,
+      "sha256": "ee89268ca9e5516be9ddc7065526794737a9b0ea4865d36f79c67389aa675a1b",
+      "description": "Superseding Lane 3 update that local model filename validation now reports zero missing references."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\hand_reviews\\lane1_spatial_asset_policy_hand_review_20260704_162635.json",
+      "type": "hand_review_record",
+      "size_bytes": 1146,
+      "sha256": "0b37a0a856990cf07c5c3727ecb8e93dc9adb346a2f6c95c107ea2273de8c7fe",
+      "description": "Strict hand/contact review limitation record."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "timestamped_backup_created",
+        "result": "pass",
+        "notes": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_spatial_asset_policy_20260704_112413.json"
+      },
+      {
+        "name": "workflow_json_valid",
+        "result": "pass",
+        "notes": "Workflow parsed successfully after metadata patch."
+      },
+      {
+        "name": "node_and_link_counts",
+        "result": "pass",
+        "notes": "node_count=769; link_count=1137; last_node_id=1098; last_link_id=1506"
+      },
+      {
+        "name": "link_endpoint_errors",
+        "result": "pass",
+        "notes": "input_link_errors=0; output_link_errors=0; link_endpoint_errors=0"
+      },
+      {
+        "name": "active_path_dangling_inputs",
+        "result": "pass",
+        "notes": "active_input_errors=0; active_endpoint_errors=0"
+      },
+      {
+        "name": "spatial_preset_decision",
+        "result": "pass",
+        "notes": "Kept current active lower-hip-derived slot group and forbade strict side-push v1 cross-scene mask copy."
+      },
+      {
+        "name": "per_hand_slot_semantics",
+        "result": "pass",
+        "notes": "Nodes 1051-1054 now carry zero/off placeholder or same-scene split-only semantics."
+      },
+      {
+        "name": "load_image_references",
+        "result": "blocked",
+        "notes": "4 missing references remain: main_flow/body_contact_slots/character_a_left_hand_mask.png, main_flow/body_contact_slots/character_a_right_hand_mask.png, main_flow/body_contact_slots/character_b_left_hand_mask.png, main_flow/body_contact_slots/character_b_right_hand_mask.png"
+      },
+      {
+        "name": "model_filenames",
+        "result": "pass",
+        "notes": "71 model references checked; 0 missing under configured Lane 1 roots."
+      },
+      {
+        "name": "runtime_validation",
+        "result": "not_applicable",
+        "notes": "Lane 1 did not start or stop EC2 and did not call live endpoints."
+      },
+      {
+        "name": "strict_hand_visual_review",
+        "result": "provisional",
+        "notes": "No rendered media or overlay was reviewed; hand/contact visual QA remains not visually reviewed."
+      }
+    ],
+    "failure_reasons": [
+      "Nodes 1051-1054 exact-name per-hand placeholder/split mask files are still missing.",
+      "Node 1009 is zero and optional only for actor_hand_only_contact_v1; full actor-body collision QA remains blocked.",
+      "No live ComfyUI runtime validation was performed after this patch."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "runtime_generation_rows",
+      "strict_visual_acceptance_rows",
+      "full_actor_body_collision_qa_rows",
+      "tracker_promotion_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "missing_per_hand_placeholder_assets",
+      "description": "Nodes 1051-1054 still reference exact per-hand files that do not exist under configured reference roots.",
+      "next_action": "Lane 2 should materialize exact-name 1024x1024 all-zero/off placeholders or same-scene split masks at the four requested paths."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "Node 1009 character_b_body_mask.png is present but zero-valued and optional only for actor_hand_only_contact_v1.",
+      "next_action": "Lane 2 should provide same-scene actor body segmentation when full actor-body collision QA is required."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "Current workflow has not been executed in live ComfyUI after the spatial asset policy patch.",
+      "next_action": "After missing per-hand files resolve, Lane 4 should run current-hash runtime validation inside a lease window if requested."
+    }
+  ]
+}

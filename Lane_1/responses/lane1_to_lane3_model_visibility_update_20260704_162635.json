@@ -1,0 +1,16 @@
+{
+  "response_id": "lane1_to_lane3_model_visibility_update_20260704_162635",
+  "responding_lane": "Lane_1",
+  "target_lane": "Lane_3",
+  "created_at_utc": "2026-07-04T16:26:35Z",
+  "supersedes_request": "lane1_to_lane3_remaining_main_flow_model_visibility_20260704_161725",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "validation_report": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_spatial_asset_policy_20260704_162635.post_validation.json",
+  "current_lane1_model_reference_result": {
+    "model_references_checked": 71,
+    "missing_model_references": 0,
+    "unique_missing_model_filenames": []
+  },
+  "note": "Current Lane 1 local validation under configured model roots reports zero missing Main Flow model references. Runtime load/endpoint proof remains Lane 4 work; this only supersedes the prior Lane 1 local filename visibility request."
+}

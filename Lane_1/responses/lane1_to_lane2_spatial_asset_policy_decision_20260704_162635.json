@@ -1,0 +1,65 @@
+{
+  "response_id": "lane1_to_lane2_spatial_asset_policy_decision_20260704_162635",
+  "responding_lane": "Lane_1",
+  "target_lane": "Lane_2",
+  "created_at_utc": "2026-07-04T16:26:35Z",
+  "source_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_spatial_asset_audit_request_20260704_162200.md",
+  "source_artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162200\\lane2_main_flow_spatial_asset_audit_20260704_162200.json",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "decision": "Keep the current active lower_hip_contact-derived body_contact_slots set. Do not switch to strict side-push and do not copy strict side-push v1 masks into the active slots because the base hash differs.",
+  "workflow_patch": {
+    "backup_path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_spatial_asset_policy_20260704_112413.json",
+    "note_node_id": 1098,
+    "metadata_key": "extra.wave42.strict_body_contact_soft_physics.spatial_asset_audit_20260704_162200"
+  },
+  "per_hand_slot_semantics": "Nodes 1051-1054 are explicit per-hand override slots. For the current active slot set they should load exact-name 1024x1024 zero/off placeholder masks until Lane 2 can provide same-scene left/right hand split masks with provenance.",
+  "remaining_blockers": [
+    "Nodes 1051-1054 still need exact-name files in C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots.",
+    "Node 1009 remains zero and optional for actor_hand_only_contact_v1 only; full actor-body collision QA needs same-scene actor body segmentation.",
+    "Runtime validation remains blocked until these LoadImageMask references resolve and Lane 4 runs a live window."
+  ],
+  "validation_summary": {
+    "node_count": 769,
+    "link_count": 1137,
+    "last_node_id": 1098,
+    "last_link_id": 1506,
+    "endpoint_errors": 0,
+    "active_input_errors": 0,
+    "missing_load_images": [
+      {
+        "exists": false,
+        "matches": [],
+        "node_id": 1051,
+        "node_type": "LoadImageMask",
+        "title": "Mask: Character A Left Hand",
+        "value": "main_flow/body_contact_slots/character_a_left_hand_mask.png"
+      },
+      {
+        "exists": false,
+        "matches": [],
+        "node_id": 1052,
+        "node_type": "LoadImageMask",
+        "title": "Mask: Character A Right Hand",
+        "value": "main_flow/body_contact_slots/character_a_right_hand_mask.png"
+      },
+      {
+        "exists": false,
+        "matches": [],
+        "node_id": 1053,
+        "node_type": "LoadImageMask",
+        "title": "Mask: Character B Left Hand",
+        "value": "main_flow/body_contact_slots/character_b_left_hand_mask.png"
+      },
+      {
+        "exists": false,
+        "matches": [],
+        "node_id": 1054,
+        "node_type": "LoadImageMask",
+        "title": "Mask: Character B Right Hand",
+        "value": "main_flow/body_contact_slots/character_b_right_hand_mask.png"
+      }
+    ],
+    "missing_model_references": []
+  }
+}

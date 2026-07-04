@@ -1,0 +1,225 @@
+{
+  "created_at_utc": "2026-07-04T16:26:35Z",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "source_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_spatial_asset_audit_request_20260704_162200.md",
+  "source_artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162200\\lane2_main_flow_spatial_asset_audit_20260704_162200.json",
+  "lane1_decision": "keep_current_lower_hip_derived_active_slot_group",
+  "active_base_sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+  "active_base_preset_match": "lower_hip_contact",
+  "forbidden_cross_scene_preset": {
+    "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_presets\\clothed_breast_side_push_strict_v1",
+    "base_sha256": "4E76DCAF4DA8BAFD837102B7A17AFB05D734A2B60CD3D2F7B7052BDD0851354B",
+    "reason": "Different base hash from current active slot folder."
+  },
+  "per_hand_slots": [
+    {
+      "node_id": 1051,
+      "required_path": "main_flow/body_contact_slots/character_a_left_hand_mask.png",
+      "policy": "zero_off_placeholder_or_same_scene_split_only"
+    },
+    {
+      "node_id": 1052,
+      "required_path": "main_flow/body_contact_slots/character_a_right_hand_mask.png",
+      "policy": "zero_off_placeholder_or_same_scene_split_only"
+    },
+    {
+      "node_id": 1053,
+      "required_path": "main_flow/body_contact_slots/character_b_left_hand_mask.png",
+      "policy": "zero_off_placeholder_or_same_scene_split_only"
+    },
+    {
+      "node_id": 1054,
+      "required_path": "main_flow/body_contact_slots/character_b_right_hand_mask.png",
+      "policy": "zero_off_placeholder_or_same_scene_split_only"
+    }
+  ],
+  "note_node_id": 1098,
+  "node_properties": {
+    "1051": {
+      "wave42_strict_body_contact_soft_physics": true,
+      "wave42_category": "strict_body_contact_soft_physics",
+      "wave42_lane2_contact_control_request": "lane2_to_lane1_contact_control_wiring_request_20260704_154905",
+      "purpose": "lane2_per_hand_mask_slot",
+      "wave42_spatial_asset_audit_request": "lane2_to_lane1_spatial_asset_audit_request_20260704_162200",
+      "wave42_active_slot_policy": "keep_current_lower_hip_derived_slot_group",
+      "wave42_per_hand_slot_semantics": "optional_override_slot_requires_exact_zero_off_placeholder_until_same_scene_split_exists",
+      "wave42_required_placeholder_path": "main_flow/body_contact_slots/character_a_left_hand_mask.png",
+      "wave42_placeholder_owner": "Lane_2",
+      "wave42_do_not_source_from": "main_flow/body_contact_presets/clothed_breast_side_push_strict_v1 because base hash differs from active slot base",
+      "wave42_active_base_sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "wave42_forbidden_strict_side_push_base_sha256": "4E76DCAF4DA8BAFD837102B7A17AFB05D734A2B60CD3D2F7B7052BDD0851354B"
+    },
+    "1052": {
+      "wave42_strict_body_contact_soft_physics": true,
+      "wave42_category": "strict_body_contact_soft_physics",
+      "wave42_lane2_contact_control_request": "lane2_to_lane1_contact_control_wiring_request_20260704_154905",
+      "purpose": "lane2_per_hand_mask_slot",
+      "wave42_spatial_asset_audit_request": "lane2_to_lane1_spatial_asset_audit_request_20260704_162200",
+      "wave42_active_slot_policy": "keep_current_lower_hip_derived_slot_group",
+      "wave42_per_hand_slot_semantics": "optional_override_slot_requires_exact_zero_off_placeholder_until_same_scene_split_exists",
+      "wave42_required_placeholder_path": "main_flow/body_contact_slots/character_a_right_hand_mask.png",
+      "wave42_placeholder_owner": "Lane_2",
+      "wave42_do_not_source_from": "main_flow/body_contact_presets/clothed_breast_side_push_strict_v1 because base hash differs from active slot base",
+      "wave42_active_base_sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "wave42_forbidden_strict_side_push_base_sha256": "4E76DCAF4DA8BAFD837102B7A17AFB05D734A2B60CD3D2F7B7052BDD0851354B"
+    },
+    "1053": {
+      "wave42_strict_body_contact_soft_physics": true,
+      "wave42_category": "strict_body_contact_soft_physics",
+      "wave42_lane2_contact_control_request": "lane2_to_lane1_contact_control_wiring_request_20260704_154905",
+      "purpose": "lane2_per_hand_mask_slot",
+      "wave42_spatial_asset_audit_request": "lane2_to_lane1_spatial_asset_audit_request_20260704_162200",
+      "wave42_active_slot_policy": "keep_current_lower_hip_derived_slot_group",
+      "wave42_per_hand_slot_semantics": "optional_override_slot_requires_exact_zero_off_placeholder_until_same_scene_split_exists",
+      "wave42_required_placeholder_path": "main_flow/body_contact_slots/character_b_left_hand_mask.png",
+      "wave42_placeholder_owner": "Lane_2",
+      "wave42_do_not_source_from": "main_flow/body_contact_presets/clothed_breast_side_push_strict_v1 because base hash differs from active slot base",
+      "wave42_active_base_sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "wave42_forbidden_strict_side_push_base_sha256": "4E76DCAF4DA8BAFD837102B7A17AFB05D734A2B60CD3D2F7B7052BDD0851354B"
+    },
+    "1054": {
+      "wave42_strict_body_contact_soft_physics": true,
+      "wave42_category": "strict_body_contact_soft_physics",
+      "wave42_lane2_contact_control_request": "lane2_to_lane1_contact_control_wiring_request_20260704_154905",
+      "purpose": "lane2_per_hand_mask_slot",
+      "wave42_spatial_asset_audit_request": "lane2_to_lane1_spatial_asset_audit_request_20260704_162200",
+      "wave42_active_slot_policy": "keep_current_lower_hip_derived_slot_group",
+      "wave42_per_hand_slot_semantics": "optional_override_slot_requires_exact_zero_off_placeholder_until_same_scene_split_exists",
+      "wave42_required_placeholder_path": "main_flow/body_contact_slots/character_b_right_hand_mask.png",
+      "wave42_placeholder_owner": "Lane_2",
+      "wave42_do_not_source_from": "main_flow/body_contact_presets/clothed_breast_side_push_strict_v1 because base hash differs from active slot base",
+      "wave42_active_base_sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "wave42_forbidden_strict_side_push_base_sha256": "4E76DCAF4DA8BAFD837102B7A17AFB05D734A2B60CD3D2F7B7052BDD0851354B"
+    },
+    "1055": {
+      "wave42_strict_body_contact_soft_physics": true,
+      "wave42_category": "strict_body_contact_soft_physics",
+      "wave42_lane2_contact_control_request": "lane2_to_lane1_contact_control_wiring_request_20260704_154905",
+      "purpose": "lane2_per_hand_mask_chain",
+      "wave42_per_hand_override_chain": true,
+      "wave42_per_hand_override_status": "inactive_until_exact_placeholder_or_same_scene_split_assets_exist",
+      "wave42_spatial_asset_audit_request": "lane2_to_lane1_spatial_asset_audit_request_20260704_162200"
+    },
+    "1056": {
+      "wave42_strict_body_contact_soft_physics": true,
+      "wave42_category": "strict_body_contact_soft_physics",
+      "wave42_lane2_contact_control_request": "lane2_to_lane1_contact_control_wiring_request_20260704_154905",
+      "purpose": "lane2_per_hand_mask_chain",
+      "wave42_per_hand_override_chain": true,
+      "wave42_per_hand_override_status": "inactive_until_exact_placeholder_or_same_scene_split_assets_exist",
+      "wave42_spatial_asset_audit_request": "lane2_to_lane1_spatial_asset_audit_request_20260704_162200"
+    },
+    "1057": {
+      "wave42_strict_body_contact_soft_physics": true,
+      "wave42_category": "strict_body_contact_soft_physics",
+      "wave42_lane2_contact_control_request": "lane2_to_lane1_contact_control_wiring_request_20260704_154905",
+      "purpose": "lane2_per_hand_mask_chain",
+      "wave42_per_hand_override_chain": true,
+      "wave42_per_hand_override_status": "inactive_until_exact_placeholder_or_same_scene_split_assets_exist",
+      "wave42_spatial_asset_audit_request": "lane2_to_lane1_spatial_asset_audit_request_20260704_162200"
+    },
+    "1058": {
+      "wave42_strict_body_contact_soft_physics": true,
+      "wave42_category": "strict_body_contact_soft_physics",
+      "wave42_lane2_contact_control_request": "lane2_to_lane1_contact_control_wiring_request_20260704_154905",
+      "purpose": "lane2_per_hand_mask_chain",
+      "wave42_per_hand_override_chain": true,
+      "wave42_per_hand_override_status": "inactive_until_exact_placeholder_or_same_scene_split_assets_exist",
+      "wave42_spatial_asset_audit_request": "lane2_to_lane1_spatial_asset_audit_request_20260704_162200"
+    },
+    "1098": {
+      "wave42_strict_body_contact_soft_physics": true,
+      "wave42_category": "strict_body_contact_soft_physics",
+      "wave42_spatial_asset_audit_request": "lane2_to_lane1_spatial_asset_audit_request_20260704_162200",
+      "purpose": "spatial_asset_policy_metadata"
+    }
+  },
+  "validation_summary": {
+    "node_count": 769,
+    "link_count": 1137,
+    "last_node_id": 1098,
+    "last_link_id": 1506,
+    "endpoint_errors": 0,
+    "active_input_errors": 0,
+    "missing_load_images": [
+      {
+        "exists": false,
+        "matches": [],
+        "node_id": 1051,
+        "node_type": "LoadImageMask",
+        "title": "Mask: Character A Left Hand",
+        "value": "main_flow/body_contact_slots/character_a_left_hand_mask.png"
+      },
+      {
+        "exists": false,
+        "matches": [],
+        "node_id": 1052,
+        "node_type": "LoadImageMask",
+        "title": "Mask: Character A Right Hand",
+        "value": "main_flow/body_contact_slots/character_a_right_hand_mask.png"
+      },
+      {
+        "exists": false,
+        "matches": [],
+        "node_id": 1053,
+        "node_type": "LoadImageMask",
+        "title": "Mask: Character B Left Hand",
+        "value": "main_flow/body_contact_slots/character_b_left_hand_mask.png"
+      },
+      {
+        "exists": false,
+        "matches": [],
+        "node_id": 1054,
+        "node_type": "LoadImageMask",
+        "title": "Mask: Character B Right Hand",
+        "value": "main_flow/body_contact_slots/character_b_right_hand_mask.png"
+      }
+    ],
+    "missing_model_references": []
+  },
+  "lane2_audit_summary": {
+    "spatial_asset_nodes": 90,
+    "load_image_nodes": 70,
+    "load_image_mask_nodes": 20,
+    "missing_assets": 4,
+    "zero_masks": 1,
+    "per_hand_masks_checked": 4,
+    "body_contact_input_nodes_checked": 23,
+    "controlnet_requirements": 4,
+    "mask_composites": 31,
+    "mask_previews": 16
+  },
+  "lane2_actionable_findings": [
+    {
+      "severity": "blocked",
+      "node_id": "1051",
+      "finding": "Missing input asset: main_flow/body_contact_slots/character_a_left_hand_mask.png",
+      "next_action": "Lane 1 should rewire the node or request/provide the missing input asset."
+    },
+    {
+      "severity": "blocked",
+      "node_id": "1052",
+      "finding": "Missing input asset: main_flow/body_contact_slots/character_a_right_hand_mask.png",
+      "next_action": "Lane 1 should rewire the node or request/provide the missing input asset."
+    },
+    {
+      "severity": "blocked",
+      "node_id": "1053",
+      "finding": "Missing input asset: main_flow/body_contact_slots/character_b_left_hand_mask.png",
+      "next_action": "Lane 1 should rewire the node or request/provide the missing input asset."
+    },
+    {
+      "severity": "blocked",
+      "node_id": "1054",
+      "finding": "Missing input asset: main_flow/body_contact_slots/character_b_right_hand_mask.png",
+      "next_action": "Lane 1 should rewire the node or request/provide the missing input asset."
+    },
+    {
+      "severity": "blocked",
+      "node_id": "1009",
+      "finding": "Zero-valued mask: main_flow/body_contact_slots/character_b_body_mask.png",
+      "next_action": "Lane 1 should choose graph semantics or request/provide a trustworthy nonzero mask source."
+    }
+  ]
+}

@@ -25,3 +25,19 @@
 - Outcome: Lane 4 LoRA visibility evidence remains useful for model/runtime visibility, but not graph-version-specific Main Flow execution proof.
 - Wrote schema-valid evidence `C:\Comfy_UI_Lora\5_sessions\Lane_1\evidence\lane1_main_flow_hash_reconciliation_20260704_162137.evidence.json` and Lane 5 audit request `C:\Comfy_UI_Lora\5_sessions\Lane_1\requests\lane1_to_lane5_main_flow_hash_reconciliation_audit_20260704_162137.json`.
 - Evidence schema validation: valid.
+
+## 2026-07-04T16:24:13Z - Lane 2 spatial asset audit intake
+
+- Read Lane 2 request lane2_to_lane1_spatial_asset_audit_request_20260704_162200.md and audit artifact lane2_main_flow_spatial_asset_audit_20260704_162200.json.
+- Finding: current active base hash is 8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523 and matches lower_hip_contact; strict side-push v1 assets use base hash 4E76DCAF4DA8BAFD837102B7A17AFB05D734A2B60CD3D2F7B7052BDD0851354B.
+- Decision before edit: keep the active lower-hip-derived slot group; do not cross-copy strict side-push masks. Nodes 1051-1054 should be exact-name zero/off placeholders until Lane 2 can provide same-scene left/right hand split masks.
+- Backup created: C:\Comfy_UI\Implementation\workflow_backups\WAVE42_MAIN_FLOW_20260702.pre_lane2_spatial_asset_policy_20260704_112413.json
+
+
+## 2026-07-04T16:26:35Z - Lane 2 spatial asset audit policy patch validated
+
+- Patched Main Flow after backup `C:\Comfy_UI\Implementation\workflow_backups\WAVE42_MAIN_FLOW_20260702.pre_lane2_spatial_asset_policy_20260704_112413.json` with note node 1098 and spatial asset policy metadata.
+- Decision: keep current lower-hip-derived body_contact_slots; do not cross-copy strict side-push v1 masks because base hash differs.
+- Nodes 1051-1054 semantics: exact-name zero/off placeholders or same-scene left/right split masks only.
+- Validation: workflow_sha256=5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9, node_count=769, link_count=1137, endpoint_errors=0, active_input_errors=0, missing_load_images=4, missing_model_refs=0.
+- Evidence: `C:\Comfy_UI_Lora\5_sessions\Lane_1\evidence\lane1_spatial_asset_policy_20260704_162635.evidence.json`; schema validation: valid.

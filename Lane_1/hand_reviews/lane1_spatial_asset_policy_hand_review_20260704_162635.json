@@ -1,0 +1,19 @@
+{
+  "review_id": "lane1_spatial_asset_policy_hand_review_20260704_162635",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:26:35Z",
+  "scope": "workflow metadata and spatial mask reference policy for body contact slots",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "verdict": "not_visually_reviewed",
+  "review_basis": "Lane 2 image/mask metadata audit and Lane 1 graph validation only",
+  "actual_generated_media_reviewed": [],
+  "checks": {
+    "per_hand_mask_alignment": "blocked_until_nodes_1051_1054_exact_files_exist",
+    "left_right_hand_identity": "manual_visual_review_required_after_same_scene_split_masks_or_runtime_output",
+    "contact_zone_alignment": "not_visually_reviewed",
+    "collision_or_interpenetration": "not_visually_reviewed",
+    "soft_body_deformation_consistency": "runtime_visual_review_required"
+  },
+  "notes": "Lane 1 explicitly prevented cross-scene strict side-push mask reuse. No rendered media or visual mask overlay was reviewed."
+}

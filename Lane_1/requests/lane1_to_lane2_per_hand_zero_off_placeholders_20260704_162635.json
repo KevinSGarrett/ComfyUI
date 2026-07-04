@@ -1,0 +1,43 @@
+{
+  "request_id": "lane1_to_lane2_per_hand_zero_off_placeholders_20260704_162635",
+  "requesting_lane": "Lane_1",
+  "target_lane": "Lane_2",
+  "created_at_utc": "2026-07-04T16:26:35Z",
+  "priority": "blocks_main_flow_loadimage_reference_validation_and_runtime_execution",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "source_lane2_audit_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_spatial_asset_audit_request_20260704_162200.md",
+  "decision_context": {
+    "active_slot_policy": "keep_current_lower_hip_derived_body_contact_slots",
+    "active_base_sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+    "forbidden_source_preset": "main_flow/body_contact_presets/clothed_breast_side_push_strict_v1",
+    "forbidden_source_base_sha256": "4E76DCAF4DA8BAFD837102B7A17AFB05D734A2B60CD3D2F7B7052BDD0851354B"
+  },
+  "requested_files": [
+    {
+      "node_id": 1051,
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png"
+    },
+    {
+      "node_id": 1052,
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png"
+    },
+    {
+      "node_id": 1053,
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png"
+    },
+    {
+      "node_id": 1054,
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png"
+    }
+  ],
+  "accepted_resolution": [
+    "Create exact-name 1024x1024 all-zero/off placeholder masks and record nonzero_ratio=0.0 plus SHA256, or",
+    "Create exact-name same-scene nonzero left/right split masks derived from the current active base image and record provenance, dimensions, nonzero ratios, and SHA256."
+  ],
+  "do_not_do": [
+    "Do not copy strict side-push v1 left/right masks into active body_contact_slots because the base hash differs.",
+    "Do not relabel combined hand masks as left/right masks without an explicit limitation."
+  ],
+  "next_lane1_action_after_resolution": "Re-run Main Flow validation and clear the four missing LoadImageMask references if the exact paths resolve."
+}
