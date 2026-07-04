@@ -1,0 +1,69 @@
+{
+  "request_id": "lane2_to_lane4_strict_body_contact_runtime_acceptance_20260704_164031",
+  "requesting_lane": "Lane_2",
+  "target_lane": "Lane_4",
+  "created_at_utc": "2026-07-04T16:40:31Z",
+  "priority": "after_aws_reauth_and_after_current_hash_runtime_queue_triage",
+  "purpose": "Tighten the current-hash strict body-contact runtime request with explicit acceptance criteria, expected off-controls, and exact Lane 2 blocker boundaries.",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+  "supersedes_or_refines": [
+    "lane2_to_lane4_strict_body_contact_runtime_request_20260704_162555"
+  ],
+  "lane2_basis": [
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_163800\\lane2_contact_mask_pixel_qa_20260704_163800.json",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\evidence_records\\lane2_contact_mask_pixel_qa_evidence_20260704_163800.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane2_per_hand_provenance_ack_20260704_164031.json"
+  ],
+  "required_runtime_checks": [
+    {
+      "name": "current_hash_graph_load",
+      "pass_condition": "Workflow hash 5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9 loads with no missing LoadImage, LoadImageMask, model, or active endpoint errors on the strict body-contact path.",
+      "capture": "Record exact node-level success or exact failing node and error text."
+    },
+    {
+      "name": "per_hand_placeholder_resolution",
+      "pass_condition": "Nodes 1051-1054 resolve to exact-name files and are treated as intentional zero/off controls, not missing-reference failures.",
+      "capture": "Record whether each node resolved, plus any UI/runtime warning emitted for zero/off masks."
+    },
+    {
+      "name": "actor_body_zero_mask_semantics",
+      "pass_condition": "Node 1009 character_b_body_mask.png is accepted as zero/off if the actor_hand_only_contact_v1 path still runs without graph failure.",
+      "capture": "If rejected, record exact node, validation error, and whether a fallback bypass is possible without editing Main Flow."
+    },
+    {
+      "name": "strict_body_contact_preview_capture",
+      "pass_condition": "If runtime execution is justified, capture generated output plus any available previews for nodes 1032, 1059-1062, and 1067-1070.",
+      "capture": "Store file paths, hashes, and a note for which previews were unavailable."
+    },
+    {
+      "name": "auxiliary_runtime_visibility",
+      "pass_condition": "Record whether the YOLO hand detector, SAM, and DWPose auxiliary assets required for strict hand/body-contact readiness are visible and loadable in the runtime environment.",
+      "capture": "Explicitly report status for bbox/hand_yolov8n.pt, sam_vit_b_01ec64.pth, and dw-ll_ucoco_384_bs5.torchscript.pt."
+    }
+  ],
+  "lane2_acceptance_boundaries": {
+    "proves": [
+      "current-hash strict body-contact path resolves its required file references",
+      "zero/off per-hand placeholders behave as explicit off-controls instead of missing files",
+      "runtime can or cannot tolerate the zero/off actor-body mask on node 1009",
+      "preview/output evidence exists for later Lane 5 or Lane 6 visual QA"
+    ],
+    "does_not_prove": [
+      "same-scene nonzero Character A/B left/right hand segmentation",
+      "final hand anatomy quality",
+      "named left/right per-hand contact-pair completion",
+      "full actor-body collision or deformation validity if node 1009 stays zero/off"
+    ]
+  },
+  "expected_blockers_to_preserve": [
+    "Keep named left/right per-hand contact edges blocked unless trustworthy same-scene nonzero split masks exist.",
+    "Keep full actor-body collision/deformation QA blocked unless node 1009 gains a trustworthy same-scene actor-body mask.",
+    "Do not promote strict visual hand/contact acceptance from runtime success alone; that still needs Lane 5 visual QA."
+  ],
+  "stop_conditions": [
+    "Stop immediately if AWS auth is still invalid or no approved Lane 4 lease window exists.",
+    "Stop after collecting enough evidence to classify the path as pass, precise runtime blocker, or auxiliary-asset blocker.",
+    "Release lease and capture EC2 stopped-state proof after completion."
+  ]
+}

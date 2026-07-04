@@ -51,3 +51,9 @@
 - Result: fallback actor-hand-only geometry has provisional mask overlap for receiver butt and receiver breast surfaces; named per-hand contact edges remain blocked because nodes 1051-1054 are zero/off placeholders.
 - Recorded that the combined actor-hand mask has three connected components but no trustworthy Character A/B left/right labels, so Lane 2 still cannot honestly split it into per-hand masks.
 - Did not run live ComfyUI, edit Main Flow, start or stop EC2, or promote tracker rows.
+
+## 2026-07-04T16:42:00Z - Lane 1 wiring refinements
+
+- Emitted a Lane 1 strict semantics update preserving off-control behavior for zero/off per-hand placeholders and explicit blocker boundaries around named per-hand edges and node 1009.
+- Emitted a Lane 1 pose/depth requirements update that documents provisional threshold-based preflight acceptance and the requirement for runtime/visual proof before final acceptance.
+- Issued a refined Lane 4 runtime acceptance request with explicit checks for node 1051-1054 behavior, node 1009 semantics, previews, and auxiliary asset visibility.
