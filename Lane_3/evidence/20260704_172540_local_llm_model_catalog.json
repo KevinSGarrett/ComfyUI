@@ -1,0 +1,11 @@
+﻿{
+  "evidence_type": "llm_local_model_catalog",
+  "lane_id": "Lane_3",
+  "timestamp_utc": "2026-07-04T17:03:04Z",
+  "base_url": "http://127.0.0.1:11434",
+  "available_models": [
+    "llava:13b",
+    "qwen2.5:14b",
+    "qwen2.5:32b"
+  ]
+}
