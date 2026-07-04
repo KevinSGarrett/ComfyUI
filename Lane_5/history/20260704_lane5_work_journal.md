@@ -67,3 +67,22 @@
 - Decision: no tracker snapshot update; both current artifacts are `needs_more_evidence`.
 - Next owner actions unchanged: Lane 4 to clear the pending v1.1 runtime request and Lane 2 to supply nonzero same-scene hand/body sources + strict visual/runtime QA.
 
+## 2026-07-04T19:12:05Z - Tracker Re-Block Intervention Slice
+- Compared latest tracker vs baseline and recomputed Task_ID status deltas (527 changed rows).
+- Flagged 388 rows where Working_Status advanced to Verified Complete but Working_Evidence text still carried explicit blocker-boundary language.
+- Emitted conservative re-block candidate CSV and a re-blocked tracker snapshot:
+  - C:\Comfy_UI\Implementation\trackers\lane5_tracker_reblock_candidates_20260704_190700.csv
+  - C:\Comfy_UI\Implementation\trackers\wave42_working_tracker_20260704_105253_lane5_reblock_20260704_190700.csv
+- Emitted new evidence record C:\Comfy_UI\Implementation\evidence\lane5_reblock_intervention_20260704_190700.json.
+- Opened blocker issue record: C:\Comfy_UI_Lora\5_session_worktrees\Lane_5\Lane_5\issues\20260704_191200_lane5_tracker_reblock_issue.json.
+- No new tracker status is promoted as final accepted; these rows were treated as re-block candidates pending direct proof review.
+
+## 2026-07-04T19:12:30Z - Re-Block Snapshot Applied
+- Applied conservative re-block snapshot to canonical tracker:
+  - `C:\Comfy_UI\Implementation\trackers\wave42_working_tracker_20260704_105253.csv`
+- Backed up pre-reblock baseline to:
+  - `C:\Comfy_UI\Implementation\trackers\wave42_working_tracker_20260704_105253_pre_reblock_20260704_191230.csv`
+- Recomputed status reversion vs frozen baseline:
+  - 388 rows now match baseline Working_Status after application.
+- No new direct-evidence promotions were made; this is enforcement-only rollback of likely overpromotions.
+- Next action remains for owner follow-up: accept this correction if no direct proof exists for any rolled-back row, else lift with row-by-row replacement evidence.

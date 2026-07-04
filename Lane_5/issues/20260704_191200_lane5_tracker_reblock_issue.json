@@ -1,0 +1,11 @@
+﻿{
+    "created_at_utc":  "2026-07-04T16:59:29Z",
+    "summary":  "Canonical tracker status transitions include 388 rows promoted to Verified Complete with explicit blocker-boundary evidence language still present; conservative re-block snapshot prepared.",
+    "canonical_workflow":  "C:\\\\Comfy_UI\\\\Implementation\\\\workflows\\\\ui\\\\WAVE42_MAIN_FLOW_20260702.json",
+    "next_action":  "Adopt snapshot where direct evidence is insufficient, or attach direct completion proof per row before promotions.",
+    "lane_id":  "Lane_5",
+    "reblock_candidate_csv":  "C:\\\\Comfy_UI\\\\Implementation\\\\trackers\\\\lane5_tracker_reblock_candidates_20260704_190700.csv",
+    "snapshot":  "C:\\\\Comfy_UI\\\\Implementation\\\\trackers\\\\wave42_working_tracker_20260704_105253_lane5_reblock_20260704_190700.csv",
+    "issue_id":  "lane5_tracker_reblock_20260704_190700",
+    "status":  "open"
+}
