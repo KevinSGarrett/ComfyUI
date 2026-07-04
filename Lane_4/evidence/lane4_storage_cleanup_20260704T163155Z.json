@@ -1,0 +1,55 @@
+﻿{
+    "schema_version":  "1.0",
+    "lane_id":  "Lane_4",
+    "evidence_id":  "lane4_storage_cleanup_20260704T163155Z",
+    "created_at_utc":  "2026-07-04T16:32:30.4465852Z",
+    "reason":  "Critical C: drive free space after EC2 live runtime window",
+    "policy_path":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\CLEANUP_POLICY.md",
+    "script_path":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\scripts\\safe_cleanup.ps1",
+    "safe_cleanup_dry_run_status":  "attempted_but_interrupted_after_no_output",
+    "safe_cleanup_dry_run_output":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\scratch\\safe_cleanup_dryrun_older1_summary.txt",
+    "lease_state_before_cleanup":  "free",
+    "drive_before":  {
+                         "free_gb":  10.478,
+                         "used_gb":  941.167
+                     },
+    "targets_pre":  [
+                        {
+                            "path":  "C:\\Comfy_UI\\EC2_Mirror\\20260628_211600",
+                            "exists":  true,
+                            "date_stamped":  true,
+                            "last_write_time_utc":  "2026-06-28T21:46:06.1963064Z",
+                            "size_gb":  202.351,
+                            "file_count":  176845,
+                            "validated_allowed_snapshot":  true
+                        },
+                        {
+                            "path":  "C:\\Comfy_UI\\_ec2sd\\20260701_125027",
+                            "exists":  true,
+                            "date_stamped":  true,
+                            "last_write_time_utc":  "2026-07-01T12:50:27.8797747Z",
+                            "size_gb":  12.479,
+                            "file_count":  5923,
+                            "validated_allowed_snapshot":  true
+                        }
+                    ],
+    "apply_started_at_utc":  "2026-07-04T16:32:30.5590615Z",
+    "apply_method":  "PowerShell Remove-Item -LiteralPath after strict path validation",
+    "apply_completed_at_utc":  "2026-07-04T16:34:48.7862897Z",
+    "drive_after":  {
+                        "free_gb":  164.557,
+                        "used_gb":  787.089,
+                        "freed_gb":  154.079
+                    },
+    "targets_post":  [
+                         {
+                             "path":  "C:\\Comfy_UI\\EC2_Mirror\\20260628_211600",
+                             "exists_after":  false
+                         },
+                         {
+                             "path":  "C:\\Comfy_UI\\_ec2sd\\20260701_125027",
+                             "exists_after":  false
+                         }
+                     ],
+    "status":  "applied"
+}

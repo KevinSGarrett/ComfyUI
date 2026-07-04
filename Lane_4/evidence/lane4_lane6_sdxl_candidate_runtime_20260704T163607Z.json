@@ -1,0 +1,182 @@
+﻿{
+    "schema_version":  "1.0",
+    "evidence_id":  "lane4_lane6_sdxl_candidate_runtime_20260704T163607Z",
+    "lane_id":  "Lane_4",
+    "created_at_utc":  "2026-07-04T16:36:07.1435913Z",
+    "claim":  {
+                  "summary":  "Lane 6 low-VRAM SDXL candidate generation succeeded on EC2; EC2 final stopped-state proof is blocked by expired AWS auth after stop request; urgent local storage cleanup completed.",
+                  "status":  "provisional",
+                  "requirement_ids":  [
+                                          "Lane_6_20260704_160530_candidate",
+                                          "Lane_4_cost_control",
+                                          "Lane_4_storage_safety"
+                                      ]
+              },
+    "inputs":  {
+                   "workflow_path":  "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+                   "workflow_sha256":  "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+                   "settings":  {
+                                    "request_path":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_160530_Lane_6_sdxl_safe_adult_clothed_low_vram_candidate.json",
+                                    "request_sha256":  "3921edda50158f8004b601075ea019c20eecbd5ab86c39bf0111a4a789583631",
+                                    "request_expected_main_flow_sha256":  "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+                                    "required_files":  [
+                                                           {
+                                                               "path":  "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+                                                               "sha256":  "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9"
+                                                           },
+                                                           {
+                                                               "path":  "C:\\Comfy_UI\\Implementation\\presets\\generation_preset_lab\\wave42_sdxl_safe_adult_clothed_low_vram_v1.json",
+                                                               "sha256":  "b686fa8af8ce01061612516b77f27ea19987735ca285142831f42c6aba44887f"
+                                                           },
+                                                           {
+                                                               "path":  "C:\\Comfy_UI\\API\\MASTER_SDXL_IMAGE_CORE_API_LOW_VRAM.json",
+                                                               "sha256":  "812145bc53a903dcd1842bce259000b09e299eec4354013f11507477115c0f54"
+                                                           },
+                                                           {
+                                                               "path":  "C:\\Comfy_UI\\Implementation\\scripts\\python\\run_comfyui_sdxl_smoke.py",
+                                                               "sha256":  "f3c78d2b26ee37285c265b448a2589fb3250788711c74cacb094aadc3480e9ee"
+                                                           }
+                                                       ],
+                                    "usage_budget_policy_read":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\USAGE_BUDGET_POLICY.md",
+                                    "ec2_model_ingestion_policy_read":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\EC2_MODEL_INGESTION_POLICY.md"
+                                }
+               },
+    "runtime":  {
+                    "ec2_instance_id":  "i-0560bf8d143f93bb1",
+                    "ec2_state_before":  "stopped",
+                    "ec2_state_after":  "unverified_after_stop_due_to_expired_aws_auth",
+                    "comfyui_url":  "http://127.0.0.1:8188 via SSM on EC2 host only",
+                    "endpoints_checked":  [
+                                              "/system_stats",
+                                              "/queue",
+                                              "/object_info",
+                                              "/prompt",
+                                              "/history/{prompt_id}"
+                                          ],
+                    "aws_auth_status":  "expired_after_stop_request",
+                    "ssm_command_id":  "a51926a9-d025-42a6-a9d9-ab2958c4cfbe",
+                    "prompt_id":  "62b19ad0-48d4-4488-8590-56e9e9d1e6ee",
+                    "stop_request_issued":  true,
+                    "lease_state_after_release":  "free",
+                    "current_c_drive_free_gb":  164.523
+                },
+    "models":  [
+                   {
+                       "name":  "RealVisXL_V5.0_fp16.safetensors",
+                       "family":  "SDXL",
+                       "path":  "/home/ubuntu/ComfyUI/models/checkpoints/RealVisXL_V5.0_fp16.safetensors; /home/ubuntu/ComfyUI/models/checkpoints/sdxl/realism/RealVisXL_V5.0_fp16.safetensors",
+                       "role":  "base checkpoint",
+                       "visibility_evidence":  "visible in live /object_info CheckpointLoaderSimple catalogue",
+                       "load_result":  "generation_completed"
+                   }
+               ],
+    "artifacts":  [
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_lane6_sdxl_candidate_runtime_20260704T163607Z.json",
+                          "type":  "coordination_evidence",
+                          "description":  "Lane 4 evidence record."
+                      },
+                      {
+                          "path":  "C:\\Comfy_UI\\Implementation\\evidence\\runtime\\lane4_lane6_sdxl_candidate_runtime_20260704T163607Z.json",
+                          "type":  "project_runtime_evidence",
+                          "description":  "Project runtime evidence copy."
+                      },
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\scratch\\lane6_sdxl_candidate_stdout.json",
+                          "type":  "ssm_runtime_summary",
+                          "sha256":  "97bd0d64f0bce0670cf8b4e21dd0968cdfb693599b2d88d16f38f98a3bde8d82",
+                          "description":  "Secret-free SSM generation result summary."
+                      },
+                      {
+                          "path":  "/home/ubuntu/ComfyUI/output/wave42_sdxl_safe_adult_clothed_low_vram_v1_00001_.png",
+                          "type":  "remote_generated_image",
+                          "size_bytes":  869783,
+                          "sha256":  "de8e72ee8787b82f211c484d084c81a707b073e963046d707396d5110315d203",
+                          "description":  "Remote EC2 output path only; image not copied locally in this slice."
+                      },
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_storage_cleanup_20260704T163155Z.json",
+                          "type":  "storage_cleanup_report",
+                          "sha256":  "34c3cf5740db7aba50fac3c39bff3b3ff4abdb1b30563eda11f619002076933c",
+                          "description":  "Cleanup report for stale EC2 mirror snapshots."
+                      }
+                  ],
+    "qa":  {
+               "verdict":  "provisional",
+               "checks":  [
+                              {
+                                  "name":  "ComfyUI /system_stats",
+                                  "result":  "pass",
+                                  "notes":  "status=200"
+                              },
+                              {
+                                  "name":  "ComfyUI /object_info",
+                                  "result":  "pass",
+                                  "notes":  "status=200"
+                              },
+                              {
+                                  "name":  "Checkpoint visibility",
+                                  "result":  "pass",
+                                  "notes":  "RealVisXL visible=True, matches=2"
+                              },
+                              {
+                                  "name":  "Prompt queued and completed",
+                                  "result":  "pass",
+                                  "notes":  "prompt_id=62b19ad0-48d4-4488-8590-56e9e9d1e6ee"
+                              },
+                              {
+                                  "name":  "Output artifact",
+                                  "result":  "pass",
+                                  "notes":  "remote_path=/home/ubuntu/ComfyUI/output/wave42_sdxl_safe_adult_clothed_low_vram_v1_00001_.png, bytes=869783, sha256=de8e72ee8787b82f211c484d084c81a707b073e963046d707396d5110315d203"
+                              },
+                              {
+                                  "name":  "Safety prompt scope",
+                                  "result":  "provisional",
+                                  "notes":  "Prompt is clearly adult, clothed, non-explicit; Lane 4 did not visually inspect the remote PNG. Lane 6/Lane 5 must perform visual QA before acceptance."
+                              },
+                              {
+                                  "name":  "EC2 stop final state",
+                                  "result":  "blocked",
+                                  "notes":  "Stop command was issued, but AWS credentials expired before a final describe could prove terminal stopped/no public IP state."
+                              },
+                              {
+                                  "name":  "Lease released",
+                                  "result":  "pass",
+                                  "notes":  "lease_state=free"
+                              },
+                              {
+                                  "name":  "Storage cleanup",
+                                  "result":  "pass",
+                                  "notes":  "Two validated stale EC2 mirror snapshots removed after lease release; C: free space now ~164.523 GB."
+                              }
+                          ],
+               "failure_reasons":  [
+                                       "AWS session expired after stop request, blocking final EC2 stopped/no-public-IP verification until reauthentication.",
+                                       "Lane 4 did not visually QA the generated image; Lane 6/Lane 5 must inspect candidate content before acceptance."
+                                   ]
+           },
+    "tracker_mapping":  {
+                            "proves_rows":  [
+                                                "Lane 6 SDXL preset can queue and produce one runtime image artifact on EC2 with RealVisXL visible.",
+                                                "Local storage pressure relieved by removal of stale EC2 mirror snapshots."
+                                            ],
+                            "does_not_prove_rows":  [
+                                                        "Final EC2 stopped-state proof after AWS auth expiry.",
+                                                        "Visual safety/quality acceptance of the candidate image.",
+                                                        "Tracker promotion without Lane 5 audit."
+                                                    ],
+                            "promotion_decision":  "needs_more_evidence"
+                        },
+    "blockers":  [
+                     {
+                         "category":  "aws_auth_expired_stop_state",
+                         "description":  "AWS credentials expired after EC2 stop-instances was issued and before final describe-instances could verify stopped/no public IP.",
+                         "next_action":  "Run aws login, then execute: aws ec2 describe-instances --instance-ids i-0560bf8d143f93bb1 --query \"Reservations[].Instances[].{State:State.Name,PublicIpAddress:PublicIpAddress,PublicDnsName:PublicDnsName}\" --output json. If state is not stopped, reacquire Lane_4 lease and stop immediately."
+                     },
+                     {
+                         "category":  "visual_qa_pending",
+                         "description":  "Generated PNG exists remotely with hash, but Lane 4 did not retrieve or visually inspect it.",
+                         "next_action":  "Lane 6/Lane 5 should retrieve or inspect the image artifact under policy and record adult/clothed visual QA."
+                     }
+                 ]
+}

@@ -1,0 +1,33 @@
+{
+  "requesting_lane": "Lane_6",
+  "created_at_utc": "2026-07-04T16:05:30Z",
+  "purpose": "Run one low-VRAM SDXL candidate image for the Lane 6 safe adult clothed preset and return output/evidence hashes for QA.",
+  "needed_by": "as_soon_as_lane_4_runtime_window_is_available",
+  "required_files": [
+    "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "C:\\Comfy_UI\\Implementation\\presets\\generation_preset_lab\\wave42_sdxl_safe_adult_clothed_low_vram_v1.json",
+    "C:\\Comfy_UI\\API\\MASTER_SDXL_IMAGE_CORE_API_LOW_VRAM.json",
+    "C:\\Comfy_UI\\Implementation\\scripts\\python\\run_comfyui_sdxl_smoke.py"
+  ],
+  "commands_or_endpoints": [
+    "Confirm EC2 lease ownership before any runtime action.",
+    "Confirm ComfyUI /system_stats and /object_info are reachable.",
+    "Record canonical Main Flow SHA256 eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0 or report if the runtime copy differs.",
+    "Queue an SDXL prompt equivalent to the preset settings: checkpoint RealVisXL_V5.0_fp16.safetensors, 768x768, batch 1, seed 2607041605, 16 steps, cfg 5.4, sampler dpmpp_2m_sde, scheduler karras.",
+    "Save output with filename prefix wave42_sdxl_safe_adult_clothed_low_vram_v1.",
+    "Return output path, size, SHA256, prompt_id, model visibility, and runtime status."
+  ],
+  "expected_outputs": [
+    "One generated image candidate or exact runtime/model blocker.",
+    "A QA/evidence JSON record with output hash, prompt/settings, checkpoint visibility, and adult/clothed safety verdict.",
+    "No tracker promotion by Lane_4; hand evidence back to Lane_6/Lane_5."
+  ],
+  "max_runtime_minutes": 30,
+  "stop_after_completion": true,
+  "notes": [
+    "This request is Main Flow-facing: it asks whether the SDXL safe adult clothed preset can produce candidate evidence traceable to WAVE42_MAIN_FLOW_20260702.json.",
+    "Local Lane 6 probe failed because 127.0.0.1:8188 actively refused the /prompt request.",
+    "Do not use OpenAI, Grok, Anthropic, or other external LLM providers for this request.",
+    "Do not download models for this request unless Lane_3 confirms availability/approval."
+  ]
+}

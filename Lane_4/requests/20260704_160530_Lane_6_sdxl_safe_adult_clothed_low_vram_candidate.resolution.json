@@ -1,0 +1,31 @@
+﻿{
+    "schema_version":  "1.0",
+    "requesting_lane":  "Lane_6",
+    "resolved_by_lane":  "Lane_4",
+    "status":  "processed_with_cost_control_blocker",
+    "processed_at_utc":  "2026-07-04T16:36:22.0095457Z",
+    "original_request_sha256":  "3921edda50158f8004b601075ea019c20eecbd5ab86c39bf0111a4a789583631",
+    "original_request_processed_path":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\processed\\20260704_160530_Lane_6_sdxl_safe_adult_clothed_low_vram_candidate.json",
+    "evidence_path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_lane6_sdxl_candidate_runtime_20260704T163607Z.json",
+    "evidence_sha256":  "c1a3e1f3ae3323f43c19ad8577bdb536480c687374130ae7ff85f22d4a5dcdac",
+    "outcomes":  {
+                     "generation":  "passed",
+                     "prompt_id":  "62b19ad0-48d4-4488-8590-56e9e9d1e6ee",
+                     "remote_output_path":  "/home/ubuntu/ComfyUI/output/wave42_sdxl_safe_adult_clothed_low_vram_v1_00001_.png",
+                     "remote_output_sha256":  "de8e72ee8787b82f211c484d084c81a707b073e963046d707396d5110315d203",
+                     "checkpoint_visible":  "passed",
+                     "lease_final_state":  "free",
+                     "ec2_final_state":  "blocked_unverified_aws_auth_expired",
+                     "storage_cleanup":  "applied"
+                 },
+    "blockers":  [
+                     {
+                         "category":  "aws_auth_expired_stop_state",
+                         "next_action":  "Run aws login, then run narrow describe-instances; if not stopped, reacquire Lane_4 lease and stop immediately."
+                     },
+                     {
+                         "category":  "visual_qa_pending",
+                         "next_action":  "Lane 6/Lane 5 visual QA of remote output before candidate acceptance."
+                     }
+                 ]
+}
