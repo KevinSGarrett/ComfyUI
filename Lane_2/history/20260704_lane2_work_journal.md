@@ -139,3 +139,15 @@
   - fallback actor-hand edges pass local preflight,
   - named per-hand edges remain blocked (left/right masks still zero/off),
   - actor-body full collision/deformation remains blocked by node-1009 status.
+
+## 2026-07-04T19:01:00Z - Runtime control contract handoff
+
+- Added explicit Lane 1 runtime-control contract request:
+  - `lane1_requests/lane2_to_lane1_contact_runtime_control_contract_20260704_181500.md`
+- Added evidence wrapper:
+  - `evidence_records/lane2_contact_runtime_contract_evidence_20260704_190000.json`
+- The contract is explicitly binding on three gating points:
+  - keep nodes 1051-1054 blocked unless same-scene nonzero per-hand split masks are available,
+  - keep node 1009 actor-body behavior as placeholder/off under actor_hand_only_contact_v1 until real actor-body source exists,
+  - require Lane 4 runtime and Lane 5 strict visual acceptance before any full strict-contact claim.
+- No Main Flow edits, EC2 runtime, tracker mutation, or model/runtime mutation were performed in this slice; this remains a local evidence+coordination handoff action.

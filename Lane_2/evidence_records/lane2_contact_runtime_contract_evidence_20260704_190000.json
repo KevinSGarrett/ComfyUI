@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_contact_runtime_contract_evidence_20260704_190000",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T19:00:00Z",
+  "claim": {
+    "summary": "Lane 2 published an explicit contact runtime control contract to preserve strict-body placeholder semantics and runtime-gating while awaiting same-scene per-hand/actor-body masks.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_to_lane1_contact_runtime_control_contract_20260704_181500",
+      "lane2_pose_depth_requirements_update_evidence_20260704_181500",
+      "lane2_main_flow_spatial_asset_audit_20260704_181500",
+      "lane2_contact_mask_pixel_qa_20260704_181500"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "settings": {
+      "mode": "runtime_contract_update",
+      "run_id": "20260704_181500",
+      "runtime_required": "Lane4_runtime_capture_plus_Lane5_strict_visual_review"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "comfyui_url": "",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used"
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\contact_physics\\20260704_181500_lane2_pose_depth_requirements\\lane2_pose_depth_requirements_update_evidence_20260704_181500.json",
+      "type": "pose_depth_evidence",
+      "size_bytes": 5992,
+      "sha256": "B07EA7889B0BA8A57B6124FEFD9396C725410699CE2D3C067E379EF08C172807",
+      "description": "Local pose/depth preflight for strict body-contact at run 20260704_181500."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_181500\\lane2_main_flow_spatial_asset_audit_20260704_181500.json",
+      "type": "main_flow_spatial_asset_audit",
+      "size_bytes": 140517,
+      "sha256": "0D546B34F890F60BA48049D05A3CCFA9192D401B036C390643F950879A055475",
+      "description": "Spatial asset audit snapshot for strict-body contact nodes."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_181500\\lane2_contact_mask_pixel_qa_20260704_181500.json",
+      "type": "contact_mask_pixel_qa",
+      "size_bytes": 25826,
+      "sha256": "2AAB6B10BA6A02F1DBA7CBBE5E5AA32E7B4CB8B3FB96FC317BDFC998E3BCC502",
+      "description": "Local per-hand + body-contact mask QA for the current hash."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_contact_runtime_control_contract_20260704_181500.md",
+      "type": "lane1_request",
+      "size_bytes": 2599,
+      "sha256": "D7FFE54859701FF81754ABF6AA660B4EF84E5F3C17EE01623149B91D705487F1",
+      "description": "Explicit runtime-control contract handoff to Lane 1."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "per_hand_placeholder_state",
+        "result": "pass",
+        "notes": "Nodes 1051-1054 are intentionally zero/off and still known blockers for named per-hand edges."
+      },
+      {
+        "name": "actor_body_placeholder_state",
+        "result": "pass",
+        "notes": "Node 1009 (`character_b_body_mask`) remains placeholder for actor-hand-only collision semantics."
+      },
+      {
+        "name": "contract_handoff",
+        "result": "pass",
+        "notes": "Lane 1 received explicit request file with gating rules and next actions."
+      },
+      {
+        "name": "runtime_visual_acceptance",
+        "result": "not_applicable",
+        "notes": "No new runtime capture or strict hand/contact review was performed in this local update."
+      }
+    ],
+    "failure_reasons": [
+      "Same-scene nonzero per-hand split masks not available.",
+      "Trusted actor-body segmentation source for node 1009 not available."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "named_left_right_contact_pair_completion_rows",
+      "full_actor_body_collision_rows",
+      "strict_visual_acceptance_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "Exact-name files exist for 1051-1054, but remain zero/off placeholders.",
+      "next_action": "Supply same-scene nonzero split masks and re-run local QA before unblocking named per-hand edges."
+    },
+    {
+      "category": "actor_body_segmentation_source",
+      "description": "Character B actor-body mask (node 1009) remains zero/off.",
+      "next_action": "Provide a nonzero actor-body source before enabling actor-body-full collision/deformation checks."
+    }
+  ]
+}
