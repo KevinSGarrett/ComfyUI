@@ -1,0 +1,33 @@
+{
+    "issue_id":  "lane1_current_hash_lane3_runtime_gap_recheck_bridge_20260704_164816",
+    "created_at_utc":  "2026-07-04T16:48:16Z",
+    "lane_id":  "Lane_1",
+    "workflow_path":  "C:\\\\Comfy_UI\\\\Implementation\\\\workflows\\\\ui\\\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256":  "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+    "status":  "open_external_runtime_dependency",
+    "blockers":  [
+                     {
+                         "category":  "runtime_visibility_gate",
+                         "severity":  "high",
+                         "description":  "Lane 3 emitted a follow-up runtime-gap recheck to Lane 4 confirming unresolved refs; no Lane 4 runtime evidence/response file has been posted yet in shared_state.",
+                         "blocking_refs":  [
+                                               "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+                                               "dw-ll_ucoco_384_bs5.torchscript.pt",
+                                               "sam_vit_b_01ec64.pth",
+                                               "/home/ubuntu/ComfyUI/models/dwpose/yolox_l.onnx",
+                                               "C:\\\\Comfy_UI_Lora\\\\downloads\\\\Hands\\\\Better hands flux v1.0.safetensors",
+                                               "C:\\\\Comfy_UI_Lora\\\\downloads\\\\Hands\\\\Detailed_Hands-000001.safetensors",
+                                               "C:\\\\Comfy_UI_Lora\\\\downloads\\\\Hands\\\\feminine_hands.safetensors",
+                                               "C:\\\\Comfy_UI_Lora\\\\downloads\\\\Hands\\\\Hand v2.safetensors",
+                                               "C:\\\\Comfy_UI_Lora\\\\downloads\\\\Hands\\\\Hands.safetensors"
+                                           ],
+                         "evidence":  [
+                                          "C:\\\\Comfy_UI\\\\Implementation\\\\evidence\\\\workflow_validation\\\\lane1_current_slice_dependency_closure_20260704_20260704_164626.evidence.json",
+                                          "C:\\\\Comfy_UI_Lora\\\\5_sessions\\\\Main\\\\shared_state\\\\ec2_requests\\\\lane1_to_lane4_current_hash_aux_runtime_and_model_visibility_20260704_164737.json",
+                                          "C:\\\\Comfy_UI_Lora\\\\5_sessions\\\\Main\\\\shared_state\\\\ec2_requests\\\\20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json",
+                                          "C:\\\\Comfy_UI\\\\5_sessions\\\\Lane_3\\\\Lane_3\\\\evidence\\\\20260704_165000_workflow_missing_refs_runtime_visibility_check_evidence.json"
+                                      ],
+                         "next_action":  "Lane 4 must execute runtime check for all unresolved refs and post evidence; otherwise post explicit sanctioned recovery/install path and owner before Main Flow can be marked runtime-ready."
+                     }
+                 ]
+}
