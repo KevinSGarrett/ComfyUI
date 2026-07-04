@@ -15,3 +15,10 @@
 - No tracker snapshot created; current-hash runtime execution remains unproven.
 - Evidence record: `C:\Comfy_UI\Implementation\evidence\promotion_quality_audit\lane5_continuous_evidence_intake_evidence_20260704_162300.json`
 - Commit/push state pending at journal write time.
+
+## 2026-07-04T16:24:54.882850Z - Lane 6 v1.1 Preset Audit
+
+- Audited Lane 6 current-hash SDXL low-VRAM v1.1 preset evidence.
+- Accepted current Main Flow hash traceability fix; preserved no-promotion boundary because runtime/candidate media and strict visual review are missing.
+- Evidence record: `C:\Comfy_UI\Implementation\evidence\promotion_quality_audit\lane5_continuous_evidence_intake_evidence_20260704_162454.json`
+- Commit/push pending at journal write time.
