@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "Lane_3_self_hosted_llm_route_20260704_164444",
+  "lane_id": "Lane_3",
+  "created_at_utc": "2026-07-04T16:44:44Z",
+  "claim": {
+    "summary": "At this check, local self-hosted Ollama route is reachable and currently exposes the expected local models `qwen2.5:14b`, `qwen2.5:32b`, and `llava:13b` via OpenAI-compatible endpoints.",
+    "status": "provisional",
+    "requirement_ids": [
+      "SELF_HOSTED_LLM_POLICY",
+      "Lane_3_llm_inventory",
+      "Lane_3_llm_route"
+    ]
+  },
+  "inputs": {
+    "settings": {
+      "policy_path": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\SELF_HOSTED_LLM_POLICY.md",
+      "model_effort_path": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\MODEL_EFFORT_ASSIGNMENTS.md",
+      "ai_plan_path": "C:\\Comfy_UI_Lora\\AI_LLM_Intelligence_Plan",
+      "local_endpoint_models": "http://127.0.0.1:11434/api/tags",
+      "local_endpoint_chat": "http://127.0.0.1:11434/v1/chat/completions"
+    }
+  },
+  "runtime": {
+    "comfyui_url": "not_checked_by_Lane_3",
+    "endpoints_checked": [
+      "http://127.0.0.1:11434/api/version",
+      "http://127.0.0.1:11434/api/tags"
+    ],
+    "aws_auth_status": "not_checked_no_ec2_start_stop_by_Lane_3"
+  },
+  "models": [
+    {
+      "name": "qwen2.5:14b",
+      "family": "Qwen2.5",
+      "path": "C:\\Users\\kevin\\.ollama\\models\\manifests\\registry.ollama.ai\\library\\qwen2.5\\14b",
+      "role": "local_default_advisory_llm",
+      "visibility_evidence": "Returned by `http://127.0.0.1:11434/api/tags`.",
+      "load_result": "not_smoke_tested_this_pass"
+    },
+    {
+      "name": "qwen2.5:32b",
+      "family": "Qwen2.5",
+      "path": "C:\\Users\\kevin\\.ollama\\models\\manifests\\registry.ollama.ai\\library\\qwen2.5\\32b",
+      "role": "local_heavier_reasoning_candidate",
+      "visibility_evidence": "Returned by `http://127.0.0.1:11434/api/tags`.",
+      "load_result": "not_smoke_tested_this_pass"
+    },
+    {
+      "name": "llava:13b",
+      "family": "LLaVA",
+      "path": "C:\\Users\\kevin\\.ollama\\models\\manifests\\registry.ollama.ai\\library\\llava\\13b",
+      "role": "local_vision_language_candidate",
+      "visibility_evidence": "Returned by `http://127.0.0.1:11434/api/tags`.",
+      "load_result": "not_smoke_tested_this_pass"
+    },
+    {
+      "name": "Qwen3-Coder target",
+      "family": "Qwen3-Coder",
+      "path": "not_present_in_local_ollama_inventory",
+      "role": "target_primary_agent_model_from_existing_AI_plan",
+      "visibility_evidence": "Not returned by `http://127.0.0.1:11434/api/tags`.",
+      "load_result": "blocked_missing_local_model"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_164444_llm_runtime_route_recheck_evidence.json",
+      "type": "self_hosted_llm_route_evidence",
+      "description": "Fresh route probe for local Ollama API and `/api/tags` visibility."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "Local Ollama API visibility",
+        "result": "pass",
+        "notes": "`/api/version` returned `0.30.11`; `/api/tags` was reachable."
+      },
+      {
+        "name": "Local model inventory",
+        "result": "pass",
+        "notes": "`/api/tags` returned `qwen2.5:14b`, `qwen2.5:32b`, and `llava:13b`."
+      },
+      {
+        "name": "Planned route-model availability",
+        "result": "blocked",
+        "notes": "Planned Qwen3-Coder-class target for the plan is still not present locally."
+      },
+      {
+        "name": "EC2-hosted LLM readiness",
+        "result": "not_applicable",
+        "notes": "Outside Lane 3 scope per lane constraints."
+      }
+    ],
+    "failure_reasons": [
+      "Qwen3-Coder target model remains absent in local Ollama inventory."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [
+      "Self-hosted local route reachable"
+    ],
+    "does_not_prove_rows": [
+      "Qwen3-Coder local readiness for AI_LLM_Intelligence_Plan",
+      "EC2-hosted LLM validation"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "missing_target_llm",
+      "description": "AI_Plan target Qwen3-Coder-class model remains missing from local Ollama after local-only verification pass.",
+      "next_action": "Coordinate with Lane 4 for EC2-hosted model route confirmation or an approved local install path."
+    },
+    {
+      "category": "ec2_dependency",
+      "description": "Lane 3 cannot execute EC2 proof-of-life validation.",
+      "next_action": "Lane 4 must perform EC2 route checks under lease protocol and report findings."
+    }
+  ]
+}
