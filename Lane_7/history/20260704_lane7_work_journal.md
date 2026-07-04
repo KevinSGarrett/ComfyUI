@@ -407,3 +407,25 @@ Blocker state and next owner actions:
   - `resume_packets/20260704_185500_usage_limit_resume_packet.md`
 - Mirrored these coordination artifacts into `C:\Comfy_UI_Lora\5_sessions\Main` and `C:\Comfy_UI_Lora\5_sessions\Lane_7` for owner visibility.
 - No owner-lane boundaries were crossed: no EC2 start/stop, no cleanup apply, no model movement, no tracker edits.
+
+## 2026-07-04T19:20:00Z - State drift and queue growth sync
+
+- Re-read latest lane signals and shared-state state:
+  - Lane 3 now publishes `20260704_171500_lane3_pm_status.md` (runtime blocker recheck added, true missing refs narrowed to 3).
+  - Lane 5 publishes `20260704_190700_lane5_status.md` (runtime QA exists, but strict visual remains manual review required).
+  - Lane 6 publishes `20260704_175600_lane6_status.md` (request-runner verification refreshed; v1.1 EC2 payload still pending).
+  - EC2 lease remains free; shared queue now reports 14 pending requests, including
+    `20260704_171400_Lane_3_to_Lane_4_main_flow_aux_runtime_blocker_recheck.json`.
+- Storage remains stable at `164.4 GB` free with stale snapshot candidates absent.
+- `C:\Comfy_UI_Lora\5_sessions` untracked total now reads `82`.
+- Added a fresh compact dashboard, storage report, shared catalog, and usage-limit resume packet:
+  - `reports/20260704_192000_lane7_compact_end_to_end_dashboard.md`
+  - `storage_reports/20260704_192000_lane7_storage_pressure_report.md`
+  - `reports/20260704_192000_lane7_shared_artifact_catalog.md`
+  - `resume_packets/20260704_192000_usage_limit_resume_packet.md`
+- Mirrored those coordination artifacts into shared reporting directories:
+  - `C:\Comfy_UI_Lora\5_sessions\Main\reports\20260704_192000_lane7_compact_end_to_end_dashboard.md`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\storage_reports\20260704_192000_lane7_storage_pressure_report.md`
+  - `C:\Comfy_UI_Lora\5_sessions\Lane_7\reports\20260704_192000_lane7_shared_artifact_catalog.md`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\resume_packets\20260704_192000_usage_limit_resume_packet.md`
+- No owner-lane authority was taken; no EC2 operations, model operations, cleanup apply, or tracker mutations were performed.
