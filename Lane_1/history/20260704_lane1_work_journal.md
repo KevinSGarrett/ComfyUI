@@ -1,4 +1,4 @@
-ï»¿
+
 ## 2026-07-04T16:14:19Z - Lane 2 body-contact slot request intake
 
 - Read Lane 2 request lane2_to_lane1_body_contact_slot_request_20260704_160416.md and validation artifact lane2_body_contact_slot_validation_20260704_160416.json.
@@ -82,3 +82,34 @@ ode_count=769, link_count=1137, and no dangling link node IDs.
 - Reconfirmed no new Lane 4 processing output for the pending runtime-gap reassertion request in shared ec2_requests or evidence directories.
 - Re-stated unresolved requirement remains runtime visibility for 4 model refs and downloads\Hands mapping into /home/ubuntu/ComfyUI/models/handsext.
 - Added PM checkpoint 20260704_175000_lane1_pm_status.md and kept Lane 1 in a precise external-blocker waiting state.
+
+## 2026-07-04T16:59:00Z - Corrected link parsing and sent runtime check-in request to Lane 4
+
+- Re-ran static Main Flow validation with correct Comfy `links` tuple parsing (`link_id, src_node, src_slot, dst_node, dst_slot`).
+- Confirmed node_count=769, link_count=1137, global dangling links=0, active-path dangling links=0.
+- Confirmed 90/90 `LoadImage`/`LoadImageMask` paths are present under `C:\Comfy_UI\Input_References`.
+- Kept Runtime blockers unchanged: `bbox/hand_yolov8n.pt`, `sam_vit_b_01ec64.pth`, `dw-ll_ucoco_384_bs5.torchscript.pt`, `yolox_l.onnx`.
+- Emitted `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\lane1_to_lane4_current_hash_runtime_gap_checkin_20260704_165900.json` with exact acceptance criteria for Lane 4.
+- Emitted evidence `C:\Comfy_UI_Lora\5_session_worktrees\Lane_1\Lane_1\evidence\lane1_main_flow_validation_snapshot_20260704_165837.evidence.json`.
+- No workflow edit performed; no backup required.
+
+## 2026-07-04T18:15:00Z - Runtime visibility remains externally blocked
+- Confirmed Main Flow immutable in this slice: hash=5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9, nodes=769, links=1137.
+- Re-checked shared request queue; only pre-existing runtime-gap check requests remain, no new Lane 4 response object with per-ref runtime load status for bbox/hand_yolov8n.pt, sam_vit_b_01ec64.pth, dw-ll_ucoco_384_bs5.torchscript.pt, yolox_l.onnx.
+- Kept Lane 1 in external-blocker wait state with precise handoff in lane1_to_lane4_current_hash_runtime_gap_checkin_20260704_165900.json.
+- No workflow edits in this slice; no backup needed for unchanged graph.
+
+
+## 2026-07-04T20:00:00Z - Lane 1 runtime-facing contact contract refresh and validation
+
+- Consumed Lane 2’s contact runtime-control contract (`lane2_to_lane1_contact_runtime_control_contract_20260704_181500.md`).
+- Re-ran local canonical Main Flow validation via `scratch/main_flow_validation_20260704_200000.json`:
+  - SHA256 `5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9`
+  - nodes `769`, links `1137`
+  - active-path dangling/endpoint errors `0`
+  - missing local LoadImage refs `0`, missing local model refs `0`
+- Confirmed no workflow edits this slice; keeping per-hand and node-1009 placeholder/blocked semantics in place until external runtime + strict visual gates close.
+- Blocker remains external: Lane 4 has not yet returned runtime visibility/loadability evidence for `bbox/hand_yolov8n.pt`, `sam_vit_b_01ec64.pth`, `dw-ll_ucoco_384_bs5.torchscript.pt`, and `yolox_l.onnx`.
+- Added artifacts and response for Lane 2:
+  - `evidence/lane1_main_flow_validation_refresh_20260704_200000.evidence.json`
+  - `responses/lane1_to_lane2_main_flow_contact_contract_ack_20260704_200000.md`

@@ -1,0 +1,81 @@
+{
+    "created_at_utc":  "2026-07-04T20:00:00Z",
+    "schema_version":  "1.0",
+    "lane_id":  "Lane_1",
+    "inputs":  {
+                   "workflow_path":  "C:\\\\Comfy_UI\\\\Implementation\\\\workflows\\\\ui\\\\WAVE42_MAIN_FLOW_20260702.json",
+                   "workflow_sha256":  "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9"
+               },
+    "artifacts":  [
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_20260704_200000.json",
+                          "sha256":  "a94dea0da388c4441fe001a5cfc09cff2ea5b3fb82d161e8186f6f03586e0ca7",
+                          "description":  "Main Flow local validation snapshot output",
+                          "size_bytes":  59883,
+                          "type":  "json"
+                      }
+                  ],
+    "qa":  {
+               "verdict":  "blocked",
+               "failure_reasons":  [
+                                       "Runtime visibility for auxiliary control models unresolved; blocks Main Flow strict acceptance path."
+                                   ],
+               "checks":  [
+                              {
+                                  "result":  "pass",
+                                  "name":  "graph_validate",
+                                  "notes":  "Active endpoint/input graph checks passed (active_input_errors=0, active_endpoint_errors=0, duplicate nodes/links empty)."
+                              },
+                              {
+                                  "result":  "pass",
+                                  "name":  "node_link_counts",
+                                  "notes":  "node_count=769, link_count=1137; last reported hash unchanged."
+                              },
+                              {
+                                  "result":  "pass",
+                                  "name":  "loadimage_and_model_refs_local",
+                                  "notes":  "missing_load_image_references=0 and missing_model_references=0 in local index roots."
+                              },
+                              {
+                                  "result":  "pass",
+                                  "name":  "lane2_contact_runtime_contract",
+                                  "notes":  "Lane 2 contract enforced locally: named per-hand edges remain blocked and node 1009 remains placeholder semantics pending runtime proof."
+                              },
+                              {
+                                  "result":  "blocked",
+                                  "name":  "runtime_dependency_gap",
+                                  "notes":  "External runtime visibility for bbox/hand_yolov8n.pt, dw-ll_ucoco_384_bs5.torchscript.pt, sam_vit_b_01ec64.pth, yolox_l.onnx still unresolved by Lane 4."
+                              }
+                          ]
+           },
+    "claim":  {
+                  "summary":  "Validated canonical Main Flow hash-correct graph structure, active-path links, LoadImage refs, and model refs after consuming Lane 2 contact-runtime contract; no graph edits made in this slice.",
+                  "status":  "passed",
+                  "requirement_ids":  [
+                                          "main_flow_graph_integrity",
+                                          "main_flow_load_and_model_refs",
+                                          "lane2_contract_preservation"
+                                      ]
+              },
+    "tracker_mapping":  {
+                            "does_not_prove_rows":  [
+                                                        "main_flow_runtime_strict_contact_ready",
+                                                        "main_flow_auxiliary_runtime_ready"
+                                                    ],
+                            "proves_rows":  [
+                                                "main_flow_local_graph_ready"
+                                            ],
+                            "promotion_decision":  "needs_more_evidence"
+                        },
+    "models":  [
+
+               ],
+    "evidence_id":  "lane1-main-flow-validation-refresh-20260704-200000",
+    "blockers":  [
+                     {
+                         "next_action":  "Await Lane 4 runtime/visibility response with object_info-verified status or explicit install/map action for each unresolved reference.",
+                         "category":  "runtime_dependency",
+                         "description":  "Lane 4 has not yet returned explicit object-info visibility for bbox/hand_yolov8n.pt, dw-ll_ucoco_384_bs5.torchscript.pt, sam_vit_b_01ec64.pth, yolox_l.onnx at /home/ubuntu/ComfyUI aliases and local basenames."
+                     }
+                 ]
+}
