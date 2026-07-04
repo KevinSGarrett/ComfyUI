@@ -1,0 +1,360 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane3-main-flow-model-visibility-20260704-162424",
+  "lane_id": "Lane_3",
+  "created_at_utc": "2026-07-04T16:24:24Z",
+  "claim": {
+    "summary": "Lane 3 reconciled Lane 1's 26 Main Flow model references against the canonical WAVE42_MAIN_FLOW_20260702.json and confirmed all 26 exact names are present under checked local model roots, primarily C:\\Comfy_UI\\Runtime_Data\\models. Runtime ComfyUI catalog/load visibility remains pending Lane 4 verification.",
+    "status": "provisional",
+    "requirement_ids": [
+      "Lane_3.MainFlow.ModelVisibility",
+      "Lane_3.ModelAssetCompatibility",
+      "Lane_4.RuntimeVisibilityRequest"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "273158B6B84CEFC67A706AC1C4656D90CFBEBF04F0890A9230DD526475D5B96D",
+    "lane1_request_path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane3_main_flow_model_visibility_20260704_105550.json",
+    "lane1_request_sha256": "9F02B716544FE40612A010906C6DEF297951939DDDC41A51E258E3FAFB0F748A",
+    "checked_roots": [
+      "C:\\Comfy_UI\\models",
+      "C:\\Comfy_UI\\Runtime_Data\\models",
+      "C:\\Comfy_UI_Lora\\models"
+    ],
+    "reference_count": 26,
+    "present_count": 26,
+    "missing_count": 0
+  },
+  "runtime": {
+    "ec2_state_before": "not_checked_by_lane_3",
+    "ec2_state_after": "not_changed_by_lane_3",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "notes": "Lane 3 did not start, stop, or query EC2 runtime state during this slice."
+  },
+  "models": [
+    {
+      "name": "RealESRGAN_x4plus.pth",
+      "family": "upscale",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\upscale_models\\RealESRGAN_x4plus.pth",
+      "sha256": "4FA0D38905F75AC06EB49A7951B426670021BE3018265FD191D2125DF9D682F1",
+      "role": "UpscaleModelLoader",
+      "size_bytes": 67040989,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "RealVisXL_V5.0_fp16.safetensors",
+      "family": "sdxl_checkpoint",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\checkpoints\\RealVisXL_V5.0_fp16.safetensors",
+      "sha256": "6A35A7855770AE9820A3C931D4964C3817B6D9E3C6F9C4DABB5B3A94E5643B80",
+      "role": "CheckpointLoaderSimple",
+      "size_bytes": 6938065488,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "ae.safetensors",
+      "family": "flux_vae",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\vae\\ae.safetensors",
+      "sha256": "AFC8E28272CD15DB3919BACDB6918CE9C1ED22E96CB12C4D5ED0FBA823529E38",
+      "role": "VAELoader",
+      "size_bytes": 335304388,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "controlnet-canny-sdxl-1.0-small.safetensors",
+      "family": "sdxl_controlnet",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\controlnet\\controlnet-canny-sdxl-1.0-small.safetensors",
+      "sha256": "97B75CE51FAE5CFC4D5EA98445292D482D911B241B9A82FD8260DBAA2269031A",
+      "role": "ControlNetLoader",
+      "size_bytes": 640459467,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "family": "sdxl_controlnet",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\controlnet\\controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "sha256": "6F23C58FD632F52238A7B35EBDC02F9F596FD13DBAA121F9B37B9F4689C2B1E9",
+      "role": "ControlNetLoader",
+      "size_bytes": 320237179,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "controlnet-openpose-sdxl-1.0.safetensors",
+      "family": "sdxl_controlnet",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\controlnet\\controlnet-openpose-sdxl-1.0.safetensors",
+      "sha256": "B8524E557A7DF60D081F5D4A0EB109967D107DF217943BF88C2D99B9EBCC06C5",
+      "role": "ControlNetLoader",
+      "size_bytes": 2502139104,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "flux1-dev-fp8.safetensors",
+      "family": "flux_checkpoint",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\checkpoints\\flux1-dev-fp8.safetensors",
+      "sha256": "8E91B68084B53A7FC44ED2A3756D821E355AC1A7B6FE29BE760C1DB532F3D88A",
+      "role": "CheckpointLoaderSimple",
+      "size_bytes": 17246524772,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "flux1-schnell-fp8.safetensors",
+      "family": "flux_checkpoint",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\checkpoints\\flux1-schnell-fp8.safetensors",
+      "sha256": "EAD426278B49030E9DA5DF862994F25CE94AB2EE4DF38B556DDDDB3DB093BF72",
+      "role": "CheckpointLoaderSimple",
+      "size_bytes": 17236328572,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "qwen_3_4b.safetensors",
+      "family": "text_encoder",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\text_encoders\\qwen_3_4b.safetensors",
+      "sha256": "6C671498573AC2F7A5501502CCCE8D2B08EA6CA2F661C458E708F36B36EDFC5A",
+      "role": "CLIPLoader",
+      "size_bytes": 8044982048,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "z_image_turbo_bf16.safetensors",
+      "family": "z_image_diffusion_model",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\diffusion_models\\z_image_turbo_bf16.safetensors",
+      "sha256": "2407613050B809FFDFF18A4AC99AF83EA6B95443ECEBDF80E064A79C825574A6",
+      "role": "UNETLoader",
+      "size_bytes": 12309866400,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "sha256": "613B1FFBAD683049521F9CC6295D622EA83BC43DCDC45F044AA6AC948FC5E606",
+      "role": "LoraLoader",
+      "size_bytes": 306439480,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_flux_sweat_v2.safetensors",
+      "sha256": "41617D0983F0D465AE74FED3F76A83577C785EF98505D4071FBD08928F2C96CB",
+      "role": "LoraLoader",
+      "size_bytes": 306442000,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_mascara-tears-v2.safetensors",
+      "sha256": "7BEFC2B2A0E5EC32A0231EC744EC38BDF73FC995877934F699FDE04F432F29C7",
+      "role": "LoraLoader",
+      "size_bytes": 475554080,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_Oily_skin_style_v1.safetensors",
+      "sha256": "859AAD5F4E0B99A0447FB4EF7E35CE594791730C4386B3EEC92632B8EE20F7DB",
+      "role": "LoraLoader",
+      "size_bytes": 306456680,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_SWEATY.safetensors",
+      "sha256": "AA8911EE3C42BE0E373E2AC529591E9C15BCA045A81F740ED7AE4E747255C4CF",
+      "role": "LoraLoader",
+      "size_bytes": 153345048,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_Sweaty_1.safetensors",
+      "sha256": "CE2A841015D3B251ECAB3B108948E796C59F5B7FC092E940F1F6B5FDDAC8BF0E",
+      "role": "LoraLoader",
+      "size_bytes": 19265552,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Better_hands_flux_v1_0.safetensors",
+      "sha256": "7A4760CD8C95F700A9D2BD107C93631A87E3F24127EE0973CC110E619CC786C9",
+      "role": "LoraLoader",
+      "size_bytes": 343805439,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Detailed_Hands-000001.safetensors",
+      "sha256": "DB03488D97D57FC4024322BA799DBF4EF3C894DFEEB2560D1FBED994F842A335",
+      "role": "LoraLoader",
+      "size_bytes": 89745224,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_feminine_hands.safetensors",
+      "sha256": "1B886A1C45CDB6F896ACACB387A973DD39D035576891C34B6A1F1DE19E6ED54C",
+      "role": "LoraLoader",
+      "size_bytes": 19293128,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Hand_v2.safetensors",
+      "sha256": "82B169C9500DA411FBCCAA40538F34F44290A525B9A2710431E91229D281F96E",
+      "role": "LoraLoader",
+      "size_bytes": 343805439,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/skin/flux_skin_Bombshell_Flux_V3.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\skin\\flux_skin_Bombshell_Flux_V3.safetensors",
+      "sha256": "E4C1A7EB7E89415198AFF67D52735964FCA0A29025CC6B6CB9C4EEA507832FD1",
+      "role": "LoraLoader",
+      "size_bytes": 153277376,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/skin/flux_skin_FC-Bandeau.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\skin\\flux_skin_FC-Bandeau.safetensors",
+      "sha256": "766B3DFB3F665D49522C7E94B0A58AB94A7763DD65199C8EA51066EE82DAAF43",
+      "role": "LoraLoader",
+      "size_bytes": 158614544,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\skin\\flux_skin_OiledSkin_FluxDev.safetensors",
+      "sha256": "4A0C0F8E8C45587AA12EAD2E785C1F21DF452D933A51793EC7E3E4E3D6EB1C03",
+      "role": "LoraLoader",
+      "size_bytes": 343805450,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "family": "flux_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\style\\flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "sha256": "2D0C893944C97021C1B6A6E16AC17A6B2477811F883A2E0B56ADE41522D3951D",
+      "role": "LoraLoader",
+      "size_bytes": 229898208,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "family": "sdxl_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\fluids\\sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "sha256": "FEB1A58BFCC24AC7A37FA50599F063EECB8ED2484B88A67E8F9F1FE8F52D1FA4",
+      "role": "LoraLoader",
+      "size_bytes": 912574852,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    },
+    {
+      "name": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "family": "sdxl_lora",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\jewelry_accessories\\sdxl_jewelry_accessories_Hands.safetensors",
+      "sha256": "2B280402901408C3F5E2B02E9F197FEB500796A4B93E57E638BA8454755BE10C",
+      "role": "LoraLoader",
+      "size_bytes": 228465148,
+      "visibility_evidence": "present_by_exact_expected_path",
+      "load_result": "pending_lane4_runtime_check"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_162424_main_flow_model_visibility_reconciliation.md",
+      "type": "reconciliation_report",
+      "description": "Human-readable compatibility and path/hash reconciliation table for the 26 Main Flow model references."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\requests\\20260704_162424_Lane_3_to_Lane_4_main_flow_runtime_visibility.json",
+      "type": "lane4_runtime_visibility_request",
+      "description": "Runtime catalog/load request for Lane 4 based on Lane 3's completed local file placement."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "lane1_request_consumed",
+        "result": "pass",
+        "notes": "Read Lane 1 request SHA256 9F02B716544FE40612A010906C6DEF297951939DDDC41A51E258E3FAFB0F748A and extracted 26 unique references."
+      },
+      {
+        "name": "canonical_workflow_hashed",
+        "result": "pass",
+        "notes": "Canonical workflow SHA256 was 273158B6B84CEFC67A706AC1C4656D90CFBEBF04F0890A9230DD526475D5B96D during reconciliation."
+      },
+      {
+        "name": "local_paths_present",
+        "result": "pass",
+        "notes": "26 of 26 exact expected names were found under checked model roots, all under C:\\Comfy_UI\\Runtime_Data\\models."
+      },
+      {
+        "name": "hashes_recorded",
+        "result": "pass",
+        "notes": "SHA256 hashes and file sizes were recorded for all 26 assets."
+      },
+      {
+        "name": "runtime_visibility",
+        "result": "provisional",
+        "notes": "Lane 3 did not verify live ComfyUI /object_info, dropdown catalog, or load execution. Lane 4 request created."
+      }
+    ],
+    "failure_reasons": []
+  },
+  "tracker_mapping": {
+    "proves_rows": [
+      "Main Flow 26 requested model names are locally present by exact expected path.",
+      "Main Flow SDXL, Flux, Z-Image, ControlNet, VAE, upscale, text-encoder, and LoRA asset families have path/hash compatibility evidence."
+    ],
+    "does_not_prove_rows": [
+      "Running ComfyUI process has refreshed and exposes every asset in node dropdown/object_info data.",
+      "Workflow execution can load every asset without VRAM, extension, or family-mismatch errors.",
+      "EC2 runtime has the same catalog state as local Runtime_Data."
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "runtime_visibility",
+      "description": "Local placement is complete, but live ComfyUI catalog/dropdown visibility and minimal load proof are not yet verified.",
+      "next_action": "Lane 4 should inspect live ComfyUI /object_info or equivalent dropdown data for the requested loader classes and run the smallest safe load/catalog smoke check for the 26 names."
+    }
+  ]
+}

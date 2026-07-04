@@ -1,0 +1,103 @@
+{
+  "request_id": "lane3-to-lane4-main-flow-runtime-visibility-20260704-162424",
+  "created_at_utc": "2026-07-04T16:24:24Z",
+  "from_lane": "Lane_3",
+  "to_lane": "Lane_4",
+  "priority": "high",
+  "subject": "Verify live ComfyUI runtime visibility for 26 canonical Main Flow model references",
+  "context": {
+    "canonical_workflow": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "canonical_workflow_sha256_at_lane3_reconciliation": "273158B6B84CEFC67A706AC1C4656D90CFBEBF04F0890A9230DD526475D5B96D",
+    "lane1_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane3_main_flow_model_visibility_20260704_105550.json",
+    "lane1_request_sha256": "9F02B716544FE40612A010906C6DEF297951939DDDC41A51E258E3FAFB0F748A",
+    "lane3_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_162424_main_flow_model_visibility_evidence.json",
+    "lane3_reconciliation_report": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_162424_main_flow_model_visibility_reconciliation.md",
+    "lane3_local_result": "26 of 26 exact references present under C:\\Comfy_UI\\Runtime_Data\\models with SHA256 hashes recorded."
+  },
+  "constraints": [
+    "Do not start or stop EC2 on behalf of Lane 3.",
+    "Do not print secrets from C:\\Comfy_UI\\.env.",
+    "Do not commit ignored live state from Main\\shared_state\\ec2_requests.",
+    "Treat Lane 3 local path/hash evidence as file placement only; runtime dropdown/catalog/load visibility still needs proof."
+  ],
+  "requested_checks": [
+    {
+      "loader_class": "CheckpointLoaderSimple",
+      "expected_names": [
+        "RealVisXL_V5.0_fp16.safetensors",
+        "flux1-dev-fp8.safetensors",
+        "flux1-schnell-fp8.safetensors"
+      ],
+      "requested_evidence": "Confirm each exact name appears in the live checkpoint dropdown/object_info data."
+    },
+    {
+      "loader_class": "UNETLoader",
+      "expected_names": [
+        "z_image_turbo_bf16.safetensors"
+      ],
+      "requested_evidence": "Confirm exact name appears in live diffusion_models/unet dropdown/object_info data."
+    },
+    {
+      "loader_class": "CLIPLoader",
+      "expected_names": [
+        "qwen_3_4b.safetensors"
+      ],
+      "requested_evidence": "Confirm exact name appears in live text encoder / clip dropdown/object_info data."
+    },
+    {
+      "loader_class": "VAELoader",
+      "expected_names": [
+        "ae.safetensors"
+      ],
+      "requested_evidence": "Confirm exact name appears in live VAE dropdown/object_info data."
+    },
+    {
+      "loader_class": "ControlNetLoader",
+      "expected_names": [
+        "controlnet-canny-sdxl-1.0-small.safetensors",
+        "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+        "controlnet-openpose-sdxl-1.0.safetensors"
+      ],
+      "requested_evidence": "Confirm each exact name appears in live ControlNet dropdown/object_info data."
+    },
+    {
+      "loader_class": "UpscaleModelLoader",
+      "expected_names": [
+        "RealESRGAN_x4plus.pth"
+      ],
+      "requested_evidence": "Confirm exact name appears in live upscale model dropdown/object_info data."
+    },
+    {
+      "loader_class": "LoraLoader_or_rgthree_lora_stack",
+      "expected_names": [
+        "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+        "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+        "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+        "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+        "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+        "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+        "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+        "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+        "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+        "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+        "wave42/flux/skin/flux_skin_Bombshell_Flux_V3.safetensors",
+        "wave42/flux/skin/flux_skin_FC-Bandeau.safetensors",
+        "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+        "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+        "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+        "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors"
+      ],
+      "requested_evidence": "Confirm each exact relative LoRA name appears in live LoRA catalog/dropdown data. If rgthree presents paths differently, record the exact visible name and mapping."
+    }
+  ],
+  "minimum_acceptance": [
+    "Attach or record live /object_info or equivalent runtime catalog evidence for each loader family.",
+    "Classify each expected name as visible, not visible, or visible under alternate display name.",
+    "Run the smallest safe smoke check needed to prove the runtime can at least catalog/load representative SDXL, Flux, Z-Image, ControlNet, VAE, upscale, text-encoder, and LoRA families, or return an exact blocker with next action."
+  ],
+  "lane3_assessment": {
+    "local_file_blocker": "resolved",
+    "runtime_visibility_status": "pending_lane4",
+    "tracker_decision": "needs_more_evidence"
+  }
+}
