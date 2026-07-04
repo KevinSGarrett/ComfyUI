@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane3-20260704_163909_top500_batch0_dry",
+  "lane_id": "Lane_3",
+  "created_at_utc": "2026-07-04T16:39:09.756755+00:00",
+  "claim": {
+    "summary": "Lane 3 parsed the curated Top500 CSV locally and produced a dry EC2 ingest batch with 20 planned model-card drafts, no downloads, and redacted download URLs.",
+    "status": "provisional",
+    "requirement_ids": [
+      "Lane_3.CivitaiTop500DryManifest",
+      "EC2_MODEL_INGESTION_POLICY.InventoryPhase"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "source_csv": "C:\\Comfy_UI_Lora\\downloads\\models\\PENDING_flux1_sdxl_TOP500_curated.csv",
+    "source_csv_sha256": "DBAE4DA6944E782A9C08DB31F9C7A76B4EF48826A4F7982B5A63B06D64E8D16C",
+    "settings": {
+      "source": "PENDING_flux1_sdxl_TOP500_curated.csv",
+      "sort": "rank ascending",
+      "eligible_families": [
+        "sdxl",
+        "flux",
+        "z_image"
+      ],
+      "required_scan": "virus=Success and pickle=Success",
+      "required_availability": "Public",
+      "excluded_flags": [
+        "minor=True",
+        "poi=True"
+      ],
+      "safety_block_terms": [
+        "child",
+        "deepfake",
+        "loli",
+        "minor",
+        "non-consensual",
+        "nonconsensual",
+        "nudify",
+        "schoolgirl",
+        "shota",
+        "teen",
+        "underage",
+        "undress",
+        "undressing"
+      ],
+      "batch_size_cap": 20,
+      "planned_size_cap_gib": 10.0
+    }
+  },
+  "runtime": {
+    "ec2_state_before": "not_checked_by_lane_3",
+    "ec2_state_after": "not_changed_by_lane_3",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used"
+  },
+  "models": [
+    {
+      "name": "Hands XL + SD 1.5 + F1D + Pony + Illustrious + zit + ZIB",
+      "family": "z_image",
+      "path": "/home/ubuntu/ComfyUI/models/loras/z_image/eyes_system/Hands zib v1.safetensors",
+      "sha256": "971D7FE6023B813411B2978A6098D74E8975AF34388B3A1A1D1F303F80F0E1AD",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Detailed Perfection style (Hands + Feet + Face + Body + All in one) XL + F1D + SD1.5 + Pony + Illu + zit + zib",
+      "family": "z_image",
+      "path": "/home/ubuntu/ComfyUI/models/loras/z_image/eyes_system/Hands + Feet + skin perfection style zib v1.safetensors",
+      "sha256": "A8104470E3607F2DA326813BBD04C70134EF521951005BDC9FAE704BD80D8124",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Real Cum SDXL",
+      "family": "sdxl",
+      "path": "/home/ubuntu/ComfyUI/models/loras/sdxl/fluid_wetness_surface/realcumv6.55.safetensors",
+      "sha256": "13658345F7346C3E75E13B3592D98FA2E749BDD83D46628B933AEC0F8B78E35B",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Feet XL + SD 1.5 + F1D + Pony + Illustrious + zit",
+      "family": "z_image",
+      "path": "/home/ubuntu/ComfyUI/models/loras/z_image/eyes_system/feet v2.1.safetensors",
+      "sha256": "454A66AA4FAC0ED377D12897EAB5EC93B2A52D4F2EED719FD4B45308387B8055",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "PornMaster-颜射，內射，精液滴下，精液，肛交後，做愛後-bukkake,creampie,cumdrip,cum,after anal,after sex",
+      "family": "sdxl",
+      "path": "/home/ubuntu/ComfyUI/models/loras/sdxl/asymmetry_imperfections/PornMaster-cum-sdxl-V3-lora.safetensors",
+      "sha256": "9D9FFB65A0D2371BD928F9F67113EF4FA5E6AD1E60B42F8DA73443F5846BA9A9",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Subtle Styles",
+      "family": "sdxl",
+      "path": "/home/ubuntu/ComfyUI/models/loras/sdxl/body_structure/subtle-rayness2-xl25.safetensors",
+      "sha256": "5BD455076E888B1310B81E3FE305137306C2A2FCA6828DF69342BAAC8E26C1DD",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Real Pussy - Cameltoe",
+      "family": "sdxl",
+      "path": "/home/ubuntu/ComfyUI/models/loras/sdxl/body_structure/Pussy_Cameltoe_v3_XL.safetensors",
+      "sha256": "9C65DB0627847C367CCD5562043085BBCA1D78139B1C0F46D26D77B47290F69E",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "NippleDiffusion - Flux1.Dev",
+      "family": "flux",
+      "path": "/home/ubuntu/ComfyUI/models/loras/flux/asymmetry_imperfections/nipplediffusion-f1.safetensors",
+      "sha256": "04C3E5AF8314FCCD00900AADB716DC01A109453E190D8C7683D42BC71C03B9E5",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Subtle Poses",
+      "family": "sdxl",
+      "path": "/home/ubuntu/ComfyUI/models/loras/sdxl/arms_elbows_knees/subtle-cum-xl3.safetensors",
+      "sha256": "4E4010E1EA8285819588740F4EAA7E20F5A36F605A7FB24B0A0D34C08DCFC568",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "400GB-LoRA-XL-Repository",
+      "family": "sdxl",
+      "path": "/home/ubuntu/ComfyUI/models/loras/sdxl/fluid_wetness_surface/FF.102.colossusProjectXLSFW_49bExperimental.LORA.safetensors",
+      "sha256": "3E7AFB2F3C599EBF3B845A65ECCEB3032EA360201B915F7D56B791476B332016",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Character Friendly Body Types - FLUX",
+      "family": "flux",
+      "path": "/home/ubuntu/ComfyUI/models/loras/flux/body_type/mongot-Nude-Candice-v1-STRONG.safetensors",
+      "sha256": "B7A12DFFED562E852735F903B2E83FB0E9B07336AA2520F8F6E8C7DCB0507871",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "FappXL (Multi NSFW concept)",
+      "family": "sdxl",
+      "path": "/home/ubuntu/ComfyUI/models/loras/sdxl/feet/FappXL.safetensors",
+      "sha256": "E3898ABC21913B9C7894EC6293D8861245383DF92E46FCBA438C2E330120CC2A",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Real Pussy - Lotte",
+      "family": "sdxl",
+      "path": "/home/ubuntu/ComfyUI/models/loras/sdxl/hands_nails/Pussy_Lotte_v6_XL_nf.safetensors",
+      "sha256": "8BCA0A6C7364B14DE8119A3739BFF518F3BB8DF137EE30E253879C328C434E19",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "(POV + Sideways) deepthroat (FLUX + SDXL)",
+      "family": "flux",
+      "path": "/home/ubuntu/ComfyUI/models/loras/flux/mouth_teeth_lips/Sideways_Deepthroat_FLUX_concept_v1_r1_merger_13_34_52_03_02_05.safetensors",
+      "sha256": "EBA05172878BE6901855CAA550296443819C98016B8EFE3234770B3D1DEF86BC",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "first_nsfw_for_sdxl",
+      "family": "sdxl",
+      "path": "/home/ubuntu/ComfyUI/models/loras/sdxl/ears/SDXL_Sevenof9_7th_NSFW.safetensors",
+      "sha256": "9FD2BE2169E9A06AE329E1FF6AF33F6D6DD00D89FD4D809B5FEB7DC7B52E4728",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Lovin'Snuggly Positions「LSP」小姿势 LoRA for RedCraft | 红潮 RedZ-Image IL PONY FLUX.1",
+      "family": "z_image",
+      "path": "/home/ubuntu/ComfyUI/models/loras/z_image/body_structure/RedLSP_extracted_lora_full_rank.safetensors",
+      "sha256": "5DFA619A7260CD7048D883DA356598A7CB5B0E88FFF4D984272B66B2B4AA1C1A",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Full Female Anatomy - Fineart Nudity - Flux Lora (NSFW) -Breasts/Pussy/Ass/and more",
+      "family": "flux",
+      "path": "/home/ubuntu/ComfyUI/models/loras/flux/body_structure/anatomy_fineart_nudity_by_caith.safetensors",
+      "sha256": "6243577C9719F1EC6F2E7F0BF9E0056CCE4C85432EAF61693B556235E9CB819C",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Detailed style XL + F1D + SD1.5 + zib (Hand focus + All in One) \"Detailed Perfection style extension\"",
+      "family": "z_image",
+      "path": "/home/ubuntu/ComfyUI/models/loras/z_image/eyes_system/Detailed style Hand focus + All in One zib v1.safetensors",
+      "sha256": "407A2DC5FB651ADED6F3A5D27EFDFFF009D9653DF4DC3E95FC8E2B8AE77AC4F2",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "NaturalBodyXL",
+      "family": "sdxl",
+      "path": "/home/ubuntu/ComfyUI/models/loras/sdxl/asymmetry_imperfections/NaturalBodyV2.0.safetensors",
+      "sha256": "D101E625403BFA769CA8F590E4DE06D0D7D3ED275EEB793F638DE414A3543862",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    },
+    {
+      "name": "Facial Expressions \"Realistic + Anime\" (detailed emotions) style XL + SD1.5 + F1D + Illu + Pony + zit",
+      "family": "z_image",
+      "path": "/home/ubuntu/ComfyUI/models/loras/z_image/face_system/facial expression style v2.1.safetensors",
+      "sha256": "3D899017777432CEC47EE610D53E5DAA699C81B7E6B0EF573322AACD11A08BA5",
+      "role": "planned_civitai_ingest_candidate",
+      "visibility_evidence": "csv_metadata_only_not_downloaded",
+      "load_result": "not_downloaded_not_loaded"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\20260704_163909_top500_batch0_dry.dry_manifest.json",
+      "type": "dry_manifest",
+      "description": "No download URLs or token values."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\20260704_163909_top500_batch0_dry.dry_download_report.md",
+      "type": "dry_download_report",
+      "description": "Batch report template filled for planned state."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\20260704_163909_top500_batch0_dry.inventory_summary.json",
+      "type": "inventory_summary",
+      "description": "Top500 family/type counts and selected batch summary."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards",
+      "type": "model_card_directory",
+      "description": "20 model-card drafts."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "local_csv_only",
+        "result": "pass",
+        "notes": "Read local CSV only; no model download commands issued."
+      },
+      {
+        "name": "download_urls_redacted",
+        "result": "pass",
+        "notes": "Manifest/report/cards omit primary_version_downloadUrl and primary_file_downloadUrl values."
+      },
+      {
+        "name": "scan_filter",
+        "result": "pass",
+        "notes": "Selected entries require virus and pickle scan Success in CSV metadata."
+      },
+      {
+        "name": "runtime_visibility",
+        "result": "not_applicable",
+        "notes": "Dry manifest only; no ComfyUI runtime visibility claim."
+      },
+      {
+        "name": "lane5_audit",
+        "result": "provisional",
+        "notes": "Lane 5 audit required before any Lane 4 EC2 launch request."
+      }
+    ],
+    "failure_reasons": [
+      "CSV metadata does not prove downloaded, hash-verified, catalog-visible, load-tested, or generation-tested status."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [
+      "Top500 curated CSV can be parsed into a bounded dry EC2 ingest manifest with model-card drafts."
+    ],
+    "does_not_prove_rows": [
+      "Any model is downloaded, hash-verified, catalog-visible, load-tested, generation-tested, or safe for tracker promotion."
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "dry_manifest_only",
+      "description": "No EC2 storage preflight, Lane 5 audit, or download/hash/catalog evidence exists for this batch.",
+      "next_action": "Lane 5 should audit this dry manifest and model cards; Lane 4 should only run EC2 downloads after audit plus storage preflight."
+    }
+  ]
+}

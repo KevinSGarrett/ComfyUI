@@ -1,0 +1,2043 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "20260704_163909_top500_batch0_dry",
+  "lane_id": "Lane_3",
+  "created_at_utc": "2026-07-04T16:39:09.748879+00:00",
+  "source_csv": "C:\\Comfy_UI_Lora\\downloads\\models\\PENDING_flux1_sdxl_TOP500_curated.csv",
+  "source_csv_sha256": "DBAE4DA6944E782A9C08DB31F9C7A76B4EF48826A4F7982B5A63B06D64E8D16C",
+  "mode": "dry_manifest_only_no_download",
+  "selection_policy": {
+    "source": "PENDING_flux1_sdxl_TOP500_curated.csv",
+    "sort": "rank ascending",
+    "eligible_families": [
+      "sdxl",
+      "flux",
+      "z_image"
+    ],
+    "required_scan": "virus=Success and pickle=Success",
+    "required_availability": "Public",
+    "excluded_flags": [
+      "minor=True",
+      "poi=True"
+    ],
+    "safety_block_terms": [
+      "child",
+      "deepfake",
+      "loli",
+      "minor",
+      "non-consensual",
+      "nonconsensual",
+      "nudify",
+      "schoolgirl",
+      "shota",
+      "teen",
+      "underage",
+      "undress",
+      "undressing"
+    ],
+    "batch_size_cap": 20,
+    "planned_size_cap_gib": 10.0
+  },
+  "storage_projection": {
+    "planned_file_count": 20,
+    "planned_total_bytes": 10589569023,
+    "planned_total_gib": 9.862,
+    "ec2_stop_threshold": "Do not start download if projected free space after batch is below 150 GB or 15 percent, whichever is stricter.",
+    "ec2_free_space_verified": false
+  },
+  "secret_handling": {
+    "download_urls_redacted": true,
+    "token_variable_name": "CIVITAI_TOKEN",
+    "token_value_present": false,
+    "token_printed_or_persisted": false
+  },
+  "target_roots": {
+    "lora": "/home/ubuntu/ComfyUI/models/loras/<family>/<category>/"
+  },
+  "entries": [
+    {
+      "rank": 2,
+      "civitai_model_id": "200255",
+      "civitai_version_id": "3012596",
+      "civitai_file_id": "2891594",
+      "name": "Hands XL + SD 1.5 + F1D + Pony + Illustrious + zit + ZIB",
+      "creator": "EauDeNoire",
+      "model_type": "LORA",
+      "base_model": "ZImageBase",
+      "compatibility_family": "z_image",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "Hands zib v1.0",
+      "filename": "Hands zib v1.safetensors",
+      "size_mb": 870.3,
+      "size_bytes_estimate": 912575693,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "971D7FE6023B813411B2978A6098D74E8975AF34388B3A1A1D1F303F80F0E1AD",
+        "auto_v2": "971D7FE602",
+        "blake3": "3EA821A638EC06AA0171FC2CB0B4A8A2AE2FC64FFF5F2500747E5D7550A14570",
+        "crc32": "6FC201FD"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2026-06-07T17:09:13.586Z"
+      },
+      "safety": {
+        "nsfw": "False",
+        "nsfw_level": "31",
+        "version_nsfw_level": "3",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "False",
+        "allow_commercial_use": "\"{RentCivit}\"",
+        "allow_derivatives": "False",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Eyes_System,Hands_Nails,Skin_System",
+        "tags": "pony;female;hyperrealism;sd1.5;person;woman;photorealistic;illustrious;girls;realistic;film;polish;cinematic;body;sexy;realism;sharp;real;f1d;zit;lora;detailed;anime;hands;photo;male;man;hand;enhancer;human;nails;sdxl;part;flux;assets"
+      },
+      "prompt_use": {
+        "trained_words": "realistic;detailed;photorealistic;incredibly lifelike;hand"
+      },
+      "civitai_url": "https://civitai.com/models/200255",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/z_image/eyes_system/Hands zib v1.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0002_model200255_version3012596.md"
+    },
+    {
+      "rank": 8,
+      "civitai_model_id": "411088",
+      "civitai_version_id": "2709983",
+      "civitai_file_id": "2595873",
+      "name": "Detailed Perfection style (Hands + Feet + Face + Body + All in one) XL + F1D + SD1.5 + Pony + Illu + zit + zib",
+      "creator": "EauDeNoire",
+      "model_type": "LORA",
+      "base_model": "ZImageBase",
+      "compatibility_family": "z_image",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "Perfection zib v1.0",
+      "filename": "Hands + Feet + skin perfection style zib v1.safetensors",
+      "size_mb": 870.3,
+      "size_bytes_estimate": 912575693,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "A8104470E3607F2DA326813BBD04C70134EF521951005BDC9FAE704BD80D8124",
+        "auto_v2": "A8104470E3",
+        "blake3": "129C3DBC07F74F885F4A6F112A82159044AA0BFE957525861735B0CF357B4861",
+        "crc32": "D0382A47"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2026-02-21T17:40:44.870Z"
+      },
+      "safety": {
+        "nsfw": "False",
+        "nsfw_level": "31",
+        "version_nsfw_level": "15",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "False",
+        "allow_commercial_use": "\"{RentCivit}\"",
+        "allow_derivatives": "False",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Eyes_System,Feet,Hands_Nails,Lighting_Camera_Render,Makeup_Module,Skin_System",
+        "tags": "photorealism;photo;skintone;milf;anime;nose;nsfw;realist;perfection;hyperrealism;person;handgun;realistic model;realistic;perfect skin;gilfs;perfect style;milfs;hyperreality;realistic skin;feet;style;detailed;gilf;woman;skins;cinematic;girls;male;lips;sexy;perfect boobs;pony;perfect hand;fingers;texture;foot;illustrious;zit;wrinkle;lora;eyes;perfect tits;xl;skin;hyperrealistic;realism;haircut;detailed eyes;photorealistic;photorealisitic;man;real;hand;photography;mature;perfect eyes;perfect body;hands;hair;hyperrealistic character portraits;perfect;ears;lipstick;realistic style;finger;ear"
+      },
+      "prompt_use": {
+        "trained_words": "ultra detailed;cinematic;detailed photorealistic cinematic style;detailed skin pore;realism style;incredibly lifelike;incredibly lifelike cinematic style;sharp;realistic style;Sharp detailed high quality image"
+      },
+      "civitai_url": "https://civitai.com/models/411088",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/z_image/eyes_system/Hands + Feet + skin perfection style zib v1.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0008_model411088_version2709983.md"
+    },
+    {
+      "rank": 9,
+      "civitai_model_id": "326320",
+      "civitai_version_id": "2162733",
+      "civitai_file_id": "2055931",
+      "name": "Real Cum SDXL",
+      "creator": "alejnd77",
+      "model_type": "LORA",
+      "base_model": "SDXL 1.0",
+      "compatibility_family": "sdxl",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "v6.55",
+      "filename": "realcumv6.55.safetensors",
+      "size_mb": 690.2,
+      "size_bytes_estimate": 723727155,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "13658345F7346C3E75E13B3592D98FA2E749BDD83D46628B933AEC0F8B78E35B",
+        "auto_v2": "13658345F7",
+        "blake3": "EC1AEC2640FE6DAE982EC7452B547D92ABF833E5DD6D2B406BCDC2763C28FB11",
+        "crc32": "74C3A1C6"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2025-08-30T01:11:49.652Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{Rent,RentCivit}\"",
+        "allow_derivatives": "True",
+        "allow_different_license": "False"
+      },
+      "taxonomy": {
+        "categories": "Fluid_Wetness_Surface,Furniture,Mouth_Teeth_Lips,Penis",
+        "tags": "cum;porn;concept;nsfw"
+      },
+      "prompt_use": {
+        "trained_words": ""
+      },
+      "civitai_url": "https://civitai.com/models/326320",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/sdxl/fluid_wetness_surface/realcumv6.55.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0009_model326320_version2162733.md"
+    },
+    {
+      "rank": 12,
+      "civitai_model_id": "200251",
+      "civitai_version_id": "2536073",
+      "civitai_file_id": "2424017",
+      "name": "Feet XL + SD 1.5 + F1D + Pony + Illustrious + zit",
+      "creator": "EauDeNoire",
+      "model_type": "LORA",
+      "base_model": "ZImageTurbo",
+      "compatibility_family": "z_image",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "Feet zit v2.1",
+      "filename": "feet v2.1.safetensors",
+      "size_mb": 435.3,
+      "size_bytes_estimate": 456445133,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "454A66AA4FAC0ED377D12897EAB5EC93B2A52D4F2EED719FD4B45308387B8055",
+        "auto_v2": "454A66AA4F",
+        "blake3": "501C1C0E1FC3D0E1E3710FACD9186ECD4BE7D7F800B046785DF4356D2249A3B4",
+        "crc32": "88FDB7DD"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2025-12-25T22:50:40.019Z"
+      },
+      "safety": {
+        "nsfw": "False",
+        "nsfw_level": "31",
+        "version_nsfw_level": "15",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "False",
+        "allow_commercial_use": "\"{RentCivit}\"",
+        "allow_derivatives": "False",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Eyes_System,Feet,Skin_System",
+        "tags": "illustrious;foot;xl;pony;body;legs;toes;feet;legs up;assets;real;woman;female;sexy;photorealistic;flux;realism;lora;realistic;photography"
+      },
+      "prompt_use": {
+        "trained_words": "cinematic realistic style;detailed;feet;foot"
+      },
+      "civitai_url": "https://civitai.com/models/200251",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/z_image/eyes_system/feet v2.1.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0012_model200251_version2536073.md"
+    },
+    {
+      "rank": 13,
+      "civitai_model_id": "96933",
+      "civitai_version_id": "1994060",
+      "civitai_file_id": "1891212",
+      "name": "PornMaster-颜射，內射，精液滴下，精液，肛交後，做愛後-bukkake,creampie,cumdrip,cum,after anal,after sex",
+      "creator": "iamddtla",
+      "model_type": "LoCon",
+      "base_model": "SDXL 1.0",
+      "compatibility_family": "sdxl",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "sdxl-v3-lora",
+      "filename": "PornMaster-cum-sdxl-V3-lora.safetensors",
+      "size_mb": 109.2,
+      "size_bytes_estimate": 114504499,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "9D9FFB65A0D2371BD928F9F67113EF4FA5E6AD1E60B42F8DA73443F5846BA9A9",
+        "auto_v2": "9D9FFB65A0",
+        "blake3": "21947B94AE865C483D2E7F4BA01036727ED978C7DEA6316224D2A8EFF4E34B2E",
+        "crc32": "4971C63A"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2025-07-10T08:15:37.312Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "False",
+        "allow_commercial_use": "\"{Image,RentCivit}\"",
+        "allow_derivatives": "False",
+        "allow_different_license": "False"
+      },
+      "taxonomy": {
+        "categories": "Asymmetry_Imperfections,Fluid_Wetness_Surface,Lighting_Camera_Render,Penis,Vagina",
+        "tags": "spread anus;puckered anus;ejaculation;cum on face;sex;cum;creampie;vagina;face covered in cum;cum trail;facial;projectile cum;gaping anal;cumdrip;cum on glasses;bukkake;veiny penis;concept;cum on food;cum in container;cum in pussy;cumshot;cum on wall;after anal;veins penis;cum on  floor;spread pussy;spread ass;gaping pussy;porn;black;after sex;large penis;cum string"
+      },
+      "prompt_use": {
+        "trained_words": "cum, bukkake, cum on her face;cum on glasses;cumdrip, cum string;cum on lips;cum on body, cum on breasts;cum on ass;cum on clothes;cum on tongue;cum in mouth;cum on hair;creampie, cum in pussy;cum covered anus"
+      },
+      "civitai_url": "https://civitai.com/models/96933",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/sdxl/asymmetry_imperfections/PornMaster-cum-sdxl-V3-lora.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0013_model96933_version1994060.md"
+    },
+    {
+      "rank": 14,
+      "civitai_model_id": "1115264",
+      "civitai_version_id": "1611101",
+      "civitai_file_id": "1511239",
+      "name": "Subtle Styles",
+      "creator": "SubtleShader",
+      "model_type": "LORA",
+      "base_model": "SDXL 1.0",
+      "compatibility_family": "sdxl",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "Rayness2 XL2.5",
+      "filename": "subtle-rayness2-xl25.safetensors",
+      "size_mb": 193.9,
+      "size_bytes_estimate": 203318886,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "5BD455076E888B1310B81E3FE305137306C2A2FCA6828DF69342BAAC8E26C1DD",
+        "auto_v2": "5BD455076E",
+        "blake3": "0BFBE4D62F18089BFC45B5C8FD99AC09B696C7ADC1B76B48B7EF29A2A8F1D6A6",
+        "crc32": "9D4BC05B"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2025-04-02T06:41:02.797Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{Image,RentCivit}\"",
+        "allow_derivatives": "True",
+        "allow_different_license": "False"
+      },
+      "taxonomy": {
+        "categories": "Body_Structure,Lighting_Camera_Render,Skin_System",
+        "tags": "style;science fiction;fantasy;scify"
+      },
+      "prompt_use": {
+        "trained_words": ""
+      },
+      "civitai_url": "https://civitai.com/models/1115264",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/sdxl/body_structure/subtle-rayness2-xl25.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0014_model1115264_version1611101.md"
+    },
+    {
+      "rank": 15,
+      "civitai_model_id": "137423",
+      "civitai_version_id": "802232",
+      "civitai_file_id": "715947",
+      "name": "Real Pussy - Cameltoe",
+      "creator": "Lucifie",
+      "model_type": "LORA",
+      "base_model": "SDXL 1.0",
+      "compatibility_family": "sdxl",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "v3 XL",
+      "filename": "Pussy_Cameltoe_v3_XL.safetensors",
+      "size_mb": 649.7,
+      "size_bytes_estimate": 681259827,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "9C65DB0627847C367CCD5562043085BBCA1D78139B1C0F46D26D77B47290F69E",
+        "auto_v2": "9C65DB0627",
+        "blake3": "BDF6B2B35835CE6CFF01A73010562AA7C0A16F05111CF3892EC5DCB6DA96DC4C",
+        "crc32": "C498C350"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2024-09-03T16:51:59.581Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{RentCivit}\"",
+        "allow_derivatives": "False",
+        "allow_different_license": "False"
+      },
+      "taxonomy": {
+        "categories": "Body_Structure,Fluid_Wetness_Surface,Furniture,Hair_System,Hands_Nails,Lighting_Camera_Render,Skin_System,Vagina",
+        "tags": "vagina;vulva;cameltoe;pubic hair;woman;concept"
+      },
+      "prompt_use": {
+        "trained_words": "cameltoe_body;cameltoe_hips;cameltoe_pussy"
+      },
+      "civitai_url": "https://civitai.com/models/137423",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/sdxl/body_structure/Pussy_Cameltoe_v3_XL.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0015_model137423_version802232.md"
+    },
+    {
+      "rank": 16,
+      "civitai_model_id": "935673",
+      "civitai_version_id": "1047380",
+      "civitai_file_id": "953046",
+      "name": "NippleDiffusion - Flux1.Dev",
+      "creator": "Skullkid",
+      "model_type": "LORA",
+      "base_model": "Flux.1 D",
+      "compatibility_family": "flux",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "General LoRA - v1.0",
+      "filename": "nipplediffusion-f1.safetensors",
+      "size_mb": 146.2,
+      "size_bytes_estimate": 153301811,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "04C3E5AF8314FCCD00900AADB716DC01A109453E190D8C7683D42BC71C03B9E5",
+        "auto_v2": "04C3E5AF83",
+        "blake3": "551EF606BDB566A7C23F464A1C7C20B6C99AECCA1B3BF0CFA08173B41BDDAB88",
+        "crc32": "1994FAB0"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2024-11-10T14:41:16.353Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{Image,RentCivit,Rent,Sell}\"",
+        "allow_derivatives": "True",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Asymmetry_Imperfections,Breast_Shape,Vagina",
+        "tags": "naked;nudes;tits;nsfw;nipples;breast;areolas;nude;breasts;woman;concept"
+      },
+      "prompt_use": {
+        "trained_words": "nipples"
+      },
+      "civitai_url": "https://civitai.com/models/935673",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/flux/asymmetry_imperfections/nipplediffusion-f1.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0016_model935673_version1047380.md"
+    },
+    {
+      "rank": 19,
+      "civitai_model_id": "1444070",
+      "civitai_version_id": "2013343",
+      "civitai_file_id": "1910274",
+      "name": "Subtle Poses",
+      "creator": "SubtleShader",
+      "model_type": "LORA",
+      "base_model": "SDXL 1.0",
+      "compatibility_family": "sdxl",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "Cum XL3",
+      "filename": "subtle-cum-xl3.safetensors",
+      "size_mb": 193.9,
+      "size_bytes_estimate": 203318886,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "4E4010E1EA8285819588740F4EAA7E20F5A36F605A7FB24B0A0D34C08DCFC568",
+        "auto_v2": "4E4010E1EA",
+        "blake3": "1EB50EBEEDE7E10FE234DE7EE1AAA38A58771688ABD0BFAD07DCB6035EF19FCD",
+        "crc32": "2E6ECC09"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2025-07-15T18:30:39.887Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{Image,RentCivit}\"",
+        "allow_derivatives": "True",
+        "allow_different_license": "False"
+      },
+      "taxonomy": {
+        "categories": "Arms_Elbows_Knees,Fluid_Wetness_Surface,Hands_Nails,Lighting_Camera_Render,Mouth_Teeth_Lips,Penis,Sex_Positions,Testicles_Balls,Torso_Abdomen,Vagina",
+        "tags": "poses;pose;woman"
+      },
+      "prompt_use": {
+        "trained_words": "cum;cum on body;cum in mouth;cum on breasts;cum in pussy;cum on hair;cum in ass;cum on stomach;cum string;cum shot;facial;cum overflow"
+      },
+      "civitai_url": "https://civitai.com/models/1444070",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/sdxl/arms_elbows_knees/subtle-cum-xl3.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0019_model1444070_version2013343.md"
+    },
+    {
+      "rank": 20,
+      "civitai_model_id": "143636",
+      "civitai_version_id": "216791",
+      "civitai_file_id": "166859",
+      "name": "400GB-LoRA-XL-Repository",
+      "creator": "idle",
+      "model_type": "LORA",
+      "base_model": "SDXL 1.0",
+      "compatibility_family": "sdxl",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "FF.102 | Colossus XL 4.9b",
+      "filename": "FF.102.colossusProjectXLSFW_49bExperimental.LORA.safetensors",
+      "size_mb": 485.9,
+      "size_bytes_estimate": 509503078,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "3E7AFB2F3C599EBF3B845A65ECCEB3032EA360201B915F7D56B791476B332016",
+        "auto_v2": "3E7AFB2F3C",
+        "blake3": "DC854C6EFD66B2481CD4D41ABB7FF469C5F304FF46B0194A7CDECC06CAD28365",
+        "crc32": "ED4EE9D1"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2023-11-07T19:35:47.205Z"
+      },
+      "safety": {
+        "nsfw": "False",
+        "nsfw_level": "31",
+        "version_nsfw_level": "15",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "False",
+        "allow_commercial_use": "\"{}\"",
+        "allow_derivatives": "False",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Fluid_Wetness_Surface,Furniture,Lighting_Camera_Render,Makeup_Module,Sex_Positions",
+        "tags": "sdxl style lora;ffai;tools;lora;base model;anime;styles"
+      },
+      "prompt_use": {
+        "trained_words": ""
+      },
+      "civitai_url": "https://civitai.com/models/143636",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/sdxl/fluid_wetness_surface/FF.102.colossusProjectXLSFW_49bExperimental.LORA.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0020_model143636_version216791.md"
+    },
+    {
+      "rank": 21,
+      "civitai_model_id": "1376968",
+      "civitai_version_id": "1741727",
+      "civitai_file_id": "1642411",
+      "name": "Character Friendly Body Types - FLUX",
+      "creator": "mongot",
+      "model_type": "LORA",
+      "base_model": "Flux.1 D",
+      "compatibility_family": "flux",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "Candice-v1-STRONG",
+      "filename": "mongot-Nude-Candice-v1-STRONG.safetensors",
+      "size_mb": 73.1,
+      "size_bytes_estimate": 76650906,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "B7A12DFFED562E852735F903B2E83FB0E9B07336AA2520F8F6E8C7DCB0507871",
+        "auto_v2": "B7A12DFFED",
+        "blake3": "F95A0377BC0A896AE6AEE77FFC238C4BF7DF48DB856D44E075153E52C25696DF",
+        "crc32": "799DF573"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2025-05-03T18:30:39.963Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "False",
+        "allow_commercial_use": "\"{RentCivit,Rent}\"",
+        "allow_derivatives": "True",
+        "allow_different_license": "False"
+      },
+      "taxonomy": {
+        "categories": "Body_Type,Breast_Shape,Face_System,Vagina",
+        "tags": "athletic;alternative;abs;genitalia;flat chest;fitness;chroma;stocky;genitals;tattoos;chubby;skinny;nude;muscular;breasts;busty;tits;naked;vagina;concept;character friendly;nipples;big tits"
+      },
+      "prompt_use": {
+        "trained_words": ""
+      },
+      "civitai_url": "https://civitai.com/models/1376968",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/flux/body_type/mongot-Nude-Candice-v1-STRONG.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0021_model1376968_version1741727.md"
+    },
+    {
+      "rank": 22,
+      "civitai_model_id": "248856",
+      "civitai_version_id": "280811",
+      "civitai_file_id": "220012",
+      "name": "FappXL (Multi NSFW concept)",
+      "creator": "ffjggrtbjibv",
+      "model_type": "LoCon",
+      "base_model": "SDXL 1.0",
+      "compatibility_family": "sdxl",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "v1.0",
+      "filename": "FappXL.safetensors",
+      "size_mb": 232.9,
+      "size_bytes_estimate": 244213350,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "E3898ABC21913B9C7894EC6293D8861245383DF92E46FCBA438C2E330120CC2A",
+        "auto_v2": "E3898ABC21",
+        "blake3": "5AA52124E73546D6159CC59BCE4E3C22AC71FE0BE142BCFAC352AE476DEBBA65",
+        "crc32": "C0F2286C"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2023-12-31T09:06:20.873Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{Image,RentCivit,Rent,Sell}\"",
+        "allow_derivatives": "True",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Feet,Fluid_Wetness_Surface,Penis,Sex_Positions,Vagina",
+        "tags": "concept;photorealistic;sexy;nsfw;penis;woman;sex"
+      },
+      "prompt_use": {
+        "trained_words": "ASS;Pussy;From behind;Penis Penetrating Pussy;Erect penis;flaccid penis;Male POV;Blowjob;Sucking a penis;Feet;Soles"
+      },
+      "civitai_url": "https://civitai.com/models/248856",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/sdxl/feet/FappXL.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0022_model248856_version280811.md"
+    },
+    {
+      "rank": 23,
+      "civitai_model_id": "89005",
+      "civitai_version_id": "712004",
+      "civitai_file_id": "626727",
+      "name": "Real Pussy - Lotte",
+      "creator": "Lucifie",
+      "model_type": "LORA",
+      "base_model": "SDXL 1.0",
+      "compatibility_family": "sdxl",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "v6_XL",
+      "filename": "Pussy_Lotte_v6_XL_nf.safetensors",
+      "size_mb": 649.7,
+      "size_bytes_estimate": 681259827,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "8BCA0A6C7364B14DE8119A3739BFF518F3BB8DF137EE30E253879C328C434E19",
+        "auto_v2": "8BCA0A6C73",
+        "blake3": "33079FC34CFEB6FF1C229EF499D3CDC89EEED1451F30223815307DD0641D7B3E",
+        "crc32": "185175F2"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2024-08-10T18:55:57.187Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{RentCivit}\"",
+        "allow_derivatives": "False",
+        "allow_different_license": "False"
+      },
+      "taxonomy": {
+        "categories": "Hands_Nails,Lighting_Camera_Render,Mouth_Teeth_Lips,Vagina",
+        "tags": "vulva;female;inpaint;vagina;concept"
+      },
+      "prompt_use": {
+        "trained_words": "pussy_scale3"
+      },
+      "civitai_url": "https://civitai.com/models/89005",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/sdxl/hands_nails/Pussy_Lotte_v6_XL_nf.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0023_model89005_version712004.md"
+    },
+    {
+      "rank": 24,
+      "civitai_model_id": "143472",
+      "civitai_version_id": "1796966",
+      "civitai_file_id": "1697550",
+      "name": "(POV + Sideways) deepthroat (FLUX + SDXL)",
+      "creator": "steffangund",
+      "model_type": "LORA",
+      "base_model": "Flux.1 D",
+      "compatibility_family": "flux",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "FLUX Sideways Deepthroat",
+      "filename": "Sideways_Deepthroat_FLUX_concept_v1_r1_merger_13_34_52_03_02_05.safetensors",
+      "size_mb": 375.6,
+      "size_bytes_estimate": 393845146,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "EBA05172878BE6901855CAA550296443819C98016B8EFE3234770B3D1DEF86BC",
+        "auto_v2": "EBA0517287",
+        "blake3": "91353B1948E83B56A29E0AC99514FECA8D793382162C5B20D3FBB1C0F715A369",
+        "crc32": "71ECE542"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2025-05-16T21:56:22.043Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{Image,RentCivit,Rent,Sell}\"",
+        "allow_derivatives": "True",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Mouth_Teeth_Lips,Penis,Sex_Positions,Skin_System",
+        "tags": "sexy;deepthroat;sex;oral;fellatio;concept;blowjob"
+      },
+      "prompt_use": {
+        "trained_words": "ballsxdeep, deepthroat;performing oral sex on;deepthroating;sideview;from the side"
+      },
+      "civitai_url": "https://civitai.com/models/143472",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/flux/mouth_teeth_lips/Sideways_Deepthroat_FLUX_concept_v1_r1_merger_13_34_52_03_02_05.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0024_model143472_version1796966.md"
+    },
+    {
+      "rank": 25,
+      "civitai_model_id": "118794",
+      "civitai_version_id": "278770",
+      "civitai_file_id": "218264",
+      "name": "first_nsfw_for_sdxl",
+      "creator": "sevenof9247",
+      "model_type": "LORA",
+      "base_model": "SDXL 1.0",
+      "compatibility_family": "sdxl",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "SDXL_Sevenof9_7th_NSFW",
+      "filename": "SDXL_Sevenof9_7th_NSFW.safetensors",
+      "size_mb": 649.7,
+      "size_bytes_estimate": 681259827,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "9FD2BE2169E9A06AE329E1FF6AF33F6D6DD00D89FD4D809B5FEB7DC7B52E4728",
+        "auto_v2": "9FD2BE2169",
+        "blake3": "F20011335C56F82AC02181BCDDA47D9E95EFA8F34D4512F7B5C6F33AA80EBB3F",
+        "crc32": "407BDA27"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2023-12-29T14:01:03.133Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "28",
+        "version_nsfw_level": "28",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{}\"",
+        "allow_derivatives": "True",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Ears,Hands_Nails,Penis,Sex_Positions,Vagina",
+        "tags": "sdxl;blowjob;naked;harsh;concept;pose;woman;adult;man;pov;porn;sex;mature;nsfw;lora"
+      },
+      "prompt_use": {
+        "trained_words": "look at my prompts"
+      },
+      "civitai_url": "https://civitai.com/models/118794",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/sdxl/ears/SDXL_Sevenof9_7th_NSFW.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0025_model118794_version278770.md"
+    },
+    {
+      "rank": 26,
+      "civitai_model_id": "1088938",
+      "civitai_version_id": "2565763",
+      "civitai_file_id": "2454305",
+      "name": "Lovin'Snuggly Positions「LSP」小姿势 LoRA for RedCraft | 红潮 RedZ-Image IL PONY FLUX.1",
+      "creator": "AiMetatron",
+      "model_type": "LORA",
+      "base_model": "ZImageTurbo",
+      "compatibility_family": "z_image",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "LSP⚡️Z Full-Rank 1.0",
+      "filename": "RedLSP_extracted_lora_full_rank.safetensors",
+      "size_mb": 1168.6,
+      "size_bytes_estimate": 1225365914,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "5DFA619A7260CD7048D883DA356598A7CB5B0E88FFF4D984272B66B2B4AA1C1A",
+        "auto_v2": "5DFA619A72",
+        "blake3": "5EB0C1F0A676167D34B007C5CF0F40912F591229247ED7BD9A506E6D78216656",
+        "crc32": "6A012250"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2026-01-04T22:47:55.778Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{RentCivit,Image,Rent,Sell}\"",
+        "allow_derivatives": "True",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Body_Structure,Environment,Fluid_Wetness_Surface,Furniture,Lighting_Camera_Render,Sex_Positions",
+        "tags": "asian;poses;pose;sexual;porn;fetish;nsfw"
+      },
+      "prompt_use": {
+        "trained_words": ""
+      },
+      "civitai_url": "https://civitai.com/models/1088938",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/z_image/body_structure/RedLSP_extracted_lora_full_rank.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0026_model1088938_version2565763.md"
+    },
+    {
+      "rank": 27,
+      "civitai_model_id": "668646",
+      "civitai_version_id": "748526",
+      "civitai_file_id": "662007",
+      "name": "Full Female Anatomy - Fineart Nudity - Flux Lora (NSFW) -Breasts/Pussy/Ass/and more",
+      "creator": "Caithy",
+      "model_type": "LORA",
+      "base_model": "Flux.1 D",
+      "compatibility_family": "flux",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "v1.0",
+      "filename": "anatomy_fineart_nudity_by_caith.safetensors",
+      "size_mb": 128.5,
+      "size_bytes_estimate": 134742016,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "6243577C9719F1EC6F2E7F0BF9E0056CCE4C85432EAF61693B556235E9CB819C",
+        "auto_v2": "6243577C97",
+        "blake3": "039964B0E9BE1A2A7BB22865F08D03C17C1C2BF640A228B2759DDB5FCD68F246",
+        "crc32": "786AFB84"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2024-08-21T01:16:17.600Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "60",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "False",
+        "allow_commercial_use": "\"{Image,RentCivit}\"",
+        "allow_derivatives": "False",
+        "allow_different_license": "False"
+      },
+      "taxonomy": {
+        "categories": "Body_Structure,Breast_Shape,Fluid_Wetness_Surface,Vagina",
+        "tags": "vagina;anatomy;butt;nude;nudity;concept;breasts"
+      },
+      "prompt_use": {
+        "trained_words": ""
+      },
+      "civitai_url": "https://civitai.com/models/668646",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/flux/body_structure/anatomy_fineart_nudity_by_caith.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0027_model668646_version748526.md"
+    },
+    {
+      "rank": 28,
+      "civitai_model_id": "421162",
+      "civitai_version_id": "2811849",
+      "civitai_file_id": "2697673",
+      "name": "Detailed style XL + F1D + SD1.5 + zib (Hand focus + All in One) \"Detailed Perfection style extension\"",
+      "creator": "EauDeNoire",
+      "model_type": "LORA",
+      "base_model": "ZImageBase",
+      "compatibility_family": "z_image",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "Detailed zib v1.0",
+      "filename": "Detailed style Hand focus + All in One zib v1.safetensors",
+      "size_mb": 870.3,
+      "size_bytes_estimate": 912575693,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "407A2DC5FB651ADED6F3A5D27EFDFFF009D9653DF4DC3E95FC8E2B8AE77AC4F2",
+        "auto_v2": "407A2DC5FB",
+        "blake3": "DC5F4216D92699EA1C9E95F29B8FC14DE2769BE9DBB18A1B054491DEB1FE7259",
+        "crc32": "15CFD4B4"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2026-03-28T21:30:39.815Z"
+      },
+      "safety": {
+        "nsfw": "False",
+        "nsfw_level": "31",
+        "version_nsfw_level": "25",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "False",
+        "allow_commercial_use": "\"{RentCivit}\"",
+        "allow_derivatives": "False",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Eyes_System,Feet,Hands_Nails,Lighting_Camera_Render,Makeup_Module,Penis,Skin_System",
+        "tags": "anime;penis;milfs;perfect hand;flux;perfect boobs;male;hyperrealistic;nose;ears;perfect style;perfect eyes;photorealisitic;wrinkle;skin;perfect body;skins;detailed eyes;eyes;nsfw lora;person;nsfw;zimage;style;lips;perfect tits;haircut;perfect skin;photography;perfection;lora;realism;realistic style;nsfw sdxl;gilfs;mature;feet;foot;xl;photorealistic;man;hair;finger;hand;fingers;girls;handgun;ear;cinematic;lipstick;sexy;realistic;photorealism;real;realistic model;realistic skin;photo;perfect;texture;hyperreality;hands;realist;gilf;milf;hyperrealistic character portraits;hyperrealism;skintone;detailed;woman"
+      },
+      "prompt_use": {
+        "trained_words": "detailed;cinematic realistic style;Sharp detailed high quality image"
+      },
+      "civitai_url": "https://civitai.com/models/421162",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/z_image/eyes_system/Detailed style Hand focus + All in One zib v1.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0028_model421162_version2811849.md"
+    },
+    {
+      "rank": 30,
+      "civitai_model_id": "137409",
+      "civitai_version_id": "263801",
+      "civitai_file_id": "205294",
+      "name": "NaturalBodyXL",
+      "creator": "HackSlash",
+      "model_type": "LORA",
+      "base_model": "SDXL 1.0",
+      "compatibility_family": "sdxl",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "v2.0",
+      "filename": "NaturalBodyV2.0.safetensors",
+      "size_mb": 435.4,
+      "size_bytes_estimate": 456549990,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "D101E625403BFA769CA8F590E4DE06D0D7D3ED275EEB793F638DE414A3543862",
+        "auto_v2": "D101E62540",
+        "blake3": "CA76DB4098AC8F5C512E667D718A0E89088F2711F4A5E0A4A0B848B6393ED184",
+        "crc32": "2F5591BE"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2023-12-15T23:16:05.235Z"
+      },
+      "safety": {
+        "nsfw": "True",
+        "nsfw_level": "60",
+        "version_nsfw_level": "28",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "True",
+        "allow_commercial_use": "\"{Image,RentCivit,Rent,Sell}\"",
+        "allow_derivatives": "True",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Asymmetry_Imperfections,Body_Type,Breast_Shape,Ears,Feet,Hands_Nails,Mouth_Teeth_Lips,Skin_System,Vagina",
+        "tags": "photorealistic;female;woman;nsfw;concept;sexy;real;nude"
+      },
+      "prompt_use": {
+        "trained_words": ""
+      },
+      "civitai_url": "https://civitai.com/models/137409",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/sdxl/asymmetry_imperfections/NaturalBodyV2.0.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0030_model137409_version263801.md"
+    },
+    {
+      "rank": 32,
+      "civitai_model_id": "541620",
+      "civitai_version_id": "2549682",
+      "civitai_file_id": "2438014",
+      "name": "Facial Expressions \"Realistic + Anime\" (detailed emotions) style XL + SD1.5 + F1D + Illu + Pony + zit",
+      "creator": "EauDeNoire",
+      "model_type": "LORA",
+      "base_model": "ZImageTurbo",
+      "compatibility_family": "z_image",
+      "family_status": "eligible_main_flow_family",
+      "version_name": "Expressions zit v2.1",
+      "filename": "facial expression style v2.1.safetensors",
+      "size_mb": 870.3,
+      "size_bytes_estimate": 912575693,
+      "file_format": "SafeTensor",
+      "hashes": {
+        "sha256": "3D899017777432CEC47EE610D53E5DAA699C81B7E6B0EF573322AACD11A08BA5",
+        "auto_v2": "3D89901777",
+        "blake3": "8040821F7555616A895CA238F34CC662485EB080CBC17E3DE1A56733004A80B5",
+        "crc32": "EB16C86B"
+      },
+      "scan": {
+        "virus": "Success",
+        "pickle": "Success",
+        "scanned_at": "2025-12-30T12:45:44.299Z"
+      },
+      "safety": {
+        "nsfw": "False",
+        "nsfw_level": "31",
+        "version_nsfw_level": "9",
+        "poi": "False",
+        "minor": "False",
+        "sfw_only": "False"
+      },
+      "licensing": {
+        "allow_no_credit": "False",
+        "allow_commercial_use": "\"{RentCivit}\"",
+        "allow_derivatives": "False",
+        "allow_different_license": "True"
+      },
+      "taxonomy": {
+        "categories": "Face_System,Feet,Lighting_Camera_Render,Skin_System",
+        "tags": "realism;duck face;facial;facial expressions;grainy;cinematography;cinematic light;wrinkles;realistic;detail face;kodak vision3 500t;filmed;worried;photo;fear;movie dynamic;kodak ektar;detailed;real;facial features;emotions;detail eye;perfect;comic;sharp;realistic model;detail;sad;eastman;style;anime;horny;realistic style;movie still;contrast;kodak 250d;photorealistic;detailed face;color;kodak;still;silly;pictures;motion picture film;cinematic lighting;realist;filmic;grainy effect;16mm;cinematographer;afraid;manga;cinema;grain;surprised;movie;wrinkly;films;kodaka hasegawa;camera;footage;movie style;film;creepy;cartoon;cinematic;facials;detailed eyes;contrasty;filme;kodak film;wrinkle;kodak gold 200;kodak motion picture;35mm;anger;grainy photo;funny;expressions;details;perfection;photography;expression;still image;movie perspective;happy;detailed art"
+      },
+      "prompt_use": {
+        "trained_words": "cinematic style;worried;surprised;Smile;Pleading;happy;fear;crying;sad;Creep sinister;blushing flush;afraid;angry;Duck Face"
+      },
+      "civitai_url": "https://civitai.com/models/541620",
+      "download_url_redacted": true,
+      "target_relative_path": "loras/z_image/face_system/facial expression style v2.1.safetensors",
+      "planned_status": "dry_manifest_only_not_downloaded",
+      "model_card_path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards\\rank0032_model541620_version2549682.md"
+    }
+  ],
+  "skipped_preview": [
+    {
+      "rank": 1,
+      "model_id": "9025",
+      "name": "Nudify XL: Better Bodies",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_nudify"
+      ]
+    },
+    {
+      "rank": 3,
+      "model_id": "144203",
+      "name": "NSFW POV All In One SDXL (Realistic/Anime/WD14 - 74MB Version Available)",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_loli"
+      ]
+    },
+    {
+      "rank": 4,
+      "model_id": "73756",
+      "name": "3D rendering style",
+      "family": "sd15",
+      "reasons": [
+        "quarantine_legacy_family"
+      ]
+    },
+    {
+      "rank": 5,
+      "model_id": "112299",
+      "name": "Labiaplasty Innie Pussy Adjuster [K9B ZImage SDXL Qwen Chroma SD1]",
+      "family": "flux2_pending_runtime",
+      "reasons": [
+        "quarantine_pending_runtime_family"
+      ]
+    },
+    {
+      "rank": 6,
+      "model_id": "1295758",
+      "name": "[NSFW Flux|Wan 2.2|Qwen] Mystic XXX",
+      "family": "wan_video",
+      "reasons": [
+        "quarantine_video_family"
+      ]
+    },
+    {
+      "rank": 7,
+      "model_id": "456882",
+      "name": "STYLES | PONY & ANIMAGINE",
+      "family": "pony",
+      "reasons": [
+        "quarantine_non_main_flow_family"
+      ]
+    },
+    {
+      "rank": 10,
+      "model_id": "86788",
+      "name": "Real Pussy - Lily",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_minor"
+      ]
+    },
+    {
+      "rank": 11,
+      "model_id": "99174",
+      "name": "Real Pussy - Peach",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_minor"
+      ]
+    },
+    {
+      "rank": 17,
+      "model_id": "416136",
+      "name": "PornMaster-更好的裸体、精液和皮肤纹理、年龄调整-Better nude, semen and skin textures、Age adjustment",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_teen"
+      ]
+    },
+    {
+      "rank": 18,
+      "model_id": "149904",
+      "name": "Real Pussy - Spreading",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_minor"
+      ]
+    },
+    {
+      "rank": 29,
+      "model_id": "90740",
+      "name": "Real Pussy - Butterfly",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_minor"
+      ]
+    },
+    {
+      "rank": 31,
+      "model_id": "422657",
+      "name": "Luke's Neon Clothing and Accessories (Illustrious + Flux + Pony + 1.5 + XL)",
+      "family": "illustrious",
+      "reasons": [
+        "quarantine_non_main_flow_family"
+      ]
+    },
+    {
+      "rank": 33,
+      "model_id": "890914",
+      "name": "Adjust details AND photorealism",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 34,
+      "model_id": "413385",
+      "name": "Pov Sitting on lap [Remake]",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 35,
+      "model_id": "138380",
+      "name": "SDXL dildo",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 36,
+      "model_id": "179060",
+      "name": "PornMaster-双插、三插、群交、轮奸从正面-double penetration、triple penetration、group sex、gangbang-from front",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 37,
+      "model_id": "562884",
+      "name": "Skin Tone (Glamour Photography) Style (Human skin color) XL + F1D + SD1.5 + Pony + Illu + zit + zib",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 38,
+      "model_id": "125648",
+      "name": "Blowjob Top of Head POV Lora SDXL1.0👑",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 39,
+      "model_id": "1464286",
+      "name": "PhotorealTouch",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 40,
+      "model_id": "137542",
+      "name": "SDXL creampie",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 41,
+      "model_id": "2168120",
+      "name": "InstaPic : Ultrareal The Authentic Social Media Lora 📸| Realism Flux | ZIT | Flux 2 Klein",
+      "family": "flux2_pending_runtime",
+      "reasons": [
+        "quarantine_pending_runtime_family"
+      ]
+    },
+    {
+      "rank": 42,
+      "model_id": "402198",
+      "name": "kissing with extra",
+      "family": "flux2_pending_runtime",
+      "reasons": [
+        "quarantine_pending_runtime_family"
+      ]
+    },
+    {
+      "rank": 43,
+      "model_id": "466123",
+      "name": "Sarah Petersons POV Missionary Spread legs, Perfect, FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 44,
+      "model_id": "160855",
+      "name": "Sarah Petersons POV Anal Vaginal Doggystyle FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 45,
+      "model_id": "1750662",
+      "name": "Photorealistic AI Influencer – Woman877 – Character LoRA [SD1.5 | SDXL | Flux | Qwen | Z-image Turbo]",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 46,
+      "model_id": "38438",
+      "name": "[XL + 1.5] Eyeshadow / Eyeliner / Freckles Enhancer",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 47,
+      "model_id": "468633",
+      "name": "Slime Girl Lora",
+      "family": "illustrious",
+      "reasons": [
+        "quarantine_non_main_flow_family"
+      ]
+    },
+    {
+      "rank": 48,
+      "model_id": "158256",
+      "name": "Futa on female POV",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 49,
+      "model_id": "1712732",
+      "name": "Cum collection",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 50,
+      "model_id": "149919",
+      "name": "Sarah Petersons BBC GANGBANG FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 51,
+      "model_id": "279313",
+      "name": "Sexy Mouth & Cumshot",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_minor"
+      ]
+    },
+    {
+      "rank": 52,
+      "model_id": "156317",
+      "name": "Sarah Petersons Perfect doggystyle (frontal view, all fours) FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 53,
+      "model_id": "483381",
+      "name": "Lying Down Breast-Morph / Backtits - FLUX + PONY",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 54,
+      "model_id": "239524",
+      "name": "finger-ass (Lora XL)",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 55,
+      "model_id": "436478",
+      "name": "Crying sad (tears) style XL + SD1.5 + Flux1D + Illu + Pony",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 56,
+      "model_id": "160470",
+      "name": "Sarah Petersons Perfect reverse cowgirl position| upright straddle| sex from behind| girl on top| straddling FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 57,
+      "model_id": "263021",
+      "name": "SexToy - Dildo",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_minor"
+      ]
+    },
+    {
+      "rank": 58,
+      "model_id": "159584",
+      "name": "Venus Body | Concept | SDXL | v0.9 Alpha",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 59,
+      "model_id": "361752",
+      "name": "Gangbang Blowjob | SDXL",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 60,
+      "model_id": "301324",
+      "name": "Sex with grabbing hair [XL] || Leti",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 61,
+      "model_id": "2029062",
+      "name": "My masterpiece! Sloppy messy enhancement, after fellatio (Flux 2.0 klein 9B/ SDXL)",
+      "family": "flux2_pending_runtime",
+      "reasons": [
+        "quarantine_pending_runtime_family"
+      ]
+    },
+    {
+      "rank": 62,
+      "model_id": "294067",
+      "name": "Doggystyle with Feet SDXL & ZIT",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 63,
+      "model_id": "305320",
+      "name": "Full nelson [XL] || Leti",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 64,
+      "model_id": "48579",
+      "name": "YameroYandere",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_child"
+      ]
+    },
+    {
+      "rank": 65,
+      "model_id": "2236064",
+      "name": "Cheek Blowjob (no double cheek bulge (flux klein 9b/Illustrious/SDXL",
+      "family": "flux2_pending_runtime",
+      "reasons": [
+        "quarantine_pending_runtime_family"
+      ]
+    },
+    {
+      "rank": 66,
+      "model_id": "1273315",
+      "name": "Bimbofusion Artstyle (ThePit and others) - Cleaned",
+      "family": "hidream",
+      "reasons": [
+        "quarantine_pending_runtime_family"
+      ]
+    },
+    {
+      "rank": 67,
+      "model_id": "623398",
+      "name": "Perfect Eyes (Variaty of iris colors + sclera colors) XL + F1D + Illu + Pony + zit",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 68,
+      "model_id": "660022",
+      "name": "Fluxxxible - Sexual Nudes for Flux",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 69,
+      "model_id": "638889",
+      "name": "Sarah Petersons Perfect prone bone mix FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 70,
+      "model_id": "1850005",
+      "name": "Dutch Blonde influencer – Woman037– Character LoRA (Perfect for Fanvue) [SDXL | SD 1.5 | Flux]",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 71,
+      "model_id": "438426",
+      "name": "[Illust&XL&Pony] fanning crotch / electric fan / 扇風機スカートめくり / 股間冷やし",
+      "family": "illustrious",
+      "reasons": [
+        "quarantine_non_main_flow_family"
+      ]
+    },
+    {
+      "rank": 72,
+      "model_id": "130866",
+      "name": "Gaping Assholes All Fours LORA 👑 SDXL1.0 - concept",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 73,
+      "model_id": "1215368",
+      "name": "Oily shiny glossy skin style F1D + XL + SD1.5 + Illu + Pony + zit",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 74,
+      "model_id": "1732024",
+      "name": "UnFlux",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 75,
+      "model_id": "2053543",
+      "name": "ZIT & IL & FLUX_bondage outfit  v3",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 76,
+      "model_id": "1019792",
+      "name": "Female - Face Portraits - Detailed Skin - Closeup Macro - Flux",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 77,
+      "model_id": "160481",
+      "name": "Sarah Petersons cowgirl position | straddling | girl on top, looking back, looking at viewer FT15",
+      "family": "z_image",
+      "reasons": [
+        "safety_block_term_child"
+      ]
+    },
+    {
+      "rank": 78,
+      "model_id": "286540",
+      "name": "Reel CumFace v1",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 79,
+      "model_id": "130516",
+      "name": "Bronya Zaychik 4in1 (IL,Pony,XL,1.5)",
+      "family": "illustrious",
+      "reasons": [
+        "quarantine_non_main_flow_family"
+      ]
+    },
+    {
+      "rank": 80,
+      "model_id": "120860",
+      "name": "[SDXL1.0] GHIBLI style V1",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 81,
+      "model_id": "359860",
+      "name": "Dantsu Flame (umamusume)_XL/PONY/IL",
+      "family": "illustrious",
+      "reasons": [
+        "quarantine_non_main_flow_family"
+      ]
+    },
+    {
+      "rank": 82,
+      "model_id": "260275",
+      "name": "PornMaster-反向女牛仔位、肛交、广角、群交、轮奸-reverse cowgirl position、anal sex、wide angle、group sex、gangbang",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 83,
+      "model_id": "146780",
+      "name": "(FLUX & SDXL) Tifa Lockhart (9 outfits)",
+      "family": "flux",
+      "reasons": [
+        "safety_block_term_child"
+      ]
+    },
+    {
+      "rank": 84,
+      "model_id": "137612",
+      "name": "SDXL sufficient nudity for Unstable YamerMIX",
+      "family": "sdxl",
+      "reasons": [
+        "safety_block_term_child"
+      ]
+    },
+    {
+      "rank": 85,
+      "model_id": "128247",
+      "name": "SDXL  来点机甲元素|Let's get some mecha elements",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 86,
+      "model_id": "1004781",
+      "name": "Sarah Petersons Premium bukkake, Cum in mouth, FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 87,
+      "model_id": "281379",
+      "name": "Spread Pussy - SDXL",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 88,
+      "model_id": "608570",
+      "name": "Nebris - Browndust2/ブラウンダスト2 - ネブリス[Pony,Illustrious,Flux]",
+      "family": "anima",
+      "reasons": [
+        "quarantine_unknown_family"
+      ]
+    },
+    {
+      "rank": 89,
+      "model_id": "185668",
+      "name": "Sarah Petersons Spitroast, Oral, Doggystyle FT15",
+      "family": "z_image",
+      "reasons": [
+        "safety_block_term_child"
+      ]
+    },
+    {
+      "rank": 90,
+      "model_id": "268759",
+      "name": "Suou Momoko 周防 桃子 / THE IDOLM@STER MILLION LIVE! アイドルマスター ミリオンライブ！ SDXL version",
+      "family": "illustrious",
+      "reasons": [
+        "quarantine_non_main_flow_family",
+        "safety_block_term_undress"
+      ]
+    },
+    {
+      "rank": 91,
+      "model_id": "415999",
+      "name": "Sarah Petersons BBC After Fellatio Perfect FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 92,
+      "model_id": "259723",
+      "name": "Side Sex with Feet SDXL",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 93,
+      "model_id": "1569830",
+      "name": "Subtle Physique",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 94,
+      "model_id": "1063613",
+      "name": "Eros",
+      "family": "flux2_pending_runtime",
+      "reasons": [
+        "quarantine_pending_runtime_family"
+      ]
+    },
+    {
+      "rank": 95,
+      "model_id": "102539",
+      "name": "Sarah Petersons spooning breast grab FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 96,
+      "model_id": "179434",
+      "name": "Sarah Petersons Perfect Bukkake mix FT15",
+      "family": "z_image",
+      "reasons": [
+        "safety_block_term_child"
+      ]
+    },
+    {
+      "rank": 97,
+      "model_id": "438680",
+      "name": "Satono Diamond (umamusume)_XL/PONY/IL",
+      "family": "illustrious",
+      "reasons": [
+        "quarantine_non_main_flow_family"
+      ]
+    },
+    {
+      "rank": 98,
+      "model_id": "292179",
+      "name": "Gaping Pussy - SDXL",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 99,
+      "model_id": "1692584",
+      "name": "FullRebelLady - Aesthetic/Fashion Style [FLUX+ZIT]",
+      "family": "z_image",
+      "reasons": [
+        "safety_block_term_teen"
+      ]
+    },
+    {
+      "rank": 100,
+      "model_id": "839526",
+      "name": "POV Blowjob - FLUX - [Non-Face Altering]",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 101,
+      "model_id": "277119",
+      "name": "minigirl SDXL",
+      "family": "pony",
+      "reasons": [
+        "quarantine_non_main_flow_family"
+      ]
+    },
+    {
+      "rank": 102,
+      "model_id": "2244773",
+      "name": "extreme Sloppy / messy deepthroat (Flux 2 Klein 9b, SDXL)",
+      "family": "flux2_pending_runtime",
+      "reasons": [
+        "quarantine_pending_runtime_family"
+      ]
+    },
+    {
+      "rank": 103,
+      "model_id": "91771",
+      "name": "RPGBarbarian",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 104,
+      "model_id": "157329",
+      "name": "Sarah Petersons Tushy side anal alt FT15",
+      "family": "z_image",
+      "reasons": [
+        "safety_block_term_child"
+      ]
+    },
+    {
+      "rank": 105,
+      "model_id": "947404",
+      "name": "Standing Doggystyle [Non-Face Altering]",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 106,
+      "model_id": "636887",
+      "name": "Sarah Petersons Mating press FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 107,
+      "model_id": "147163",
+      "name": "Leaves and vines（树叶藤蔓衣）",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 108,
+      "model_id": "290592",
+      "name": "femboysXL - femboy/otoko no ko/trap concept MULTI-LoRA (base 128 dim)",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 109,
+      "model_id": "170432",
+      "name": "Sarah Petersons COOP Missionary threesome FT15",
+      "family": "z_image",
+      "reasons": [
+        "safety_block_term_child"
+      ]
+    },
+    {
+      "rank": 110,
+      "model_id": "2079877",
+      "name": "Cum in mouth - CIMzz",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 111,
+      "model_id": "156345",
+      "name": "Sarah Petersons Blacked clothing magazine cover FT15",
+      "family": "z_image",
+      "reasons": [
+        "safety_block_term_child"
+      ]
+    },
+    {
+      "rank": 112,
+      "model_id": "641457",
+      "name": "Sarah Petersons Doggystyle Frontal ASS-ault FT15c",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 113,
+      "model_id": "717617",
+      "name": "Sarah Petersons HUGE penis by face, after fellatio, mph FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 114,
+      "model_id": "123044",
+      "name": "Circle Art | Concept Magic",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 115,
+      "model_id": "168135",
+      "name": "Sarah Petersons Missionary position Non POV Perfect FT15",
+      "family": "z_image",
+      "reasons": [
+        "safety_block_term_child"
+      ]
+    },
+    {
+      "rank": 116,
+      "model_id": "91359",
+      "name": "RPGAngels",
+      "family": "sdxl",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 117,
+      "model_id": "819195",
+      "name": "Bound to Bed – BDSM, Bondage with a chance of tapegag",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 118,
+      "model_id": "456422",
+      "name": "Sarah Petersons Perfect Doggystyle FT15",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 119,
+      "model_id": "968741",
+      "name": "Sarah Petersons Seated Anal Doggystyle standing FT15 XLrd",
+      "family": "z_image",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    },
+    {
+      "rank": 120,
+      "model_id": "866273",
+      "name": "Facial cum massive FLUX",
+      "family": "flux",
+      "reasons": [
+        "batch_count_cap"
+      ]
+    }
+  ],
+  "not_a_launch_request": true
+}

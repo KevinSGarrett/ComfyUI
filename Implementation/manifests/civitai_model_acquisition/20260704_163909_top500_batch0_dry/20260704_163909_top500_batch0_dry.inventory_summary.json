@@ -1,0 +1,34 @@
+{
+  "source_csv": "C:\\Comfy_UI_Lora\\downloads\\models\\PENDING_flux1_sdxl_TOP500_curated.csv",
+  "source_csv_sha256": "DBAE4DA6944E782A9C08DB31F9C7A76B4EF48826A4F7982B5A63B06D64E8D16C",
+  "row_count": 500,
+  "family_counts": {
+    "anima": 1,
+    "chroma": 10,
+    "flux": 77,
+    "flux2_pending_runtime": 9,
+    "hidream": 1,
+    "illustrious": 18,
+    "other": 1,
+    "pony": 9,
+    "qwen_image": 2,
+    "sd15": 2,
+    "sdxl": 185,
+    "wan_video": 1,
+    "z_image": 184
+  },
+  "type_counts": {
+    "DoRA": 1,
+    "LORA": 475,
+    "LoCon": 24
+  },
+  "selected_count": 20,
+  "selected_total_gib": 9.862,
+  "selected_family_counts": {
+    "flux": 4,
+    "sdxl": 10,
+    "z_image": 6
+  },
+  "skipped_preview_count": 100,
+  "download_urls_redacted": true
+}
