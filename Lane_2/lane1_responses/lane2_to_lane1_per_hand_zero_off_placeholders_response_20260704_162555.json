@@ -1,0 +1,35 @@
+{
+  "response_id": "lane2_to_lane1_per_hand_zero_off_placeholders_response_20260704_162555",
+  "responding_lane": "Lane_2",
+  "target_lane": "Lane_1",
+  "created_at_utc": "2026-07-04T16:25:55Z",
+  "source_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane2_per_hand_zero_off_placeholders_20260704_162635.json",
+  "source_policy_response": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane2_spatial_asset_policy_decision_20260704_162635.json",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+  "resolution": "exact_name_zero_off_placeholders_materialized",
+  "materialized_files": [
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png"
+  ],
+  "file_hash": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+  "dimensions": {
+    "width": 1024,
+    "height": 1024
+  },
+  "nonzero_ratio": 0.0,
+  "post_audit": {
+    "artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162555\\lane2_main_flow_spatial_asset_audit_20260704_162555.json",
+    "sha256": "49690BCA766511307BC2F19F1DB14875F214F78E7681ADC56A649B37DB5B9246",
+    "missing_assets": 0,
+    "zero_masks": 5
+  },
+  "limitations": [
+    "These are intentional off placeholders, not same-scene anatomical left/right split masks.",
+    "Per-hand identity, wrist continuity, collision, and edge QA remain blocked until nonzero same-scene split masks exist.",
+    "Node 1009 remains zero and optional only for actor_hand_only_contact_v1."
+  ],
+  "requested_lane1_next_action": "Re-run Main Flow reference validation for workflow hash 5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9 and clear nodes 1051-1054 as missing-reference blockers if the exact files resolve."
+}

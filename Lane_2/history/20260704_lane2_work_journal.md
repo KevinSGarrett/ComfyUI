@@ -29,3 +29,16 @@
 - Confirmed the active `body_contact_slots` base image matches the `lower_hip_contact` preset, while available strict side-push left/right masks belong to a different base hash. Lane 2 therefore did not copy those masks into active slots.
 - Preserved node 1009 `character_b_body_mask.png` as a zero-valued mask blocker.
 - Created a Lane 1 request asking for active preset semantics and a trustworthy per-hand source/mapping before Lane 2 materializes per-hand masks.
+
+## 2026-07-04T16:25:55Z - Per-hand zero/off placeholders
+
+- Consumed Lane 1 response `lane1_to_lane2_spatial_asset_policy_decision_20260704_162635` and request `lane1_to_lane2_per_hand_zero_off_placeholders_20260704_162635`.
+- Confirmed Lane 1 policy for the current Main Flow hash `5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9`: keep the active lower-hip-derived slot group, do not copy strict side-push masks across scene hashes, and materialize exact-name zero/off placeholders for nodes 1051-1054 until same-scene left/right split masks exist.
+- Materialized four 1024x1024 all-zero/off placeholder masks under `C:\Comfy_UI\Input_References\main_flow\body_contact_slots`:
+  - `character_a_left_hand_mask.png`
+  - `character_a_right_hand_mask.png`
+  - `character_b_left_hand_mask.png`
+  - `character_b_right_hand_mask.png`
+- Re-ran the Lane 2 spatial asset audit against the current canonical Main Flow. Result: `missing_assets` is now `0`; `zero_masks` is `5` because the four per-hand override placeholders and node 1009 are intentionally zero.
+- Prepared a Lane 4 runtime request for strict body-contact validation after Lane 1 re-runs graph/reference validation.
+- Did not edit Main Flow, start or stop EC2, promote tracker rows, or commit binary masks.

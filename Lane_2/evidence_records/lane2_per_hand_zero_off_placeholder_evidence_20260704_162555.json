@@ -1,0 +1,179 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_per_hand_zero_off_placeholder_evidence_20260704_162555",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:25:55Z",
+  "claim": {
+    "summary": "Lane 2 materialized exact-name 1024x1024 all-zero/off per-hand placeholder masks for Main Flow nodes 1051-1054, resolving missing LoadImageMask file references under Lane 1's current spatial asset policy while preserving the blocker for real same-scene left/right hand segmentation.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane1_to_lane2_per_hand_zero_off_placeholders_20260704_162635",
+      "main_flow_nodes_1051_1054_per_hand_placeholder_masks",
+      "lane2_main_flow_spatial_asset_audit_20260704_162555",
+      "lane2_to_lane4_strict_body_contact_runtime_request_20260704_162555"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "settings": {
+      "lane1_policy_response": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane2_spatial_asset_policy_decision_20260704_162635.json",
+      "lane1_policy_response_sha256": "F55530CCC6B1F921112CDFF2CD07C8769E8D66CD799753754A01E4F8C77BE385",
+      "lane1_placeholder_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane2_per_hand_zero_off_placeholders_20260704_162635.json",
+      "lane1_placeholder_request_sha256": "82869A6FCA503B8E1C4F6B240FB6A03057F9393AECC78241CEA839EFFCB6A8D5",
+      "active_slot_policy": "keep_current_lower_hip_derived_body_contact_slots",
+      "accepted_resolution": "exact-name 1024x1024 all-zero/off placeholders until same-scene left/right split masks exist"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "EC2 was not started or stopped; Lane 2 created a Lane 4 runtime request only."
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\per_hand_zero_off_placeholders\\20260704_162555\\lane2_per_hand_zero_off_placeholders_20260704_162555.json",
+      "type": "per_hand_zero_off_placeholder_artifact",
+      "size_bytes": 5243,
+      "sha256": "E08AF318CA3C617CFC41305946ABABEB1FA1520FE768009589874FD3159B2B2A",
+      "description": "Artifact recording the four exact-name zero/off per-hand placeholder masks and their policy context."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162555\\lane2_main_flow_spatial_asset_audit_20260704_162555.json",
+      "type": "post_materialization_spatial_asset_audit",
+      "size_bytes": 140517,
+      "sha256": "49690BCA766511307BC2F19F1DB14875F214F78E7681ADC56A649B37DB5B9246",
+      "description": "Current Main Flow spatial asset audit after placeholder materialization; reports missing_assets=0 and zero_masks=5."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_responses\\lane2_to_lane1_per_hand_zero_off_placeholders_response_20260704_162555.json",
+      "type": "lane1_response",
+      "size_bytes": 2235,
+      "sha256": "CBD8EB737C900AFA5E852305B44DA74FEF5660125F080BCF1C656030636D4463",
+      "description": "Lane 2 response telling Lane 1 the exact placeholder files now exist."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane4_requests\\lane2_to_lane4_strict_body_contact_runtime_request_20260704_162555.json",
+      "type": "lane4_runtime_request",
+      "size_bytes": 2620,
+      "sha256": "A2A31D3545400F2E91F049EF0FD84B4EBE7F3D3CE15CF014927768397F709438",
+      "description": "Lane 4 runtime-validation request for the current strict body-contact path."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\hand_reviews\\20260704_162555_lane2_per_hand_zero_off_hand_review.json",
+      "type": "strict_hand_contact_review_record",
+      "size_bytes": 1931,
+      "sha256": "79A848BCBD39EB693E56A36BC7393FC05CF45F877FA5F6E1DE84EA8C18F4418E",
+      "description": "Hand/contact review record explaining that placeholders resolve files but do not prove anatomy."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+      "type": "zero_off_per_hand_placeholder_mask",
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "description": "Node 1051 exact-name 1024x1024 zero/off placeholder; nonzero_ratio=0.0."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+      "type": "zero_off_per_hand_placeholder_mask",
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "description": "Node 1052 exact-name 1024x1024 zero/off placeholder; nonzero_ratio=0.0."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+      "type": "zero_off_per_hand_placeholder_mask",
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "description": "Node 1053 exact-name 1024x1024 zero/off placeholder; nonzero_ratio=0.0."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png",
+      "type": "zero_off_per_hand_placeholder_mask",
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "description": "Node 1054 exact-name 1024x1024 zero/off placeholder; nonzero_ratio=0.0."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "lane1_policy_alignment",
+        "result": "pass",
+        "notes": "Lane 1 explicitly accepted exact-name all-zero/off placeholders for nodes 1051-1054 under the current lower-hip slot policy."
+      },
+      {
+        "name": "per_hand_placeholder_files_exist",
+        "result": "pass",
+        "notes": "All four requested exact-name files exist at C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots."
+      },
+      {
+        "name": "placeholder_dimensions",
+        "result": "pass",
+        "notes": "All four placeholders are 1024x1024."
+      },
+      {
+        "name": "placeholder_off_state",
+        "result": "pass",
+        "notes": "All four placeholders have SHA256 D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF and nonzero_ratio=0.0."
+      },
+      {
+        "name": "post_materialization_audit_missing_assets",
+        "result": "pass",
+        "notes": "Lane 2 audit reports missing_assets=0 for current workflow hash 5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9."
+      },
+      {
+        "name": "per_hand_anatomy",
+        "result": "blocked",
+        "notes": "Zero/off placeholders do not prove hand count, left/right identity, wrist continuity, or per-hand contact alignment."
+      },
+      {
+        "name": "full_actor_body_collision_qa",
+        "result": "blocked",
+        "notes": "Node 1009 remains zero/off and full actor-body collision QA still needs same-scene actor body segmentation."
+      },
+      {
+        "name": "runtime_validation",
+        "result": "not_applicable",
+        "notes": "No live runtime validation was performed by Lane 2; a Lane 4 request was created."
+      }
+    ],
+    "failure_reasons": [
+      "Per-hand split masks are placeholders only and do not prove anatomical hand quality.",
+      "Node 1009 remains zero-valued for full actor-body collision QA.",
+      "No live ComfyUI runtime output was reviewed."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "strict_visual_acceptance_rows",
+      "per_hand_anatomy_completion_rows",
+      "full_actor_body_collision_rows",
+      "runtime_generation_rows",
+      "tracker_promotion_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "Exact files now exist, but same-scene nonzero Character A/B left/right hand segmentation is still unavailable.",
+      "next_action": "Lane 2 should replace zero/off placeholders with nonzero split masks when a trustworthy same-scene source exists."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "Node 1009 character_b_body_mask.png remains zero-valued and optional only for actor_hand_only_contact_v1.",
+      "next_action": "Provide same-scene actor body segmentation if full actor-body collision QA is required."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "The current Main Flow hash has not been executed after placeholder materialization.",
+      "next_action": "Lane 4 should validate current-hash runtime behavior inside a justified EC2 lease window after Lane 1 clears reference validation."
+    }
+  ]
+}

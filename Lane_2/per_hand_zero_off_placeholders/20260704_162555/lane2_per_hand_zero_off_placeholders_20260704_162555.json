@@ -1,0 +1,111 @@
+{
+  "artifact_version": "1.0",
+  "artifact_id": "lane2_per_hand_zero_off_placeholders_20260704_162555",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:25:55Z",
+  "status": "file_resolution_pass_with_semantic_limitations",
+  "workflow": {
+    "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9"
+  },
+  "lane1_inputs": {
+    "policy_response": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane2_spatial_asset_policy_decision_20260704_162635.json",
+    "policy_response_sha256": "F55530CCC6B1F921112CDFF2CD07C8769E8D66CD799753754A01E4F8C77BE385",
+    "placeholder_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane2_per_hand_zero_off_placeholders_20260704_162635.json",
+    "placeholder_request_sha256": "82869A6FCA503B8E1C4F6B240FB6A03057F9393AECC78241CEA839EFFCB6A8D5"
+  },
+  "policy": {
+    "active_slot_group": "lower_hip_contact_derived_body_contact_slots",
+    "active_base_sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+    "accepted_resolution": "exact-name 1024x1024 all-zero/off placeholder masks until same-scene left/right hand split masks exist",
+    "forbidden_source": "main_flow/body_contact_presets/clothed_breast_side_push_strict_v1",
+    "forbidden_source_reason": "strict side-push v1 base hash differs from active slot base"
+  },
+  "source_zero_mask": {
+    "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png",
+    "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+    "width": 1024,
+    "height": 1024,
+    "size_bytes": 3129,
+    "nonzero_pixels": 0,
+    "nonzero_ratio": 0.0,
+    "role": "known zero/off mask template"
+  },
+  "materialized_files": [
+    {
+      "node_id": 1051,
+      "slot_id": "character_a_left_hand_mask",
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "width": 1024,
+      "height": 1024,
+      "size_bytes": 3129,
+      "nonzero_pixels": 0,
+      "nonzero_ratio": 0.0,
+      "semantics": "zero/off placeholder, not a proved anatomical left-hand segmentation"
+    },
+    {
+      "node_id": 1052,
+      "slot_id": "character_a_right_hand_mask",
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "width": 1024,
+      "height": 1024,
+      "size_bytes": 3129,
+      "nonzero_pixels": 0,
+      "nonzero_ratio": 0.0,
+      "semantics": "zero/off placeholder, not a proved anatomical right-hand segmentation"
+    },
+    {
+      "node_id": 1053,
+      "slot_id": "character_b_left_hand_mask",
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "width": 1024,
+      "height": 1024,
+      "size_bytes": 3129,
+      "nonzero_pixels": 0,
+      "nonzero_ratio": 0.0,
+      "semantics": "zero/off placeholder, not a proved anatomical left-hand segmentation"
+    },
+    {
+      "node_id": 1054,
+      "slot_id": "character_b_right_hand_mask",
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png",
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "width": 1024,
+      "height": 1024,
+      "size_bytes": 3129,
+      "nonzero_pixels": 0,
+      "nonzero_ratio": 0.0,
+      "semantics": "zero/off placeholder, not a proved anatomical right-hand segmentation"
+    }
+  ],
+  "audit_after_materialization": {
+    "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162555\\lane2_main_flow_spatial_asset_audit_20260704_162555.json",
+    "sha256": "49690BCA766511307BC2F19F1DB14875F214F78E7681ADC56A649B37DB5B9246",
+    "summary": {
+      "spatial_asset_nodes": 90,
+      "load_image_nodes": 70,
+      "load_image_mask_nodes": 20,
+      "missing_assets": 0,
+      "zero_masks": 5,
+      "per_hand_masks_checked": 4,
+      "body_contact_input_nodes_checked": 23,
+      "controlnet_requirements": 4,
+      "mask_composites": 31,
+      "mask_previews": 16
+    }
+  },
+  "graph_effect": {
+    "active_generation_missing_reference_status": "resolved_for_nodes_1051_1054",
+    "mask_math_effect": "all-zero placeholders add no pixels to the combined mask chain",
+    "semantic_status": "per-hand left/right anatomy remains unproven until same-scene split masks exist",
+    "node_1009_status": "zero/off and optional only for actor_hand_only_contact_v1"
+  },
+  "next_actions": [
+    "Lane 1 should re-run Main Flow reference validation and clear the four missing LoadImageMask references if the exact paths resolve.",
+    "Lane 4 can runtime-validate the current workflow hash after Lane 1 confirms graph/reference validation.",
+    "Lane 2 should replace zero/off placeholders with same-scene nonzero split masks when a trustworthy source exists."
+  ]
+}

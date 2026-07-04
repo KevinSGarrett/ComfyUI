@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "review_id": "lane2_per_hand_zero_off_hand_review_20260704_162555",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:25:55Z",
+  "scope": "Per-hand zero/off placeholder materialization for Main Flow nodes 1051-1054.",
+  "review_basis": [
+    "Lane 1 spatial asset policy decision authorizing zero/off placeholders.",
+    "Hash and dimension validation of the four exact-name placeholder masks.",
+    "Post-materialization Main Flow spatial asset audit."
+  ],
+  "verdict": "manual_review_required",
+  "checks": [
+    {
+      "name": "hand_count_and_left_right_identity",
+      "result": "blocked",
+      "notes": "The files are zero/off placeholders and intentionally do not encode hand identity."
+    },
+    {
+      "name": "per_hand_mask_alignment",
+      "result": "blocked",
+      "notes": "Alignment cannot be evaluated until same-scene nonzero split masks exist."
+    },
+    {
+      "name": "missing_reference_resolution",
+      "result": "pass",
+      "notes": "Exact-name files now exist at nodes 1051-1054 paths and are 1024x1024."
+    },
+    {
+      "name": "false_geometry_avoidance",
+      "result": "pass",
+      "notes": "Lane 2 used all-zero masks instead of copying cross-scene strict side-push masks or relabeling a combined hand mask."
+    },
+    {
+      "name": "collision_and_soft_body_deformation",
+      "result": "manual_review_required",
+      "notes": "Runtime output and nonzero actor/receiver split masks are required before collision/deformation quality can be accepted."
+    }
+  ],
+  "limitations": [
+    "No generated output was reviewed.",
+    "No live ComfyUI runtime validation was performed by Lane 2.",
+    "These masks are file-resolution controls only; they do not prove hand anatomy or per-hand contact quality."
+  ],
+  "next_action": "Lane 1 should re-run reference validation; Lane 4 should perform runtime validation in a lease window if requested."
+}

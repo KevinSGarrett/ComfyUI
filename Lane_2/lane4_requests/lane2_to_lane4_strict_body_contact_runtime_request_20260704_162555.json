@@ -1,0 +1,40 @@
+{
+  "request_id": "lane2_to_lane4_strict_body_contact_runtime_request_20260704_162555",
+  "requesting_lane": "Lane_2",
+  "target_lane": "Lane_4",
+  "created_at_utc": "2026-07-04T16:25:55Z",
+  "priority": "after_lane1_reference_validation",
+  "purpose": "Validate current Main Flow strict body-contact path after Lane 2 materialized exact-name zero/off per-hand placeholders for nodes 1051-1054.",
+  "needed_by": "next_justified_lane4_live_runtime_window",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+  "required_files": [
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\body_contact_base_input.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_pose_reference.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_contact_depth_reference.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png"
+  ],
+  "commands_or_endpoints": [
+    "Acquire EC2 lease if live validation is approved.",
+    "Run ComfyUI workflow validation/load using WAVE42_MAIN_FLOW_20260702.json at hash 5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9.",
+    "Validate LoadImage/LoadImageMask resolution for nodes 999-1017 and 1051-1054.",
+    "If generation is run, capture strict body-contact preview/output plus node 1032/1059-1062/1067-1070 QA previews where feasible."
+  ],
+  "expected_outputs": [
+    "Runtime evidence showing nodes 1051-1054 no longer fail from missing image files.",
+    "Runtime evidence showing node 1009 is accepted as zero/off for actor_hand_only_contact_v1 or a precise error if not.",
+    "Output or preview hashes for any generated QA images.",
+    "EC2 stopped-state proof and lease release after completion."
+  ],
+  "max_runtime_minutes": 45,
+  "stop_after_completion": true,
+  "lane2_limitations": [
+    "Lane 2 did not start or stop EC2.",
+    "Per-hand placeholders are zero/off and do not prove anatomical hand quality.",
+    "Full actor-body collision QA remains blocked until a same-scene actor body mask exists."
+  ]
+}
