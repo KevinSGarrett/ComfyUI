@@ -1,0 +1,31 @@
+{
+  "review_id": "lane1_current_slice_dependency_hand_review_20260704_164031",
+  "created_at_utc": "2026-07-04T16:40:31Z",
+  "lane_id": "Lane_1",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "scope": "Workflow/reference/dependency evidence only; no generated media or hand anatomy image was reviewed by Lane 1 in this slice.",
+  "verdict": "blocked_for_visual_hand_contact_acceptance",
+  "checks": [
+    {
+      "name": "media_review",
+      "result": "not_applicable",
+      "notes": "No generated image/video output was produced or inspected."
+    },
+    {
+      "name": "per_hand_mask_semantics",
+      "result": "blocked",
+      "notes": "Per-hand masks at nodes 1051-1054 are zero/off placeholders."
+    },
+    {
+      "name": "runtime_execution",
+      "result": "blocked",
+      "notes": "Lane 4 current-hash runtime execution remains pending."
+    }
+  ],
+  "does_not_prove": [
+    "hand anatomy correctness",
+    "per-hand contact quality",
+    "localized ControlNet effect",
+    "runtime execution"
+  ]
+}

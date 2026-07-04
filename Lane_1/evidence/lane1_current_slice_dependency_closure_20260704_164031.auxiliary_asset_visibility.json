@@ -1,0 +1,118 @@
+{
+  "report_id": "lane1_auxiliary_asset_visibility_check_20260704_164031",
+  "created_at_utc": "2026-07-04T16:40:31Z",
+  "lane_id": "Lane_1",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "scope": "Static current-hash check of active auxiliary detector/preprocessor widget filenames not covered by Lane 1 standard model-reference validator.",
+  "standard_validator_context": {
+    "validation_report": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_current_slice_dependency_closure_20260704_164031.validation.json",
+    "node_count": 769,
+    "link_count": 1137,
+    "missing_load_image_references": 0,
+    "missing_model_references": 0,
+    "active_input_errors": 0,
+    "active_endpoint_errors": 0
+  },
+  "asset_checks": [
+    {
+      "reference": "bbox/hand_yolov8n.pt",
+      "node_ids": [
+        973
+      ],
+      "node_titles": [
+        "Strict Hand YOLO Detector"
+      ],
+      "workflow_widget_context": "UltralyticsDetectorProvider model_name",
+      "expected_runtime_path": "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "expected_sha256_from_workflow_metadata": "f3f23b865741cc8373a76dfac31a71ffd71356a480ca43266f294815b608e174",
+      "role": "strict hand detector",
+      "exact_filename_search": {
+        "command": "rg --files -g hand_yolov8n.pt C:\\Comfy_UI C:\\Comfy_UI_Lora",
+        "exit_code": 1,
+        "matches": []
+      },
+      "local_visibility_status": "missing_by_exact_filename_search",
+      "local_matches": []
+    },
+    {
+      "reference": "sam_vit_b_01ec64.pth",
+      "node_ids": [
+        975
+      ],
+      "node_titles": [
+        "Strict Hand SAM Loader"
+      ],
+      "workflow_widget_context": "SAMLoader model_name",
+      "expected_runtime_path": "/home/ubuntu/ComfyUI/models/sams/sam_vit_b_01ec64.pth",
+      "role": "strict hand segmentation SAM model",
+      "exact_filename_search": {
+        "command": "rg --files -g sam_vit_b_01ec64.pth C:\\Comfy_UI C:\\Comfy_UI_Lora",
+        "exit_code": 1,
+        "matches": []
+      },
+      "local_visibility_status": "missing_by_exact_filename_search",
+      "local_matches": []
+    },
+    {
+      "reference": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "node_ids": [
+        978,
+        1040
+      ],
+      "node_titles": [
+        "Strict Hand DWPose Control",
+        "Strict Body Contact DWPose Control"
+      ],
+      "workflow_widget_context": "DWPreprocessor pose model",
+      "expected_runtime_path": "/home/ubuntu/ComfyUI/models/dwpose/dw-ll_ucoco_384_bs5.torchscript.pt",
+      "role": "strict hand/body-contact DWPose model",
+      "exact_filename_search": {
+        "command": "rg --files -g dw-ll_ucoco_384_bs5.torchscript.pt C:\\Comfy_UI C:\\Comfy_UI_Lora",
+        "exit_code": 1,
+        "matches": []
+      },
+      "local_visibility_status": "missing_by_exact_filename_search",
+      "local_matches": []
+    },
+    {
+      "reference": "yolox_l.onnx",
+      "node_ids": [
+        978,
+        1040
+      ],
+      "node_titles": [
+        "Strict Hand DWPose Control",
+        "Strict Body Contact DWPose Control"
+      ],
+      "workflow_widget_context": "DWPreprocessor bbox detector model",
+      "expected_runtime_path": "/home/ubuntu/ComfyUI/models/dwpose/yolox_l.onnx",
+      "role": "DWPose detector dependency",
+      "exact_filename_search": {
+        "command": "rg --files -g yolox_l.onnx C:\\Comfy_UI C:\\Comfy_UI_Lora",
+        "exit_code": 0,
+        "matches": [
+          "C:\\Comfy_UI_Lora\\OpenPose\\models\\dwpose\\yolox_l.onnx"
+        ]
+      },
+      "local_visibility_status": "found_exact_filename_runtime_path_unproven",
+      "local_matches": [
+        {
+          "path": "C:\\Comfy_UI_Lora\\OpenPose\\models\\dwpose\\yolox_l.onnx",
+          "sha256": "7860AE79DE6C89A3C1EB72AE9A2756C0CCFBE04B7791BB5880AFABD97855A411",
+          "size_bytes": 216746733
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "lane3_blocker_assets_not_found_by_exact_filename_search": [
+      "bbox/hand_yolov8n.pt",
+      "sam_vit_b_01ec64.pth",
+      "dw-ll_ucoco_384_bs5.torchscript.pt"
+    ],
+    "additional_dwp_preprocessor_dependency_found_outside_comfy_model_roots": "yolox_l.onnx found at C:\\Comfy_UI_Lora\\OpenPose\\models\\dwpose\\yolox_l.onnx; runtime visibility to current ComfyUI DWPreprocessor nodes is unproven.",
+    "main_flow_patch_needed": false,
+    "next_action": "Lane 4 should verify/load these auxiliary assets during the next approved current-hash runtime validation window or return exact sanctioned source/install paths."
+  }
+}

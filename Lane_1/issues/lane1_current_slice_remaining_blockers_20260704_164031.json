@@ -1,0 +1,29 @@
+{
+  "issue_id": "lane1_current_slice_remaining_blockers_20260704_164031",
+  "created_at_utc": "2026-07-04T16:40:31Z",
+  "lane_id": "Lane_1",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "status": "open_external_dependencies",
+  "blockers": [
+    {
+      "category": "auxiliary_runtime_asset_visibility",
+      "description": "Nodes 973, 975, 978, and 1040 reference active auxiliary detector/preprocessor assets whose runtime visibility is not proven; three Lane 3 blocker filenames were not found locally by exact filename search.",
+      "next_action": "Lane 4 should consume the Lane 3 request plus Lane 1 addendum and return runtime-visible paths/load results or exact sanctioned source/install blockers."
+    },
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "Nodes 1051-1054 resolve files but only as all-zero/off placeholders.",
+      "next_action": "Lane 2 should provide trustworthy nonzero same-scene Character A/B left/right hand masks when available."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "Node 1009 actor body mask remains zero and optional only for actor_hand_only_contact_v1.",
+      "next_action": "Provide same-scene actor body segmentation only if full actor-body collision QA is required."
+    },
+    {
+      "category": "current_hash_runtime_validation",
+      "description": "Current workflow hash has not been executed after recent static reference closure.",
+      "next_action": "Lane 4 should run current-hash validation during an approved EC2 window."
+    }
+  ]
+}

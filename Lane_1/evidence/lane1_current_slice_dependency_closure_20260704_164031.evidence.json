@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane1_current_slice_dependency_closure_20260704_164031",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:40:31Z",
+  "claim": {
+    "summary": "Lane 1 consumed Lane 2 per-hand zero/off placeholder provenance and Lane 3 auxiliary runtime findings for the current Main Flow hash. Static graph, LoadImage, and standard model-reference validation pass with no missing references, but Main Flow runtime readiness remains blocked by auxiliary detector/preprocessor visibility and semantic zero-mask limitations.",
+    "status": "blocked",
+    "requirement_ids": [
+      "Lane_1.MainFlow.CurrentSlice.DependencyClosure",
+      "Lane_2.PerHandZeroOffPlaceholders.20260704_162555",
+      "Lane_3.MainFlow.CurrentWorkflowAuxiliaryRefs.20260704_163052",
+      "Lane_4.CurrentHashRuntimeValidation.Pending"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+    "settings": {
+      "budget_mode": "critical",
+      "default_model_effort_policy": "gpt-5.4/high unless Main Flow edit/graph repair/contradictory evidence requires gpt-5.5/xhigh",
+      "workflow_edited": false,
+      "workflow_backup_created": false,
+      "reason_no_backup": "No canonical workflow JSON edit was made in this slice."
+    }
+  },
+  "runtime": {
+    "ec2_action_by_lane1": "none",
+    "runtime_validation_status": "pending_lane4",
+    "standard_validator_report": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_current_slice_dependency_closure_20260704_164031.validation.json",
+    "auxiliary_asset_report": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_current_slice_dependency_closure_20260704_164031.auxiliary_asset_visibility.json"
+  },
+  "models": [
+    {
+      "name": "bbox/hand_yolov8n.pt",
+      "family": "ultralytics",
+      "path": "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "sha256": "f3f23b865741cc8373a76dfac31a71ffd71356a480ca43266f294815b608e174",
+      "role": "strict hand detector auxiliary",
+      "visibility_evidence": "Not found by exact filename search under C:\\Comfy_UI or C:\\Comfy_UI_Lora; runtime visibility pending Lane 4."
+    },
+    {
+      "name": "sam_vit_b_01ec64.pth",
+      "family": "sam",
+      "path": "/home/ubuntu/ComfyUI/models/sams/sam_vit_b_01ec64.pth",
+      "role": "strict hand SAM segmentation auxiliary",
+      "visibility_evidence": "Not found by exact filename search under C:\\Comfy_UI or C:\\Comfy_UI_Lora; runtime visibility/source pending Lane 4."
+    },
+    {
+      "name": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "family": "dwpose",
+      "path": "/home/ubuntu/ComfyUI/models/dwpose/dw-ll_ucoco_384_bs5.torchscript.pt",
+      "role": "strict hand/body-contact DWPose auxiliary",
+      "visibility_evidence": "Not found by exact filename search under C:\\Comfy_UI or C:\\Comfy_UI_Lora; runtime visibility/source pending Lane 4."
+    },
+    {
+      "name": "yolox_l.onnx",
+      "family": "dwpose",
+      "path": "C:\\Comfy_UI_Lora\\OpenPose\\models\\dwpose\\yolox_l.onnx",
+      "role": "DWPose detector dependency",
+      "visibility_evidence": "Exact filename exists outside checked ComfyUI model roots; runtime visibility to DWPreprocessor nodes remains unproven."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_current_slice_dependency_closure_20260704_164031.validation.json",
+      "type": "lane1_current_static_validation",
+      "description": "Fresh current-slice validator report for canonical Main Flow.",
+      "size_bytes": 59886,
+      "sha256": "EC63316B1EBA2329B8F7B303FB356577C533F3549D0E60E1C6BE4209C590622C"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_current_slice_dependency_closure_20260704_164031.auxiliary_asset_visibility.json",
+      "type": "lane1_auxiliary_asset_visibility_report",
+      "description": "Lane 1 static check of active auxiliary detector/preprocessor asset filenames.",
+      "size_bytes": 4792,
+      "sha256": "8A15D3734BA15D4360DE3696FA8C1B7725C0CA071AAC76FF72C3D58049AF0730"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_responses\\lane2_to_lane1_per_hand_zero_off_placeholders_response_20260704_162555.json",
+      "type": "lane2_response",
+      "description": "Lane 2 response confirming exact-name zero/off per-hand placeholder materialization.",
+      "size_bytes": 2235,
+      "sha256": "CBD8EB737C900AFA5E852305B44DA74FEF5660125F080BCF1C656030636D4463"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\evidence_records\\lane2_per_hand_zero_off_placeholder_evidence_20260704_162555.json",
+      "type": "lane2_evidence",
+      "description": "Lane 2 schema evidence for per-hand zero/off placeholders.",
+      "size_bytes": 9235,
+      "sha256": "B3BBA8C5BE993069EC1A9A281B8489313A613FEAFFAB7E6AED07B81EC4EE3B2B"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162555\\lane2_main_flow_spatial_asset_audit_20260704_162555.json",
+      "type": "lane2_spatial_asset_audit",
+      "description": "Lane 2 post-materialization spatial asset audit showing missing_assets=0 and zero_masks=5.",
+      "size_bytes": 140517,
+      "sha256": "49690BCA766511307BC2F19F1DB14875F214F78E7681ADC56A649B37DB5B9246"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\hand_reviews\\20260704_162555_lane2_per_hand_zero_off_hand_review.json",
+      "type": "lane2_hand_review",
+      "description": "Lane 2 hand/contact review limiting placeholder claims.",
+      "size_bytes": 1931,
+      "sha256": "79A848BCBD39EB693E56A36BC7393FC05CF45F877FA5F6E1DE84EA8C18F4418E"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\issues\\20260704_162555_same_scene_per_hand_split_blocker.json",
+      "type": "lane2_issue",
+      "description": "Lane 2 same-scene per-hand split blocker record.",
+      "size_bytes": 1048,
+      "sha256": "6DB3652C1D3AAA45082326E5578D2FE65103DABABFB5D536358E9C36AD2E4794"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_163052_main_flow_current_workflow_auxiliary_refs_evidence.json",
+      "type": "lane3_auxiliary_refs_evidence",
+      "description": "Lane 3 evidence identifying current Main Flow auxiliary runtime asset blockers.",
+      "size_bytes": 8533,
+      "sha256": "F872EB3F5FB66093313D250F3D956D0BF38AA90A2E801593E822A1780C4704B4"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_163052_main_flow_current_workflow_auxiliary_refs.md",
+      "type": "lane3_auxiliary_refs_report",
+      "description": "Lane 3 human-readable auxiliary reference addendum.",
+      "size_bytes": 3510,
+      "sha256": "CEF5E08FB4A8B2F74F5B90BFF60ED8427A4BDC30A4CF05D87856C461296C9092"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_163052_Lane_3_to_Lane_4_main_flow_auxiliary_runtime_visibility.json",
+      "type": "lane3_ec2_request",
+      "description": "Protocol-visible Lane 3 runtime visibility request.",
+      "size_bytes": 4141,
+      "sha256": "503600D24D6A37C2116506F6E2984298A2E25BF68AC876BE11EB3C195216623B"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\requests\\lane1_to_lane4_current_hash_auxiliary_runtime_visibility_20260704_164031.json",
+      "type": "lane1_lane4_auxiliary_visibility_request",
+      "description": "Lane 1 addendum request adopting auxiliary checks for Main Flow readiness.",
+      "size_bytes": 3305,
+      "sha256": "7B759C015F58A3639BD3F967CD84417D269CFD6879C0AAD8B4FEC62AB2A48DFA"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\responses\\lane1_to_lane2_per_hand_provenance_ack_20260704_164031.json",
+      "type": "lane1_lane2_ack",
+      "description": "Lane 1 acknowledgement that nodes 1051-1054 are no longer missing references.",
+      "size_bytes": 2013,
+      "sha256": "41D47AA2B851692551770F1DBB13C9A13C27FBE6142E16616CAACDD1BA34CCB1"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\responses\\lane1_to_lane3_auxiliary_dependency_ack_20260704_164031.json",
+      "type": "lane1_lane3_ack",
+      "description": "Lane 1 acknowledgement adopting Lane 3 auxiliary blockers.",
+      "size_bytes": 2006,
+      "sha256": "C04B50D16DE5D68E78B7360166BAE4E89847D68E10CF0CE18D34D7188FD17818"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\hand_reviews\\lane1_current_slice_dependency_hand_review_20260704_164031.json",
+      "type": "lane1_hand_review_record",
+      "description": "Lane 1 non-media hand/contact review record for this evidence slice.",
+      "size_bytes": 1091,
+      "sha256": "4A43223841DD78D04D8C6DC7B07060D50B6B7E2617C0A2EECDA873226B63850B"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\issues\\lane1_current_slice_remaining_blockers_20260704_164031.json",
+      "type": "lane1_remaining_blockers",
+      "description": "Lane 1 remaining blockers after current dependency intake.",
+      "size_bytes": 1641,
+      "sha256": "CA33323AF03988073C86F54A2E5B6E1FFC76BB9F47F0B8C7306107149CB9DA15"
+    }
+  ],
+  "qa": {
+    "verdict": "blocked",
+    "checks": [
+      {
+        "name": "workflow_graph_static_validation",
+        "result": "pass",
+        "notes": "node_count=769, link_count=1137, endpoint_errors=0, active_input_errors=0."
+      },
+      {
+        "name": "load_image_and_mask_file_resolution",
+        "result": "pass",
+        "notes": "Fresh validator reports missing_load_image_references=0; nodes 1051-1054 resolve to Lane 2 exact-name zero/off placeholders."
+      },
+      {
+        "name": "standard_model_reference_resolution",
+        "result": "pass",
+        "notes": "Fresh validator reports missing_model_references=0 for standard checkpoint/LoRA/ControlNet/model widgets it covers."
+      },
+      {
+        "name": "auxiliary_detector_preprocessor_visibility",
+        "result": "blocked",
+        "notes": "hand_yolov8n.pt, sam_vit_b_01ec64.pth, and dw-ll_ucoco_384_bs5.torchscript.pt were not found locally by exact filename search; Lane 4 runtime/source validation required."
+      },
+      {
+        "name": "per_hand_semantic_validity",
+        "result": "blocked",
+        "notes": "Nodes 1051-1054 are all-zero/off placeholders and do not prove same-scene left/right hand segmentation."
+      },
+      {
+        "name": "runtime_execution",
+        "result": "blocked",
+        "notes": "Lane 1 did not start/stop EC2; current-hash execution remains pending Lane 4."
+      }
+    ],
+    "failure_reasons": [
+      "Auxiliary detector/preprocessor assets lack runtime visibility evidence.",
+      "Per-hand and actor-body masks remain zero-valued placeholders for semantic QA.",
+      "No current-hash runtime execution evidence yet."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [
+      "Current Main Flow graph, LoadImage/LoadImageMask references, and standard model references pass Lane 1 static validation for hash 5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9.",
+      "Nodes 1051-1054 are no longer missing file references after Lane 2 exact-name zero/off placeholder materialization."
+    ],
+    "does_not_prove_rows": [
+      "ComfyUI runtime execution for the current hash.",
+      "Runtime visibility/loading of auxiliary assets hand_yolov8n.pt, sam_vit_b_01ec64.pth, dw-ll_ucoco_384_bs5.torchscript.pt, or DWPreprocessor yolox_l.onnx.",
+      "Same-scene per-hand left/right segmentation or visual hand/contact quality.",
+      "Full actor-body collision QA using node 1009."
+    ],
+    "promotion_decision": "preserve_blocker"
+  },
+  "blockers": [
+    {
+      "category": "auxiliary_runtime_asset_visibility",
+      "description": "Nodes 973, 975, 978, and 1040 reference active auxiliary detector/preprocessor assets whose runtime visibility is not proven; three Lane 3 blocker filenames were not found locally by exact filename search.",
+      "next_action": "Lane 4 should consume the Lane 3 request plus Lane 1 addendum and return runtime-visible paths/load results or exact sanctioned source/install blockers."
+    },
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "Nodes 1051-1054 resolve files but only as all-zero/off placeholders.",
+      "next_action": "Lane 2 should provide trustworthy nonzero same-scene Character A/B left/right hand masks when available."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "Node 1009 actor body mask remains zero and optional only for actor_hand_only_contact_v1.",
+      "next_action": "Provide same-scene actor body segmentation only if full actor-body collision QA is required."
+    },
+    {
+      "category": "current_hash_runtime_validation",
+      "description": "Current workflow hash has not been executed after recent static reference closure.",
+      "next_action": "Lane 4 should run current-hash validation during an approved EC2 window."
+    }
+  ]
+}

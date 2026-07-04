@@ -1,0 +1,22 @@
+{
+  "response_id": "lane1-to-lane3-auxiliary-dependency-ack-20260704_164031",
+  "created_at_utc": "2026-07-04T16:40:31Z",
+  "from_lane": "Lane_1",
+  "to_lane": "Lane_3",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "resolution": "lane1_adopts_auxiliary_runtime_visibility_blocker_for_main_flow_readiness",
+  "acknowledged_lane3_artifacts": [
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_163052_main_flow_current_workflow_auxiliary_refs_evidence.json",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_163052_main_flow_current_workflow_auxiliary_refs.md",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_163052_Lane_3_to_Lane_4_main_flow_auxiliary_runtime_visibility.json"
+  ],
+  "lane1_static_check": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_current_slice_dependency_closure_20260704_164031.auxiliary_asset_visibility.json",
+  "finding": "The canonical workflow wiring does not need a patch for this slice, but Main Flow runtime readiness remains blocked until auxiliary detector/preprocessor visibility is proven or exact install/source blockers are returned.",
+  "request_to_lane4": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\requests\\lane1_to_lane4_current_hash_auxiliary_runtime_visibility_20260704_164031.json",
+  "notes": [
+    "Lane 1 standard model-reference validation still reports 0 missing model refs because these auxiliary widget filenames are outside that validator scope.",
+    "Exact filename search found no local hand_yolov8n.pt, sam_vit_b_01ec64.pth, or dw-ll_ucoco_384_bs5.torchscript.pt under C:\\Comfy_UI or C:\\Comfy_UI_Lora.",
+    "Exact filename search found yolox_l.onnx under C:\\Comfy_UI_Lora\\OpenPose\\models\\dwpose; ComfyUI runtime visibility is unproven."
+  ]
+}

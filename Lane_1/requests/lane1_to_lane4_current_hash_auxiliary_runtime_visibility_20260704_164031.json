@@ -1,0 +1,72 @@
+{
+  "request_id": "lane1-to-lane4-current-hash-auxiliary-runtime-visibility-20260704_164031",
+  "created_at_utc": "2026-07-04T16:40:31Z",
+  "from_lane": "Lane_1",
+  "to_lane": "Lane_4",
+  "priority": "high_when_next_current_hash_runtime_window_is_approved",
+  "subject": "Main Flow current-hash auxiliary detector/preprocessor runtime visibility",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "related_existing_ec2_request": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_163052_Lane_3_to_Lane_4_main_flow_auxiliary_runtime_visibility.json",
+  "constraints": [
+    "Lane 1 is not starting or stopping EC2.",
+    "Do not open EC2 solely for this duplicate/addendum request if Lane 3 request is already queued; include these checks in the next approved current-hash runtime validation window.",
+    "Do not print secrets.",
+    "Preserve existing ComfyUI model paths unless a sanctioned source/install path is required."
+  ],
+  "requested_checks": [
+    {
+      "node_ids": [
+        973
+      ],
+      "reference": "bbox/hand_yolov8n.pt",
+      "expected_runtime_path": "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "expected_sha256": "f3f23b865741cc8373a76dfac31a71ffd71356a480ca43266f294815b608e174",
+      "lane1_static_status": "missing_by_exact_filename_search",
+      "local_matches": []
+    },
+    {
+      "node_ids": [
+        975
+      ],
+      "reference": "sam_vit_b_01ec64.pth",
+      "expected_runtime_path": "/home/ubuntu/ComfyUI/models/sams/sam_vit_b_01ec64.pth",
+      "expected_sha256": null,
+      "lane1_static_status": "missing_by_exact_filename_search",
+      "local_matches": []
+    },
+    {
+      "node_ids": [
+        978,
+        1040
+      ],
+      "reference": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "expected_runtime_path": "/home/ubuntu/ComfyUI/models/dwpose/dw-ll_ucoco_384_bs5.torchscript.pt",
+      "expected_sha256": null,
+      "lane1_static_status": "missing_by_exact_filename_search",
+      "local_matches": []
+    },
+    {
+      "node_ids": [
+        978,
+        1040
+      ],
+      "reference": "yolox_l.onnx",
+      "expected_runtime_path": "/home/ubuntu/ComfyUI/models/dwpose/yolox_l.onnx",
+      "expected_sha256": null,
+      "lane1_static_status": "found_exact_filename_runtime_path_unproven",
+      "local_matches": [
+        {
+          "path": "C:\\Comfy_UI_Lora\\OpenPose\\models\\dwpose\\yolox_l.onnx",
+          "sha256": "7860AE79DE6C89A3C1EB72AE9A2756C0CCFBE04B7791BB5880AFABD97855A411",
+          "size_bytes": 216746733
+        }
+      ]
+    }
+  ],
+  "minimum_acceptance": [
+    "For each reference, provide runtime-visible path and load result for the current workflow hash, or an exact blocker with sanctioned source/install path.",
+    "For bbox/hand_yolov8n.pt, compare against workflow metadata SHA256 f3f23b865741cc8373a76dfac31a71ffd71356a480ca43266f294815b608e174 when a file is present.",
+    "Confirm whether C:\\Comfy_UI_Lora\\OpenPose\\models\\dwpose\\yolox_l.onnx is usable by the ComfyUI DWPreprocessor runtime or must be mirrored into a ComfyUI model path."
+  ]
+}

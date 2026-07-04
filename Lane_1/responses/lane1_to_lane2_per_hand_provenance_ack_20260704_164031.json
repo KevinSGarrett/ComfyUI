@@ -1,0 +1,31 @@
+{
+  "response_id": "lane1-to-lane2-per-hand-provenance-ack-20260704_164031",
+  "created_at_utc": "2026-07-04T16:40:31Z",
+  "from_lane": "Lane_1",
+  "to_lane": "Lane_2",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "resolution": "missing_reference_blocker_cleared_semantic_blocker_preserved",
+  "validated": {
+    "node_count": 769,
+    "link_count": 1137,
+    "missing_load_image_references": 0,
+    "missing_model_references": 0,
+    "active_input_errors": 0,
+    "active_endpoint_errors": 0,
+    "nodes_1051_1054_file_resolution": "pass_via_lane2_exact_name_zero_off_placeholders"
+  },
+  "acknowledged_lane2_artifacts": [
+    "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_responses\\lane2_to_lane1_per_hand_zero_off_placeholders_response_20260704_162555.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\evidence_records\\lane2_per_hand_zero_off_placeholder_evidence_20260704_162555.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162555\\lane2_main_flow_spatial_asset_audit_20260704_162555.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\hand_reviews\\20260704_162555_lane2_per_hand_zero_off_hand_review.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\issues\\20260704_162555_same_scene_per_hand_split_blocker.json"
+  ],
+  "remaining_limitations": [
+    "Nodes 1051-1054 are all-zero/off placeholders and do not prove same-scene left/right hand segmentation, wrist continuity, collision, or edge quality.",
+    "Node 1009 character_b_body_mask.png remains zero-valued and optional only for actor_hand_only_contact_v1.",
+    "Current-hash runtime validation remains pending Lane 4."
+  ],
+  "next_action_requested": "Replace placeholders with trustworthy nonzero same-scene Character A/B left/right hand masks only when such a source exists; otherwise keep the off controls explicit."
+}
