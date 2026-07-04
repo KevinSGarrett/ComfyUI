@@ -429,3 +429,24 @@ Blocker state and next owner actions:
   - `C:\Comfy_UI_Lora\5_sessions\Lane_7\reports\20260704_192000_lane7_shared_artifact_catalog.md`
   - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\resume_packets\20260704_192000_usage_limit_resume_packet.md`
 - No owner-lane authority was taken; no EC2 operations, model operations, cleanup apply, or tracker mutations were performed.
+
+## 2026-07-04T19:35:00Z - Runtime/queue/usage/pressure refresh
+
+- Re-read active lane artifacts and shared state:
+  - Lane 2 latest status: `C:\Comfy_UI_Lora\5_session_worktrees\Lane_2\Lane_2\reports\20260704_181800_lane2_status.md`
+  - Lane 3 runtime scan updated in `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\reports\20260704_171700_main_flow_runtime_scan.csv` (true missing refs + runtime-hit counts).
+  - Lane 6 latest status: `C:\Comfy_UI_Lora\5_session_worktrees\Lane_6\Lane_6\reports\20260704_180300_lane6_status.md`
+- Shared-state snapshot unchanged on lease (`free`, owner null) but pending queue remains `14`.
+- Storage snapshot remains stable: `C:` free `164.391 GB` of `951.646 GB` and stale snapshot candidates absent.
+- Untracked inventory in `C:\Comfy_UI_Lora\5_sessions` moved to `83`.
+- Created/updated coordination artifacts for this cycle:
+  - `reports/20260704_193500_lane7_compact_end_to_end_dashboard.md`
+  - `storage_reports/20260704_193500_lane7_storage_pressure_report.md`
+  - `reports/20260704_193500_lane7_shared_artifact_catalog.md`
+  - `resume_packets/20260704_193500_usage_limit_resume_packet.md`
+- Mirrored those artifacts into shared reporting locations:
+  - `C:\Comfy_UI_Lora\5_sessions\Main\reports\20260704_193500_lane7_compact_end_to_end_dashboard.md`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\storage_reports\20260704_193500_lane7_storage_pressure_report.md`
+  - `C:\Comfy_UI_Lora\5_sessions\Lane_7\reports\20260704_193500_lane7_shared_artifact_catalog.md`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\resume_packets\20260704_193500_usage_limit_resume_packet.md`
+- No authority was taken in owner-lane domains (no EC2 actions, cleanup apply, model movement, tracker edits, or runtime handoffs).
