@@ -1,0 +1,66 @@
+{
+  "manifest_id": "lane6_to_lane5_runtime_status_20260704_180250",
+  "lane_id": "Lane_6",
+  "created_at_utc": "2026-07-04T18:02:50Z",
+  "purpose": "Single checkpoint for Lane 5: self-hosted AI_Front proof remains valid, but SDXL v1.1 candidate runtime is still unresolved in shared EC2 queue.",
+  "canonical_main_flow": {
+    "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+    "edited_by_lane_6": false
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\generation_preset_lab\\wave42_ai_front_self_hosted_llm_qwen14b_text_planning_v1_evidence_20260704_155133.json",
+      "size_bytes": 1588,
+      "sha256": "A05550B589D3FEF8120317DA429417221592E246F8F7CFD8B739CEA8783E0A60",
+      "status": "passed",
+      "note": "Baseline self-hosted text-planning proof (local qwen2.5:14b, no cloud provider)."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\generation_preset_lab\\wave42_ai_front_self_hosted_request_runner_bundle_refresh_evidence_20260704_175200.json",
+      "size_bytes": 4085,
+      "sha256": "0555DBF6C6DADB3D5D949059E8856396E432C8513C650C0DEB3276D3FC052F84",
+      "status": "passed",
+      "note": "Latest self-hosted request-runner + policy boundary evidence."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\generation_preset_lab\\wave42_request_runner_bundle_verification_20260704_175200.json",
+      "size_bytes": 2321,
+      "sha256": "FB3C0775D0C590D62F7302EF317E0CA2FAE989D18C8C19E47236E3BEB73240D5",
+      "status": "passed",
+      "note": "Verifier report re-run pass."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\generation_preset_lab\\wave42_sdxl_safe_adult_clothed_low_vram_v1_1_runtime_status_20260704_175900.json",
+      "size_bytes": 3347,
+      "sha256": "217B7437E509A2B1C9AC4F11B7F33B530558737ED048982F2E70D76F93A802FA",
+      "status": "blocked",
+      "note": "Active v1.1 request not yet completed in ec2_requests/processed."
+    }
+  ],
+  "manifest_refs": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\manifests\\generation_preset_lab\\wave42_ai_front_self_hosted_request_runner_manifest_20260704_164142.json",
+      "sha256": "3764E0C7D3D5B893F0F5F7B1B51B9C768CDBD5F726B3F786540536A08048F9B0"
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\manifests\\generation_preset_lab\\wave42_sdxl_safe_adult_clothed_low_vram_v1_1_manifest_20260704_162157.json",
+      "sha256": "132BD6C135D11F414EE907E4DBA8A3381A3E48B632F52AA140E34D0C39D9493A"
+    }
+  ],
+  "runtime_status": {
+    "request_file": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json",
+    "request_processed": false,
+    "processed_dir_observation": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\processed"
+  },
+  "next_owner_actions": [
+    {
+      "owner": "Lane_4",
+      "action": "Return completion payload for request 20260704_162157 or a precise blocker tied to that request id."
+    },
+    {
+      "owner": "Lane_5",
+      "action": "Preserve as needs_more_evidence; do not promote any v1.1 candidate quality or tracker row until strict media hand-review is possible."
+    }
+  ]
+}

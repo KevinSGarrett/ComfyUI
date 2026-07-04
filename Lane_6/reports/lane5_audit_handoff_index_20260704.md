@@ -48,9 +48,17 @@ The handoff recommends preserving provisional status for the SDXL preset until L
 - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\processed` still has no completion artifact for `20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json`.
 - Main Flow SHA currently observed by Lane 6 is `5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9`; existing v1.1 evidence file records the older creation hash, so hash parity should be confirmed in final completion.
 - New blocker artifacts added:
-  - `C:\Comfy_UI\Implementation\evidence\generation_preset_lab\wave42_sdxl_safe_adult_clothed_low_vram_v1_1_runtime_gap_20260704_173200.json`
-  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_6\Lane_6\issues\20260704_173200_lane6_v1_1_runtime_request_gap.json`
+- `C:\Comfy_UI\Implementation\evidence\generation_preset_lab\wave42_sdxl_safe_adult_clothed_low_vram_v1_1_runtime_gap_20260704_173200.json`
 - Updated `C:\Comfy_UI\Implementation\manifests\generation_preset_lab\wave42_sdxl_safe_adult_clothed_low_vram_v1_1_manifest_20260704_162157.json` with pending/runtime-blocker status and explicit Lane 4 completion action.
+
+## Runtime Handoff Update (2026-07-04T18:02:50Z)
+
+- Added compact runtime/AI_Front checkpoint:
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_6\Lane_6\reports\20260704_180250_lane6_to_lane5_ai_front_runtime_handoff.json`
+- This file includes:
+  - latest verifier continuity,
+  - current self-hosted request-runnner status,
+  - and explicit Lane 4/Lane 5 next actions for request `20260704_162157`.
 
 ## Added Handoff Update (2026-07-04T17:38:00Z)
 
