@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_contact_wiring_checklist_evidence_20260704_172500",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T17:25:00Z",
+  "claim": {
+    "summary": "Created a Lane 1 wiring checklist from current collision/deformation and contact-pair artifacts with explicit blocked/active edge states.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_collision_deformation_requirements_update_20260704_175500",
+      "lane2_contact_pair_graph_evidence_20260704_175000",
+      "lane2_to_lane1_contact_pair_graph_update_20260704_175000"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:/Comfy_UI/Implementation/workflows/ui/WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "sources": [
+      "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_contact_wiring_checklist_20260704_172500.md",
+      "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\evidence_records\\lane2_collision_deformation_requirements_update_20260704_175500.json",
+      "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_pair_graph\\20260704_175000\\lane2_contact_pair_graph_20260704_175000.json",
+      "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_175000\\lane2_contact_mask_pixel_qa_20260704_175000.json"
+    ],
+    "settings": {
+      "use_markdown_gate_table": true,
+      "runtime_required": "current-hash runtime handoff required"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "local checklist synthesis"
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_contact_wiring_checklist_20260704_172500.md",
+      "type": "lane1_wiring_checklist",
+      "size_bytes": 2240,
+      "sha256": "1E54BDF03F2AFD2C6357626B966E114328A18A9EBC2057A4AD8ADC0EF1D3F80D",
+      "description": "Checklist table for Lane 1 actioning state."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\evidence_records\\lane2_collision_deformation_requirements_update_20260704_175500.json",
+      "type": "collision_deformation_evidence",
+      "size_bytes": 7352,
+      "sha256": "A0558EDC9E40186CE588155B70BBF1F6B012429E550FB4AF133EEB6CBAEB6F88",
+      "description": "Collision/deformation requirement packet used to generate states."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_pair_graph\\20260704_175000\\lane2_contact_pair_graph_20260704_175000.json",
+      "type": "contact_pair_graph",
+      "size_bytes": 7225,
+      "sha256": "5904A396EEC6DC7122C3692201748472454917D8831613C75F86AF23905BCCBF",
+      "description": "Pair graph used for allowed/blocked states."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_175000\\lane2_contact_mask_pixel_qa_20260704_175000.json",
+      "type": "contact_mask_pixel_qa",
+      "size_bytes": 25826,
+      "sha256": "F7CC0A0AE33EA361B55360B6A4FC2ED84A7388B00A9BE7274439CB9A0779314D",
+      "description": "Source pixel QA metrics."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "checklist_alignment",
+        "result": "pass",
+        "notes": "Checklist enumerates all six contact edges with explicit gate states."
+      },
+      {
+        "name": "runtime_gate_present",
+        "result": "pass",
+        "notes": "Checklist includes explicit Lane4/Lane5 acceptance precondition."
+      },
+      {
+        "name": "edge_blockers",
+        "result": "pass",
+        "notes": "Named edges correctly remain blocked until same-scene sources arrive."
+      }
+    ],
+    "failure_reasons": [
+      "No new local geometry blocker removals; runtime/visual acceptance pending."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "strict_visual_acceptance_rows",
+      "named_left_right_contact_pair_completion_rows",
+      "full_actor_body_collision_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "Named per-hand edges remain blocked by zero/off split masks",
+      "next_action": "Supply same-scene nonzero left/right hand split masks to unlock them."
+    },
+    {
+      "category": "actor_body_segmentation_source",
+      "description": "Node 1009 actor-body remains zero/off",
+      "next_action": "Supply same-scene actor-body source for full collision/deformation acceptance."
+    },
+    {
+      "category": "runtime_visual_validation",
+      "description": "Final strict acceptance requires Lane4 runtime + Lane5 visual review",
+      "next_action": "Await lane4/5 handoff completion."
+    }
+  ]
+}
