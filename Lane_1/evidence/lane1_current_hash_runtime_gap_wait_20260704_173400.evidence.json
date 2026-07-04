@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane1_current_hash_runtime_gap_wait_20260704_173400",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T17:34:00Z",
+  "claim": {
+    "summary": "Current-Hash runtime-gap request remains un-serviced by Lane 4; static workflow structure remains internally consistent and unresolved runtime-critical refs unchanged.",
+    "status": "blocked",
+    "requirement_ids": [
+      "mainflow:runtime_visibility",
+      "lane4:runtime_response",
+      "mainflow:static_integrity"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "settings": {
+      "validation_time_utc": "2026-07-04T17:34:00Z",
+      "validation_scope": "static graph + pending runtime-gap request status"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+      "type": "workflow",
+      "description": "Canonical graph validated for this snapshot."
+    },
+    {
+      "path": "C:\\Comfy_UI\\5_sessions\\Main\\shared_state\\ec2_requests\\lane1_to_lane4_current_hash_runtime_gap_reassertion_20260704_170200.json",
+      "type": "request",
+      "description": "Latest runtime-gap follow-up request awaiting processing."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_165000_workflow_missing_refs_runtime_visibility_check_evidence.json",
+      "type": "evidence",
+      "description": "Latest upstream model/runtime visibility scan before Lane 4 pickup."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_pm_status_20260704T163939Z.md",
+      "type": "status",
+      "description": "Lane 4 reporting AWS auth/session renewal required before additional EC2 actions."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_current_hash_runtime_gate_snapshot_20260704_170200.evidence.json",
+      "type": "evidence",
+      "description": "Previous validated blocker snapshot for same workflow hash."
+    }
+  ],
+  "models": [
+    {
+      "name": "bbox/hand_yolov8n.pt",
+      "family": "ultralytics-detector",
+      "path": "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "role": "auxiliary_detector",
+      "visibility_evidence": "none",
+      "load_result": "pending_lane4_runtime_response"
+    },
+    {
+      "name": "sam_vit_b_01ec64.pth",
+      "family": "sam",
+      "path": "/home/ubuntu/ComfyUI/models/sams/sam_vit_b_01ec64.pth",
+      "role": "segmentation_backbone",
+      "visibility_evidence": "none",
+      "load_result": "pending_lane4_runtime_response"
+    },
+    {
+      "name": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "family": "dwpose-model",
+      "path": "/home/ubuntu/ComfyUI/models/dwpose/dw-ll_ucoco_384_bs5.torchscript.pt",
+      "role": "pose_model",
+      "visibility_evidence": "none",
+      "load_result": "pending_lane4_runtime_response"
+    },
+    {
+      "name": "yolox_l.onnx",
+      "family": "dwpose-model",
+      "path": "/home/ubuntu/ComfyUI/models/dwpose/yolox_l.onnx",
+      "role": "pose_decoder",
+      "visibility_evidence": "none",
+      "load_result": "pending_lane4_runtime_response"
+    }
+  ],
+  "runtime": {
+    "endpoints_checked": [
+      "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\lane_status\\(none; no lane-4 runtime check files observed in this slice)"
+    ],
+    "aws_auth_status": "blocked_by_user-auth_refresh_needed (per Lane_4 PM)"
+  },
+  "qa": {
+    "verdict": "blocked",
+    "checks": [
+      {
+        "name": "json_parse",
+        "result": "pass",
+        "notes": "Canonical workflow parses successfully."
+      },
+      {
+        "name": "node_link_integrity",
+        "result": "pass",
+        "notes": "769 nodes, 1137 links, dangling links source=0 destination=0."
+      },
+      {
+        "name": "loadimage_resolution",
+        "result": "pass",
+        "notes": "LoadImage path checks passed (non-blocking)."
+      },
+      {
+        "name": "runtime_visibility_response",
+        "result": "blocked",
+        "notes": "No new Lane 4 response for runtime-gap request after reassertion."
+      }
+    ],
+    "failure_reasons": [
+      "Lane 4 has not yet responded with runtime visibility/load for unresolved refs."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [
+      "lane1_workflow_graph_integrity_20260704_173400",
+      "lane1_loadimage_resolution_20260704_173400"
+    ],
+    "does_not_prove_rows": [
+      "lane1_main_flow_runtime_readiness_current_hash"
+    ],
+    "promotion_decision": "preserve_blocker"
+  },
+  "blockers": [
+    {
+      "category": "runtime_visibility_missing",
+      "description": "Runtime visibility/load evidence for four critical model refs is still missing and must be supplied by Lane 4.",
+      "next_action": "Lane 4 must return per-ref runtime path, sha256/size, and ComfyUI load test result after AWS auth refresh."
+    }
+  ]
+}
