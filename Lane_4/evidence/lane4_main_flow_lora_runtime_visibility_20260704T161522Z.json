@@ -1,0 +1,353 @@
+﻿{
+    "schema_version":  "1.0",
+    "evidence_id":  "lane4_main_flow_lora_runtime_visibility_20260704T161522Z",
+    "lane_id":  "Lane_4",
+    "created_at_utc":  "2026-07-04T16:15:22.1041485Z",
+    "claim":  {
+                  "summary":  "Main Flow-tied EC2 runtime visibility pass for Lane 3 LoRA request; EC2-hosted LLM route blocked because no private loopback OpenAI-compatible service was running.",
+                  "status":  "provisional",
+                  "requirement_ids":  [
+                                          "Lane_3_20260704_155047_runtime_visibility",
+                                          "Main_Flow_runtime_model_visibility",
+                                          "Lane_4_cost_control",
+                                          "SELF_HOSTED_LLM_POLICY"
+                                      ]
+              },
+    "inputs":  {
+                   "workflow_path":  "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+                   "workflow_sha256":  "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+                   "settings":  {
+                                    "temporary_effort":  "xhigh",
+                                    "request_path":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_155047_Lane_3_model_lora_llm_visibility.json",
+                                    "request_sha256":  "cd07ac3e88504493ed1e464f30f2aa865ad3b2dda3c2a76856641c96390f4bba",
+                                    "lane3_compatibility_table":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_155047_model_lora_compatibility_table.md",
+                                    "lane3_llm_route_evidence":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_155047_llm_runtime_route_evidence.json",
+                                    "supervisor_report":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\reports\\six_lane_supervisor_status_20260704.md",
+                                    "reduced_remote_summary_sha256":  "e886f6e5b3dd159f880f27f021d3524cd5dd9d53ae762018c8f30fdb666125b7"
+                                }
+               },
+    "runtime":  {
+                    "ec2_instance_id":  "i-0560bf8d143f93bb1",
+                    "ec2_state_before":  "stopped",
+                    "ec2_state_after":  "stopped",
+                    "comfyui_url":  "http://127.0.0.1:8188 via SSM on EC2 host only",
+                    "endpoints_checked":  [
+                                              "/system_stats",
+                                              "/queue",
+                                              "/object_info",
+                                              "/v1/models on 127.0.0.1:11434, :8000, :8080"
+                                          ],
+                    "aws_auth_status":  "passed",
+                    "ssm_command_id":  "6cf2315f-da18-45b7-ae69-2d0cc3ea1eb7",
+                    "ssm_reduced_summary_command_id":  "05e83843-b8b7-4a96-87df-1ee0eced6e84",
+                    "runtime_summary_path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.runtime_summary.json",
+                    "runtime_summary_sha256":  "780e04ab92b74251d4eb4a8f2055e073c709da82c3bbf9833588d8769fb018bc",
+                    "public_endpoint_used":  false,
+                    "ec2_public_ip_present_after_stop":  false,
+                    "ec2_public_dns_present_after_stop":  false,
+                    "lease_state_after_release":  "free",
+                    "stop_wait_seconds":  261.541,
+                    "main_flow_hash_observations":  {
+                                                        "initial_observed":  "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+                                                        "current_local":  "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+                                                        "remote_script_recorded":  "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0"
+                                                    }
+                },
+    "models":  [
+                   {
+                       "name":  "civitai_wave42/sdxl/mature_age/Mature_Female__v342953__MatureFemaleSDXL-LoCon.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/sdxl/mature_age/Mature_Female__v342953__MatureFemaleSDXL-LoCon.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/sdxl/curvy_hourglass_body/Hourglass_Body_Shape_SD1.5_SDXL_PONY_FLUX_olaz__v911708__hourglassv2_SDXL.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/sdxl/curvy_hourglass_body/Hourglass_Body_Shape_SD1.5_SDXL_PONY_FLUX_olaz__v911708__hourglassv2_SDXL.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/sdxl/curvy_body_shape/Curvy_body_-_SDXL__v1449869__b8174d41-8ba7-4318-bc14-53ee7e353d91.TA_trained.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/sdxl/curvy_body_shape/Curvy_body_-_SDXL__v1449869__b8174d41-8ba7-4318-bc14-53ee7e353d91.TA_trained.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/sdxl/body_slider/bodyslider_sdxl__v2515273__bodyslider_sdxl.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/sdxl/body_slider/bodyslider_sdxl__v2515273__bodyslider_sdxl.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/sdxl/bbw_large_butt_thighs/Chubby_BBW_-_XL__v704816__Chubby_BBW_-_XL.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/sdxl/bbw_large_butt_thighs/Chubby_BBW_-_XL__v704816__Chubby_BBW_-_XL.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/sdxl/skin_imperfections/Skin_Realism_Acne_Skin_Details_Imperfections_SDX__v280914__imperfect.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/sdxl/skin_imperfections/Skin_Realism_Acne_Skin_Details_Imperfections_SDX__v280914__imperfect.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/sdxl/skin_texture_realism/Realistic_Skin_Texture_style_Detailed_Skin_XL_SD__v647890__skin_texture_style.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/sdxl/skin_texture_realism/Realistic_Skin_Texture_style_Detailed_Skin_XL_SD__v647890__skin_texture_style.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/sdxl/lip_expression/Joschek_s_Lip_Biting__v384729__biting_own_lip-000008.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/sdxl/lip_expression/Joschek_s_Lip_Biting__v384729__biting_own_lip-000008.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/sdxl/hoop_earrings/oversize_hoop_earrings_SDXL__v2951537__oversize_hoop_earrings_SDXL_epoch_16.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/sdxl/hoop_earrings/oversize_hoop_earrings_SDXL__v2951537__oversize_hoop_earrings_SDXL_epoch_16.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/sdxl/pov_camera/Point_of_view_pov_fps_cinematic_subjective_camer__v712243__point_of_view_style_v3.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/sdxl/pov_camera/Point_of_view_pov_fps_cinematic_subjective_camer__v712243__point_of_view_style_v3.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/flux/mature_age/Mature_Women_Flux__v1746681__Mature_Women_Flux.safetensors",
+                       "family":  "flux",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/flux/mature_age/Mature_Women_Flux__v1746681__Mature_Women_Flux.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/flux/curvy_hourglass_body/Hourglass_Body_Shape_SD1.5_SDXL_PONY_FLUX_olaz__v932199__hourglassv2_flux.safetensors",
+                       "family":  "flux",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/flux/curvy_hourglass_body/Hourglass_Body_Shape_SD1.5_SDXL_PONY_FLUX_olaz__v932199__hourglassv2_flux.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/flux/skin_pores_realism/Realistic_Skin_Texture_style_Detailed_Skin_XL_SD__v804746__detailed_skin_pore_style_v2.safetensors",
+                       "family":  "flux",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/flux/skin_pores_realism/Realistic_Skin_Texture_style_Detailed_Skin_XL_SD__v804746__detailed_skin_pore_style_v2.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/flux/long_curly_hair/Long_hair_LoRA_-_Flux_Z-image__v753327__Longhair2.safetensors",
+                       "family":  "flux",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/flux/long_curly_hair/Long_hair_LoRA_-_Flux_Z-image__v753327__Longhair2.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/flux/big_lips/big_lips__v1699453__lips2.safetensors",
+                       "family":  "flux",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/flux/big_lips/big_lips__v1699453__lips2.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/flux/lip_expression/Joschek_s_Lip_Biting_for_Flux__v2091427__lip_bitiing_flux.safetensors",
+                       "family":  "flux",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/flux/lip_expression/Joschek_s_Lip_Biting_for_Flux__v2091427__lip_bitiing_flux.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/flux/hoop_earrings/Hoop_earrings__v1448114__Hoop_earrings.safetensors",
+                       "family":  "flux",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/flux/hoop_earrings/Hoop_earrings__v1448114__Hoop_earrings.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/flux/pov_camera/Point_of_view_pov_fps_cinematic_subjective_camer__v1407640__pov_style_v1.safetensors",
+                       "family":  "flux",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/flux/pov_camera/Point_of_view_pov_fps_cinematic_subjective_camer__v1407640__pov_style_v1.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "civitai_wave42/flux/saggy_breasts/saggy_breasts_proof_of_concept__v888864__saggy_breasts-save-560-20-0.safetensors",
+                       "family":  "flux",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/civitai_wave42/flux/saggy_breasts/saggy_breasts_proof_of_concept__v888864__saggy_breasts-save-560-20-0.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   },
+                   {
+                       "name":  "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+                       "family":  "sdxl",
+                       "path":  "/home/ubuntu/ComfyUI/models/loras/wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+                       "role":  "requested_lora_runtime_visibility",
+                       "visibility_evidence":  "visible_in_comfyui_object_info_and_remote_file_size_matched",
+                       "load_result":  "catalog_visible_not_generation_loaded"
+                   }
+               ],
+    "artifacts":  [
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.json",
+                          "type":  "coordination_evidence",
+                          "description":  "Lane 4 branch evidence record."
+                      },
+                      {
+                          "path":  "C:\\Comfy_UI\\Implementation\\evidence\\runtime\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.json",
+                          "type":  "project_runtime_evidence",
+                          "description":  "Project runtime evidence copy."
+                      },
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.runtime_summary.json",
+                          "type":  "runtime_summary",
+                          "sha256":  "780e04ab92b74251d4eb4a8f2055e073c709da82c3bbf9833588d8769fb018bc",
+                          "description":  "Compact runtime summary derived from SSM localhost checks."
+                      },
+                      {
+                          "path":  "C:\\Comfy_UI\\Implementation\\evidence\\runtime\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.runtime_summary.json",
+                          "type":  "project_runtime_summary",
+                          "sha256":  "780e04ab92b74251d4eb4a8f2055e073c709da82c3bbf9833588d8769fb018bc",
+                          "description":  "Project copy of compact runtime summary."
+                      },
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\schemas\\evidence_record.schema.json",
+                          "type":  "schema",
+                          "sha256":  "f8c712fd69499fa19f7493b820cf9fa3807f74bd04152c94415b88d9b24d8fa3",
+                          "description":  "Evidence schema."
+                      }
+                  ],
+    "qa":  {
+               "verdict":  "provisional",
+               "checks":  [
+                              {
+                                  "name":  "Lane 4 temporary xhigh live-window policy acknowledged",
+                                  "result":  "pass",
+                                  "notes":  "MODEL_EFFORT_ASSIGNMENTS dynamic policy read after supervisor escalation."
+                              },
+                              {
+                                  "name":  "EC2 lease acquired before start",
+                                  "result":  "pass",
+                                  "notes":  "Lease owner was Lane_4 for the live window."
+                              },
+                              {
+                                  "name":  "ComfyUI /system_stats",
+                                  "result":  "pass",
+                                  "notes":  "status=200, sha256=8f2a389d93e647db0b1e3be90cfb8041b8f32111d1e7a17aaafd3db7331bee59"
+                              },
+                              {
+                                  "name":  "ComfyUI /queue",
+                                  "result":  "pass",
+                                  "notes":  "status=200, sha256=6c1bb554d677ad1ea8526c38e26e141e6faf4f2fab85faaa8d264aeda0e7b4f0"
+                              },
+                              {
+                                  "name":  "ComfyUI /object_info",
+                                  "result":  "pass",
+                                  "notes":  "status=200, nodes=1915, sha256=6c6dc7d10d8e61506b900a4fae6cab1a9997f2ee716585e8bc1b341eea993b38"
+                              },
+                              {
+                                  "name":  "Requested Lane 3 LoRA visibility",
+                                  "result":  "pass",
+                                  "notes":  "22/22 requested LoRAs visible in object_info."
+                              },
+                              {
+                                  "name":  "Remote LoRA file path coverage",
+                                  "result":  "pass",
+                                  "notes":  "22/22 requested LoRA files exist under /home/ubuntu/ComfyUI/models/loras with expected size."
+                              },
+                              {
+                                  "name":  "Private EC2 LLM endpoint",
+                                  "result":  "blocked",
+                                  "notes":  "No OpenAI-compatible loopback service responded on 127.0.0.1:11434/v1, :8000/v1, or :8080/v1 during the live window; no public unauthenticated LLM endpoint was used or exposed."
+                              },
+                              {
+                                  "name":  "External provider default avoidance",
+                                  "result":  "pass",
+                                  "notes":  "No external LLM provider was used; normal self-hosted route remains local per Lane 3 evidence, while EC2 route requires a service/model start request."
+                              },
+                              {
+                                  "name":  "EC2 stopped after live window",
+                                  "result":  "pass",
+                                  "notes":  "state=stopped, public_ip_present=False, public_dns_present=False"
+                              },
+                              {
+                                  "name":  "Lease released after stop",
+                                  "result":  "pass",
+                                  "notes":  "lease_state=free"
+                              }
+                          ],
+               "failure_reasons":  [
+                                       "EC2-hosted self-hosted LLM endpoint was not available on checked private loopback ports; Lane 3/Lane 4 need an explicit EC2 LLM service/model start/deploy path before EC2 LLM readiness can pass.",
+                                       "Main Flow workflow hash changed during/around the live-window slice; runtime evidence records both observations and should be reconciled by Lane 1/Lane 5 before treating this as graph-version-specific execution proof."
+                                   ]
+           },
+    "tracker_mapping":  {
+                            "proves_rows":  [
+                                                "Runtime ComfyUI endpoint visibility for requested Lane 3 LoRAs against live /object_info.",
+                                                "Remote EC2 LoRA path coverage for requested civitai_wave42 and wave42 LoRAs.",
+                                                "EC2 cost-control closure after live window."
+                                            ],
+                            "does_not_prove_rows":  [
+                                                        "EC2-hosted Qwen3-Coder-class LLM readiness.",
+                                                        "Main Flow image generation execution/output quality.",
+                                                        "Tracker promotion without Lane 5 audit."
+                                                    ],
+                            "promotion_decision":  "needs_more_evidence"
+                        },
+    "blockers":  [
+                     {
+                         "category":  "ec2_llm_endpoint",
+                         "description":  "No private OpenAI-compatible LLM service responded on 127.0.0.1:11434/v1, 127.0.0.1:8000/v1, or 127.0.0.1:8080/v1 during the EC2 live window.",
+                         "next_action":  "Lane 3 should provide the EC2 model/service path or a concrete Lane 4 request to start/deploy the chosen Qwen3-Coder-class runtime; Lane 4 should then re-open a short lease window and test /v1/models plus a sentinel chat request."
+                     },
+                     {
+                         "category":  "main_flow_hash_changed",
+                         "description":  "Main Flow workflow hash observed before supervisor update differed from the current local workflow hash extracted after runtime checks.",
+                         "next_action":  "Lane 1/Lane 5 should reconcile the current canonical Main Flow hash before using this evidence as graph-version-specific proof."
+                     }
+                 ]
+}

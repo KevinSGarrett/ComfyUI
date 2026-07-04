@@ -1,0 +1,36 @@
+{
+  "requesting_lane": "Lane_3",
+  "created_at_utc": "2026-07-04T15:50:47Z",
+  "purpose": "Validate runtime visibility for Lane 3 verified SDXL/Flux LoRAs and validate an EC2-hosted self-hosted LLM route if local capacity is insufficient for AI_LLM_Intelligence_Plan target models.",
+  "needed_by": "next Lane_4 runtime window",
+  "required_files": [
+    "C:\\Comfy_UI\\Implementation\\manifests\\civitai_model_acquisition\\civitai_lora_install_20260702_000428.json",
+    "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\civitai_wave42",
+    "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_155047_model_lora_compatibility_table.md",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_155047_llm_runtime_route_evidence.json"
+  ],
+  "commands_or_endpoints": [
+    "Do not expose public unauthenticated LLM endpoints.",
+    "Under Lane 4 EC2 lease only: verify ComfyUI model visibility via the live ComfyUI `/object_info` endpoint, especially LoRA loader-visible names under `civitai_wave42/sdxl`, `civitai_wave42/flux`, and `wave42/sdxl`.",
+    "Under Lane 4 EC2 lease only: verify model path sync or mount coverage for `C:\\Comfy_UI\\Runtime_Data\\models\\loras\\civitai_wave42` and `C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42` on the runtime host.",
+    "Under Lane 4 EC2 lease only: if the AI_LLM_Intelligence_Plan needs EC2 LLM capacity, validate an OpenAI-compatible self-hosted endpoint over SSM/SSH/private tunnel shape, not a public unauthenticated URL.",
+    "LLM endpoint check shape: `GET /v1/models` and one secret-free `POST /v1/chat/completions` sentinel request.",
+    "Preferred local default remains `http://127.0.0.1:11434/v1`; EC2 route should be fallback for GPU/server capacity and target Qwen3-Coder-class model validation."
+  ],
+  "expected_outputs": [
+    "Evidence file with ComfyUI endpoint URL shape without credentials, endpoints checked, timestamp, and Lane_4 lease/cost state.",
+    "List of LoRA names visible to ComfyUI, grouped by SDXL vs Flux vs Wave42 existing SDXL.",
+    "Any missing model paths or relative-name mismatches, with exact next action.",
+    "If EC2 LLM is tested: model name, family, quantization/source manifest, endpoint URL shape without credentials, sample response, latency, and failure behavior.",
+    "Explicit statement that external providers are not required for normal AI_LLM_Intelligence_Plan operation."
+  ],
+  "max_runtime_minutes": 60,
+  "stop_after_completion": true,
+  "safety_constraints": [
+    "Lane_3 did not and must not start or stop EC2.",
+    "Do not print tokens, AWS credentials, Civitai URLs with credentials, SSH keys, presigned URLs, or provider API keys.",
+    "Do not mix SDXL LoRAs into Flux workflows or Flux LoRAs into SDXL workflows.",
+    "Do not download broad Civitai mirrors."
+  ]
+}

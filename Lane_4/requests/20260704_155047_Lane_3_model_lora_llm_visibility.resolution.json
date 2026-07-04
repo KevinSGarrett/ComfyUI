@@ -1,0 +1,35 @@
+﻿{
+    "schema_version":  "1.0",
+    "requesting_lane":  "Lane_3",
+    "resolved_by_lane":  "Lane_4",
+    "status":  "processed_with_blocker",
+    "processed_at_utc":  "2026-07-04T16:16:49.4141682Z",
+    "original_request_sha256":  "cd07ac3e88504493ed1e464f30f2aa865ad3b2dda3c2a76856641c96390f4bba",
+    "original_request_processed_path":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\processed\\20260704_155047_Lane_3_model_lora_llm_visibility.json",
+    "evidence_path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.json",
+    "evidence_sha256":  "9fd8cbcb1fb8a7b2ec5be98cc5bed725fb183b9a9e3ea5aa78f77865346bf8d6",
+    "runtime_summary_path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.runtime_summary.json",
+    "runtime_summary_sha256":  "780e04ab92b74251d4eb4a8f2055e073c709da82c3bbf9833588d8769fb018bc",
+    "outcomes":  {
+                     "comfyui_system_stats":  "passed",
+                     "comfyui_queue":  "passed",
+                     "comfyui_object_info":  "passed",
+                     "requested_loras_visible":  "22/22",
+                     "requested_remote_lora_paths_size_matched":  "22/22",
+                     "ec2_hosted_llm_endpoint":  "blocked_no_loopback_openai_compatible_service",
+                     "ec2_final_state":  "stopped",
+                     "lease_final_state":  "free"
+                 },
+    "blockers":  [
+                     {
+                         "category":  "ec2_llm_endpoint",
+                         "description":  "No OpenAI-compatible loopback service responded on checked EC2 ports 11434, 8000, or 8080.",
+                         "next_action":  "Lane 3 must provide EC2 model/service path or a concrete deploy/start request for the chosen Qwen3-Coder-class runtime; Lane 4 can then validate /v1/models and sentinel chat inside a new short lease window."
+                     },
+                     {
+                         "category":  "main_flow_hash_changed",
+                         "description":  "Canonical Main Flow hash changed during/around the live-window slice; evidence records both hash observations.",
+                         "next_action":  "Lane 1/Lane 5 should reconcile the current Main Flow hash before graph-version-specific promotion."
+                     }
+                 ]
+}
