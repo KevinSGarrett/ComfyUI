@@ -330,3 +330,36 @@ Next owner action:
 - Lane 4: complete `aws login`, process queued runtime requests, and provide requested runtime visibility proofs or sanctioned remediation.
 - Lane 1: continue lane-bridge waiting state until the above proofs arrive.
 - Lane 3: decide whether qwen3-class dependency is required for its current ownership path and route via EC2/local install policy.
+
+## 2026-07-04T16:50:57Z - Compact delta after updated owner evidence and queue refresh
+
+Material state changes since the previous follow-up:
+
+- Current per-owner checks now include additional status refreshes:
+  - Lane 5 PM follow-up landed in its worktree at `C:\Comfy_UI_Lora\5_session_worktrees\Lane_5\Lane_5\reports\20260704_175900_lane5_status.md`.
+  - Lane 6 v1.1 queue checkpoint landed at `C:\Comfy_UI_Lora\5_session_worktrees\Lane_6\Lane_6\reports\20260704_172000_lane6_v1_1_state_checkpoint.md`.
+- Queue refresh confirms current pending EC2 request set is unchanged in ownership scope but expanded (10 files total), including:
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_165000_Lane_3_to_Lane_4_current_workflow_model_refs_visibility_recheck.json`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\lane1_to_lane4_current_hash_aux_runtime_and_model_visibility_20260704_164737.json`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_164620_Lane_3_to_Lane_4_current_workflow_model_refs_visibility.json`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_164209_lane3_to_lane5_top500_batch0_audit.json`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_164031_Lane_1_current_hash_auxiliary_runtime_visibility_addendum.json`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_163216_Lane_1_current_hash_main_flow_runtime_validation.json`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_163052_Lane_3_to_Lane_4_main_flow_auxiliary_runtime_visibility.json`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_162555_Lane_2_strict_body_contact_zero_off_validation.json`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_162424_Lane_3_to_Lane_4_main_flow_runtime_visibility.json`
+  - `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json`
+- Environment checks:
+  - Lease file now still `free` with `owner_lane:null` and `purpose:null`.
+  - `C:` free `164.465 GB` at check time.
+  - Candidate stale snapshot dirs remain absent.
+- Untracked lane artifacts were catalogued (no actions taken): lane5 status report and lane6 checkpoint report.
+
+Actions taken:
+
+- Added compact dashboard update at `Lane_7/reports/20260704_115057_lane7_compact_delta_dashboard.md`.
+- Mirrored that report into:
+  - `C:\Comfy_UI_Lora\5_sessions\Main\reports\20260704_115057_lane7_compact_delta_dashboard.md`
+  - `C:\Comfy_UI_Lora\5_sessions\Lane_7\reports\20260704_115057_lane7_compact_delta_dashboard.md`
+- Preserved all boundaries: no owner-lane authority actions, no EC2 mutation, no model movement, no artifact deletion, no tracker edits.
