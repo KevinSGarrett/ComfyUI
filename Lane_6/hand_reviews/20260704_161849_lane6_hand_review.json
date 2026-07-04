@@ -1,0 +1,36 @@
+{
+  "review_id": "20260704_161849_lane6_hand_review",
+  "lane_id": "Lane_6",
+  "created_at_utc": "2026-07-04T16:18:49Z",
+  "scope": "AI_Front self-hosted LLM adapter and SDXL preset/runtime-request continuity",
+  "verdict": "not_visually_reviewed",
+  "actual_media_reviewed": false,
+  "media_paths": [],
+  "checks": [
+    {
+      "name": "hand_count_left_right_identity",
+      "result": "not_applicable",
+      "notes": "No generated candidate media exists in this slice."
+    },
+    {
+      "name": "finger_count_continuity_separation",
+      "result": "not_applicable",
+      "notes": "No hands or fingers were visually reviewed."
+    },
+    {
+      "name": "mask_contact_pose_depth_alignment",
+      "result": "not_applicable",
+      "notes": "This slice touched provider adapter behavior, not hand/contact masks."
+    },
+    {
+      "name": "manual_visual_review_required_for_candidate_claims",
+      "result": "pass",
+      "notes": "Any future candidate media from Lane 4 must receive strict visual hand review before any hand/anatomy quality claim."
+    }
+  ],
+  "limitations": [
+    "No candidate image was generated or reviewed.",
+    "No hand quality, anatomy quality, or contact quality is claimed."
+  ],
+  "next_action": "When Lane 4 returns candidate media for the SDXL preset, run strict hand/anatomy review on the actual output."
+}

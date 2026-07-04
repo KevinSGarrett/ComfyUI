@@ -1,0 +1,29 @@
+{
+  "issue_id": "20260704_161849_lane6_local_comfyui_blocker",
+  "lane_id": "Lane_6",
+  "created_at_utc": "2026-07-04T16:18:49Z",
+  "category": "runtime",
+  "severity": "blocking_candidate_media_generation",
+  "summary": "Local ComfyUI endpoint is unavailable for Lane 6 candidate generation.",
+  "evidence": {
+    "endpoint": "http://127.0.0.1:8188",
+    "tcp_probe": "failed",
+    "prior_prompt_probe": "[WinError 10061] connection actively refused",
+    "candidate_media_generated": false
+  },
+  "main_flow": {
+    "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "current_sha256_observed": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d"
+  },
+  "next_action": "Lane_4 should process C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_160530_Lane_6_sdxl_safe_adult_clothed_low_vram_candidate.json under the EC2 lease protocol, or a local ComfyUI owner should start a local endpoint outside Lane_6 authority.",
+  "blocked_scope": [
+    "new real candidate image outputs",
+    "candidate media QA",
+    "strict visual hand review of generated output"
+  ],
+  "unblocked_scope": [
+    "AI_Front self-hosted LLM adapter work",
+    "preset/schema/evidence packaging",
+    "Lane 5 audit handoffs"
+  ]
+}
