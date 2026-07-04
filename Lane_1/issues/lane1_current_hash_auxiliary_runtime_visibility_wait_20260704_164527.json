@@ -1,0 +1,23 @@
+{
+    "issue_id":  "lane1_current_hash_auxiliary_runtime_visibility_wait_20260704_164527",
+    "created_at_utc":  "2026-07-04T16:45:27Z",
+    "lane_id":  "Lane_1",
+    "objective_scope":  "Main Flow canonical hash current wiring readiness",
+    "workflow_path":  "C:\\\\Comfy_UI\\\\Implementation\\\\workflows\\\\ui\\\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256":  "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+    "status":  "open_external_dependencies",
+    "blockers":  [
+                     {
+                         "category":  "auxiliary_runtime_asset_visibility_pending",
+                         "severity":  "high",
+                         "description":  "No runtime evidence has been posted yet confirming visibility/load for auxiliary detector/preprocessor files (hand_yolov8n.pt, sam_vit_b_01ec64.pth, dw-ll_ucoco_384_bs5.torchscript.pt, yolox_l.onnx) for current-hash workflow.",
+                         "evidence":  [
+                                          "C:\\\\Comfy_UI_Lora\\\\5_session_worktrees\\\\Lane_1\\\\Lane_1\\\\requests\\\\lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json",
+                                          "C:\\\\Comfy_UI_Lora\\\\5_sessions\\\\Main\\\\shared_state\\\\ec2_requests\\\\lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json",
+                                          "C:\\\\Comfy_UI\\\\Implementation\\\\evidence\\\\workflow_validation\\\\lane1_current_slice_dependency_closure_20260704_164031.auxiliary_asset_visibility.json",
+                                          "C:\\\\Comfy_UI\\\\Implementation\\\\evidence\\\\workflow_validation\\\\lane1_current_slice_dependency_closure_20260704_164031.evidence.json"
+                                      ],
+                         "next_action":  "Lane_4 must process the reprompt file and return runtime path existence + sha/size + load/visibility proof per requested asset; if missing, return exact sanctioned source/install path for each asset and expected owner."
+                     }
+                 ]
+}
