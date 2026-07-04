@@ -93,3 +93,23 @@ Boundaries preserved:
 - No model downloads/deletions.
 - No generated media inspection or deletion.
 - No secrets printed.
+
+## 2026-07-04T16:42:00Z - PM follow-up after Lane 4 blocker threshold
+
+Material state changes since the compact post-cleanup delta:
+
+- Lane 4 has now marked its own active goal blocked after repeated AWS auth expiry checks.
+- A new Lane 1 addendum request was queued at `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_164031_Lane_1_current_hash_auxiliary_runtime_visibility_addendum.json`.
+- Lane 7 follow-up check still showed lease `free` and C: about 163.9 GB free.
+
+Action taken:
+
+- Wrote one compact PM follow-up status routing the stop-proof blocker to Lane 4 and noting that the Lane 1 addendum should be batched with the queued Lane 3 auxiliary request in the next approved current-hash runtime window.
+
+Boundaries preserved:
+
+- No Lane 7 EC2 action.
+- No cleanup apply.
+- No model download/delete.
+- No tracker action.
+- No new autonomous lane wakeups.
