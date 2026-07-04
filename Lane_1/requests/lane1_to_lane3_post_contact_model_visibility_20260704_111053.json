@@ -1,0 +1,132 @@
+{
+  "request_id": "lane1_to_lane3_post_contact_model_visibility_20260704_111053",
+  "requesting_lane": "Lane_1",
+  "target_lane": "Lane_3",
+  "created_at_utc": "2026-07-04T16:10:53Z",
+  "priority": "high",
+  "status": "open",
+  "source_evidence_id": "lane1_lane2_contact_control_wiring_20260704_111053",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "request": "Reconcile remaining post-contact-control Main Flow model/control filename visibility blockers.",
+  "model_roots_checked": [
+    "C:\\Comfy_UI\\models",
+    "C:\\Comfy_UI\\Runtime_Data\\models",
+    "C:\\Comfy_UI_Lora\\models"
+  ],
+  "missing_unique_model_references": [
+    {
+      "value": "RealESRGAN_x4plus.pth",
+      "count": 1,
+      "node_ids": [
+        60
+      ],
+      "node_types": [
+        "UpscaleModelLoader"
+      ]
+    },
+    {
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "count": 6,
+      "node_ids": [
+        10,
+        413,
+        462,
+        643,
+        979,
+        1035
+      ],
+      "node_types": [
+        "CheckpointLoaderSimple"
+      ]
+    },
+    {
+      "value": "ae.safetensors",
+      "count": 1,
+      "node_ids": [
+        37
+      ],
+      "node_types": [
+        "VAELoader"
+      ]
+    },
+    {
+      "value": "controlnet-canny-sdxl-1.0-small.safetensors",
+      "count": 1,
+      "node_ids": [
+        120
+      ],
+      "node_types": [
+        "ControlNetLoader"
+      ]
+    },
+    {
+      "value": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "count": 1,
+      "node_ids": [
+        1043
+      ],
+      "node_types": [
+        "ControlNetLoader"
+      ]
+    },
+    {
+      "value": "controlnet-openpose-sdxl-1.0.safetensors",
+      "count": 2,
+      "node_ids": [
+        984,
+        1041
+      ],
+      "node_types": [
+        "ControlNetLoader"
+      ]
+    },
+    {
+      "value": "flux1-dev-fp8.safetensors",
+      "count": 2,
+      "node_ids": [
+        461,
+        642
+      ],
+      "node_types": [
+        "CheckpointLoaderSimple"
+      ]
+    },
+    {
+      "value": "flux1-schnell-fp8.safetensors",
+      "count": 2,
+      "node_ids": [
+        100,
+        425
+      ],
+      "node_types": [
+        "CheckpointLoaderSimple"
+      ]
+    },
+    {
+      "value": "qwen_3_4b.safetensors",
+      "count": 1,
+      "node_ids": [
+        32
+      ],
+      "node_types": [
+        "CLIPLoader"
+      ]
+    },
+    {
+      "value": "z_image_turbo_bf16.safetensors",
+      "count": 1,
+      "node_ids": [
+        30
+      ],
+      "node_types": [
+        "UNETLoader"
+      ]
+    }
+  ],
+  "required_action": "Return direct file/catalog visibility evidence or corrected ComfyUI dropdown-relative filenames. Lane 1 preserved current model paths.",
+  "evidence_paths": [
+    "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.evidence.json",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_lane2_contact_control_wiring_20260704_111053.evidence.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_lane2_contact_control_wiring_20260704_111053.evidence.json"
+  ]
+}

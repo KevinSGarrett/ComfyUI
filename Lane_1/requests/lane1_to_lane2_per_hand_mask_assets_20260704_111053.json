@@ -1,0 +1,51 @@
+{
+  "request_id": "lane1_to_lane2_per_hand_mask_assets_20260704_111053",
+  "requesting_lane": "Lane_1",
+  "target_lane": "Lane_2",
+  "created_at_utc": "2026-07-04T16:10:53Z",
+  "priority": "high",
+  "status": "open",
+  "source_evidence_id": "lane1_lane2_contact_control_wiring_20260704_111053",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "request": "Provide actual per-hand mask image files for the Lane 2 contact-control slots now wired into Main Flow.",
+  "missing_references": [
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 1051,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Left Hand",
+      "value": "main_flow/body_contact_slots/character_a_left_hand_mask.png"
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 1052,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Right Hand",
+      "value": "main_flow/body_contact_slots/character_a_right_hand_mask.png"
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 1053,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Left Hand",
+      "value": "main_flow/body_contact_slots/character_b_left_hand_mask.png"
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 1054,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Right Hand",
+      "value": "main_flow/body_contact_slots/character_b_right_hand_mask.png"
+    }
+  ],
+  "required_action": "Create the four PNG files under C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots or provide exact substitute paths for Lane 1 to bind.",
+  "evidence_paths": [
+    "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.evidence.json",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_lane2_contact_control_wiring_20260704_111053.evidence.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_lane2_contact_control_wiring_20260704_111053.evidence.json"
+  ]
+}

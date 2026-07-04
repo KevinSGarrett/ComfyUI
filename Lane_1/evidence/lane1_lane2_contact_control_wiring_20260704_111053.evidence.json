@@ -1,0 +1,832 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane1_lane2_contact_control_wiring_20260704_111053",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:10:53Z",
+  "claim": {
+    "summary": "Lane 2 strict contact-control artifact was converted into canonical Main Flow structural wiring with per-hand mask slots, combined-mask insertion, QA saves/previews, contact-pair metadata, soft-body binding metadata, and a runtime binding template. Graph validation passes; runtime readiness remains provisional pending actual per-hand mask assets, remaining model visibility, and Lane 4 live validation.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_lane1_contact_control_wiring_request",
+      "main_flow_convergence",
+      "lane1_graph_validation"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "44f366f162a937b10c2d7157c5f0b668e1d27bdfdb93698a6181981ce4a3dd22",
+    "settings": {
+      "source_lane2_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_contact_control_wiring_request_20260704_154905.md",
+      "source_lane2_artifact": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\contact_control\\20260704_154905\\lane2_contact_control_artifact_20260704_154905.json",
+      "backup_path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_contact_control_wiring_20260704_110410.json",
+      "backup_sha256": "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+      "backup_matches_pre_patch_source": true,
+      "runtime_binding_template": "C:\\Comfy_UI\\Implementation\\workflows\\api\\WAVE42_STRICT_BODY_CONTACT_RUNTIME_BINDING_20260704_110829.json",
+      "validator_script": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\validate_main_flow.py",
+      "counts": {
+        "pre_patch": {
+          "workflow_sha256": "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+          "node_count": 721,
+          "link_count": 1081,
+          "endpoint_errors": 0,
+          "missing_load_image_references": 1,
+          "missing_model_references": 65
+        },
+        "post_patch": {
+          "workflow_sha256": "44f366f162a937b10c2d7157c5f0b668e1d27bdfdb93698a6181981ce4a3dd22",
+          "node_count": 767,
+          "link_count": 1137,
+          "endpoint_errors": 0,
+          "active_input_errors": 0,
+          "active_endpoint_errors": 0,
+          "missing_load_image_references": 4,
+          "missing_model_references": 18,
+          "unique_missing_model_references": 10
+        }
+      },
+      "added_nodes": [
+        1051,
+        1052,
+        1053,
+        1054,
+        1055,
+        1056,
+        1057,
+        1058,
+        1059,
+        1060,
+        1061,
+        1062,
+        1063,
+        1064,
+        1065,
+        1066,
+        1067,
+        1068,
+        1069,
+        1070,
+        1071,
+        1072,
+        1073,
+        1074,
+        1075,
+        1076,
+        1077,
+        1078,
+        1079,
+        1080,
+        1081,
+        1082,
+        1083,
+        1084,
+        1085,
+        1086,
+        1087,
+        1088,
+        1089,
+        1090,
+        1091,
+        1092,
+        1093,
+        1094,
+        1095,
+        1096
+      ],
+      "added_links": [
+        1451,
+        1452,
+        1453,
+        1454,
+        1455,
+        1456,
+        1457,
+        1458,
+        1459,
+        1460,
+        1461,
+        1462,
+        1463,
+        1464,
+        1465,
+        1466,
+        1467,
+        1468,
+        1469,
+        1470,
+        1471,
+        1472,
+        1473,
+        1474,
+        1475,
+        1476,
+        1477,
+        1478,
+        1479,
+        1480,
+        1481,
+        1482,
+        1483,
+        1484,
+        1485,
+        1486,
+        1487,
+        1488,
+        1489,
+        1490,
+        1491,
+        1492,
+        1493,
+        1494,
+        1495,
+        1496,
+        1497,
+        1498,
+        1499,
+        1500,
+        1501,
+        1502,
+        1503,
+        1504,
+        1505,
+        1506
+      ],
+      "lane2_contact_control_wiring_metadata": {
+        "added_at": "20260704_110829",
+        "source_artifact": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\contact_control\\20260704_154905\\lane2_contact_control_artifact_20260704_154905.json",
+        "source_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_contact_control_wiring_request_20260704_154905.md",
+        "graph_id": "lane2_contact_pair_graph_v1",
+        "active_edge_id_default": "B.left_to_A.left_breast_side_push",
+        "per_hand_mask_node_ids": {
+          "character_a_left_hand_mask": 1051,
+          "character_a_right_hand_mask": 1052,
+          "character_b_left_hand_mask": 1053,
+          "character_b_right_hand_mask": 1054
+        },
+        "combined_mask_insertion": {
+          "retargeted_link": 1402,
+          "new_chain_nodes": [
+            1055,
+            1056,
+            1057,
+            1058
+          ],
+          "final_link_to_existing_node_1024": 1458
+        },
+        "per_hand_qa_nodes": {
+          "mask_to_image": [
+            1059,
+            1060,
+            1061,
+            1062
+          ],
+          "save_image_default_off": [
+            1063,
+            1064,
+            1065,
+            1066
+          ]
+        },
+        "control_map_qa_nodes": {
+          "soft_body_pressure_map": {
+            "preview": 1067,
+            "save": 1071
+          },
+          "soft_body_indentation_mask": {
+            "preview": 1068,
+            "save": 1072
+          },
+          "contact_shadow_mask": {
+            "preview": 1069,
+            "save": 1073
+          },
+          "interaction_occlusion_order_mask": {
+            "preview": 1070,
+            "save": 1074
+          }
+        },
+        "contact_pair_edge_qa_nodes": {
+          "B.left_to_A.left_breast_side_push": {
+            "composites": [
+              1075,
+              1076,
+              1077
+            ],
+            "preview": 1078,
+            "save": 1079
+          },
+          "B.right_to_A.right_breast_side_push": {
+            "composites": [
+              1080,
+              1081,
+              1082
+            ],
+            "preview": 1083,
+            "save": 1084
+          },
+          "B.left_to_A.left_butt_squeeze": {
+            "composites": [
+              1085,
+              1086,
+              1087
+            ],
+            "preview": 1088,
+            "save": 1089
+          },
+          "B.right_to_A.right_butt_squeeze": {
+            "composites": [
+              1090,
+              1091,
+              1092
+            ],
+            "preview": 1093,
+            "save": 1094
+          }
+        },
+        "soft_body_control_mapping": {
+          "workflow_nodes": {
+            "hand_lora": 1036,
+            "openpose_apply": 1042,
+            "depth_volume_apply": 1044,
+            "sampler": 1045
+          },
+          "slider_defaults": {
+            "pressure": 0.45,
+            "deformation": 0.38,
+            "soft_body_spread": 0.3,
+            "volume_preservation": 0.72,
+            "upward_lift": 0.25,
+            "side_pull": 0.25,
+            "under_lift": 0.2,
+            "butt_spread": 0.2,
+            "contact_shadow": 0.55,
+            "collision_clearance": 0.65
+          },
+          "current_widget_values": {
+            "openpose_apply_strength": 0.74,
+            "openpose_start_percent": 0.0,
+            "openpose_end_percent": 0.86,
+            "depth_apply_strength": 0.48,
+            "depth_start_percent": 0.0,
+            "depth_end_percent": 0.76,
+            "sampler_steps": 34,
+            "sampler_cfg": 5.4,
+            "sampler_denoise": 0.31,
+            "hand_lora_model_strength": 0.16,
+            "hand_lora_clip_strength": 0.16
+          },
+          "recommended_binding_formula": {
+            "openpose_apply_strength": "clamp(0.62 + collision_clearance * 0.18, 0.62, 0.82)",
+            "depth_apply_strength": "clamp(0.34 + deformation * 0.22 + volume_preservation * 0.08, 0.34, 0.62)",
+            "sampler_denoise": "clamp(0.22 + deformation * 0.24, 0.22, 0.46)",
+            "hand_lora_strength": "clamp(0.10 + pressure * 0.12, 0.10, 0.22)",
+            "contact_shadow_prompt_weight": "clamp(0.40 + contact_shadow * 0.35, 0.40, 0.75)"
+          }
+        },
+        "unresolved_external_dependencies": [
+          "Lane 2 must provide actual per-hand mask image files for the four new slots or approve substitute split-mask sources.",
+          "Lane 4 must run live ComfyUI validation before runtime readiness/tracker promotion can be claimed."
+        ]
+      },
+      "missing_load_image_references": [
+        {
+          "exists": false,
+          "matches": [],
+          "node_id": 1051,
+          "node_type": "LoadImageMask",
+          "title": "Mask: Character A Left Hand",
+          "value": "main_flow/body_contact_slots/character_a_left_hand_mask.png"
+        },
+        {
+          "exists": false,
+          "matches": [],
+          "node_id": 1052,
+          "node_type": "LoadImageMask",
+          "title": "Mask: Character A Right Hand",
+          "value": "main_flow/body_contact_slots/character_a_right_hand_mask.png"
+        },
+        {
+          "exists": false,
+          "matches": [],
+          "node_id": 1053,
+          "node_type": "LoadImageMask",
+          "title": "Mask: Character B Left Hand",
+          "value": "main_flow/body_contact_slots/character_b_left_hand_mask.png"
+        },
+        {
+          "exists": false,
+          "matches": [],
+          "node_id": 1054,
+          "node_type": "LoadImageMask",
+          "title": "Mask: Character B Right Hand",
+          "value": "main_flow/body_contact_slots/character_b_right_hand_mask.png"
+        }
+      ],
+      "unique_missing_model_references": [
+        {
+          "value": "RealESRGAN_x4plus.pth",
+          "count": 1,
+          "node_ids": [
+            60
+          ],
+          "node_types": [
+            "UpscaleModelLoader"
+          ]
+        },
+        {
+          "value": "RealVisXL_V5.0_fp16.safetensors",
+          "count": 6,
+          "node_ids": [
+            10,
+            413,
+            462,
+            643,
+            979,
+            1035
+          ],
+          "node_types": [
+            "CheckpointLoaderSimple"
+          ]
+        },
+        {
+          "value": "ae.safetensors",
+          "count": 1,
+          "node_ids": [
+            37
+          ],
+          "node_types": [
+            "VAELoader"
+          ]
+        },
+        {
+          "value": "controlnet-canny-sdxl-1.0-small.safetensors",
+          "count": 1,
+          "node_ids": [
+            120
+          ],
+          "node_types": [
+            "ControlNetLoader"
+          ]
+        },
+        {
+          "value": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+          "count": 1,
+          "node_ids": [
+            1043
+          ],
+          "node_types": [
+            "ControlNetLoader"
+          ]
+        },
+        {
+          "value": "controlnet-openpose-sdxl-1.0.safetensors",
+          "count": 2,
+          "node_ids": [
+            984,
+            1041
+          ],
+          "node_types": [
+            "ControlNetLoader"
+          ]
+        },
+        {
+          "value": "flux1-dev-fp8.safetensors",
+          "count": 2,
+          "node_ids": [
+            461,
+            642
+          ],
+          "node_types": [
+            "CheckpointLoaderSimple"
+          ]
+        },
+        {
+          "value": "flux1-schnell-fp8.safetensors",
+          "count": 2,
+          "node_ids": [
+            100,
+            425
+          ],
+          "node_types": [
+            "CheckpointLoaderSimple"
+          ]
+        },
+        {
+          "value": "qwen_3_4b.safetensors",
+          "count": 1,
+          "node_ids": [
+            32
+          ],
+          "node_types": [
+            "CLIPLoader"
+          ]
+        },
+        {
+          "value": "z_image_turbo_bf16.safetensors",
+          "count": 1,
+          "node_ids": [
+            30
+          ],
+          "node_types": [
+            "UNETLoader"
+          ]
+        }
+      ],
+      "ec2_started_or_stopped_by_lane": false
+    }
+  },
+  "models": [
+    {
+      "name": "RealVisXL_V5.0_fp16.safetensors",
+      "family": "sdxl",
+      "path": "RealVisXL_V5.0_fp16.safetensors",
+      "role": "CheckpointLoaderSimple",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "not_visible_in_checked_local_roots"
+    },
+    {
+      "name": "sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "sdxl_adult_male_Double_Kiss_POV.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "z_image_turbo_bf16.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "z_image_turbo_bf16.safetensors",
+      "role": "UNETLoader",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "not_visible_in_checked_local_roots"
+    },
+    {
+      "name": "qwen_3_4b.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "qwen_3_4b.safetensors",
+      "role": "CLIPLoader",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "not_visible_in_checked_local_roots"
+    },
+    {
+      "name": "ae.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "ae.safetensors",
+      "role": "VAELoader",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "not_visible_in_checked_local_roots"
+    },
+    {
+      "name": "RealESRGAN_x4plus.pth",
+      "family": "upscale",
+      "path": "RealESRGAN_x4plus.pth",
+      "role": "UpscaleModelLoader",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "not_visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux1-schnell-fp8.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "flux1-schnell-fp8.safetensors",
+      "role": "CheckpointLoaderSimple",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "not_visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_skin_Bombshell_Flux_V3.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/skin/flux_skin_Bombshell_Flux_V3.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_skin_FC-Bandeau.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/skin/flux_skin_FC-Bandeau.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_skin_OiledSkin_FluxDev.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "controlnet-canny-sdxl-1.0-small.safetensors",
+      "family": "controlnet",
+      "path": "controlnet-canny-sdxl-1.0-small.safetensors",
+      "role": "ControlNetLoader",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "not_visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux1-dev-fp8.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "flux1-dev-fp8.safetensors",
+      "role": "CheckpointLoaderSimple",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "not_visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_hands_feminine_hands.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_hands_Detailed_Hands-000001.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_hands_Better_hands_flux_v1_0.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_hands_Hand_v2.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "sdxl_jewelry_accessories_Hands.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_fluids_flux_sweat_v2.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_fluids_SWEATY.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_fluids_Sweaty_1.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_fluids_Oily_skin_style_v1.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "flux_fluids_mascara-tears-v2.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "sdxl_jewelry_accessories_Hands.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "role": "LoraLoader",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "visible_in_checked_local_roots"
+    },
+    {
+      "name": "controlnet-openpose-sdxl-1.0.safetensors",
+      "family": "controlnet",
+      "path": "controlnet-openpose-sdxl-1.0.safetensors",
+      "role": "ControlNetLoader",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "not_visible_in_checked_local_roots"
+    },
+    {
+      "name": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "family": "controlnet",
+      "path": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "role": "ControlNetLoader",
+      "visibility_evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "load_result": "not_visible_in_checked_local_roots"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+      "type": "workflow_json",
+      "size_bytes": 1296262,
+      "sha256": "44f366f162a937b10c2d7157c5f0b668e1d27bdfdb93698a6181981ce4a3dd22",
+      "description": "Canonical Main Flow workflow after Lane 2 contact-control structural wiring."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_contact_control_wiring_20260704_110410.json",
+      "type": "workflow_backup_json",
+      "size_bytes": 1188058,
+      "sha256": "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+      "description": "Timestamped backup created before Lane 2 contact-control workflow edit."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.pre_validation.json",
+      "type": "validator_report_json",
+      "size_bytes": 65811,
+      "sha256": "28d5d414460dbeb2fafc7282edd86a54571c2cfe54878f153ce09a910a3ca31f",
+      "description": "Validator report before Lane 2 contact-control wiring."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.post_validation.json",
+      "type": "validator_report_json",
+      "size_bytes": 62292,
+      "sha256": "5dce748e17df882956d3c0774df92230d676dde815a28593bf77cf7def6b6446",
+      "description": "Validator report after Lane 2 contact-control wiring."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflows\\api\\WAVE42_STRICT_BODY_CONTACT_RUNTIME_BINDING_20260704_110829.json",
+      "type": "runtime_binding_template",
+      "size_bytes": 5170,
+      "sha256": "e21dde928c23adec1fd65553e8c0811d42854dcc221fd72dd9edbdd85638df5c",
+      "description": "API/runtime binding template created for strict body contact lane."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_lane2_contact_control_wiring_20260704_111053.runtime_binding.json",
+      "type": "runtime_binding_template_copy",
+      "size_bytes": 5170,
+      "sha256": "e21dde928c23adec1fd65553e8c0811d42854dcc221fd72dd9edbdd85638df5c",
+      "description": "Lane worktree copy of runtime binding template for coordination commit."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\contact_control\\20260704_154905\\lane2_contact_control_artifact_20260704_154905.json",
+      "type": "source_lane2_contact_control_artifact",
+      "size_bytes": 19451,
+      "sha256": "435e73c2e4d1f536f07c33b770f08875d1dc8a8ec0c41db891eb5baff8ffcc8b",
+      "description": "Source Lane 2 structural contact-control artifact consumed by Lane 1."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_contact_control_wiring_request_20260704_154905.md",
+      "type": "source_lane2_wiring_request",
+      "size_bytes": 2749,
+      "sha256": "f8fe6021c875a16764ffc99328571da4b564f8e04b495c9c7cf7b5f1eeebc435",
+      "description": "Source Lane 2 request consumed by Lane 1."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "required_docs_reread",
+        "result": "pass",
+        "notes": "Updated model/effort, global, lane boundaries, supervisor status, EC2 protocol, and Lane 1 instructions were read before this patch."
+      },
+      {
+        "name": "backup_before_workflow_edit",
+        "result": "pass",
+        "notes": "Backup hash matched pre-patch workflow hash."
+      },
+      {
+        "name": "lane2_request_consumed",
+        "result": "pass",
+        "notes": "Lane 2 contact-control artifact and wiring request were read and converted into Main Flow structural wiring."
+      },
+      {
+        "name": "per_hand_mask_slots",
+        "result": "pass",
+        "notes": "Nodes 1051-1054 add explicit left/right per-hand LoadImageMask slots."
+      },
+      {
+        "name": "combined_mask_chain_insertion",
+        "result": "pass",
+        "notes": "Link 1402 retargeted through nodes 1055-1058; node 1024 now receives link 1458 after per-hand masks are added."
+      },
+      {
+        "name": "qa_previews_and_saves",
+        "result": "pass",
+        "notes": "Default-off QA SaveImage nodes added for per-hand masks, pressure/indentation/shadow/occlusion maps, and four contact-pair edge QA composites."
+      },
+      {
+        "name": "soft_body_bindings_metadata",
+        "result": "pass",
+        "notes": "Nodes 1036, 1042, 1044, and 1045 now carry wave42_soft_body_control_bindings metadata."
+      },
+      {
+        "name": "runtime_binding_template",
+        "result": "pass",
+        "notes": "Runtime binding template parsed with 17 input bindings and 4 allowed contact edges."
+      },
+      {
+        "name": "workflow_graph_integrity",
+        "result": "pass",
+        "notes": "Post-patch validator reports 0 input, output, endpoint, active input, and active endpoint errors."
+      },
+      {
+        "name": "load_image_reference_visibility",
+        "result": "blocked",
+        "notes": "The four new per-hand mask image files are not present yet under checked reference roots."
+      },
+      {
+        "name": "model_filename_visibility",
+        "result": "blocked",
+        "notes": "18 model references (10 unique values) remain not visible under checked local model roots."
+      },
+      {
+        "name": "live_comfyui_runtime_validation",
+        "result": "not_applicable",
+        "notes": "Lane 1 did not start or stop EC2; live validation remains Lane 4 work after assets/models are visible."
+      }
+    ],
+    "failure_reasons": [
+      "Four newly wired per-hand mask files are missing from C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots.",
+      "Remaining core model/control filenames are not fully visible in checked local roots.",
+      "No live ComfyUI endpoint validation was run by Lane 1 per EC2 boundary."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "runtime_generation_rows",
+      "tracker_promotion_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "reference_asset",
+      "description": "Lane 2-requested per-hand mask slots are wired but the four actual image files are missing.",
+      "next_action": "Lane 2 should create character_a_left_hand_mask.png, character_a_right_hand_mask.png, character_b_left_hand_mask.png, and character_b_right_hand_mask.png under C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots or approve exact substitute split-mask paths."
+    },
+    {
+      "category": "model_visibility",
+      "description": "10 unique core model/control/upscale/encoder filenames remain not visible under checked local roots.",
+      "next_action": "Lane 3 should reconcile the current post-patch missing model list and return model visibility evidence or corrected dropdown-relative filenames."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "The strict body contact path has not been live-run after the new structural wiring.",
+      "next_action": "Lane 4 should run live ComfyUI validation after Lane 2 and Lane 3 blockers are cleared."
+    }
+  ]
+}

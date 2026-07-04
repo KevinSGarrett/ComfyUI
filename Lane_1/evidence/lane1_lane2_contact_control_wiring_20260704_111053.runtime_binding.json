@@ -1,0 +1,155 @@
+{
+  "schema_version": "1.0",
+  "template_id": "wave42_strict_body_contact_runtime_binding_20260704_110829",
+  "created_by_lane": "Lane_1",
+  "created_at_local": "20260704_110829",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "source_lane2_artifact": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\contact_control\\20260704_154905\\lane2_contact_control_artifact_20260704_154905.json",
+  "source_lane2_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_contact_control_wiring_request_20260704_154905.md",
+  "purpose": "Runtime/API binding contract for strict body contact and soft-body Main Flow lane. Structural template only; live endpoint validation belongs to Lane_4.",
+  "input_bindings": {
+    "base_image": {
+      "node_id": 999,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/body_contact_base_input.png"
+    },
+    "pose_reference": {
+      "node_id": 1000,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/contact_pose_reference.png"
+    },
+    "depth_reference": {
+      "node_id": 1001,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/soft_body_contact_depth_reference.png"
+    },
+    "normal_reference": {
+      "node_id": 1017,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/soft_body_normal_reference.png"
+    },
+    "character_a_body_mask": {
+      "node_id": 1008,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/character_a_body_mask.png"
+    },
+    "character_b_body_mask": {
+      "node_id": 1009,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/character_b_body_mask.png"
+    },
+    "character_a_hand_mask": {
+      "node_id": 1005,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/character_a_hand_mask.png"
+    },
+    "character_b_hand_mask": {
+      "node_id": 1006,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/character_b_hand_mask.png"
+    },
+    "character_a_left_hand_mask": {
+      "node_id": 1051,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/character_a_left_hand_mask.png"
+    },
+    "character_a_right_hand_mask": {
+      "node_id": 1052,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/character_a_right_hand_mask.png"
+    },
+    "character_b_left_hand_mask": {
+      "node_id": 1053,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/character_b_left_hand_mask.png"
+    },
+    "character_b_right_hand_mask": {
+      "node_id": 1054,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/character_b_right_hand_mask.png"
+    },
+    "contact_zone_mask": {
+      "node_id": 1007,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/contact_zone_mask.png"
+    },
+    "soft_body_pressure_map": {
+      "node_id": 1014,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/soft_body_pressure_map.png"
+    },
+    "soft_body_indentation_mask": {
+      "node_id": 1015,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/soft_body_indentation_mask.png"
+    },
+    "contact_shadow_mask": {
+      "node_id": 1016,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/contact_shadow_mask.png"
+    },
+    "interaction_occlusion_order_mask": {
+      "node_id": 1013,
+      "widget_index": 0,
+      "path": "main_flow/body_contact_slots/interaction_occlusion_order_mask.png"
+    }
+  },
+  "selected_contact_pair_edge_id": {
+    "default": "B.left_to_A.left_breast_side_push",
+    "allowed_values": [
+      "B.left_to_A.left_breast_side_push",
+      "B.right_to_A.right_breast_side_push",
+      "B.left_to_A.left_butt_squeeze",
+      "B.right_to_A.right_butt_squeeze"
+    ],
+    "workflow_metadata_path": "extra.wave42.strict_body_contact_soft_physics.lane2_contact_control_wiring.active_edge_id_default"
+  },
+  "soft_body_slider_values": {
+    "pressure": 0.45,
+    "deformation": 0.38,
+    "soft_body_spread": 0.3,
+    "volume_preservation": 0.72,
+    "upward_lift": 0.25,
+    "side_pull": 0.25,
+    "under_lift": 0.2,
+    "butt_spread": 0.2,
+    "contact_shadow": 0.55,
+    "collision_clearance": 0.65
+  },
+  "soft_body_widget_targets": {
+    "hand_lora": 1036,
+    "openpose_apply": 1042,
+    "depth_volume_apply": 1044,
+    "sampler": 1045
+  },
+  "default_off_qa_outputs": {
+    "per_hand_mask_saves": [
+      1063,
+      1064,
+      1065,
+      1066
+    ],
+    "control_map_saves": [
+      1071,
+      1072,
+      1073,
+      1074
+    ],
+    "contact_pair_edge_saves": [
+      1079,
+      1084,
+      1089,
+      1094
+    ],
+    "existing_strict_contact_saves": [
+      1047,
+      1048,
+      1049,
+      1050
+    ]
+  },
+  "known_unresolved_dependencies": [
+    "Lane 2 must provide actual per-hand mask image files for the four new slots or approve substitute split-mask sources.",
+    "Lane 4 must run live ComfyUI validation before runtime readiness/tracker promotion can be claimed."
+  ]
+}
