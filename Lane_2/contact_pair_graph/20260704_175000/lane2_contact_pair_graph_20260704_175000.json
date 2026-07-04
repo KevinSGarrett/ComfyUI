@@ -1,0 +1,181 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "lane2_contact_pair_graph_20260704_175000",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:55:00Z",
+  "source_artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_175000\\lane2_contact_mask_pixel_qa_20260704_175000.json",
+  "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "contact_pairs": [
+    {
+      "edge_id": "fallback_actor_hand_to_receiver_butt",
+      "status_rule": "fallback_actor_hand_only",
+      "verdict": "provisional_pass_for_mask_geometry",
+      "reason": "actor hand has required overlap with contact zone; runtime visual/depth interpretation still unproven",
+      "actor": "character_b_actor_hand",
+      "receiver": "character_a_receiver",
+      "ratios": {
+        "actor_contact_overlap_over_actor": 1.0,
+        "actor_contact_overlap_over_contact": 0.33108038,
+        "receiver_contact_overlap_over_contact": 0.92388479,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 0.99916814,
+        "pressure_inside_character_a_body_and_receiver": 0.92468361,
+        "indentation_inside_character_a_body_and_receiver": 0.96368337,
+        "occlusion_overlap_over_actor": 1.0
+      },
+      "areas": {
+        "actor": 3184,
+        "receiver": 38506,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      }
+    },
+    {
+      "edge_id": "fallback_actor_hand_to_receiver_breast",
+      "status_rule": "fallback_actor_hand_only",
+      "verdict": "provisional_pass_for_mask_geometry",
+      "reason": "actor hand has required overlap with contact zone; runtime visual/depth interpretation still unproven",
+      "actor": "character_b_actor_hand",
+      "receiver": "character_a_receiver",
+      "ratios": {
+        "actor_contact_overlap_over_actor": 1.0,
+        "actor_contact_overlap_over_contact": 0.33108038,
+        "receiver_contact_overlap_over_contact": 1.0,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 1.0,
+        "pressure_inside_character_a_body_and_receiver": 1.0,
+        "indentation_inside_character_a_body_and_receiver": 1.0,
+        "occlusion_overlap_over_actor": 1.0
+      },
+      "areas": {
+        "actor": 3184,
+        "receiver": 86064,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      }
+    },
+    {
+      "edge_id": "B.left_to_A.left_breast_side_push",
+      "status_rule": "per_hand_split_required",
+      "verdict": "blocked",
+      "reason": "actor mask is zero/off",
+      "actor": "character_b_left_hand",
+      "receiver": "character_a_receiver_breast",
+      "ratios": {
+        "actor_contact_overlap_over_actor": null,
+        "actor_contact_overlap_over_contact": 0.0,
+        "receiver_contact_overlap_over_contact": 1.0,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 1.0,
+        "pressure_inside_character_a_body_and_receiver": 1.0,
+        "indentation_inside_character_a_body_and_receiver": 1.0,
+        "occlusion_overlap_over_actor": null
+      },
+      "areas": {
+        "actor": 0,
+        "receiver": 86064,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      }
+    },
+    {
+      "edge_id": "B.right_to_A.right_breast_side_push",
+      "status_rule": "per_hand_split_required",
+      "verdict": "blocked",
+      "reason": "actor mask is zero/off",
+      "actor": "character_b_right_hand",
+      "receiver": "character_a_receiver_breast",
+      "ratios": {
+        "actor_contact_overlap_over_actor": null,
+        "actor_contact_overlap_over_contact": 0.0,
+        "receiver_contact_overlap_over_contact": 1.0,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 1.0,
+        "pressure_inside_character_a_body_and_receiver": 1.0,
+        "indentation_inside_character_a_body_and_receiver": 1.0,
+        "occlusion_overlap_over_actor": null
+      },
+      "areas": {
+        "actor": 0,
+        "receiver": 86064,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      }
+    },
+    {
+      "edge_id": "B.left_to_A.left_butt_squeeze",
+      "status_rule": "per_hand_split_required",
+      "verdict": "blocked",
+      "reason": "actor mask is zero/off",
+      "actor": "character_b_left_hand",
+      "receiver": "character_a_receiver_butt",
+      "ratios": {
+        "actor_contact_overlap_over_actor": null,
+        "actor_contact_overlap_over_contact": 0.0,
+        "receiver_contact_overlap_over_contact": 0.92388479,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 0.99916814,
+        "pressure_inside_character_a_body_and_receiver": 0.92468361,
+        "indentation_inside_character_a_body_and_receiver": 0.96368337,
+        "occlusion_overlap_over_actor": null
+      },
+      "areas": {
+        "actor": 0,
+        "receiver": 38506,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      }
+    },
+    {
+      "edge_id": "B.right_to_A.right_butt_squeeze",
+      "status_rule": "per_hand_split_required",
+      "verdict": "blocked",
+      "reason": "actor mask is zero/off",
+      "actor": "character_b_right_hand",
+      "receiver": "character_a_receiver_butt",
+      "ratios": {
+        "actor_contact_overlap_over_actor": null,
+        "actor_contact_overlap_over_contact": 0.0,
+        "receiver_contact_overlap_over_contact": 0.92388479,
+        "contact_zone_contained_by_dilated_actor_receiver_shadow": 0.99916814,
+        "pressure_inside_character_a_body_and_receiver": 0.92468361,
+        "indentation_inside_character_a_body_and_receiver": 0.96368337,
+        "occlusion_overlap_over_actor": null
+      },
+      "areas": {
+        "actor": 0,
+        "receiver": 38506,
+        "contact_zone": 9617,
+        "pressure": 9719,
+        "indentation": 8123
+      }
+    }
+  ],
+  "blockers": [
+    {
+      "edge_id": "B.left_to_A.left_breast_side_push",
+      "block_reason": "actor mask is zero/off",
+      "next_action": "Provide same-scene nonzero masks for left/right split hands"
+    },
+    {
+      "edge_id": "B.right_to_A.right_breast_side_push",
+      "block_reason": "actor mask is zero/off",
+      "next_action": "Provide same-scene nonzero masks for left/right split hands"
+    },
+    {
+      "edge_id": "B.left_to_A.left_butt_squeeze",
+      "block_reason": "actor mask is zero/off",
+      "next_action": "Provide same-scene nonzero masks for left/right split hands"
+    },
+    {
+      "edge_id": "B.right_to_A.right_butt_squeeze",
+      "block_reason": "actor mask is zero/off",
+      "next_action": "Provide same-scene nonzero masks for left/right split hands"
+    }
+  ],
+  "notes": [
+    "Graph is snapshot-based and derived from local pixel QA. It is not a runtime validity claim.",
+    "Local verification keeps named per-hand edges blocked and actor-body full collision blocked until nonzero split/body sources arrive."
+  ]
+}

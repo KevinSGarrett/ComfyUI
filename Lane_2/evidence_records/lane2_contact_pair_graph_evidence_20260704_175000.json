@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_contact_pair_graph_evidence_20260704_175000",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:55:00Z",
+  "claim": {
+    "summary": "Generated a stable contact-pair graph snapshot from run 20260704_175000, explicitly marking provisional fallback actor-hand edges and blocked named per-hand contacts due to zero/off split masks.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_contact_pair_graph_20260704_175000",
+      "lane2_contact_mask_pixel_qa_20260704_175000",
+      "lane2_to_lane1_contact_pair_graph_update_20260704_175000"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "slot_root": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots",
+    "settings": {
+      "mode": "contact_pair_graph_snapshot",
+      "source_run_id": "20260704_175000",
+      "runtime_required": "current-hash runtime acceptance remains required"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "local graph assembly from mask QA metrics only"
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_pair_graph\\20260704_175000\\lane2_contact_pair_graph_20260704_175000.json",
+      "type": "contact_pair_graph",
+      "size_bytes": 5904,
+      "sha256": "5904A396EEC6DC7122C3692201748472454917D8831613C75F86AF23905BCCBF",
+      "description": "Canonicalized contact-pair graph with provisional/blocked edge statuses."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_175000\\lane2_contact_mask_pixel_qa_20260704_175000.json",
+      "type": "contact_mask_pixel_qa_artifact",
+      "size_bytes": 25826,
+      "sha256": "F7CC0A0AE33EA361B55360B6A4FC2ED84A7388B00A9BE7274439CB9A0779314D",
+      "description": "Underlying local QA source for the contact graph edges."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_contact_pair_graph_update_20260704_175000.md",
+      "type": "lane1_contact_pair_wiring_request",
+      "size_bytes": 714,
+      "sha256": "A1AD46F39B37490D1BAD59F0664037FCDF2AA307D79AA3A325904FF0BE282744",
+      "description": "Lane 1 request with allowed versus blocked contact-edge list for wiring clarity."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\tools\\contact_mask_pixel_qa.py",
+      "type": "reusable_contact_mask_pixel_qa_tool",
+      "size_bytes": 16144,
+      "sha256": "0CCF5F462C5A9A5B99F60CB95CCD87BFEB91C2D822A1506FF68A584E2665DFC3",
+      "description": "Reusable local QA tool used to derive the edge statuses."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "contact_pair_graph_stability",
+        "result": "pass",
+        "notes": "Graph snapshot generated successfully from the latest revalidation run."
+      },
+      {
+        "name": "named_per_hand_edges",
+        "result": "blocked",
+        "notes": "All named B-left/B-right edges remain blocked due to zero/off actor hand split masks."
+      },
+      {
+        "name": "fallback_actor_hand_edges",
+        "result": "provisional",
+        "notes": "Fallback actor-hand edges remain provisionally pass in local geometry checks."
+      },
+      {
+        "name": "runtime_visual_coverage",
+        "result": "not_applicable",
+        "notes": "No runtime/visual acceptance is claimed in this graph artifact."
+      }
+    ],
+    "failure_reasons": [
+      "Need same-scene nonzero per-hand split masks to unblock named edges.",
+      "Need valid actor body source for future full-body collision/deformation claims."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "named_left_right_contact_pair_completion_rows",
+      "full_actor_body_collision_rows",
+      "strict_visual_acceptance_rows",
+      "runtime_generation_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "Graph blockers still show all per-hand edges blocked because split masks are zero/off.",
+      "next_action": "Provide same-scene nonzero per-hand split masks to enable B-left/B-right named-edge routing."
+    },
+    {
+      "category": "actor_body_segmentation_source",
+      "description": "Node 1009 / actor-body collision remains zero/off in this graph context.",
+      "next_action": "Provide trusted actor-body source before enabling full-body collision/deformation checks."
+    },
+    {
+      "category": "runtime_visual_acceptance",
+      "description": "No final acceptance from runtime/visual review in this contact-pair graph artifact.",
+      "next_action": "Lane 4 runtime execution and Lane 5 visual hand/contact review are still required for acceptance."
+    }
+  ]
+}
