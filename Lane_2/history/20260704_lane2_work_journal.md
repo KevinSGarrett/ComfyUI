@@ -124,3 +124,18 @@
   - C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_180500_lane2_spatial_contact_revalidation
 - Added and sent refreshed Lane 1 revalidation request lane2_to_lane1_contact_revalidation_20260704_180500.md.
 - No new blockers introduced; unresolved blockers remain same-scene per-hand split and actor-body segmentation for full contact/deformation closure.
+
+## 2026-07-04T17:00:00Z - Contact-pair graph snapshot refresh
+
+- Rebuilt contact-pair graph from contact_mask_pixel_qa_20260704_180500:
+  - contact_pair_graph/20260704_180500/lane2_contact_pair_graph_20260704_180500.json
+- Added pair-graph evidence wrapper:
+  - evidence_records/lane2_contact_pair_graph_evidence_20260704_180500.json
+- Added Lane 1 request with explicit per-edge state refresh:
+  - lane1_requests/lane2_to_lane1_contact_pair_graph_update_20260704_180500.md
+- Mirrored into implementation evidence:
+  - C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_180500_lane2_contact_pair_graph
+- Result state remains unchanged:
+  - fallback actor-hand edges pass local preflight,
+  - named per-hand edges remain blocked (left/right masks still zero/off),
+  - actor-body full collision/deformation remains blocked by node-1009 status.
