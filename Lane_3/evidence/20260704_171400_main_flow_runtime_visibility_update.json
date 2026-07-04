@@ -1,0 +1,130 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "Lane_3_main_flow_runtime_visibility_update_20260704_171400",
+  "lane_id": "Lane_3",
+  "created_at_utc": "2026-07-04T16:56:10Z",
+  "claim": {
+    "summary": "Revalidation of Main Flow model reference visibility and alias mapping; only 3 hard blockers remain without local runtime artifact.",
+    "status": "blocked",
+    "requirement_ids": [
+      "main_flow_model_reference_visibility",
+      "main_flow_model_family_compatibility",
+      "self_hosted_llm_route_consistency"
+    ]
+  },
+  "inputs": {
+    "source_artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_171000_main_flow_model_ref_compatibility_table.json",
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9"
+  },
+  "qa": {
+    "verdict": "blocked",
+    "checks": [
+      {
+        "name": "Runtime scan against checked local roots",
+        "result": "fail",
+        "notes": "29 present, 9 missing after scan."
+      },
+      {
+        "name": "Local-source remap check",
+        "result": "pass",
+        "notes": "5 source payload refs have known runtime mapping equivalents in Local Runtime_Data/lora targets."
+      }
+    ],
+    "failure_reasons": [
+      "Missing /home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt, dw-ll_ucoco_384_bs5.torchscript.pt, and sam_vit_b_01ec64.pth in checked local runtime roots."
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_171000_main_flow_model_ref_compatibility_table.json",
+      "type": "compatibility_table",
+      "description": "Previous full scan artifact for 38 refs",
+      "size_bytes": 24403
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_165900_model_ref_runtime_crosscheck.json",
+      "type": "compatibility_table",
+      "description": "Raw runtime crosscheck rows"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\reports\\20260704_171400_main_flow_runtime_visibility_matrix.md",
+      "type": "compatibility_matrix_report",
+      "description": "Consolidated 38-ref matrix with remap/hard-missing split"
+    }
+  ],
+  "tracker_mapping": {
+    "proves_rows": [
+      "Mapped Main Flow source payload aliases for 5 Hands entries to existing runtime LoRA targets."
+    ],
+    "does_not_prove_rows": [
+      "Runtime readiness blocked until local/EC2 visibility is proven for hand detector + 2 vision control files."
+    ],
+    "promotion_decision": "preserve_blocker"
+  },
+  "blockers": [
+    {
+      "category": "missing_main_flow_model_ref",
+      "description": "3 Main Flow references still unresolvable in local runtime roots: /home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt, dw-ll_ucoco_384_bs5.torchscript.pt, sam_vit_b_01ec64.pth.",
+      "next_action": "Install/map and validate these assets in EC2/local runtime before claiming Main Flow readiness."
+    }
+  ],
+  "blocker_alias_remap": [
+    {
+      "source": "bbox/hand_yolov8n.pt",
+      "mapped_to": "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "family": "Other",
+      "rationale": "Workflow alias maps to canonical EC2 path used by pose/hand detector nodes."
+    },
+    {
+      "source": "C:\\Comfy_UI_Lora\\downloads\\Hands\\Better hands flux v1.0.safetensors",
+      "mapped_to": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Better_hands_flux_v1_0.safetensors",
+      "family": "Flux",
+      "rationale": "Local runtime includes equivalent LoRA filename from previously reconciled lane registry mapping."
+    },
+    {
+      "source": "C:\\Comfy_UI_Lora\\downloads\\Hands\\Detailed_Hands-000001.safetensors",
+      "mapped_to": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Detailed_Hands-000001.safetensors",
+      "family": "Flux",
+      "rationale": "Local runtime includes equivalent LoRA filename from previously reconciled lane registry mapping."
+    },
+    {
+      "source": "C:\\Comfy_UI_Lora\\downloads\\Hands\\feminine_hands.safetensors",
+      "mapped_to": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_feminine_hands.safetensors",
+      "family": "Flux",
+      "rationale": "Local runtime includes equivalent LoRA filename from previously reconciled lane registry mapping."
+    },
+    {
+      "source": "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hand v2.safetensors",
+      "mapped_to": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Hand_v2.safetensors",
+      "family": "Flux",
+      "rationale": "Local runtime includes equivalent LoRA filename from previously reconciled lane registry mapping."
+    },
+    {
+      "source": "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hands.safetensors",
+      "mapped_to": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\jewelry_accessories\\sdxl_jewelry_accessories_Hands.safetensors",
+      "family": "SDXL",
+      "rationale": "Local runtime includes equivalent LoRA filename from previously reconciled lane registry mapping."
+    }
+  ],
+  "remaining_missing": [
+    {
+      "source": "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "family": "Vision-Control",
+      "category": "Other",
+      "rationale": "Absolute hand detector path missing from checked local runtime roots."
+    },
+    {
+      "source": "dw-ll_ucoco_384_bs5.torchscript.pt",
+      "family": "Vision-Control",
+      "category": "Other",
+      "rationale": "Missing in checked local runtime roots."
+    },
+    {
+      "source": "sam_vit_b_01ec64.pth",
+      "family": "Vision-Control",
+      "category": "Other",
+      "rationale": "Missing in checked local runtime roots."
+    }
+  ]
+}

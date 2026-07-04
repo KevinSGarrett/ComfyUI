@@ -1,0 +1,18 @@
+{
+    "request_id":  "lane3_to_lane4_main_flow_aux_runtime_blocker_recheck_20260704_171400",
+    "created_at_utc":  "2026-07-04T16:56:10Z",
+    "from_lane":  "Lane_3",
+    "to_lane":  "Lane_4",
+    "workflow_path":  "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256":  "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "purpose":  "Reconfirm missing runtime blockers and provide exact blocker remediations for Lane 4 runtime install/map.\nThe payload alias entries are mapped to runtime LoRAs; only 3 hard blockers remain.",
+    "unresolved_refs":  [
+                            "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+                            "dw-ll_ucoco_384_bs5.torchscript.pt",
+                            "sam_vit_b_01ec64.pth"
+                        ],
+    "source_to_runtime_alias":  {
+                                    "bbox/hand_yolov8n.pt":  "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt"
+                                },
+    "next_action":  "Create install/map plan for true blockers and return 38-ref matrix with runtime hit names under /object_info or equivalent."
+}
