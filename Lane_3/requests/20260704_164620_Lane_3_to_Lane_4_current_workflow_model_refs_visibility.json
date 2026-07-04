@@ -1,0 +1,28 @@
+{
+    "created_at_utc":  "2026-07-04T16:46:20Z",
+    "priority":  "high",
+    "purpose":  "Verify remaining Main Flow workflow model refs and mark each missing local ref as local-missing vs ec2-hosted required before downstream validation.",
+    "missing_refs":  [
+                         "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+                         "bbox/hand_yolov8n.pt",
+                         "C:\\\\Comfy_UI_Lora\\\\downloads\\\\Hands\\\\Better hands flux v1.0.safetensors",
+                         "C:\\\\Comfy_UI_Lora\\\\downloads\\\\Hands\\\\Detailed_Hands-000001.safetensors",
+                         "C:\\\\Comfy_UI_Lora\\\\downloads\\\\Hands\\\\feminine_hands.safetensors",
+                         "C:\\\\Comfy_UI_Lora\\\\downloads\\\\Hands\\\\Hand v2.safetensors",
+                         "C:\\\\Comfy_UI_Lora\\\\downloads\\\\Hands\\\\Hands.safetensors",
+                         "dw-ll_ucoco_384_bs5.torchscript.pt",
+                         "sam_vit_b_01ec64.pth"
+                     ],
+    "from_lane":  "Lane_3",
+    "scope":  {
+                  "workflow_path":  "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+                  "missing_refs":  9,
+                  "workflow_sha256":  "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+                  "present_refs":  29,
+                  "evidence_path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_164604_main_flow_current_workflow_ref_visibility_recheck_evidence.json",
+                  "total_refs":  38
+              },
+    "next_action":  "Please check runtime visibility for EC2 or approved local source map for each missing ref, then return an updated lane4 runtime evidence file.",
+    "request_id":  "lane3_to_lane4_current_workflow_model_refs_visibility_20260704_164620",
+    "to_lane":  "Lane_4"
+}

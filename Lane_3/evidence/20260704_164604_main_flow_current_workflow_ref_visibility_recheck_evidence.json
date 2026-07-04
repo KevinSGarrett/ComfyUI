@@ -1,0 +1,89 @@
+{
+    "schema_version":  "1.0",
+    "evidence_id":  "Lane_3_main_flow_ref_visibility_20260704_164604",
+    "lane_id":  "Lane_3",
+    "created_at_utc":  "2026-07-04T16:46:08.2744825Z",
+    "inputs":  {
+                   "workflow_path":  "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+                   "workflow_sha256":  "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9"
+               },
+    "qa":  {
+               "verdict":  "blocked",
+               "failure_reasons":  [
+                                       "Runtime_Data path-insensitive basename check missing 9 refs"
+                                   ],
+               "checks":  [
+                              {
+                                  "result":  "pass",
+                                  "name":  "Workflow model reference extraction",
+                                  "notes":  "Extracted unique refs: 38"
+                              },
+                              {
+                                  "result":  "blocked",
+                                  "name":  "Local Runtime_Data basename presence",
+                                  "notes":  "Missing refs: 9"
+                              }
+                          ]
+           },
+    "refs":  {
+                 "total_unique":  38,
+                 "missing":  [
+                                 "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+                                 "bbox/hand_yolov8n.pt",
+                                 "C:\\Comfy_UI_Lora\\downloads\\Hands\\Better hands flux v1.0.safetensors",
+                                 "C:\\Comfy_UI_Lora\\downloads\\Hands\\Detailed_Hands-000001.safetensors",
+                                 "C:\\Comfy_UI_Lora\\downloads\\Hands\\feminine_hands.safetensors",
+                                 "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hand v2.safetensors",
+                                 "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hands.safetensors",
+                                 "dw-ll_ucoco_384_bs5.torchscript.pt",
+                                 "sam_vit_b_01ec64.pth"
+                             ],
+                 "present_count":  29,
+                 "missing_count":  9,
+                 "present":  [
+                                 "ae.safetensors",
+                                 "controlnet-canny-sdxl-1.0-small.safetensors",
+                                 "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+                                 "controlnet-openpose-sdxl-1.0.safetensors",
+                                 "flux1-dev-fp8.safetensors",
+                                 "flux1-schnell-fp8.safetensors",
+                                 "qwen_3_4b.safetensors",
+                                 "RealESRGAN_x4plus.pth",
+                                 "RealVisXL_V5.0_fp16.safetensors",
+                                 "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+                                 "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+                                 "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+                                 "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+                                 "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+                                 "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+                                 "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+                                 "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+                                 "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+                                 "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+                                 "wave42/flux/skin/flux_skin_Bombshell_Flux_V3.safetensors",
+                                 "wave42/flux/skin/flux_skin_FC-Bandeau.safetensors",
+                                 "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+                                 "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+                                 "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+                                 "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+                                 "wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+                                 "wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+                                 "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+                                 "z_image_turbo_bf16.safetensors"
+                             ]
+             },
+    "blockers":  [
+                     {
+                         "category":  "missing_main_flow_model_ref",
+                         "description":  "Current workflow still includes references not present by basename in Runtime_Data\\models",
+                         "next_action":  "Submit an updated runtime-visibility or install-map request before main-flow validation is considered complete"
+                     }
+                 ],
+    "artifacts":  [
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_164604_main_flow_current_workflow_ref_visibility_recheck.md",
+                          "description":  "Basename-based path-insensitive recheck summary",
+                          "type":  "recheck_summary"
+                      }
+                  ]
+}
