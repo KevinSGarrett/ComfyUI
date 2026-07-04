@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_spatial_contact_revalidation_20260704_170115",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T17:01:27Z",
+  "claim": {
+    "summary": "Current-hash strict-body-contact local spatial revalidation passed asset reference integrity checks and confirmed unchanged blockers: per-hand split masks and actor body mask remain zero placeholders.",
+    "status": "provisional",
+    "requirement_ids": [
+      "spatial_asset_audit_hash_stable",
+      "per_hand_split_mask_provisional",
+      "actor_body_collision_mask_placeholder"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9"
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_170115\\lane2_main_flow_spatial_asset_audit_20260704_170115.json",
+      "type": "lane2_spatial_asset_audit",
+      "size_bytes": 140517,
+      "sha256": "00E86A2C6D2551448A151DD061C774BA9A0394006D42FE332051FD696173EBC4",
+      "description": "Local Main Flow node asset audit for strict-body contact and mask/control references."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_170115\\lane2_contact_mask_pixel_qa_20260704_170115.json",
+      "type": "lane2_contact_mask_pixel_qa",
+      "size_bytes": 25826,
+      "sha256": "1FF5A63BEFEA4614728E0FAC9E978F78D520D47BA50BA4D407E698DAC81532E6",
+      "description": "Local mask/depth pixel QA pass for fallback vs named per-hand edge states."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "main_flow_spatial_asset_audit_summary",
+        "result": "pass",
+        "notes": "90 spatial nodes, 0 missing assets, 5 zero masks across strict contact path."
+      },
+      {
+        "name": "contact_mask_pixel_qa_edge_projection",
+        "result": "provisional",
+        "notes": "Fallback actor-hand edges remain provisional pass; left/right named edges remain blocked by zero per-hand masks."
+      },
+      {
+        "name": "per_hand_split_plausibility",
+        "result": "blocked",
+        "notes": "character_a/b left/right hand masks are zero/off; cannot derive faithful split geometry."
+      },
+      {
+        "name": "actor_body_collision_feasibility",
+        "result": "blocked",
+        "notes": "character_b_body_mask remains zero/off; full actor-body collision/deformation claims cannot be made locally."
+      }
+    ],
+    "failure_reasons": [
+      "Named per-hand edge QA is blocked by exact-name zero/off placeholders.",
+      "Full actor-body collision/deformation checks are blocked by zero actor body mask (node 1009)."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [
+      "lane2_spatial_contact_revalidation"
+    ],
+    "does_not_prove_rows": [
+      "lane2_per_hand_contact_strict",
+      "lane2_actor_body_collision_strict",
+      "lane2_full_strict_contact_pose_depth_upgrade"
+    ],
+    "promotion_decision": "preserve_blocker"
+  },
+  "blockers": [
+    {
+      "category": "per_hand_masks",
+      "description": "nodes 1051-1054 are present but zero/off; named per-hand edges are not trustworthy as spatial truth.",
+      "next_action": "Provide same-scene nonzero left/right hand split masks (character_a_left_hand_mask, character_a_right_hand_mask, character_b_left_hand_mask, character_b_right_hand_mask)."
+    },
+    {
+      "category": "actor_body_mask",
+      "description": "node 1009 character_b_body_mask remains zero/off in the active lower_hip body_contact slot set.",
+      "next_action": "Provide same-scene actor-body mask source for strict full-body collision/deformation checks."
+    },
+    {
+      "category": "runtime_and_visual",
+      "description": "No current-hash strict-body runtime/visual acceptance evidence for nodes 1051-1054 and 1009.",
+      "next_action": "Wait for Lane 4 strict-hash runtime execution and Lane 5 strict hand/contact visual review."
+    }
+  ]
+}

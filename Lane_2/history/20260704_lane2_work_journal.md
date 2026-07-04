@@ -161,3 +161,24 @@
     - `lane2_190100_lane2_status.md`
 - Issued an updated status checkpoint noting no changed blocker state and no new external runtime responses yet:
   - `reports/20260704_192700_lane2_status.md`
+
+## 2026-07-04T17:01:27Z - Local revalidation refresh (run 20260704_170115)
+
+- Re-ran local spatial/contact checks at `run_id=20260704_170115` using reusable Lane 2 scripts:
+  - `main_flow_spatial_asset_audit\\20260704_170115\\lane2_main_flow_spatial_asset_audit_20260704_170115.json`
+  - `contact_mask_pixel_qa\\20260704_170115\\lane2_contact_mask_pixel_qa_20260704_170115.json`
+- Revalidated stable state:
+  - 90 spatial nodes with 0 missing assets,
+  - 5 zero masks (the four per-hand placeholders + actor-body mask),
+  - 2 provisional pass edges (fallback actor hand edges),
+  - 4 blocked named per-hand edges due zero split masks.
+- Added mirrored implementation evidence and evidence wrapper:
+  - `C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_170115_lane2_spatial_contact_revalidation\lane2_spatial_contact_revalidation_evidence_20260704_170115.json`
+  - `C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_170115_lane2_spatial_contact_revalidation\lane2_main_flow_spatial_asset_audit_20260704_170115.json`
+  - `C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_170115_lane2_spatial_contact_revalidation\lane2_contact_mask_pixel_qa_20260704_170115.json`
+- Updated Lane 2 evidence record:
+  - `evidence_records/lane2_spatial_contact_revalidation_evidence_20260704_170115.json`
+- No new blockers introduced by this run; remaining blocker set unchanged:
+  - exact-name per-hand split masks absent (nodes 1051-1054 zero/off),
+  - exact-name actor-body mask absent (node 1009 zero/off),
+  - no current-hash strict-body runtime/visual acceptance yet.
