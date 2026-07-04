@@ -22,3 +22,12 @@
 - Accepted current Main Flow hash traceability fix; preserved no-promotion boundary because runtime/candidate media and strict visual review are missing.
 - Evidence record: `C:\Comfy_UI\Implementation\evidence\promotion_quality_audit\lane5_continuous_evidence_intake_evidence_20260704_162454.json`
 - Commit/push pending at journal write time.
+
+## 2026-07-04T16:29:08Z - Lane 6 AI_Front Self-Hosted LLM Adapter Audit
+
+- Audited missed Lane 6 schema evidence `wave42_ai_front_self_hosted_llm_adapter_20260704_161849`.
+- Accepted direct proof of AI_Front self-hosted OpenAI-compatible adapter behavior, unit tests, py_compile, local Ollama model listing, chat completion, and fail-closed provider policy.
+- Preserved blockers for `SETUP-0127` and `IMPL-00419` because no generated schema-valid plans/manifests, replayable prompt-builder logs, or runtime candidate output were proven.
+- Preserved runtime/candidate/strict visual blockers because local ComfyUI `127.0.0.1:8188` was blocked and the hand-review record was `not_visually_reviewed`.
+- Evidence record: `C:\Comfy_UI\Implementation\evidence\promotion_quality_audit\lane5_continuous_evidence_intake_evidence_20260704_162908.json`
+- No tracker snapshot created.
