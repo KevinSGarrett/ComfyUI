@@ -1,0 +1,16 @@
+{
+  "issue_id": "lane6_v1_1_runtime_gap_blocker_20260704_181200",
+  "lane_id": "Lane_6",
+  "created_at_utc": "2026-07-04T18:12:00Z",
+  "status": "blocked",
+  "category": "runtime_dependency",
+  "summary": "Lane 6 SDXL v1.1 candidate request 20260704_162157 remains unprocessed in shared EC2 queue; no remote artifact was returned for strict media QA.",
+  "request_file": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json",
+  "observed_processed_entries": [
+    "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\processed\\20260704_160530_Lane_6_sdxl_safe_adult_clothed_low_vram_candidate.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\processed\\20260704_160530_Lane_6_sdxl_safe_adult_clothed_low_vram_candidate.resolution.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\processed\\20260704_155047_Lane_3_model_lora_llm_visibility.json",
+    "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\processed\\20260704_155047_Lane_3_model_lora_llm_visibility.resolution.json"
+  ],
+  "next_owner_action": "Lane_4 should process request 20260704_162157 and deliver completion payload (or a precise blocker reason) into the processed folder."
+}
