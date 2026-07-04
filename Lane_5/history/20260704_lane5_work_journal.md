@@ -48,3 +48,10 @@
 - Enforced direct-evidence rule: no promotion/re-block action because contact/runtime/visual blockers remain unchanged and unsupported by new direct evidence.
 - Next owner actions unchanged: Lane 4 current-hash strict runtime pass; Lane 2/Lane 6 same-scene non-zero per-hand and strict visual media evidence.
 
+
+## 2026-07-04T11:51:02.7221804Z - Lane 5 No-Promotion Slice (17:00-17:55 evidence)
+
+- Audited 7 new+follow-on Lane 2 artifacts (schema-valid and support/non-schema) from `20260704_174500/175000/175500`.
+- Confirmed they only map to `needs_more_evidence` / support-only status; no new promotion proof for contact pairs, collision, strict visual, or runtime generation rows.
+- No tracker snapshot/re-block was performed; blocker set unchanged (named hand split masks, actor-body source, strict runtime/visual hand-contact acceptance).
+
