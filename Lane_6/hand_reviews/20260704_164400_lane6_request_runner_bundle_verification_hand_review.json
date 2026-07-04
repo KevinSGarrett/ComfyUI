@@ -1,0 +1,36 @@
+{
+  "review_id": "20260704_164400_lane6_request_runner_bundle_verification_hand_review",
+  "lane_id": "Lane_6",
+  "created_at_utc": "2026-07-04T16:44:00Z",
+  "scope": "Self-hosted request-runner bundle deterministic verification for SDXL v1.1 candidate pipeline",
+  "verdict": "pass",
+  "actual_media_reviewed": false,
+  "media_paths": [],
+  "checks": [
+    {
+      "name": "bundle_verification_status",
+      "result": "pass",
+      "notes": "Verifier report status is pass for all deterministic checks."
+    },
+    {
+      "name": "manifest_evidence_consistency",
+      "result": "pass",
+      "notes": "Manifest points to the superseded 20260704_164142 evidence record."
+    },
+    {
+      "name": "policy_boundary_enforced",
+      "result": "pass",
+      "notes": "No cloud provider, no tracker promotion, no Main Flow edits."
+    },
+    {
+      "name": "manual_visual_review_required_for_candidate_claims",
+      "result": "pass",
+      "notes": "No candidate media was generated; no claims beyond runtime readiness are made."
+    }
+  ],
+  "limitations": [
+    "No generated candidate images/videos are available in this slice.",
+    "No anatomical or visual hand review possible without runtime output."
+  ],
+  "next_action": "Await Lane 4/EC2 or local ComfyUI candidate runtime output for strict visual QA before any candidate quality closure."
+}
