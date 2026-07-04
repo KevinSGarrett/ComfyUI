@@ -1,0 +1,95 @@
+{
+    "schema_version":  "1.0",
+    "evidence_id":  "Lane_3_llm_route_status_20260704_114851",
+    "lane_id":  "Lane_3",
+    "created_at_utc":  "2026-07-04T16:48:57.3156434Z",
+    "claim":  {
+                  "summary":  "Local Ollama endpoint remains reachable; qwen3-class model remains absent.",
+                  "status":  "provisional",
+                  "requirement_ids":  [
+                                          "SELF_HOSTED_LLM_ROUTE",
+                                          "AI_LLM_Intelligence_Plan"
+                                      ]
+              },
+    "inputs":  {
+                   "endpoint":  "http://127.0.0.1:11434",
+                   "chat_endpoint":  "http://127.0.0.1:11434/v1/chat/completions",
+                   "models_endpoint":  "http://127.0.0.1:11434/api/tags"
+               },
+    "runtime":  {
+                    "aws_auth_status":  "not_checked_no_ec2_start_stop_by_Lane_3",
+                    "endpoints_checked":  [
+                                              "http://127.0.0.1:11434/api/version",
+                                              "http://127.0.0.1:11434/api/tags",
+                                              "http://127.0.0.1:11434/v1/chat/completions"
+                                          ]
+                },
+    "models":  [
+                   {
+                       "name":  "llava:13b",
+                       "family":  "llava",
+                       "path":  "local",
+                       "role":  "detected_local",
+                       "visibility_evidence":  "api/tags",
+                       "load_result":  "not_tested"
+                   },
+                   {
+                       "name":  "qwen2.5:14b",
+                       "family":  "qwen",
+                       "path":  "local",
+                       "role":  "detected_local",
+                       "visibility_evidence":  "api/tags",
+                       "load_result":  "blocked_timeout_or_error"
+                   },
+                   {
+                       "name":  "qwen2.5:32b",
+                       "family":  "qwen",
+                       "path":  "local",
+                       "role":  "detected_local",
+                       "visibility_evidence":  "api/tags",
+                       "load_result":  "not_tested"
+                   }
+               ],
+    "qa":  {
+               "verdict":  "blocked",
+               "failure_reasons":  [
+                                       "qwen3-family not installed locally"
+                                   ],
+               "checks":  [
+                              {
+                                  "result":  "pass",
+                                  "name":  "Ollama API reachable",
+                                  "notes":  "version=0.30.11"
+                              },
+                              {
+                                  "result":  "pass",
+                                  "name":  "Local tags query",
+                                  "notes":  "count=3"
+                              },
+                              {
+                                  "result":  "blocked",
+                                  "name":  "Chat completion smoke",
+                                  "notes":  "The request was aborted: The operation has timed out."
+                              },
+                              {
+                                  "result":  "blocked",
+                                  "name":  "Qwen3 presence",
+                                  "notes":  "No qwen3-class local model found"
+                              }
+                          ]
+           },
+    "blockers":  [
+                     {
+                         "category":  "missing_target_llm",
+                         "description":  "Qwen3-class models absent locally; route currently relies on qwen2.5/llava fallback.",
+                         "next_action":  "Resolve via EC2 or approved local install path."
+                     }
+                 ],
+    "artifacts":  [
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_114851_llm_route_status_recheck.md",
+                          "description":  "Route recheck summary",
+                          "type":  "llm_route_status_md"
+                      }
+                  ]
+}
