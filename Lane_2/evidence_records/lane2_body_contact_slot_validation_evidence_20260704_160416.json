@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_body_contact_slot_validation_evidence_20260704_160416",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:04:16Z",
+  "claim": {
+    "summary": "Lane 2 validated Main Flow strict body contact slot assets for nodes 999-1017, filled two zero-valued active masks from same-scene fallback masks, and produced a Lane 1 request for the remaining zero-valued character_b_body_mask.png blocker.",
+    "status": "provisional",
+    "requirement_ids": [
+      "main_flow_nodes_999_1017_body_contact_slots",
+      "lane2_body_contact_slot_validation",
+      "lane2_to_lane1_body_contact_slot_request_20260704_160416"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "B8D0899CE45845F97F8540DFB379D9E8FD8987B42A65A123D67A249880E72E13",
+    "settings": {
+      "nodes_checked": "999-1017",
+      "slot_root": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots",
+      "validation_method": "existence, SHA256, image dimensions, luminance occupancy for masks"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "EC2 was not started or stopped; no endpoint was called."
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\body_contact_slot_validation\\20260704_160416\\lane2_body_contact_slot_validation_20260704_160416.json",
+      "type": "body_contact_slot_validation_artifact",
+      "size_bytes": 15212,
+      "sha256": "E084C815289B07F14C392481C108C007277398089AFCE08D078F91CA16AFDF80",
+      "description": "Full slot validation records for Main Flow nodes 999-1017."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_body_contact_slot_request_20260704_160416.md",
+      "type": "lane1_wiring_or_policy_request",
+      "size_bytes": 1908,
+      "sha256": "D8D0C99A98DF62FFA08E7BB1A882DF9239DC39BAE9DCE8494CFDB9F80420D397",
+      "description": "Lane 1 request for character_b_body_mask handling."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\breast_contact_mask.png",
+      "type": "derived_mask_asset",
+      "size_bytes": 15155,
+      "sha256": "5FE00AEED75C2AD3CD992256251B0ABA2457A85F276DBA0B834EBB0DCAFF1E2F",
+      "description": "Filled from character_a_receiver_breast_mask.png after zero-valued original was backed up."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_hand_mask.png",
+      "type": "derived_mask_asset",
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "description": "Filled from character_b_actor_hand_mask.png after zero-valued original was backed up."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png",
+      "type": "remaining_zero_mask_asset",
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "description": "Still zero-valued; no trustworthy actor body segmentation source was available."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\spatial_validation\\20260704_160416_lane2_body_contact_slots\\lane2_body_contact_slot_validation_20260704_160416.json",
+      "type": "spatial_validation_evidence_copy",
+      "size_bytes": 15212,
+      "sha256": "E084C815289B07F14C392481C108C007277398089AFCE08D078F91CA16AFDF80",
+      "description": "Project evidence mirror of the body contact slot validation artifact."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\mask_validation\\20260704_160416_lane2_body_contact_slots\\lane2_body_contact_slot_validation_20260704_160416.json",
+      "type": "mask_validation_evidence_copy",
+      "size_bytes": 15212,
+      "sha256": "E084C815289B07F14C392481C108C007277398089AFCE08D078F91CA16AFDF80",
+      "description": "Project evidence mirror of the body contact slot validation artifact."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "slot_files_exist",
+        "result": "pass",
+        "notes": "All 19 Main Flow strict body contact slot files referenced by nodes 999-1017 exist under Input_References."
+      },
+      {
+        "name": "slot_dimensions",
+        "result": "pass",
+        "notes": "All 19 slot files are 1024x1024."
+      },
+      {
+        "name": "breast_contact_mask_filled",
+        "result": "pass",
+        "notes": "breast_contact_mask.png now matches character_a_receiver_breast_mask.png and has nonzero occupancy."
+      },
+      {
+        "name": "character_b_hand_mask_filled",
+        "result": "pass",
+        "notes": "character_b_hand_mask.png now matches character_b_actor_hand_mask.png and has nonzero occupancy."
+      },
+      {
+        "name": "character_b_body_mask",
+        "result": "blocked",
+        "notes": "character_b_body_mask.png remains zero-valued because no trustworthy actor body segmentation source is available."
+      },
+      {
+        "name": "main_flow_not_edited",
+        "result": "pass",
+        "notes": "Lane 2 did not edit WAVE42_MAIN_FLOW_20260702.json."
+      },
+      {
+        "name": "runtime_validation",
+        "result": "not_applicable",
+        "notes": "This is a local asset validity pass only; live runtime validation remains a Lane 4 task."
+      }
+    ],
+    "failure_reasons": [
+      "character_b_body_mask.png remains zero-valued.",
+      "No live runtime validation was performed after slot repair."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "runtime_generation_rows",
+      "strict_visual_acceptance_rows",
+      "tracker_promotion_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "mask_source",
+      "description": "No trustworthy actor body segmentation source exists for character_b_body_mask.png in the current body_contact_slots set.",
+      "next_action": "Lane 1 should choose actor-hand-only graph semantics for this preset or request/provide an actor body segmentation source for Lane 2 to materialize."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "The slot asset set has not been run through the Main Flow strict body contact group after Lane 2's mask repairs.",
+      "next_action": "After Lane 1 accepts the node 1009 handling, Lane 4 can validate the graph during a justified live runtime window."
+    }
+  ]
+}

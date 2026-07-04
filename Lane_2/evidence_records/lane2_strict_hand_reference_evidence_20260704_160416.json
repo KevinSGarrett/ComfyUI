@@ -1,0 +1,156 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_strict_hand_reference_evidence_20260704_160416",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:04:16Z",
+  "claim": {
+    "summary": "Lane 2 resolved Lane 1's strict-hand reference dependency by copying an existing provenance-backed two-person hand-contact reference into C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png for Main Flow node 972.",
+    "status": "passed",
+    "requirement_ids": [
+      "lane1_to_lane2_strict_hand_reference_20260704_105550",
+      "main_flow_node_972_reference_file"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "B8D0899CE45845F97F8540DFB379D9E8FD8987B42A65A123D67A249880E72E13",
+    "settings": {
+      "request_path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane2_strict_hand_reference_20260704_105550.json",
+      "requested_reference": "main_flow/strict_hand_detail_input.png",
+      "expected_reference_path": "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png",
+      "source_reference_path": "C:\\Comfy_UI\\Input_References\\main_flow\\hand_lora_detail\\hand_base_two_person_contact_20260703_210253.png",
+      "source_evidence_path": "C:\\Comfy_UI\\Implementation\\evidence\\runtime\\strict_hand_yolo_sam_mask_probe\\wave42_strict_hand_yolo_sam_mask_probe_20260703_223957.json",
+      "visual_sanity": "clothed adult-presenting hand-contact reference; source suitability only, not a production visual QA pass"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "EC2 was not started or stopped; no endpoint was called."
+  },
+  "models": [
+    {
+      "name": "bbox/hand_yolov8n.pt",
+      "family": "YOLO hand detector",
+      "path": "ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+      "role": "strict hand detector expected by node 973",
+      "load_result": "not loaded by Lane_2 in this pass"
+    },
+    {
+      "name": "sam_vit_b_01ec64.pth",
+      "family": "SAM",
+      "path": "ComfyUI/models/sams/sam_vit_b_01ec64.pth",
+      "role": "strict hand segmentation expected by node 975",
+      "load_result": "not loaded by Lane_2 in this pass"
+    },
+    {
+      "name": "controlnet-openpose-sdxl-1.0.safetensors",
+      "family": "SDXL ControlNet",
+      "path": "ComfyUI/models/controlnet/controlnet-openpose-sdxl-1.0.safetensors",
+      "role": "strict hand DWPose/OpenPose control expected by nodes 984-985",
+      "load_result": "not loaded by Lane_2 in this pass"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png",
+      "type": "provided_reference_image",
+      "size_bytes": 955002,
+      "sha256": "72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D",
+      "description": "Reference file now matching Main Flow node 972's current LoadImage widget value."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\hand_lora_detail\\hand_base_two_person_contact_20260703_210253.png",
+      "type": "source_reference_image",
+      "size_bytes": 955002,
+      "sha256": "72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D",
+      "description": "Existing strict-hand/two-person contact reference copied to the expected node 972 path."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\strict_hand_reference\\20260704_160416\\lane2_strict_hand_reference_artifact_20260704_160416.json",
+      "type": "strict_hand_reference_artifact",
+      "size_bytes": 4073,
+      "sha256": "EBD32CFD2059E0BCC3B2422D75B7D199C736C6BC6E734406D62AF2BA653D436D",
+      "description": "Machine-readable record of the reference dependency resolution."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_responses\\lane2_to_lane1_strict_hand_reference_response_20260704_160416.json",
+      "type": "lane1_response",
+      "size_bytes": 1861,
+      "sha256": "D88944F8DE6289CAE3E56AEA3143F86707317CC033AE74545B257D0CD0EAB737",
+      "description": "Lane 1 response indicating node 972 can preserve its current reference value."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\spatial_validation\\20260704_160416_lane2_strict_hand_reference\\lane2_strict_hand_reference_artifact_20260704_160416.json",
+      "type": "spatial_validation_evidence_copy",
+      "size_bytes": 4073,
+      "sha256": "EBD32CFD2059E0BCC3B2422D75B7D199C736C6BC6E734406D62AF2BA653D436D",
+      "description": "Project evidence mirror of the strict-hand reference artifact."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\mask_validation\\20260704_160416_lane2_strict_hand_reference\\lane2_strict_hand_reference_artifact_20260704_160416.json",
+      "type": "mask_validation_evidence_copy",
+      "size_bytes": 4073,
+      "sha256": "EBD32CFD2059E0BCC3B2422D75B7D199C736C6BC6E734406D62AF2BA653D436D",
+      "description": "Project evidence mirror for strict hand mask/reference dependency."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "expected_reference_exists",
+        "result": "pass",
+        "notes": "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png exists after Lane 2 copy."
+      },
+      {
+        "name": "target_hash_matches_source",
+        "result": "pass",
+        "notes": "Source and target hash both equal 72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D."
+      },
+      {
+        "name": "main_flow_not_edited",
+        "result": "pass",
+        "notes": "Lane 2 did not edit WAVE42_MAIN_FLOW_20260702.json."
+      },
+      {
+        "name": "ec2_not_started_or_stopped",
+        "result": "pass",
+        "notes": "No EC2 lease, start, stop, or endpoint action was performed by Lane 2."
+      },
+      {
+        "name": "runtime_validation",
+        "result": "not_applicable",
+        "notes": "This record resolves a missing reference file only. Runtime validation remains external to this Lane 2 pass."
+      },
+      {
+        "name": "strict_visual_acceptance",
+        "result": "provisional",
+        "notes": "Prior strict-hand probe evidence required manual visual review; this copy does not change that QA state."
+      }
+    ],
+    "failure_reasons": [
+      "No new strict-hand runtime execution was performed.",
+      "No tracker row should be promoted from the reference copy alone."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "runtime_generation_rows",
+      "strict_visual_acceptance_rows",
+      "tracker_promotion_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "runtime_validation",
+      "description": "The strict-hand lane has a valid reference file but has not been run after this dependency resolution.",
+      "next_action": "Lane 1 should re-run structural validation for node 972; Lane 4 should perform live/runtime validation only if a runtime window is requested."
+    }
+  ]
+}

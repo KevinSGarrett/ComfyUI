@@ -1,0 +1,30 @@
+{
+  "response_id": "lane2_to_lane1_strict_hand_reference_response_20260704_160416",
+  "responding_lane": "Lane_2",
+  "target_lane": "Lane_1",
+  "created_at_utc": "2026-07-04T16:04:16Z",
+  "request_id": "lane1_to_lane2_strict_hand_reference_20260704_105550",
+  "status": "resolved_reference_file_provided",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "node_id": 972,
+  "node_title": "Strict Hand Base Image Input",
+  "current_reference_to_preserve": "main_flow/strict_hand_detail_input.png",
+  "provided_reference_path": "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png",
+  "provided_reference_sha256": "72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D",
+  "provided_reference_dimensions": {
+    "width": 1024,
+    "height": 768
+  },
+  "source_reference_path": "C:\\Comfy_UI\\Input_References\\main_flow\\hand_lora_detail\\hand_base_two_person_contact_20260703_210253.png",
+  "source_reference_sha256": "72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D",
+  "source_evidence": [
+    "C:\\Comfy_UI\\Implementation\\evidence\\runtime\\strict_hand_yolo_sam_mask_probe\\wave42_strict_hand_yolo_sam_mask_probe_20260703_223957.json"
+  ],
+  "lane2_artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\strict_hand_reference\\20260704_160416\\lane2_strict_hand_reference_artifact_20260704_160416.json",
+  "lane2_notes": [
+    "Lane 2 copied an existing strict-hand/two-person contact reference into the exact path Lane 1 requested.",
+    "Main Flow does not need a node 972 binding change for this dependency.",
+    "This is not a production visual pass and not tracker-promotion evidence."
+  ],
+  "next_action_for_lane1": "Re-run structural validation for node 972 and preserve the current reference value if the expected file now resolves."
+}

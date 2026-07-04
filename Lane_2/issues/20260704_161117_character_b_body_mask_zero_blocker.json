@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "issue_id": "lane2_character_b_body_mask_zero_20260704_161117",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:11:17Z",
+  "status": "blocked",
+  "category": "mask_source",
+  "summary": "Main Flow body contact slot node 1009 references character_b_body_mask.png, but the file remains zero-valued.",
+  "affected_main_flow": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "nodes": [
+      1009
+    ],
+    "slot_file": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png"
+  },
+  "evidence": {
+    "validation_artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\body_contact_slot_validation\\20260704_160416\\lane2_body_contact_slot_validation_20260704_160416.json",
+    "evidence_record": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\evidence_records\\lane2_body_contact_slot_validation_evidence_20260704_160416.json",
+    "lane1_request": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_body_contact_slot_request_20260704_160416.md",
+    "slot_sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+    "slot_size_bytes": 3129,
+    "observed_state": "zero_occupancy_mask"
+  },
+  "why_not_fixed": "Lane 2 found same-scene fallback masks for breast_contact_mask.png and character_b_hand_mask.png, but did not find a trustworthy same-scene actor body segmentation source for character_b_body_mask.png. Copying an unrelated or fabricated body mask would create false spatial evidence.",
+  "next_action": "Lane 1 should choose actor-hand-only graph semantics for this preset, making node 1009 optional or disabled, or provide/request an actor body segmentation source so Lane 2 can materialize a valid nonzero mask.",
+  "ec2_action": "none",
+  "main_flow_edited": false,
+  "tracker_promotion": "none"
+}

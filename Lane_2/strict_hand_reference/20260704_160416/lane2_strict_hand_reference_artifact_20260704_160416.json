@@ -1,0 +1,73 @@
+{
+  "artifact_version": "1.0",
+  "artifact_id": "lane2_strict_hand_reference_artifact_20260704_160416",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:04:16Z",
+  "status": "dependency_reference_provided",
+  "lane1_request": {
+    "request_id": "lane1_to_lane2_strict_hand_reference_20260704_105550",
+    "request_path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane2_strict_hand_reference_20260704_105550.json",
+    "requested_node_id": 972,
+    "requested_node_title": "Strict Hand Base Image Input",
+    "requested_reference": "main_flow/strict_hand_detail_input.png",
+    "expected_path": "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png"
+  },
+  "action_taken": {
+    "type": "copied_existing_reference_asset",
+    "source_path": "C:\\Comfy_UI\\Input_References\\main_flow\\hand_lora_detail\\hand_base_two_person_contact_20260703_210253.png",
+    "target_path": "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png",
+    "reason": "The source image is an existing Lane 2-owned strict-hand/two-person contact reference with prior strict-hand probe provenance. It matches the current Main Flow node 972 reference target without requiring a Main Flow edit.",
+    "main_flow_edited": false,
+    "ec2_started_or_stopped": false
+  },
+  "source_asset": {
+    "path": "C:\\Comfy_UI\\Input_References\\main_flow\\hand_lora_detail\\hand_base_two_person_contact_20260703_210253.png",
+    "width": 1024,
+    "height": 768,
+    "size_bytes": 955002,
+    "sha256": "72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D",
+    "provenance": [
+      {
+        "evidence_path": "C:\\Comfy_UI\\Implementation\\evidence\\runtime\\strict_hand_yolo_sam_mask_probe\\wave42_strict_hand_yolo_sam_mask_probe_20260703_223957.json",
+        "case_name": "full_two_person_contact",
+        "evidence_field": "input_sha256",
+        "evidence_sha256": "72ff596f5492a7876130f0bca5677bebb66de08b92304d6b1f7ecb70a6534a0d",
+        "mechanical_status": "success_nonblank_mask_probe",
+        "strict_visual_verdict": "manual_review_required"
+      }
+    ],
+    "visual_sanity": {
+      "inspected_by_lane": "Lane_2",
+      "result": "usable_reference",
+      "notes": "Clothed adult-presenting hand-contact reference in a gym/studio setting. No minor or ambiguous-age subject was apparent in the inspected reference. This is a source suitability check, not a production QA pass."
+    }
+  },
+  "target_asset": {
+    "path": "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png",
+    "width": 1024,
+    "height": 768,
+    "size_bytes": 955002,
+    "sha256": "72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D",
+    "exists_after_action": true,
+    "workflow_reference_compatible": true
+  },
+  "strict_hand_workflow_mapping": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "node_972": "LoadImage: Strict Hand Base Image Input",
+    "node_973": "UltralyticsDetectorProvider: Strict Hand YOLO Detector",
+    "node_976": "SAMDetectorCombined: Strict Hand SAM Mask",
+    "node_978": "DWPreprocessor: Strict Hand DWPose Control",
+    "node_985": "ControlNetApplyAdvanced: Strict Hand DWPose Control Apply",
+    "node_990": "SaveImage: Strict Hand Save Repair - Enable To Run"
+  },
+  "acceptance_for_lane1": [
+    "Keep node 972 bound to main_flow/strict_hand_detail_input.png.",
+    "Validate that C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png exists and hashes to 72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D.",
+    "Do not treat this dependency resolution as runtime proof. The strict-hand lane remains default-off until Lane 4 or a local runtime validation owner runs it."
+  ],
+  "remaining_limitations": [
+    "No new strict-hand runtime execution was performed by Lane 2.",
+    "Prior strict-hand evidence had mechanical success but manual visual review was still required.",
+    "Tracker promotion requires Lane 5 review and runtime evidence, not this reference copy alone."
+  ]
+}

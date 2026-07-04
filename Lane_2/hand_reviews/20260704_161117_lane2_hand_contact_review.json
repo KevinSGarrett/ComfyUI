@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "review_id": "lane2_hand_contact_review_20260704_161117",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:11:17Z",
+  "scope": "Strict hand reference dependency and Main Flow body contact slot validation for hand/contact controls.",
+  "review_basis": [
+    "Visual inspection of the strict-hand source/control reference image.",
+    "Mask existence, dimensions, hash, and occupancy validation for Main Flow body contact slot assets.",
+    "Workflow node reference inspection for Main Flow nodes 972 and 999-1017."
+  ],
+  "media_reviewed": [
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png",
+      "type": "input_control_reference",
+      "sha256": "72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D",
+      "notes": "Same-scene source was visually inspected as a clothed adult-presenting two-person hand-contact reference. This is not final generated-output hand QA."
+    }
+  ],
+  "mask_assets_reviewed": [
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\breast_contact_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png"
+  ],
+  "verdict": "manual_review_required",
+  "checks": [
+    {
+      "name": "hand_count_and_identity",
+      "result": "manual_review_required",
+      "notes": "Input/control image appears suitable for strict-hand reference dependency, but final generated output was not produced or reviewed in this slice."
+    },
+    {
+      "name": "finger_continuity_and_separation",
+      "result": "manual_review_required",
+      "notes": "Requires generated output or high-resolution final candidate review."
+    },
+    {
+      "name": "thumb_and_palm_orientation",
+      "result": "manual_review_required",
+      "notes": "Requires generated output or high-resolution final candidate review."
+    },
+    {
+      "name": "wrist_to_hand_connection",
+      "result": "manual_review_required",
+      "notes": "Requires generated output or high-resolution final candidate review."
+    },
+    {
+      "name": "per_hand_mask_alignment",
+      "result": "provisional",
+      "notes": "character_b_hand_mask.png was filled from same-scene character_b_actor_hand_mask.png and is nonzero, but runtime output alignment is untested."
+    },
+    {
+      "name": "contact_zone_mask_alignment",
+      "result": "provisional",
+      "notes": "breast_contact_mask.png was filled from same-scene character_a_receiver_breast_mask.png and is nonzero, but runtime output alignment is untested."
+    },
+    {
+      "name": "pose_depth_normal_occlusion_consistency",
+      "result": "manual_review_required",
+      "notes": "Depth/normal/occlusion consistency around the contact zone requires a generated output or Lane 4 runtime validation."
+    },
+    {
+      "name": "collision_and_soft_body_deformation",
+      "result": "blocked",
+      "notes": "character_b_body_mask.png remains zero-valued, so full actor-body collision/deformation QA is blocked until Lane 1 supplies semantics or a valid actor body mask source."
+    }
+  ],
+  "limitations": [
+    "No new generated output was reviewed.",
+    "No live ComfyUI runtime validation was performed.",
+    "Final strict hand quality cannot be claimed from workflow structure, reference image existence, or mask metadata alone."
+  ],
+  "next_action": "After Lane 1 resolves node 1009 handling and Lane 4 runs a justified runtime validation, perform strict visual review on the generated output and update the hand/contact verdict."
+}
