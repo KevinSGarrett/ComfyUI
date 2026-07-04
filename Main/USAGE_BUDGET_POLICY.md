@@ -4,7 +4,7 @@
 
 The lane system must stay autonomous without burning the Codex usage budget through unnecessary polling, repeated deep reads, high-speed execution, or blanket `xhigh` reasoning.
 
-The user reported usage dropping from about 60 percent to about 10 percent on 2026-07-04, and then reported usage had already reached about 91 percent used after the first budget update. Until the user resets usage or approves a larger budget, the system is in **emergency budget mode**.
+The user reported usage dropping from about 60 percent to about 10 percent on 2026-07-04, then reported usage had already reached about 91 percent used after the first budget update, and then reported usage was still being consumed too quickly in the 5-hour window. Until the user resets usage or explicitly asks to resume, the system is in **circuit breaker mode**.
 
 ## Standard Speed Requirement
 
@@ -27,6 +27,19 @@ If a tool or UI exposes a speed control, set it to standard. If no speed control
 | Conservation | 15-40 percent | Reduce polling, avoid broad reads, use lower effort for mechanical work, escalate only for risky decisions. |
 | Critical | 15 percent or below | Poll lightly, wake only owner lanes for concrete next actions, stop no-op loops, prefer scripts over LLM reasoning, reserve `xhigh` for high-risk work. |
 | Emergency | About 90 percent used or higher | Lanes finish current atomic slices, write compact PM status, then pause for supervisor triggers. Heartbeat becomes PM checkpoint only. |
+| Circuit breaker | Usage continues rising too quickly after emergency mode | Pause heartbeat automation. Send hard-stop instructions to lanes. No automatic polling or lane wakeups until explicit user resume. |
+
+## Circuit Breaker Rules
+
+While in circuit breaker mode:
+
+- The supervisor heartbeat must be `PAUSED`.
+- Do not poll lanes automatically.
+- Do not send any lane follow-up unless the user explicitly asks to resume or there is an immediate safety/cost risk.
+- Do not open EC2, retry AWS auth, process model downloads, run candidate generation, or perform broad evidence scans.
+- Existing lane turns should stop after their current command/tool and return a tiny PM checkpoint only.
+- Project management should happen from existing reports and committed evidence, not fresh deep reads.
+- Resume should be staged, not all at once: Lane 4 safety first, then Lane 3 manifests, Lane 5 audit, then other owner lanes as needed.
 
 ## Emergency Budget Rules
 

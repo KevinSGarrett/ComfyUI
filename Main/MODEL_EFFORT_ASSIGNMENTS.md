@@ -6,9 +6,20 @@ Use the strongest model for lanes where mistakes can corrupt shared architecture
 
 ## Current Mode
 
-Current mode is **emergency budget mode**.
+Current mode is **circuit breaker mode**.
 
-Reason: the user reported usage dropping from about 60 percent to about 10 percent on 2026-07-04, then reported the system had already reached about 91 percent used after the first budget update. All lanes should use standard speed, finish only current atomic slices, write compact PM status, and pause for supervisor triggers until usage is reset or the user explicitly authorizes higher burn.
+Reason: the user reported usage dropping from about 60 percent to about 10 percent on 2026-07-04, then reported the system had already reached about 91 percent used after the first budget update, then reported usage was still being consumed too quickly. All lanes should stop after their current command/tool, return a tiny PM checkpoint if already active, and wait for explicit supervisor/user resume.
+
+## Circuit Breaker Defaults
+
+No lane should be automatically woken in circuit breaker mode.
+
+If a human explicitly resumes one lane, use the cheapest setting that can safely handle the task:
+
+- PM/status-only resume: `gpt-5.3-codex-spark/low`
+- Scripted inventory or report generation: `gpt-5.4/low`
+- Routine owner-lane work: use the emergency defaults below
+- High-risk work: escalate only for the exact risky decision and then return to pause
 
 ## Emergency-Budget Defaults
 
@@ -70,9 +81,10 @@ Do not downgrade below the critical-budget table unless the user explicitly auth
 
 ## Current Supervisor Defaults
 
-- Current mode is emergency budget mode.
+- Current mode is circuit breaker mode.
 - All lanes should run at standard speed.
-- Lanes should finish current atomic slices, write compact PM status, then pause for a supervisor trigger.
+- Lanes should stop after the current command/tool, write a tiny PM checkpoint only if already active, then pause for a supervisor trigger.
+- Supervisor heartbeat should remain paused until the user explicitly resumes monitoring.
 - Hand review, candidate/media QA, Main Flow edits, EC2 live-window work, tracker truth decisions, cleanup apply, and model-ingest launch decisions must escalate to `xhigh`.
 - Routine polling, inventory, report formatting, model-card generation, and no-op status reports should not use `xhigh`.
 - The supervisor should record any intentional temporary escalation in a lane report or coordination summary.
