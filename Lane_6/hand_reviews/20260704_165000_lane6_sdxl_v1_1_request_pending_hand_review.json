@@ -1,0 +1,32 @@
+{
+  "review_id": "20260704_165000_lane6_sdxl_v1_1_request_pending_hand_review",
+  "lane_id": "Lane_6",
+  "created_at_utc": "2026-07-04T16:50:00Z",
+  "scope": "Lane 6 v1.1 SDXL safe adult clothed runtime request state",
+  "verdict": "not_visually_reviewed",
+  "actual_media_reviewed": false,
+  "media_paths": [],
+  "checks": [
+    {
+      "name": "request_processed",
+      "result": "blocked",
+      "notes": "`20260704_162157..._candidate.json` has no processed/resolution record yet in shared_state or Lane_4 processed directories."
+    },
+    {
+      "name": "visual_qa_possible",
+      "result": "blocked",
+      "notes": "No returned image artifact available for local review yet."
+    },
+    {
+      "name": "runtime_blocker_present",
+      "result": "blocked",
+      "notes": "AWS-auth expiry stop-state proof remains unresolved from prior v1 request; must be revalidated when needed."
+    }
+  ],
+  "limitations": [
+    "No new local candidate image generated in this slice.",
+    "No updated v1.1 output artifact to review in this slice.",
+    "Stop-state verification depends on external auth state renewal."
+  ],
+  "next_action": "Wait for Lane 4 to resolve pending v1.1 request, then perform strict visual hand/anatomy QA and continue candidate acceptance checks."
+}

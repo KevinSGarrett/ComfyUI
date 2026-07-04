@@ -114,3 +114,9 @@
   - AWS auth expired after stop request, so final stopped/no-public-IP proof is blocked.
   - Candidate image is remote-only and was not visually reviewed.
 - v1.1 request remains pending in shared queue (`20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json`); no v1.1 media handoff yet.
+
+## 2026-07-04T16:50:00Z - v1.1 Request Still Pending
+
+- Verified: `C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json` exists and is still unprocessed.
+- Lane 4 `requests` directory contains processed records only for earlier request IDs (`...160530...` and `...155047...`), no processed or resolution entry for this v1.1 request.
+- Next action is unchanged: strict visual QA and runtime evidence for v1.1 candidate are blocked until Lane 4 processes the v1.1 request and returns localizable output/evidence.
