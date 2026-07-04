@@ -1,0 +1,4087 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "lane2_main_flow_spatial_asset_audit_20260704_162200",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:15:53Z",
+  "workflow": {
+    "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "sha256": "273158B6B84CEFC67A706AC1C4656D90CFBEBF04F0890A9230DD526475D5B96D",
+    "node_count": 768
+  },
+  "input_root": "C:\\Comfy_UI\\Input_References",
+  "summary": {
+    "spatial_asset_nodes": 90,
+    "load_image_nodes": 70,
+    "load_image_mask_nodes": 20,
+    "missing_assets": 4,
+    "zero_masks": 1,
+    "per_hand_masks_checked": 4,
+    "body_contact_input_nodes_checked": 23,
+    "controlnet_requirements": 4,
+    "mask_composites": 31,
+    "mask_previews": 16
+  },
+  "actionable_findings": [
+    {
+      "severity": "blocked",
+      "node_id": "1051",
+      "finding": "Missing input asset: main_flow/body_contact_slots/character_a_left_hand_mask.png",
+      "next_action": "Lane 1 should rewire the node or request/provide the missing input asset."
+    },
+    {
+      "severity": "blocked",
+      "node_id": "1052",
+      "finding": "Missing input asset: main_flow/body_contact_slots/character_a_right_hand_mask.png",
+      "next_action": "Lane 1 should rewire the node or request/provide the missing input asset."
+    },
+    {
+      "severity": "blocked",
+      "node_id": "1053",
+      "finding": "Missing input asset: main_flow/body_contact_slots/character_b_left_hand_mask.png",
+      "next_action": "Lane 1 should rewire the node or request/provide the missing input asset."
+    },
+    {
+      "severity": "blocked",
+      "node_id": "1054",
+      "finding": "Missing input asset: main_flow/body_contact_slots/character_b_right_hand_mask.png",
+      "next_action": "Lane 1 should rewire the node or request/provide the missing input asset."
+    },
+    {
+      "severity": "blocked",
+      "node_id": "1009",
+      "finding": "Zero-valued mask: main_flow/body_contact_slots/character_b_body_mask.png",
+      "next_action": "Lane 1 should choose graph semantics or request/provide a trustworthy nonzero mask source."
+    }
+  ],
+  "per_hand_masks": [
+    {
+      "node_id": 1051,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Left Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_left_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_left_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    },
+    {
+      "node_id": 1052,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Right Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_right_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_right_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    },
+    {
+      "node_id": 1053,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Left Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_left_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_left_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    },
+    {
+      "node_id": 1054,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Right Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_right_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_right_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    }
+  ],
+  "body_contact_inputs": [
+    {
+      "node_id": 999,
+      "node_type": "LoadImage",
+      "title": "Strict Body Contact Base Image Input",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/body_contact_base_input.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_contact_slots/body_contact_base_input.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\body_contact_base_input.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 662866,
+      "sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 1,
+        "luma_max": 233,
+        "luma_mean": 129.6493844985962,
+        "nonzero_pixels": 1048576,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 1000,
+      "node_type": "LoadImage",
+      "title": "Ref: Body+Hand Contact Pose",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/contact_pose_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_contact_slots/contact_pose_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_pose_reference.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 662866,
+      "sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 1,
+        "luma_max": 233,
+        "luma_mean": 129.6493844985962,
+        "nonzero_pixels": 1048576,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 1001,
+      "node_type": "LoadImage",
+      "title": "Ref: Soft Body Contact Depth",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_contact_depth_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_contact_depth_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_contact_depth_reference.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 126165,
+      "sha256": "F69E5F4CEEAA26AE04E18BBADBF597733D9D69D04C2354309741E815963337B0",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 211,
+        "luma_mean": 136.52483367919922,
+        "nonzero_pixels": 1045372,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.99694443,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 1002,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Breast Contact Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/breast_contact_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/breast_contact_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\breast_contact_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 15155,
+      "sha256": "5FE00AEED75C2AD3CD992256251B0ABA2457A85F276DBA0B834EBB0DCAFF1E2F",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 17.245975494384766,
+        "nonzero_pixels": 86064,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.08207703,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1003,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Butt Contact Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/butt_contact_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/butt_contact_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\butt_contact_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 13930,
+      "sha256": "C3CD9E2CA4687790A7E32FFFA377ACDD729244A9BA428BE7421698F39839A47E",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 7.862674713134766,
+        "nonzero_pixels": 38506,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.03672218,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1004,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Hand Contact Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/hand_contact_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/hand_contact_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\hand_contact_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1005,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Hands",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1006,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Hands",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1007,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Explicit Contact Zone",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/contact_zone_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/contact_zone_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_zone_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 7649,
+      "sha256": "F04671541F44CC067C8FD0BFD4281075C6E9206779254E755C33D0BC3F4EC15C",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 1.8764019012451172,
+        "nonzero_pixels": 9617,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.00917149,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1008,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Receiver Body",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_body_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_body_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_body_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 15603,
+      "sha256": "BEC9CAA7F1B126EAFDDA652CCA8D763F26C8E6ACF4744A431C804BF592C2B04F",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 180,
+        "luma_mean": 48.272769927978516,
+        "nonzero_pixels": 312165,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.29770374,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1009,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Actor Body",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_body_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_body_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 0,
+        "luma_mean": 0.0,
+        "nonzero_pixels": 0,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0,
+        "mask_state": "zero"
+      }
+    },
+    {
+      "node_id": 1010,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Receiver Breasts",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_receiver_breast_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_receiver_breast_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_receiver_breast_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 15155,
+      "sha256": "5FE00AEED75C2AD3CD992256251B0ABA2457A85F276DBA0B834EBB0DCAFF1E2F",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 17.245975494384766,
+        "nonzero_pixels": 86064,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.08207703,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1011,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Receiver Butt",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_receiver_butt_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_receiver_butt_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_receiver_butt_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 13930,
+      "sha256": "C3CD9E2CA4687790A7E32FFFA377ACDD729244A9BA428BE7421698F39839A47E",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 7.862674713134766,
+        "nonzero_pixels": 38506,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.03672218,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1012,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Actor Hands",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_actor_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_actor_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_actor_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1013,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Interaction Occlusion Order",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/interaction_occlusion_order_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/interaction_occlusion_order_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\interaction_occlusion_order_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1014,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Soft-Body Pressure Map",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_pressure_map.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_pressure_map.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_pressure_map.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 10256,
+      "sha256": "0C1CE45071D6C3462EC588F18B9D033882471A5F72C1D73D14264E1369C36F90",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 1.1637401580810547,
+        "nonzero_pixels": 9719,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.00926876,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1015,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Indentation Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_indentation_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_indentation_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_indentation_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 8879,
+      "sha256": "17BB25F206E0EFFE45FD457AB0DB9BC153B5716C77F2A1BB9281CF32E5BF4C68",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 1.2429265975952148,
+        "nonzero_pixels": 8123,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0077467,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1016,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Contact Shadow Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/contact_shadow_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/contact_shadow_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_shadow_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 9093,
+      "sha256": "95B008DE7E81885336DEFEAC79C7213F217AD85670477B4AB38F859BE7774A89",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 183,
+        "luma_mean": 0.9344511032104492,
+        "nonzero_pixels": 8708,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0083046,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1017,
+      "node_type": "LoadImage",
+      "title": "Ref: Soft Body Normal Map",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_normal_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_normal_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_normal_reference.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 12097,
+      "sha256": "FA42A970EA2CA568C5CD8120B26B119E45646BB7485028BAE6DE68DE8934B69A",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 136,
+        "luma_max": 181,
+        "luma_mean": 136.20123958587646,
+        "nonzero_pixels": 1048576,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 1051,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Left Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_left_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_left_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    },
+    {
+      "node_id": 1052,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Right Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_right_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_right_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    },
+    {
+      "node_id": 1053,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Left Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_left_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_left_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    },
+    {
+      "node_id": 1054,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Right Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_right_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_right_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    }
+  ],
+  "depth_normal_occlusion_requirements": [
+    {
+      "node_id": 1001,
+      "node_type": "LoadImage",
+      "title": "Ref: Soft Body Contact Depth",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_contact_depth_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_contact_depth_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_contact_depth_reference.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 126165,
+      "sha256": "F69E5F4CEEAA26AE04E18BBADBF597733D9D69D04C2354309741E815963337B0",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 211,
+        "luma_mean": 136.52483367919922,
+        "nonzero_pixels": 1045372,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.99694443,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 1013,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Interaction Occlusion Order",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/interaction_occlusion_order_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/interaction_occlusion_order_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\interaction_occlusion_order_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1014,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Soft-Body Pressure Map",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_pressure_map.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_pressure_map.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_pressure_map.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 10256,
+      "sha256": "0C1CE45071D6C3462EC588F18B9D033882471A5F72C1D73D14264E1369C36F90",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 1.1637401580810547,
+        "nonzero_pixels": 9719,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.00926876,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1015,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Indentation Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_indentation_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_indentation_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_indentation_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 8879,
+      "sha256": "17BB25F206E0EFFE45FD457AB0DB9BC153B5716C77F2A1BB9281CF32E5BF4C68",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 1.2429265975952148,
+        "nonzero_pixels": 8123,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0077467,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1016,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Contact Shadow Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/contact_shadow_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/contact_shadow_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_shadow_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 9093,
+      "sha256": "95B008DE7E81885336DEFEAC79C7213F217AD85670477B4AB38F859BE7774A89",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 183,
+        "luma_mean": 0.9344511032104492,
+        "nonzero_pixels": 8708,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0083046,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1017,
+      "node_type": "LoadImage",
+      "title": "Ref: Soft Body Normal Map",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_normal_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_normal_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_normal_reference.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 12097,
+      "sha256": "FA42A970EA2CA568C5CD8120B26B119E45646BB7485028BAE6DE68DE8934B69A",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 136,
+        "luma_max": 181,
+        "luma_mean": 136.20123958587646,
+        "nonzero_pixels": 1048576,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    }
+  ],
+  "all_load_image_assets": [
+    {
+      "node_id": 80,
+      "node_type": "LoadImage",
+      "title": "Active Category Ref: Inpaint / Detail Repair",
+      "group": "active_reference_route",
+      "widgets": [
+        "main_flow/category_reference_slots/inpaint_detail_repair_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/inpaint_detail_repair_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\inpaint_detail_repair_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 872294,
+      "sha256": "4F35D64146E4ACCCA6476842122EBE2489C502B6FE3879B197F0D41B9B342D19",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 81,
+      "node_type": "LoadImageMask",
+      "title": "",
+      "group": "active_reference_route",
+      "widgets": [
+        "main_flow/wave42_inpaint_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/wave42_inpaint_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\wave42_inpaint_mask.png",
+      "asset_group": "other_input_reference",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 4479,
+      "sha256": "DF2DF3266CF958C29CD7C08E68E043214903E08D8F493CEDA6B123D7FC963263",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "L",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 12.623267279730904,
+        "nonzero_pixels": 43642,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.07399156,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 111,
+      "node_type": "LoadImage",
+      "title": "Active Category Ref: Face / Identity",
+      "group": "active_reference_route",
+      "widgets": [
+        "main_flow/category_reference_slots/face_identity_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/face_identity_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\face_identity_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 893041,
+      "sha256": "BED1BE5AAF11B4C7623BAD0186BCADD29A6CD2BB986AD7478378352C3B472C2E",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 121,
+      "node_type": "LoadImage",
+      "title": "Active Category Ref: Pose / Camera",
+      "group": "active_reference_route",
+      "widgets": [
+        "main_flow/category_reference_slots/pose_camera_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/pose_camera_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\pose_camera_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 2528,
+      "sha256": "FBB926BBFDC2B2C7D9CE647CA28C50D69389975F820C2EB66A9D58BE2E52164B",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "L",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.9783681233723959,
+        "nonzero_pixels": 2263,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.00383674,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 441,
+      "node_type": "LoadImage",
+      "title": "Ref: Face / Identity / Expression",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/face_identity_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/face_identity_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\face_identity_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 893041,
+      "sha256": "BED1BE5AAF11B4C7623BAD0186BCADD29A6CD2BB986AD7478378352C3B472C2E",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 442,
+      "node_type": "LoadImage",
+      "title": "Ref: Hair",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/hair_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/hair_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\hair_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 443,
+      "node_type": "LoadImage",
+      "title": "Ref: Skin / Detail / Texture",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/skin_detail_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/skin_detail_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\skin_detail_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 444,
+      "node_type": "LoadImage",
+      "title": "Ref: Body Shape",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/body_shape_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/body_shape_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\body_shape_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 445,
+      "node_type": "LoadImage",
+      "title": "Ref: Body Type / BBW / Latina / Cellulite",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/body_type_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/body_type_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\body_type_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 446,
+      "node_type": "LoadImage",
+      "title": "Ref: Breast Size",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/breast_size_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/breast_size_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\breast_size_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 447,
+      "node_type": "LoadImage",
+      "title": "Ref: Breast Firmness / Sagginess",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/breast_saggy_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/breast_saggy_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\breast_saggy_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 448,
+      "node_type": "LoadImage",
+      "title": "Ref: Areola / Nipple / Body-Part Detail",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/areola_nipple_body_part_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/areola_nipple_body_part_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\areola_nipple_body_part_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 449,
+      "node_type": "LoadImage",
+      "title": "Ref: Butt / Hips / Thighs",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/butt_hips_thighs_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/butt_hips_thighs_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\butt_hips_thighs_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 450,
+      "node_type": "LoadImage",
+      "title": "Ref: Pose / Camera",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/pose_camera_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/pose_camera_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\pose_camera_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 2528,
+      "sha256": "FBB926BBFDC2B2C7D9CE647CA28C50D69389975F820C2EB66A9D58BE2E52164B",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "L",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.9783681233723959,
+        "nonzero_pixels": 2263,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.00383674,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 451,
+      "node_type": "LoadImage",
+      "title": "Ref: Action / Interaction",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/action_interaction_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/action_interaction_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\action_interaction_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 452,
+      "node_type": "LoadImage",
+      "title": "Ref: Fluids",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/fluids_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/fluids_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\fluids_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 453,
+      "node_type": "LoadImage",
+      "title": "Ref: Clothing / Fabric",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/clothing_fabric_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/clothing_fabric_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\clothing_fabric_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 454,
+      "node_type": "LoadImage",
+      "title": "Ref: Inpaint / Detail Repair",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/inpaint_detail_repair_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/inpaint_detail_repair_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\inpaint_detail_repair_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 872294,
+      "sha256": "4F35D64146E4ACCCA6476842122EBE2489C502B6FE3879B197F0D41B9B342D19",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 455,
+      "node_type": "LoadImage",
+      "title": "Ref: Lighting / Style / Realism",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/lighting_style_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/lighting_style_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\lighting_style_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 456,
+      "node_type": "LoadImage",
+      "title": "Ref: Jewelry / Accessories",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/accessories_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/accessories_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\accessories_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 457,
+      "node_type": "LoadImage",
+      "title": "Ref: Experimental / Review / Disabled",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/category_reference_slots/experimental_review_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/category_reference_slots/experimental_review_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\experimental_review_reference.png",
+      "asset_group": "category_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 568,
+      "node_type": "LoadImage",
+      "title": "Body Type / Details Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/body_type_details_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/body_type_details_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\body_type_details_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 570,
+      "node_type": "LoadImage",
+      "title": "Hair Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/hair_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/hair_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\hair_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 572,
+      "node_type": "LoadImage",
+      "title": "Face Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/face_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/face_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\face_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 893041,
+      "sha256": "BED1BE5AAF11B4C7623BAD0186BCADD29A6CD2BB986AD7478378352C3B472C2E",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 574,
+      "node_type": "LoadImage",
+      "title": "Breasts Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/breasts_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/breasts_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\breasts_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 576,
+      "node_type": "LoadImage",
+      "title": "Stomach / Abdomen Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/stomach_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/stomach_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\stomach_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 578,
+      "node_type": "LoadImage",
+      "title": "Pelvic Region Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/pelvic_region_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/pelvic_region_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\pelvic_region_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 872294,
+      "sha256": "4F35D64146E4ACCCA6476842122EBE2489C502B6FE3879B197F0D41B9B342D19",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 580,
+      "node_type": "LoadImage",
+      "title": "Butt / Hips Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/butt_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/butt_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\butt_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 582,
+      "node_type": "LoadImage",
+      "title": "Legs / Thighs Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/legs_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/legs_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\legs_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 584,
+      "node_type": "LoadImage",
+      "title": "Feet Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/feet_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/feet_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\feet_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 586,
+      "node_type": "LoadImage",
+      "title": "Hands Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/hands_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/hands_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\hands_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 872294,
+      "sha256": "4F35D64146E4ACCCA6476842122EBE2489C502B6FE3879B197F0D41B9B342D19",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 588,
+      "node_type": "LoadImage",
+      "title": "Fluids Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/fluids_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/fluids_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\fluids_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 590,
+      "node_type": "LoadImage",
+      "title": "Pose Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/pose_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/pose_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\pose_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 2528,
+      "sha256": "FBB926BBFDC2B2C7D9CE647CA28C50D69389975F820C2EB66A9D58BE2E52164B",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "L",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.9783681233723959,
+        "nonzero_pixels": 2263,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.00383674,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 592,
+      "node_type": "LoadImage",
+      "title": "Action Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/action_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/action_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\action_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 594,
+      "node_type": "LoadImage",
+      "title": "Camera Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/camera_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/camera_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\camera_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 2528,
+      "sha256": "FBB926BBFDC2B2C7D9CE647CA28C50D69389975F820C2EB66A9D58BE2E52164B",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "L",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.9783681233723959,
+        "nonzero_pixels": 2263,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.00383674,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 596,
+      "node_type": "LoadImage",
+      "title": "Environment Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/environment_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/environment_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\environment_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 598,
+      "node_type": "LoadImage",
+      "title": "Expression Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/body_part_reference_slots/expression_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_part_reference_slots/expression_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\expression_reference.png",
+      "asset_group": "body_part_reference_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 893041,
+      "sha256": "BED1BE5AAF11B4C7623BAD0186BCADD29A6CD2BB986AD7478378352C3B472C2E",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 832,
+      "node_type": "LoadImage",
+      "title": "Character A Body Type / Details Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/body_type_details_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/body_type_details_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\body_type_details_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 834,
+      "node_type": "LoadImage",
+      "title": "Character A Hair Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/hair_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/hair_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\hair_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 836,
+      "node_type": "LoadImage",
+      "title": "Character A Face Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/face_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/face_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\face_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 893041,
+      "sha256": "BED1BE5AAF11B4C7623BAD0186BCADD29A6CD2BB986AD7478378352C3B472C2E",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 838,
+      "node_type": "LoadImage",
+      "title": "Character A Breasts Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/breasts_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/breasts_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\breasts_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 840,
+      "node_type": "LoadImage",
+      "title": "Character A Stomach / Abdomen Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/stomach_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/stomach_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\stomach_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 842,
+      "node_type": "LoadImage",
+      "title": "Character A Pelvic Region Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/pelvic_region_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/pelvic_region_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\pelvic_region_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 872294,
+      "sha256": "4F35D64146E4ACCCA6476842122EBE2489C502B6FE3879B197F0D41B9B342D19",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 844,
+      "node_type": "LoadImage",
+      "title": "Character A Butt / Hips Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/butt_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/butt_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\butt_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 846,
+      "node_type": "LoadImage",
+      "title": "Character A Legs / Thighs Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/legs_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/legs_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\legs_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 848,
+      "node_type": "LoadImage",
+      "title": "Character A Feet Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/feet_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/feet_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\feet_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 850,
+      "node_type": "LoadImage",
+      "title": "Character A Hands Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/hands_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/hands_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\hands_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 872294,
+      "sha256": "4F35D64146E4ACCCA6476842122EBE2489C502B6FE3879B197F0D41B9B342D19",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 852,
+      "node_type": "LoadImage",
+      "title": "Character A Fluids Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/fluids_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/fluids_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\fluids_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 854,
+      "node_type": "LoadImage",
+      "title": "Character A Pose Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/pose_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/pose_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\pose_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 2528,
+      "sha256": "FBB926BBFDC2B2C7D9CE647CA28C50D69389975F820C2EB66A9D58BE2E52164B",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "L",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.9783681233723959,
+        "nonzero_pixels": 2263,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.00383674,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 856,
+      "node_type": "LoadImage",
+      "title": "Character A Action Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/action_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/action_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\action_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 858,
+      "node_type": "LoadImage",
+      "title": "Character A Expression Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_a/expression_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_a/expression_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\expression_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 893041,
+      "sha256": "BED1BE5AAF11B4C7623BAD0186BCADD29A6CD2BB986AD7478378352C3B472C2E",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 860,
+      "node_type": "LoadImage",
+      "title": "Character B Body Type / Details Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/body_type_details_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/body_type_details_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\body_type_details_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 862,
+      "node_type": "LoadImage",
+      "title": "Character B Hair Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/hair_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/hair_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\hair_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 864,
+      "node_type": "LoadImage",
+      "title": "Character B Face Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/face_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/face_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\face_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 893041,
+      "sha256": "BED1BE5AAF11B4C7623BAD0186BCADD29A6CD2BB986AD7478378352C3B472C2E",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 866,
+      "node_type": "LoadImage",
+      "title": "Character B Breasts Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/breasts_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/breasts_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\breasts_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 868,
+      "node_type": "LoadImage",
+      "title": "Character B Stomach / Abdomen Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/stomach_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/stomach_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\stomach_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 870,
+      "node_type": "LoadImage",
+      "title": "Character B Pelvic Region Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/pelvic_region_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/pelvic_region_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\pelvic_region_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 872294,
+      "sha256": "4F35D64146E4ACCCA6476842122EBE2489C502B6FE3879B197F0D41B9B342D19",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 872,
+      "node_type": "LoadImage",
+      "title": "Character B Butt / Hips Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/butt_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/butt_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\butt_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 874,
+      "node_type": "LoadImage",
+      "title": "Character B Legs / Thighs Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/legs_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/legs_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\legs_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 876,
+      "node_type": "LoadImage",
+      "title": "Character B Feet Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/feet_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/feet_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\feet_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 878,
+      "node_type": "LoadImage",
+      "title": "Character B Hands Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/hands_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/hands_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\hands_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 872294,
+      "sha256": "4F35D64146E4ACCCA6476842122EBE2489C502B6FE3879B197F0D41B9B342D19",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 880,
+      "node_type": "LoadImage",
+      "title": "Character B Fluids Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/fluids_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/fluids_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\fluids_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 882,
+      "node_type": "LoadImage",
+      "title": "Character B Pose Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/pose_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/pose_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\pose_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 2528,
+      "sha256": "FBB926BBFDC2B2C7D9CE647CA28C50D69389975F820C2EB66A9D58BE2E52164B",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "L",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.9783681233723959,
+        "nonzero_pixels": 2263,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.00383674,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 884,
+      "node_type": "LoadImage",
+      "title": "Character B Action Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/action_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/action_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\action_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 1878,
+      "sha256": "1569C899427FFD831FFA0F36B3115E75C2758D19AB12B835884BFCDE99B42E02",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 128,
+        "luma_max": 128,
+        "luma_mean": 128.0,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 886,
+      "node_type": "LoadImage",
+      "title": "Character B Expression Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_slots/character_b/expression_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_slots/character_b/expression_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\expression_reference.png",
+      "asset_group": "multi_character_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 893041,
+      "sha256": "BED1BE5AAF11B4C7623BAD0186BCADD29A6CD2BB986AD7478378352C3B472C2E",
+      "image_metrics": {
+        "width": 768,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 243,
+        "luma_mean": 108.94525316026476,
+        "nonzero_pixels": 589809,
+        "pixel_count": 589824,
+        "nonzero_ratio": 0.99997457,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 966,
+      "node_type": "LoadImage",
+      "title": "Interaction / Choreography Reference Image",
+      "group": "reference_or_support",
+      "widgets": [
+        "main_flow/multi_character_interaction_slots/interaction_choreography_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/multi_character_interaction_slots/interaction_choreography_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_interaction_slots\\interaction_choreography_reference.png",
+      "asset_group": "multi_character_interaction_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 2923,
+      "sha256": "4F44C50AAE6C3FD7929DC1CB2BCA52E7929283CAEB76A5443C11D3391A189C37",
+      "image_metrics": {
+        "width": 512,
+        "height": 512,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 132,
+        "luma_max": 245,
+        "luma_mean": 136.04001998901367,
+        "nonzero_pixels": 262144,
+        "pixel_count": 262144,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 972,
+      "node_type": "LoadImage",
+      "title": "Strict Hand Base Image Input",
+      "group": "strict_hand",
+      "widgets": [
+        "main_flow/strict_hand_detail_input.png",
+        "image"
+      ],
+      "relative_path": "main_flow/strict_hand_detail_input.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png",
+      "asset_group": "strict_hand_reference",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 955002,
+      "sha256": "72FF596F5492A7876130F0BCA5677BEBB66DE08B92304D6B1F7ECB70A6534A0D",
+      "image_metrics": {
+        "width": 1024,
+        "height": 768,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 94.00483957926433,
+        "nonzero_pixels": 786423,
+        "pixel_count": 786432,
+        "nonzero_ratio": 0.99998856,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 999,
+      "node_type": "LoadImage",
+      "title": "Strict Body Contact Base Image Input",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/body_contact_base_input.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_contact_slots/body_contact_base_input.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\body_contact_base_input.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 662866,
+      "sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 1,
+        "luma_max": 233,
+        "luma_mean": 129.6493844985962,
+        "nonzero_pixels": 1048576,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 1000,
+      "node_type": "LoadImage",
+      "title": "Ref: Body+Hand Contact Pose",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/contact_pose_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_contact_slots/contact_pose_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_pose_reference.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 662866,
+      "sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 1,
+        "luma_max": 233,
+        "luma_mean": 129.6493844985962,
+        "nonzero_pixels": 1048576,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 1001,
+      "node_type": "LoadImage",
+      "title": "Ref: Soft Body Contact Depth",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_contact_depth_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_contact_depth_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_contact_depth_reference.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 126165,
+      "sha256": "F69E5F4CEEAA26AE04E18BBADBF597733D9D69D04C2354309741E815963337B0",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 211,
+        "luma_mean": 136.52483367919922,
+        "nonzero_pixels": 1045372,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.99694443,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 1002,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Breast Contact Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/breast_contact_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/breast_contact_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\breast_contact_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 15155,
+      "sha256": "5FE00AEED75C2AD3CD992256251B0ABA2457A85F276DBA0B834EBB0DCAFF1E2F",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 17.245975494384766,
+        "nonzero_pixels": 86064,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.08207703,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1003,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Butt Contact Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/butt_contact_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/butt_contact_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\butt_contact_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 13930,
+      "sha256": "C3CD9E2CA4687790A7E32FFFA377ACDD729244A9BA428BE7421698F39839A47E",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 7.862674713134766,
+        "nonzero_pixels": 38506,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.03672218,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1004,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Hand Contact Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/hand_contact_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/hand_contact_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\hand_contact_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1005,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Hands",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1006,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Hands",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1007,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Explicit Contact Zone",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/contact_zone_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/contact_zone_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_zone_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 7649,
+      "sha256": "F04671541F44CC067C8FD0BFD4281075C6E9206779254E755C33D0BC3F4EC15C",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 1.8764019012451172,
+        "nonzero_pixels": 9617,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.00917149,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1008,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Receiver Body",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_body_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_body_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_body_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 15603,
+      "sha256": "BEC9CAA7F1B126EAFDDA652CCA8D763F26C8E6ACF4744A431C804BF592C2B04F",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 180,
+        "luma_mean": 48.272769927978516,
+        "nonzero_pixels": 312165,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.29770374,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1009,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Actor Body",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_body_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_body_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3129,
+      "sha256": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 0,
+        "luma_mean": 0.0,
+        "nonzero_pixels": 0,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0,
+        "mask_state": "zero"
+      }
+    },
+    {
+      "node_id": 1010,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Receiver Breasts",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_receiver_breast_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_receiver_breast_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_receiver_breast_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 15155,
+      "sha256": "5FE00AEED75C2AD3CD992256251B0ABA2457A85F276DBA0B834EBB0DCAFF1E2F",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 17.245975494384766,
+        "nonzero_pixels": 86064,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.08207703,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1011,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Receiver Butt",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_receiver_butt_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_receiver_butt_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_receiver_butt_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 13930,
+      "sha256": "C3CD9E2CA4687790A7E32FFFA377ACDD729244A9BA428BE7421698F39839A47E",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 7.862674713134766,
+        "nonzero_pixels": 38506,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.03672218,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1012,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Actor Hands",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_actor_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_actor_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_actor_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1013,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Interaction Occlusion Order",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/interaction_occlusion_order_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/interaction_occlusion_order_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\interaction_occlusion_order_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 3861,
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 0.7743072509765625,
+        "nonzero_pixels": 3184,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0030365,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1014,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Soft-Body Pressure Map",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_pressure_map.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_pressure_map.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_pressure_map.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 10256,
+      "sha256": "0C1CE45071D6C3462EC588F18B9D033882471A5F72C1D73D14264E1369C36F90",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 1.1637401580810547,
+        "nonzero_pixels": 9719,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.00926876,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1015,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Indentation Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_indentation_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_indentation_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_indentation_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 8879,
+      "sha256": "17BB25F206E0EFFE45FD457AB0DB9BC153B5716C77F2A1BB9281CF32E5BF4C68",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 255,
+        "luma_mean": 1.2429265975952148,
+        "nonzero_pixels": 8123,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0077467,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1016,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Contact Shadow Zones",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/contact_shadow_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/contact_shadow_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_shadow_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": true,
+      "size_bytes": 9093,
+      "sha256": "95B008DE7E81885336DEFEAC79C7213F217AD85670477B4AB38F859BE7774A89",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 0,
+        "luma_max": 183,
+        "luma_mean": 0.9344511032104492,
+        "nonzero_pixels": 8708,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 0.0083046,
+        "mask_state": "nonzero"
+      }
+    },
+    {
+      "node_id": 1017,
+      "node_type": "LoadImage",
+      "title": "Ref: Soft Body Normal Map",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/soft_body_normal_reference.png",
+        "image"
+      ],
+      "relative_path": "main_flow/body_contact_slots/soft_body_normal_reference.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_normal_reference.png",
+      "asset_group": "body_contact_slots",
+      "exists": true,
+      "is_mask": false,
+      "size_bytes": 12097,
+      "sha256": "FA42A970EA2CA568C5CD8120B26B119E45646BB7485028BAE6DE68DE8934B69A",
+      "image_metrics": {
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "format": "PNG",
+        "luma_min": 136,
+        "luma_max": 181,
+        "luma_mean": 136.20123958587646,
+        "nonzero_pixels": 1048576,
+        "pixel_count": 1048576,
+        "nonzero_ratio": 1.0,
+        "image_state": "nonzero_luma"
+      }
+    },
+    {
+      "node_id": 1051,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Left Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_left_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_left_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    },
+    {
+      "node_id": 1052,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Right Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_a_right_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_a_right_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    },
+    {
+      "node_id": 1053,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Left Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_left_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_left_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    },
+    {
+      "node_id": 1054,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Right Hand",
+      "group": "strict_body_contact",
+      "widgets": [
+        "main_flow/body_contact_slots/character_b_right_hand_mask.png",
+        "red"
+      ],
+      "relative_path": "main_flow/body_contact_slots/character_b_right_hand_mask.png",
+      "resolved_path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png",
+      "asset_group": "body_contact_slots",
+      "exists": false,
+      "is_mask": true
+    }
+  ],
+  "controlnet_requirements": [
+    {
+      "node_id": 120,
+      "node_type": "ControlNetLoader",
+      "title": "",
+      "group": "reference_or_support",
+      "widgets": [
+        "controlnet-canny-sdxl-1.0-small.safetensors"
+      ],
+      "model_name": "controlnet-canny-sdxl-1.0-small.safetensors",
+      "visibility_status": "not_validated_by_lane_2",
+      "next_owner": "Lane_3_or_Lane_4"
+    },
+    {
+      "node_id": 984,
+      "node_type": "ControlNetLoader",
+      "title": "Strict Hand OpenPose ControlNet",
+      "group": "strict_hand",
+      "widgets": [
+        "controlnet-openpose-sdxl-1.0.safetensors"
+      ],
+      "model_name": "controlnet-openpose-sdxl-1.0.safetensors",
+      "visibility_status": "not_validated_by_lane_2",
+      "next_owner": "Lane_3_or_Lane_4"
+    },
+    {
+      "node_id": 1041,
+      "node_type": "ControlNetLoader",
+      "title": "Strict Body Contact OpenPose ControlNet",
+      "group": "reference_or_support",
+      "widgets": [
+        "controlnet-openpose-sdxl-1.0.safetensors"
+      ],
+      "model_name": "controlnet-openpose-sdxl-1.0.safetensors",
+      "visibility_status": "not_validated_by_lane_2",
+      "next_owner": "Lane_3_or_Lane_4"
+    },
+    {
+      "node_id": 1043,
+      "node_type": "ControlNetLoader",
+      "title": "Strict Body Contact Depth ControlNet",
+      "group": "reference_or_support",
+      "widgets": [
+        "controlnet-depth-sdxl-1.0-small.fp16.safetensors"
+      ],
+      "model_name": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "visibility_status": "not_validated_by_lane_2",
+      "next_owner": "Lane_3_or_Lane_4"
+    }
+  ],
+  "mask_composites": [
+    {
+      "node_id": 828,
+      "node_type": "MaskComposite",
+      "title": "Character A Attention Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 830,
+      "node_type": "MaskComposite",
+      "title": "Character B Attention Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        352,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1019,
+      "node_type": "MaskComposite",
+      "title": "Add Breast Contact Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1020,
+      "node_type": "MaskComposite",
+      "title": "Add Butt Contact Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1021,
+      "node_type": "MaskComposite",
+      "title": "Add Hand Contact Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1022,
+      "node_type": "MaskComposite",
+      "title": "Add Character A Hand Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1023,
+      "node_type": "MaskComposite",
+      "title": "Add Character B Hand Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1024,
+      "node_type": "MaskComposite",
+      "title": "Add Receiver Breast Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1025,
+      "node_type": "MaskComposite",
+      "title": "Add Receiver Butt Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1026,
+      "node_type": "MaskComposite",
+      "title": "Add Actor Hand Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1027,
+      "node_type": "MaskComposite",
+      "title": "Add Occlusion Order Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1028,
+      "node_type": "MaskComposite",
+      "title": "Add Pressure Map Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1029,
+      "node_type": "MaskComposite",
+      "title": "Add Indentation Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1030,
+      "node_type": "MaskComposite",
+      "title": "Add Contact Shadow Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1031,
+      "node_type": "MaskComposite",
+      "title": "Combined Body Contact Mask",
+      "group": "reference_or_support",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1055,
+      "node_type": "MaskComposite",
+      "title": "Add Character A Left Hand Mask",
+      "group": "strict_body_contact",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1056,
+      "node_type": "MaskComposite",
+      "title": "Add Character A Right Hand Mask",
+      "group": "strict_body_contact",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1057,
+      "node_type": "MaskComposite",
+      "title": "Add Character B Left Hand Mask",
+      "group": "strict_body_contact",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1058,
+      "node_type": "MaskComposite",
+      "title": "Add Character B Right Hand Mask",
+      "group": "strict_body_contact",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1075,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Left Hand to A Left Breast Side Push - Add Actor Hand",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1076,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Left Hand to A Left Breast Side Push - Add Receiver Surface",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1077,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Left Hand to A Left Breast Side Push - Add Contact Zone",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1080,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Right Hand to A Right Breast Side Push - Add Actor Hand",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1081,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Right Hand to A Right Breast Side Push - Add Receiver Surface",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1082,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Right Hand to A Right Breast Side Push - Add Contact Zone",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1085,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Left Hand to A Left Butt Squeeze - Add Actor Hand",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1086,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Left Hand to A Left Butt Squeeze - Add Receiver Surface",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1087,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Left Hand to A Left Butt Squeeze - Add Contact Zone",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1090,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Right Hand to A Right Butt Squeeze - Add Actor Hand",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1091,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Right Hand to A Right Butt Squeeze - Add Receiver Surface",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    },
+    {
+      "node_id": 1092,
+      "node_type": "MaskComposite",
+      "title": "Edge QA: B Right Hand to A Right Butt Squeeze - Add Contact Zone",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": [
+        0,
+        0,
+        "add"
+      ]
+    }
+  ],
+  "mask_previews": [
+    {
+      "node_id": 977,
+      "node_type": "MaskToImage",
+      "title": "Strict Hand Mask Preview",
+      "group": "strict_hand",
+      "widgets": []
+    },
+    {
+      "node_id": 1032,
+      "node_type": "MaskToImage",
+      "title": "Combined Contact Mask Preview",
+      "group": "reference_or_support",
+      "widgets": []
+    },
+    {
+      "node_id": 1033,
+      "node_type": "MaskToImage",
+      "title": "QA Preview: Receiver Body Mask",
+      "group": "reference_or_support",
+      "widgets": []
+    },
+    {
+      "node_id": 1034,
+      "node_type": "MaskToImage",
+      "title": "QA Preview: Actor Body Mask",
+      "group": "reference_or_support",
+      "widgets": []
+    },
+    {
+      "node_id": 1059,
+      "node_type": "MaskToImage",
+      "title": "QA Preview: Character A Left Hand Mask",
+      "group": "strict_body_contact",
+      "widgets": []
+    },
+    {
+      "node_id": 1060,
+      "node_type": "MaskToImage",
+      "title": "QA Preview: Character A Right Hand Mask",
+      "group": "strict_body_contact",
+      "widgets": []
+    },
+    {
+      "node_id": 1061,
+      "node_type": "MaskToImage",
+      "title": "QA Preview: Character B Left Hand Mask",
+      "group": "strict_body_contact",
+      "widgets": []
+    },
+    {
+      "node_id": 1062,
+      "node_type": "MaskToImage",
+      "title": "QA Preview: Character B Right Hand Mask",
+      "group": "strict_body_contact",
+      "widgets": []
+    },
+    {
+      "node_id": 1067,
+      "node_type": "MaskToImage",
+      "title": "QA Preview: Soft-Body Pressure Map",
+      "group": "strict_body_contact",
+      "widgets": []
+    },
+    {
+      "node_id": 1068,
+      "node_type": "MaskToImage",
+      "title": "QA Preview: Indentation Mask",
+      "group": "strict_body_contact",
+      "widgets": []
+    },
+    {
+      "node_id": 1069,
+      "node_type": "MaskToImage",
+      "title": "QA Preview: Contact Shadow Mask",
+      "group": "strict_body_contact",
+      "widgets": []
+    },
+    {
+      "node_id": 1070,
+      "node_type": "MaskToImage",
+      "title": "QA Preview: Occlusion Order Mask",
+      "group": "strict_body_contact",
+      "widgets": []
+    },
+    {
+      "node_id": 1078,
+      "node_type": "MaskToImage",
+      "title": "Edge QA: B Left Hand to A Left Breast Side Push Preview",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": []
+    },
+    {
+      "node_id": 1083,
+      "node_type": "MaskToImage",
+      "title": "Edge QA: B Right Hand to A Right Breast Side Push Preview",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": []
+    },
+    {
+      "node_id": 1088,
+      "node_type": "MaskToImage",
+      "title": "Edge QA: B Left Hand to A Left Butt Squeeze Preview",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": []
+    },
+    {
+      "node_id": 1093,
+      "node_type": "MaskToImage",
+      "title": "Edge QA: B Right Hand to A Right Butt Squeeze Preview",
+      "group": "strict_body_contact_edge_qa",
+      "widgets": []
+    }
+  ],
+  "limitations": [
+    "This audit validates local workflow references and image/mask metadata only.",
+    "It does not perform live ComfyUI runtime execution.",
+    "It does not visually approve generated hands, contact, collision, or deformation quality.",
+    "ControlNet model file visibility is listed as a requirement but not validated by Lane 2."
+  ]
+}

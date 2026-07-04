@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "review_id": "lane2_spatial_asset_hand_review_20260704_162200",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:22:00Z",
+  "scope": "Current Main Flow per-hand mask and strict body-contact asset audit.",
+  "review_basis": [
+    "Visual inspection of active body_contact_slots base image and current hand/contact masks.",
+    "Hash comparison between active body_contact_slots base and candidate body_contact_presets sources.",
+    "Metadata audit of Main Flow nodes 999-1017 and 1051-1093."
+  ],
+  "media_reviewed": [
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\body_contact_base_input.png",
+      "type": "input_control_reference",
+      "sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+      "notes": "Visual inspection showed a clothed adult-presenting single-subject lower-hip contact-style reference, not a two-character strict side-push source."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\hand_contact_mask.png",
+      "type": "input_mask_reference",
+      "sha256": "5F86F9FC5BD515F589D58FD66ACF8DE40F3D502B5541E5F2BF5829E7CB272590",
+      "notes": "Mask is nonzero but combined/ambiguous; it does not establish Character A/B left/right per-hand identity."
+    }
+  ],
+  "verdict": "blocked",
+  "checks": [
+    {
+      "name": "per_hand_mask_existence",
+      "result": "blocked",
+      "notes": "Nodes 1051-1054 reference four per-hand mask files that are missing from active body_contact_slots."
+    },
+    {
+      "name": "left_right_identity",
+      "result": "blocked",
+      "notes": "Existing active mask is a combined contact-hand mask and cannot safely be relabeled as Character A/B left/right without Lane 1 semantics or a trustworthy source."
+    },
+    {
+      "name": "same_scene_source_consistency",
+      "result": "blocked",
+      "notes": "Available strict-v1 left/right masks use a different base hash than the active slot folder."
+    },
+    {
+      "name": "final_generated_hand_quality",
+      "result": "manual_review_required",
+      "notes": "No new runtime generation was produced or reviewed."
+    },
+    {
+      "name": "collision_and_soft_body_deformation",
+      "result": "manual_review_required",
+      "notes": "Depth/normal/pressure/indentation/occlusion assets exist and are nonzero, but runtime output and collision/deformation quality remain unproven."
+    }
+  ],
+  "limitations": [
+    "Input/control references and masks were inspected; no final generated output was reviewed.",
+    "Per-hand mask semantics are unresolved.",
+    "Node 1009 remains zero-valued."
+  ],
+  "next_action": "Lane 1 should decide the active preset semantics for nodes 1009 and 1051-1054 before Lane 2 materializes any missing per-hand masks."
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_main_flow_spatial_asset_audit_evidence_20260704_162200",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:22:00Z",
+  "claim": {
+    "summary": "Lane 2 audited the current canonical Main Flow spatial asset references and found four missing per-hand mask files at nodes 1051-1054 plus the already-known zero-valued character_b_body_mask.png at node 1009.",
+    "status": "blocked",
+    "requirement_ids": [
+      "main_flow_spatial_asset_audit_current_workflow",
+      "main_flow_nodes_1051_1054_per_hand_masks",
+      "main_flow_node_1009_character_b_body_mask",
+      "lane2_to_lane1_spatial_asset_audit_request_20260704_162200"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "273158B6B84CEFC67A706AC1C4656D90CFBEBF04F0890A9230DD526475D5B96D",
+    "settings": {
+      "input_root": "C:\\Comfy_UI\\Input_References",
+      "audited_node_types": [
+        "LoadImage",
+        "LoadImageMask",
+        "SolidMask",
+        "MaskComposite",
+        "MaskToImage",
+        "ControlNetLoader",
+        "ControlNetApplyAdvanced",
+        "IPAdapterUnifiedLoader",
+        "IPAdapter"
+      ],
+      "summary": {
+        "spatial_asset_nodes": 90,
+        "load_image_nodes": 70,
+        "load_image_mask_nodes": 20,
+        "missing_assets": 4,
+        "zero_masks": 1,
+        "per_hand_masks_checked": 4,
+        "body_contact_input_nodes_checked": 23,
+        "controlnet_requirements": 4,
+        "mask_composites": 31,
+        "mask_previews": 16
+      }
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "EC2 was not started or stopped; no endpoint was called."
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162200\\lane2_main_flow_spatial_asset_audit_20260704_162200.json",
+      "type": "main_flow_spatial_asset_audit_artifact",
+      "size_bytes": 135301,
+      "sha256": "5E78529FB1A4E4C64D7380723388114DFD63991BAF895F13616D0BB2EBEED8C4",
+      "description": "Current-workflow audit covering LoadImage/LoadImageMask spatial assets, mask occupancy, per-hand masks, depth/normal/occlusion assets, ControlNet requirements, composites, and previews."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\tools\\main_flow_spatial_asset_audit.py",
+      "type": "reusable_lane2_audit_tool",
+      "size_bytes": 11779,
+      "sha256": "9087BBB3EC22B64A78361965FA51D4747615088E4BB819BDE08F03DEF08355CA",
+      "description": "Read-only reusable audit script for Main Flow spatial asset references."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_spatial_asset_audit_request_20260704_162200.md",
+      "type": "lane1_wiring_or_semantics_request",
+      "size_bytes": 2982,
+      "sha256": "D784A12C67200F43E5F1980B8722822729255C74B8742036309A90110EFDC72F",
+      "description": "Lane 1 request for nodes 1009 and 1051-1054 semantics and per-hand source mapping."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\issues\\20260704_162200_per_hand_mask_source_blocker.json",
+      "type": "lane2_blocker_record",
+      "size_bytes": 2188,
+      "sha256": "DEE3B81D2116A24C400267B6A8B75EB881F5E2262435144849D6BFB6BC9B97BE",
+      "description": "Blocker record for missing per-hand masks and scene-hash mismatch with candidate strict side-push masks."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\hand_reviews\\20260704_162200_lane2_spatial_asset_hand_review.json",
+      "type": "strict_hand_contact_review_record",
+      "size_bytes": 2824,
+      "sha256": "2DA5F89227E1FC0CFE02F2A062D135F798AECB09C08497F72823FA8921C14168",
+      "description": "Strict hand/contact review record for the current spatial asset audit."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\reports\\20260704_162200_lane2_status.md",
+      "type": "lane2_status_report",
+      "size_bytes": 2247,
+      "sha256": "7E8C73B7A91E6EEF13B1117382C3E5C620677E880740508D9E00CD4E042FCDF4",
+      "description": "Lane 2 status report for the current Main Flow spatial asset audit slice."
+    }
+  ],
+  "qa": {
+    "verdict": "blocked",
+    "checks": [
+      {
+        "name": "audit_tool_execution",
+        "result": "pass",
+        "notes": "Lane 2 audit tool ran successfully against the current canonical Main Flow and input-reference root."
+      },
+      {
+        "name": "workflow_hash_current",
+        "result": "pass",
+        "notes": "Audit artifact workflow hash matches current WAVE42_MAIN_FLOW_20260702.json hash 273158B6B84CEFC67A706AC1C4656D90CFBEBF04F0890A9230DD526475D5B96D."
+      },
+      {
+        "name": "per_hand_mask_files",
+        "result": "blocked",
+        "notes": "Nodes 1051-1054 reference four per-hand masks that do not exist in active body_contact_slots."
+      },
+      {
+        "name": "same_scene_source_consistency",
+        "result": "blocked",
+        "notes": "Available strict side-push left/right masks belong to a different base image hash than the active body_contact_slots base, so Lane 2 did not copy them."
+      },
+      {
+        "name": "character_b_body_mask",
+        "result": "blocked",
+        "notes": "Node 1009 character_b_body_mask.png remains present but zero-valued."
+      },
+      {
+        "name": "depth_normal_occlusion_assets",
+        "result": "pass",
+        "notes": "Soft body depth, normal, pressure, indentation, contact shadow, and occlusion assets exist and are nonzero in the current audit."
+      },
+      {
+        "name": "main_flow_not_edited",
+        "result": "pass",
+        "notes": "Lane 2 did not edit WAVE42_MAIN_FLOW_20260702.json."
+      },
+      {
+        "name": "runtime_validation",
+        "result": "not_applicable",
+        "notes": "This is a local asset/reference audit only; live runtime validation remains a Lane 4 task after Lane 1 resolves graph semantics."
+      }
+    ],
+    "failure_reasons": [
+      "Nodes 1051-1054 reference missing per-hand mask files.",
+      "Node 1009 remains a zero-valued actor body mask.",
+      "Final generated hand/contact/collision/deformation quality was not visually reviewed."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "runtime_generation_rows",
+      "strict_visual_acceptance_rows",
+      "per_hand_mask_completion_rows",
+      "tracker_promotion_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "per_hand_mask_source",
+      "description": "Current Main Flow nodes 1051-1054 reference per-hand mask files that do not exist in active body_contact_slots, and available strict side-push masks do not match the active base image hash.",
+      "next_action": "Lane 1 should choose active preset semantics and provide an exact same-scene source/mapping, or permit explicit zero/off masks for disabled per-hand controls."
+    },
+    {
+      "category": "actor_body_mask_source",
+      "description": "Node 1009 character_b_body_mask.png remains zero-valued.",
+      "next_action": "Lane 1 should choose actor-hand-only graph semantics or request/provide a trustworthy actor body segmentation source for Lane 2."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "The current Main Flow spatial controls have not been run through live ComfyUI after Lane 1's latest node additions.",
+      "next_action": "After Lane 1 resolves nodes 1009 and 1051-1054 semantics, Lane 4 can validate runtime behavior in a justified live window."
+    }
+  ]
+}

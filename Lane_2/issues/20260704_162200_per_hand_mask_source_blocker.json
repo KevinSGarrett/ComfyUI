@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "issue_id": "lane2_per_hand_mask_source_blocker_20260704_162200",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:22:00Z",
+  "status": "blocked",
+  "category": "per_hand_mask_source",
+  "summary": "Current Main Flow nodes 1051-1054 reference four per-hand mask files that do not exist in the active body_contact_slots folder.",
+  "affected_main_flow": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "273158B6B84CEFC67A706AC1C4656D90CFBEBF04F0890A9230DD526475D5B96D",
+    "nodes": [
+      1051,
+      1052,
+      1053,
+      1054
+    ],
+    "missing_files": [
+      "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+      "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+      "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+      "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png"
+    ]
+  },
+  "evidence": {
+    "audit_artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_162200\\lane2_main_flow_spatial_asset_audit_20260704_162200.json",
+    "audit_sha256": "5E78529FB1A4E4C64D7380723388114DFD63991BAF895F13616D0BB2EBEED8C4",
+    "active_base_sha256": "8DAD144442821B3AB1E461ADA539A3420C446670FC02A9DAC540726E385DE523",
+    "active_base_matches_preset": "lower_hip_contact",
+    "strict_side_push_base_sha256": "4E76DCAF4DA8BAFD837102B7A17AFB05D734A2B60CD3D2F7B7052BDD0851354B"
+  },
+  "why_not_fixed": "Available strict side-push left/right hand masks belong to a different base image hash than the active Main Flow body_contact_slots base. Lane 2 did not copy them because that would mix mask geometry across scenes.",
+  "next_action": "Lane 1 should choose active preset semantics and provide either an exact source/mapping for nodes 1051-1054 or permission to represent absent/disabled per-hand controls as explicit zero/off masks.",
+  "ec2_action": "none",
+  "main_flow_edited": false,
+  "tracker_promotion": "none"
+}

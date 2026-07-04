@@ -15,3 +15,17 @@
 - Did not edit `C:\Comfy_UI\Implementation\workflows\ui\WAVE42_MAIN_FLOW_20260702.json`.
 - Did not start or stop EC2, call runtime endpoints, promote tracker rows, print secrets, stage media, or commit model/generated output.
 - Current next action: validate and commit the Lane 2 text coordination artifacts, then leave the remaining actor body mask issue as an explicit Lane 1 decision/blocker.
+
+## 2026-07-04T16:22:00Z - Current Main Flow spatial asset audit
+
+- Re-hashed the canonical Main Flow after observing a newer workflow state; current workflow hash for this slice is `273158B6B84CEFC67A706AC1C4656D90CFBEBF04F0890A9230DD526475D5B96D`.
+- Added and ran reusable Lane 2 audit tool `Lane_2\tools\main_flow_spatial_asset_audit.py` against `C:\Comfy_UI\Implementation\workflows\ui\WAVE42_MAIN_FLOW_20260702.json`.
+- Produced current-workflow spatial asset audit artifact covering 90 spatial asset nodes: 70 `LoadImage`, 20 `LoadImageMask`, 4 ControlNet requirements, 31 mask composites, and 16 mask preview nodes.
+- Found four missing per-hand mask files newly referenced by Main Flow nodes 1051-1054:
+  - `main_flow/body_contact_slots/character_a_left_hand_mask.png`
+  - `main_flow/body_contact_slots/character_a_right_hand_mask.png`
+  - `main_flow/body_contact_slots/character_b_left_hand_mask.png`
+  - `main_flow/body_contact_slots/character_b_right_hand_mask.png`
+- Confirmed the active `body_contact_slots` base image matches the `lower_hip_contact` preset, while available strict side-push left/right masks belong to a different base hash. Lane 2 therefore did not copy those masks into active slots.
+- Preserved node 1009 `character_b_body_mask.png` as a zero-valued mask blocker.
+- Created a Lane 1 request asking for active preset semantics and a trustworthy per-hand source/mapping before Lane 2 materializes per-hand masks.
