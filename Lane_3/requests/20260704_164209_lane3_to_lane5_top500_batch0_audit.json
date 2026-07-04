@@ -1,0 +1,41 @@
+{
+  "request_id": "lane3_to_lane5_top500_batch0_audit_20260704_164209",
+  "created_at_utc": "2026-07-04T16:42:09Z",
+  "from_lane": "Lane_3",
+  "to_lane": "Lane_5",
+  "priority": "normal",
+  "purpose": "Audit the Top500 batch-0 dry ingest manifest, model-card drafts, and safety exclusions before any Lane 4 EC2 download launch request.",
+  "scope": {
+    "source_csv": "C:\\Comfy_UI_Lora\\downloads\\models\\PENDING_flux1_sdxl_TOP500_curated.csv",
+    "source_csv_sha256": "DBAE4DA6944E782A9C08DB31F9C7A76B4EF48826A4F7982B5A63B06D64E8D16C",
+    "batch_id": "20260704_163909_top500_batch0_dry",
+    "planned_model_count": 20,
+    "planned_total_gib": 9.862,
+    "family_mix": {
+      "sdxl": 10,
+      "flux": 4,
+      "z_image": 6
+    }
+  },
+  "required_artifacts": [
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\20260704_163909_top500_batch0_dry.dry_manifest.json",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\20260704_163909_top500_batch0_dry.dry_download_report.md",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\20260704_163909_top500_batch0_dry.inventory_summary.json",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_163909_top500_batch0_dry_evidence.json",
+    "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Implementation\\manifests\\civitai_model_acquisition\\20260704_163909_top500_batch0_dry\\model_cards"
+  ],
+  "audit_focus": [
+    "Confirm dry-manifest status is not overclaimed as downloaded, hash-verified, catalog-visible, load-tested, or generation-tested.",
+    "Review safety-term exclusions and note any false positives or missing exclusion terms.",
+    "Review license/commercial/derivative fields as captured from CSV metadata.",
+    "Confirm manifest/report/cards do not persist download URLs or secret values.",
+    "Confirm the batch is suitable as a pre-Lane-4 planning artifact only, not a launch authorization."
+  ],
+  "known_limitations": [
+    "Lane 3 used local CSV metadata only; no binaries were downloaded.",
+    "EC2 free space and token-safe download execution remain unverified by Lane 3.",
+    "The batch currently includes adult/NSFW-oriented rows from the curated source and requires Lane 5 policy judgment before any downstream use."
+  ],
+  "next_owner_action_after_pass": "Lane 4 may perform EC2 storage preflight and design a token-safe downloader, but should not launch downloads until audit concerns are addressed.",
+  "current_commit": "6615ec5"
+}
