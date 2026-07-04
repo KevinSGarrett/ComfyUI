@@ -21,6 +21,14 @@
 - Strict hand review verdict remains `not_visually_reviewed` because no candidate media exists.
 - Local ComfyUI blocker remains active for candidate media generation.
 
+## 2026-07-04T16:21:57Z - SDXL Preset v1.1 Supersession
+
+- Main Flow had changed from earlier Lane 6 evidence hashes.
+- Created `wave42_sdxl_safe_adult_clothed_low_vram_v1_1.json` instead of modifying the prior evidence-bound preset.
+- Created superseding Lane 4 request `20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json`.
+- v1.1 evidence validates against the shared evidence schema and artifact hashes match.
+- Candidate media remains runtime-blocked pending Lane 4.
+
 ## 2026-07-04T16:13:17Z - Adapter Edit
 
 - Created AI_Front executable self-hosted LLM adapter at `C:\Comfy_UI_Lora\AI_Front\src\self_hosted_llm_adapter.py`.
