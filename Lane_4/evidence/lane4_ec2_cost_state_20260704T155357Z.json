@@ -1,0 +1,245 @@
+﻿{
+    "schema_version":  "1.0",
+    "evidence_id":  "lane4_ec2_cost_state_20260704T155357Z",
+    "lane_id":  "Lane_4",
+    "created_at_utc":  "2026-07-04T15:53:57.5754224Z",
+    "claim":  {
+                  "summary":  "Stopped-state EC2 cost-control proof for shared Wave42 runtime instance; no live ComfyUI or LLM endpoint validation was justified.",
+                  "status":  "passed",
+                  "requirement_ids":  [
+                                          "Lane_4_EC2_COST_CONTROL",
+                                          "Lane_4_LEASE_BEHAVIOR",
+                                          "Lane_4_AWS_STATE_PREFLIGHT"
+                                      ]
+              },
+    "inputs":  {
+                   "instruction_files_read":  [
+                                                  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\GLOBAL_INSTRUCTIONS.md",
+                                                  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\LANE_BOUNDARIES.md",
+                                                  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\EC2_LEASE_PROTOCOL.md",
+                                                  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\SELF_HOSTED_LLM_POLICY.md",
+                                                  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\MODEL_EFFORT_ASSIGNMENTS.md",
+                                                  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\LANE_INSTRUCTIONS.md",
+                                                  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\schemas\\evidence_record.schema.json"
+                                              ],
+                   "evidence_schema_sha256":  "f8c712fd69499fa19f7493b820cf9fa3807f74bd04152c94415b88d9b24d8fa3",
+                   "aws_cli":  "aws-cli/2.32.23 Python/3.13.11 Windows/11 exe/AMD64",
+                   "configured_region":  "us-east-1",
+                   "ec2_request_dir":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests",
+                   "ec2_request_files":  [
+
+                                         ],
+                   "live_window_justification":  "No pending EC2 request files and no runtime task requiring ComfyUI/LLM endpoint readiness; instance kept stopped."
+               },
+    "runtime":  {
+                    "ec2_instance_id":  "i-0560bf8d143f93bb1",
+                    "ec2_state_before":  "stopping",
+                    "ec2_state_after":  "stopped",
+                    "comfyui_url":  null,
+                    "endpoints_checked":  [
+
+                                          ],
+                    "aws_auth_status":  "passed",
+                    "aws_auth_sanitized":  {
+                                               "status":  "passed",
+                                               "account_last4":  "9913",
+                                               "principal_type":  "root",
+                                               "user_id_last4":  "9913",
+                                               "error":  null
+                                           },
+                    "region":  "us-east-1",
+                    "initial_observation":  {
+                                                "checked_at_utc":  "2026-07-04T15:50:14.3657578Z",
+                                                "state":  "stopping",
+                                                "state_transition_reason":  "User initiated (2026-07-04 15:47:58 GMT)",
+                                                "has_public_ip":  true,
+                                                "has_public_dns":  true,
+                                                "ssm_active_command_count":  0,
+                                                "local_stop_reboot_loop_count":  0
+                                            },
+                    "stop_wait":  {
+                                      "waited_at_utc":  "2026-07-04T15:51:02.5159636Z",
+                                      "wait_completed_at_utc":  "2026-07-04T15:52:19.8750308Z",
+                                      "wait_seconds":  77.359,
+                                      "wait_status":  "passed"
+                                  },
+                    "final_observation":  {
+                                              "status":  "passed",
+                                              "instance_id":  "i-0560bf8d143f93bb1",
+                                              "state":  "stopped",
+                                              "state_transition_reason":  "User initiated (2026-07-04 15:47:58 GMT)",
+                                              "instance_type":  "g5.xlarge",
+                                              "availability_zone":  "us-east-1d",
+                                              "has_public_ip":  false,
+                                              "has_public_dns":  false,
+                                              "launch_time":  "2026-07-04T15:41:35+00:00",
+                                              "error":  null
+                                          },
+                    "ssm_active_commands":  {
+                                                "status":  "passed",
+                                                "active_command_count":  0,
+                                                "active_commands":  [
+
+                                                                    ],
+                                                "error":  null
+                                            },
+                    "local_control_loops":  {
+                                                "active_process_count":  0,
+                                                "active_processes":  [
+
+                                                                     ],
+                                                "scheduled_task_count":  0,
+                                                "scheduled_tasks":  [
+
+                                                                    ],
+                                                "command_lines_recorded":  false,
+                                                "patterns_checked":  [
+                                                                         "aws_live_window.ps1",
+                                                                         "ec2_lease.ps1",
+                                                                         "aws ec2 start-instances",
+                                                                         "aws ec2 stop-instances",
+                                                                         "aws ec2 reboot-instances",
+                                                                         "Start/Stop/Restart-Computer"
+                                                                     ]
+                                            },
+                    "lease":  {
+                                  "final_state":  "free",
+                                  "final_owner":  null,
+                                  "behavior_validation":  [
+                                                              {
+                                                                  "step":  "status_before",
+                                                                  "lease_state":  "free",
+                                                                  "owner_lane":  null
+                                                              },
+                                                              {
+                                                                  "step":  "acquire",
+                                                                  "lease_state":  "held",
+                                                                  "owner_lane":  "Lane_4",
+                                                                  "purpose":  "Lane 4 stopped-state cost evidence and lease behavior validation"
+                                                              },
+                                                              {
+                                                                  "step":  "heartbeat",
+                                                                  "lease_state":  "held",
+                                                                  "owner_lane":  "Lane_4"
+                                                              },
+                                                              {
+                                                                  "step":  "release",
+                                                                  "lease_state":  "free",
+                                                                  "owner_lane":  null
+                                                              },
+                                                              {
+                                                                  "step":  "status_after",
+                                                                  "lease_state":  "free",
+                                                                  "owner_lane":  null
+                                                              }
+                                                          ]
+                              }
+                },
+    "models":  [
+
+               ],
+    "artifacts":  [
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_ec2_cost_state_20260704T155357Z.json",
+                          "type":  "coordination_evidence",
+                          "description":  "Lane worktree copy for branch commit."
+                      },
+                      {
+                          "path":  "C:\\Comfy_UI\\Implementation\\evidence\\ec2\\lane4_ec2_cost_state_20260704T155357Z.json",
+                          "type":  "project_evidence",
+                          "description":  "Owned project EC2 evidence copy."
+                      },
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_sessions\\Main\\schemas\\evidence_record.schema.json",
+                          "type":  "schema",
+                          "sha256":  "f8c712fd69499fa19f7493b820cf9fa3807f74bd04152c94415b88d9b24d8fa3",
+                          "description":  "Evidence schema used for field shape."
+                      }
+                  ],
+    "qa":  {
+               "verdict":  "pass",
+               "checks":  [
+                              {
+                                  "name":  "Required shared docs and Lane_4 instructions read",
+                                  "result":  "pass",
+                                  "notes":  "GLOBAL_INSTRUCTIONS, LANE_BOUNDARIES, EC2_LEASE_PROTOCOL, SELF_HOSTED_LLM_POLICY, Lane_4 instructions, evidence schema, and MODEL_EFFORT_ASSIGNMENTS were read before this evidence write."
+                              },
+                              {
+                                  "name":  "Model and effort assignment",
+                                  "result":  "pass",
+                                  "notes":  "Lane_4 assignment is gpt-5.5/high in MODEL_EFFORT_ASSIGNMENTS.md."
+                              },
+                              {
+                                  "name":  "AWS authentication",
+                                  "result":  "pass",
+                                  "notes":  "STS get-caller-identity succeeded; account/user identifiers stored only as last4."
+                              },
+                              {
+                                  "name":  "AWS region configured",
+                                  "result":  "pass",
+                                  "notes":  "Region: us-east-1"
+                              },
+                              {
+                                  "name":  "EC2 terminal state stopped",
+                                  "result":  "pass",
+                                  "notes":  "Final state: stopped."
+                              },
+                              {
+                                  "name":  "No public IP or public DNS after stop",
+                                  "result":  "pass",
+                                  "notes":  "has_public_ip=False; has_public_dns=False."
+                              },
+                              {
+                                  "name":  "SSM active command state",
+                                  "result":  "pass",
+                                  "notes":  "Active commands: 0."
+                              },
+                              {
+                                  "name":  "Local stop/reboot loop state",
+                                  "result":  "pass",
+                                  "notes":  "Matching local processes: 0; matching scheduled tasks: 0. Command lines were not recorded to avoid secret leakage."
+                              },
+                              {
+                                  "name":  "Shared EC2 lease final state",
+                                  "result":  "pass",
+                                  "notes":  "Final lease state: free; owner: ."
+                              },
+                              {
+                                  "name":  "Shared EC2 lease behavior",
+                                  "result":  "pass",
+                                  "notes":  "Status/acquire/heartbeat/release/status cycle succeeded at 2026-07-04T15:49:33Z and ended free."
+                              },
+                              {
+                                  "name":  "Pending EC2 request files",
+                                  "result":  "pass",
+                                  "notes":  "Pending request files: 0."
+                              },
+                              {
+                                  "name":  "ComfyUI endpoint readiness",
+                                  "result":  "not_applicable",
+                                  "notes":  "No live endpoint check was performed because no EC2 request required a live window and the cost-control objective was to keep the instance stopped."
+                              },
+                              {
+                                  "name":  "EC2-hosted self-hosted LLM endpoint readiness",
+                                  "result":  "not_applicable",
+                                  "notes":  "No EC2-hosted LLM request was active; no endpoint was exposed or checked."
+                              }
+                          ],
+               "failure_reasons":  {
+
+                                   }
+           },
+    "tracker_mapping":  {
+                            "proves_rows":  [
+
+                                            ],
+                            "does_not_prove_rows":  [
+                                                        "Live ComfyUI endpoint readiness is not proven by this evidence because no justified live window was opened.",
+                                                        "EC2-hosted self-hosted LLM endpoint readiness is not proven by this evidence because no EC2 LLM request was active."
+                                                    ],
+                            "promotion_decision":  "not_applicable"
+                        },
+    "blockers":  {
+
+                 }
+}
