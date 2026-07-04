@@ -86,3 +86,9 @@
 - Expanded AI_Front test coverage; test suite now passes `9/9`.
 - Live verifier report against the request-runner bundle failed due stale artifact hash metadata in `wave42_ai_front_self_hosted_request_runner_evidence_20260704_163146.json`.
 - Wrote compact PM status report and paused for supervisor trigger instead of starting a superseding evidence slice under emergency budget instructions.
+
+## 2026-07-04T16:41:42Z - Request Runner Evidence Superseded
+
+- Reopened the paused atomic slice and wrote superseding request-runner evidence and manifest with current hashes.
+- Added verifier-aware evidence artifact coverage and preserved no-cloud/no-promotion boundaries.
+- Candidate media remains unproven and visually unreviewed pending runtime output.

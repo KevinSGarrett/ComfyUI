@@ -1,0 +1,36 @@
+{
+  "review_id": "20260704_164142_lane6_request_runner_verifier_hand_review",
+  "lane_id": "Lane_6",
+  "created_at_utc": "2026-07-04T16:41:42Z",
+  "scope": "AI_Front self-hosted request-runner verifier slice and referenced SDXL preset continuity",
+  "verdict": "not_visually_reviewed",
+  "actual_media_reviewed": false,
+  "media_paths": [],
+  "checks": [
+    {
+      "name": "hand_count_left_right_identity",
+      "result": "not_applicable",
+      "notes": "No generated candidate media exists in this verifier slice."
+    },
+    {
+      "name": "finger_count_continuity_separation",
+      "result": "not_applicable",
+      "notes": "No hands or fingers were visually reviewed."
+    },
+    {
+      "name": "mask_contact_pose_depth_alignment",
+      "result": "not_applicable",
+      "notes": "This slice validated AI_Front bundle integrity, not rendered anatomy or contact masks."
+    },
+    {
+      "name": "manual_visual_review_required_for_candidate_claims",
+      "result": "pass",
+      "notes": "Any future candidate media from Lane 4 still requires strict visual hand and anatomy review before any candidate quality claim."
+    }
+  ],
+  "limitations": [
+    "No candidate image or video was generated or reviewed.",
+    "No hand quality, anatomy quality, contact quality, or runtime-readiness claim is made."
+  ],
+  "next_action": "When runtime output exists for the SDXL v1.1 request, run strict visual hand and anatomy review on the actual media."
+}
