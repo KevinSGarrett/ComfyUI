@@ -1,0 +1,12 @@
+{
+  "manifest_path": "C:\\Comfy_UI\\Implementation\\manifests\\promotion_quality_audit\\continuous_lane_evidence_intake_20260704_162300.json",
+  "evidence_record_path": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\lane5_continuous_evidence_intake_evidence_20260704_162300.json",
+  "doc_path": "C:\\Comfy_UI\\Implementation\\docs\\CONTINUOUS_LANE5_EVIDENCE_INTAKE_20260704_162300.md",
+  "csv_path": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\continuous_lane_evidence_intake_20260704_162300.csv",
+  "created_at_utc": "2026-07-04T16:23:00.492883Z",
+  "tracker_snapshot_created": false,
+  "tracker_rows_promoted": [],
+  "tracker_rows_reblocked": [],
+  "current_canonical_workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+  "main_flow_convergence_verdict": "Hash ambiguity accepted as resolved for interpretation. Lane 4 20260704T161522Z evidence remains valid for LoRA catalog visibility but not current-hash Main Flow execution."
+}
