@@ -1,0 +1,74 @@
+﻿{
+  "request_id": "lane2_to_lane4_strict_body_contact_runtime_acceptance_20260704_181500",
+  "requesting_lane": "Lane_2",
+  "target_lane": "Lane_4",
+  "created_at_utc": "2026-07-04T18:15:00Z",
+  "priority": "current_hash_continuation_if_runtime_window_available",
+  "purpose": "Refresh strict body-contact runtime acceptance for Main Flow current hash after 181500 local pose/depth revalidation; classify remaining blockers with authoritative runtime evidence.",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+  "supersedes_or_refines": [
+    "lane2_to_lane4_strict_body_contact_runtime_acceptance_20260704_164031",
+    "lane2_to_lane4_strict_body_contact_runtime_request_20260704_162555"
+  ],
+  "basis": {
+    "main_flow_spatial_audit": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_181500\\lane2_main_flow_spatial_asset_audit_20260704_181500.json",
+    "contact_mask_qc": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_181500\\lane2_contact_mask_pixel_qa_20260704_181500.json",
+    "pose_depth_requirements": "C:\\Comfy_UI\\Implementation\\evidence\\contact_physics\\20260704_181500_lane2_pose_depth_requirements\\lane2_pose_depth_requirements_update_evidence_20260704_181500.json",
+    "collision_profile": "C:\\Comfy_UI\\Implementation\\evidence\\contact_physics\\20260704_175500_lane2_collision_deformation\\lane2_collision_deformation_requirements_update_20260704_175500.json"
+  },
+  "required_files": [
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\body_contact_base_input.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_pose_reference.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_contact_depth_reference.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\breast_contact_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\butt_contact_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_body_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_pressure_map.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_indentation_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_shadow_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\interaction_occlusion_order_mask.png",
+    "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png"
+  ],
+  "commands_or_endpoints": [
+    "Acquire EC2 lease if approved and run live validation on current workflow hash.",
+    "Validate graph node reference resolution for strict body-contact nodes; explicitly fail/mark if any required node reference errors exist.",
+    "Capture runtime evidence for per-hand nodes 1051-1054 (left/right split), node 1009 actor-body behavior, and contact edge gating behavior.",
+    "Capture output/preview evidence for strict-body mask nodes 1032, 1059-1062, 1067-1070, and 1078/1083/1088/1093 if edge QA runs.",
+    "Collect visibility/proxy checks for strict hand dependencies (hand YOLO, SAM, OpenPose/CN stack) as runtime context evidence."
+  ],
+  "required_checks": [
+    {
+      "name": "current_hash_graph_load",
+      "pass_condition": "Workflow loads under current hash with no missing LoadImage / LoadImageMask / ControlNet / endpoint blocking on the strict body-contact branch."
+    },
+    {
+      "name": "placeholder_as_intent_not_error",
+      "pass_condition": "Nodes 1051-1054 resolve to exact-name files and runtime reports these as intentional zero/off if they remain placeholders."
+    },
+    {
+      "name": "actor_body_zero_semantics",
+      "pass_condition": "Node 1009 is accepted as zero/off for actor_hand_only_contact_v1 without forcing graph failure; if rejected, capture exact blocker and whether fallback bypass is possible without editing Main Flow."
+    },
+    {
+      "name": "runtime_visibility",
+      "pass_condition": "Runtime evidence includes strict contact outputs and confirms strict_hand_detail_input source presence plus required model/tool availability context."
+    }
+  ],
+  "expected_outputs": [
+    "Lane 4 runtime evidence package with exact pass/fail per required check and evidence file paths/hashes.",
+    "Lane 4 classification of blockers: which are runtime-true vs still-semantic (same-scene per-hand split or actor-body mask source missing).",
+    "EC2 stop state + lease release evidence for the completed run."
+  ],
+  "runtime_constraints": {
+    "max_runtime_minutes": 45,
+    "stop_after_completion": true,
+    "no_evidence_promotion": "Do not promote final acceptance; this is still Lane 5 + visual review dependent."
+  },
+  "next_action": "Lane 5 strict visual hand/contact review should run after runtime package is delivered; no Main Flow semantic edits by Lane 2 during this stage."
+}
