@@ -2,6 +2,14 @@
 
 These are hard write boundaries for six concurrent Codex Desktop sessions. A lane may read broadly, but writes are limited to its owned paths unless the shared claim protocol is used.
 
+## Main Flow Convergence Rule
+
+The whole system is organized around the canonical Main Flow:
+
+`C:\Comfy_UI\Implementation\workflows\ui\WAVE42_MAIN_FLOW_20260702.json`
+
+Lane work may cover the broader system, but it must keep producing Main Flow-facing outputs: workflow repairs, asset/model/runtime visibility evidence, Lane 1 wiring requests, Lane 4 runtime requests, Lane 5 tracker/evidence decisions, or Lane 6 presets/candidates that can be traced back to the Main Flow. Side documents and inventories are intermediate work, not final lane completion, when a Main Flow-facing next action remains.
+
 ## Lane 1: Main Flow Architecture
 
 Mission: repair, wire, validate, and preserve the canonical Main Flow workflow graph.

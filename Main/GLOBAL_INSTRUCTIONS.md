@@ -77,6 +77,25 @@ Use `Main\schemas\evidence_record.schema.json` and include:
 - QA verdict and failure reasons
 - tracker rows proven and not proven
 
+## Main Flow Convergence Standard
+
+All lane work must converge back to the canonical ComfyUI Main Flow unless the lane is explicitly producing governance, QA, or cost-control evidence.
+
+The canonical Main Flow workflow is:
+
+`C:\Comfy_UI\Implementation\workflows\ui\WAVE42_MAIN_FLOW_20260702.json`
+
+Every lane output should answer at least one of these questions:
+
+- Does this make the Main Flow graph more correctly wired?
+- Does this prove that a Main Flow asset, model, node, control, preset, or runtime dependency is present and visible?
+- Does this produce a concrete Lane 1 request to wire or repair the Main Flow?
+- Does this produce a concrete Lane 4 request to validate Main Flow runtime behavior?
+- Does this produce Lane 5 evidence that can honestly promote, preserve, or re-block Main Flow-related tracker rows?
+- Does this produce Lane 6 presets or candidates that are traceable to the Main Flow and its self-hosted LLM/provider contract?
+
+Side artifacts are useful only when they strengthen Main Flow readiness, runtime validation, candidate generation, or QA. Do not let a lane stop at a plan, inventory, or standalone architecture note when a Main Flow-facing next action remains available.
+
 ## Coordination Standard
 
 Before writing outside its owned lane directory, a lane must confirm the path is allowed by `LANE_BOUNDARIES.md`.

@@ -36,6 +36,8 @@ On each heartbeat, the supervisor must:
 6. Confirm live EC2 windows are stopped/released before closing a supervisor cycle.
 7. Check Git branch status and pushes for lane worktrees and the main coordination repo.
 8. Avoid printing or committing secrets from `C:\Comfy_UI\.env`.
+9. Reassess model/effort dynamically and escalate a lane to `xhigh` when it is editing Main Flow, deciding tracker truth, opening/closing EC2 runtime windows, resolving cross-lane evidence conflicts, or making model/runtime visibility decisions that affect Main Flow readiness.
+10. Keep every lane pointed back at `C:\Comfy_UI\Implementation\workflows\ui\WAVE42_MAIN_FLOW_20260702.json`; side artifacts are only complete when they produce Main Flow wiring, runtime visibility, candidate/preset evidence, QA decisions, or exact blockers.
 
 ## Latest Manual Supervisor Kick
 
