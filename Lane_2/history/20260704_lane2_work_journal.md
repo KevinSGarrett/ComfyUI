@@ -151,3 +151,13 @@
   - keep node 1009 actor-body behavior as placeholder/off under actor_hand_only_contact_v1 until real actor-body source exists,
   - require Lane 4 runtime and Lane 5 strict visual acceptance before any full strict-contact claim.
 - No Main Flow edits, EC2 runtime, tracker mutation, or model/runtime mutation were performed in this slice; this remains a local evidence+coordination handoff action.
+
+## 2026-07-04T19:27:00Z - Canonical evidence mirror refresh
+
+- Mirrored the latest contact runtime-control package into canonical implementation evidence for cross-lane discoverability:
+  - `C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_190000_lane2_contact_runtime_contract\`
+    - `lane2_contact_runtime_contract_evidence_20260704_190000.json`
+    - `lane2_to_lane1_contact_runtime_control_contract_20260704_181500.md`
+    - `lane2_190100_lane2_status.md`
+- Issued an updated status checkpoint noting no changed blocker state and no new external runtime responses yet:
+  - `reports/20260704_192700_lane2_status.md`
