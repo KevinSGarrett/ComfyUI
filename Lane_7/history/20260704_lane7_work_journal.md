@@ -193,3 +193,45 @@ Evidence / commit:
 - New reprompt request: `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json`
 - Shared queue snapshot: `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests` and `...\\processed`
 - This report and journal update.
+
+## 2026-07-04T11:46:43Z - PM follow-up: Lane 3 model-ref recheck request added to runtime queue
+
+Material state changes since the previous follow-up:
+
+- A new pending request is now in shared EC2 queue:
+  - `20260704_164620_Lane_3_to_Lane_4_current_workflow_model_refs_visibility.json`
+- This request calls out nine missing refs for hash `5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9`, including:
+  - `bbox/hand_yolov8n.pt`
+  - `dw-ll_ucoco_384_bs5.torchscript.pt`
+  - `sam_vit_b_01ec64.pth`
+  - Four local hand checkpoint references under `C:\Comfy_UI_Lora\downloads\Hands`
+  - `/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt`
+- Lane 3 blocker evidence was updated at:
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\evidence\20260704_164604_main_flow_current_workflow_ref_visibility_recheck_evidence.json`
+  - `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\evidence\20260704_164604_main_flow_current_workflow_ref_visibility_recheck.md`
+- C: free space remains healthy at `164.432 GB`.
+- Both cleanup-target paths remain absent.
+- The Lane 1 auxiliary reprompt request remains pending.
+
+Actions taken:
+
+- Added an updated compact PM follow-up routing the new Lane 3 request and refreshed blocker ownership path.
+
+Blockers:
+
+- Lane 4 is still blocked by AWS auth/session on final stopped/no-public-IP proof before it can process/runtime-close any queued visibility work.
+- Runtime readiness remains blocked for:
+  - Lane 3 model-ref recheck request
+  - Lane 1 auxiliary runtime visibility reprompt
+
+Next owner action:
+
+- Lane 4: complete `aws login`, then process:
+  - `20260704_164620_Lane_3_to_Lane_4_current_workflow_model_refs_visibility.json`
+  - `lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json`
+- Lane 4 should return runtime path/load/readback evidence for each missing ref or exact sanctioned remediation guidance.
+
+Evidence / commit:
+
+- New request: `C:\Comfy_UI_Lora\5_sessions\Main\shared_state\ec2_requests\20260704_164620_Lane_3_to_Lane_4_current_workflow_model_refs_visibility.json`
+- Lane 3 evidence record: `C:\Comfy_UI_Lora\5_session_worktrees\Lane_3\Lane_3\evidence\20260704_164604_main_flow_current_workflow_ref_visibility_recheck_evidence.json`
