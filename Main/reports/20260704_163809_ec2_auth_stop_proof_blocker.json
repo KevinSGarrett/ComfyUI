@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "issue_id": "lane7_ec2_auth_stop_proof_blocker_20260704_163809",
+  "created_at_utc": "2026-07-04T16:38:09Z",
+  "owner_lane": "Lane_4",
+  "routing_lane": "Lane_7",
+  "category": "ec2_cost_control",
+  "severity": "high",
+  "status": "owner_lane_action_required",
+  "summary": "AWS auth expired after Lane 4 issued an EC2 stop request, so final stopped/no-public-IP proof remains blocked even though the local lease is free.",
+  "facts": {
+    "instance_id": "i-0560bf8d143f93bb1",
+    "local_lease_state": "free",
+    "lane4_runtime_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_lane6_sdxl_candidate_runtime_20260704T163607Z.json",
+    "lane4_cleanup_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_storage_cleanup_20260704T163155Z.json",
+    "cleanup_evidence_sha256": "34C3CF5740DB7ABA50FAC3C39BFF3B3FF4ABDB1B30563EDA11F619002076933C",
+    "c_drive_free_gb_lane7_followup": 164.499,
+    "c_drive_free_percent_lane7_followup": 17.286
+  },
+  "exact_owner_next_action": "Lane 4 should run aws login, then aws ec2 describe-instances --instance-ids i-0560bf8d143f93bb1 --query \"Reservations[].Instances[].{State:State.Name,PublicIpAddress:PublicIpAddress,PublicDnsName:PublicDnsName}\" --output json. If state is not stopped, Lane 4 must reacquire the shared lease and stop the instance immediately.",
+  "lane7_constraints": [
+    "Lane 7 must not run aws login for Lane 4.",
+    "Lane 7 must not start or stop EC2.",
+    "Lane 7 must not apply cleanup.",
+    "Lane 7 must not promote or re-block trackers."
+  ]
+}

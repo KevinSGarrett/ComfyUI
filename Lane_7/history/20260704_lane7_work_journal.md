@@ -58,3 +58,38 @@ Boundaries preserved:
 - No generated media deletion.
 - No EC2 mirror cleanup dry-run or apply run by Lane 7.
 - No secrets printed.
+
+## 2026-07-04T16:38:09Z - Compact post-cleanup delta
+
+Read updated budget/model/ingestion policy files:
+
+- `C:\Comfy_UI_Lora\5_sessions\Main\USAGE_BUDGET_POLICY.md`
+- `C:\Comfy_UI_Lora\5_sessions\Main\MODEL_EFFORT_ASSIGNMENTS.md`
+- `C:\Comfy_UI_Lora\5_sessions\Main\EC2_MODEL_INGESTION_POLICY.md`
+
+Material changes observed:
+
+- Current canonical Main Flow hash is now `5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9`.
+- Lane 4 applied cleanup to the two supervisor-identified stale date-stamped mirror snapshot roots after lease release.
+- Lane 7 follow-up storage check showed C: at 164.499 GB free, 17.286 percent free.
+- Both cleanup target paths were absent at Lane 7 follow-up.
+- Lane 4 cleanup evidence hash is `34C3CF5740DB7ABA50FAC3C39BFF3B3FF4ABDB1B30563EDA11F619002076933C`.
+- Lane 4 produced Lane 6 v1 SDXL runtime evidence, but AWS auth expired after the stop request, leaving final stopped/no-public-IP proof blocked until Lane 4 reauthenticates.
+- Pending EC2 queue still contains five requests; newer 5C67 Lane 1/Lane 3 requests should supersede older hash context.
+
+Actions taken:
+
+- Wrote compact Lane 7 delta dashboard.
+- Wrote storage cleanup follow-up.
+- Wrote critical-budget resume packet update.
+- Wrote owner-routed EC2 auth/stop-proof blocker for Lane 4.
+
+Boundaries preserved:
+
+- No Main Flow edits.
+- No tracker promotions or re-blocks.
+- No EC2 start/stop or lease action.
+- No cleanup dry-run or apply.
+- No model downloads/deletions.
+- No generated media inspection or deletion.
+- No secrets printed.
