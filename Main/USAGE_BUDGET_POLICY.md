@@ -4,7 +4,7 @@
 
 The lane system must stay autonomous without burning the Codex usage budget through unnecessary polling, repeated deep reads, high-speed execution, or blanket `xhigh` reasoning.
 
-The user reported usage dropping from about 60 percent to about 10 percent on 2026-07-04. Until the user resets usage or approves a larger budget, the system is in **critical budget mode**.
+The user reported usage dropping from about 60 percent to about 10 percent on 2026-07-04, and then reported usage had already reached about 91 percent used after the first budget update. Until the user resets usage or approves a larger budget, the system is in **emergency budget mode**.
 
 ## Standard Speed Requirement
 
@@ -26,6 +26,18 @@ If a tool or UI exposes a speed control, set it to standard. If no speed control
 | Normal | Above 40 percent | Use baseline lane settings, poll normally, keep reports current. |
 | Conservation | 15-40 percent | Reduce polling, avoid broad reads, use lower effort for mechanical work, escalate only for risky decisions. |
 | Critical | 15 percent or below | Poll lightly, wake only owner lanes for concrete next actions, stop no-op loops, prefer scripts over LLM reasoning, reserve `xhigh` for high-risk work. |
+| Emergency | About 90 percent used or higher | Lanes finish current atomic slices, write compact PM status, then pause for supervisor triggers. Heartbeat becomes PM checkpoint only. |
+
+## Emergency Budget Rules
+
+While in emergency budget mode:
+
+- Lanes must not recursively choose new work after finishing an atomic slice.
+- Each lane should write one compact PM status: Done, In Progress, Blocked, Next owner action, evidence/commit.
+- Supervisor follow-ups should be rare and targeted.
+- Prefer no-op monitoring over lane wakeups when there is no safety risk.
+- Do not spend LLM usage trying to overcome known external blockers such as expired AWS authentication.
+- Pause EC2/model-ingest/candidate-runtime expansion until the external blocker is cleared and a concrete owner-lane trigger exists.
 
 ## Critical Budget Rules
 
@@ -82,9 +94,22 @@ Use `medium` or lower for:
 | Lane_6 | `gpt-5.4/high` | `gpt-5.5/xhigh` for candidate/media QA, hand review, or runtime-readiness acceptance. |
 | Lane_7 | `gpt-5.4/medium` | `gpt-5.5/high` or `xhigh` only for release-critical contradiction, storage crisis, or usage-limit resume planning. |
 
+## Current Emergency-Budget Lane Defaults
+
+| Lane | Default while emergency | Escalate when |
+| --- | --- | --- |
+| Lane_1 | `gpt-5.4/medium` | Actual Main Flow edit or graph repair. |
+| Lane_2 | `gpt-5.4/medium` | Strict visual hand/contact validity or irreversible asset decision. |
+| Lane_3 | `gpt-5.4/low` for CSV/model-card/manifest scripts; `medium` for taxonomy | EC2 model-ingest launch decision or risky compatibility claim. |
+| Lane_4 | `gpt-5.5/medium` | Active EC2 lease, cleanup apply, stop-state ambiguity, or EC2-only model-download execution. |
+| Lane_5 | `gpt-5.4/medium` | Tracker mutation, re-block/promotion dispute, or visual QA acceptance. |
+| Lane_6 | `gpt-5.4/medium` | Candidate/media QA, hand review, or runtime-readiness acceptance. |
+| Lane_7 | `gpt-5.4/low` | Release-critical contradiction, storage crisis, or usage-limit resume planning. |
+
 ## Polling Rules
 
 - In critical mode, the supervisor heartbeat should run about every 15 minutes, not every 5 minutes.
+- In emergency mode, the supervisor heartbeat should run about every 30 minutes and act as a PM checkpoint, not a work generator.
 - A heartbeat should first inspect `list_threads`, the EC2 lease file, disk free space, and git branch status.
 - Deep thread reads should be targeted to changed, idle, failed, or high-risk lanes.
 - Send a follow-up prompt only to lanes that need an owner-lane action.

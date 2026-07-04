@@ -6,9 +6,21 @@ Use the strongest model for lanes where mistakes can corrupt shared architecture
 
 ## Current Mode
 
-Current mode is **critical budget mode**.
+Current mode is **emergency budget mode**.
 
-Reason: the user reported usage dropping from about 60 percent to about 10 percent on 2026-07-04. All lanes should use standard speed, reduced default effort, and targeted escalation until usage is reset or the user explicitly authorizes higher burn.
+Reason: the user reported usage dropping from about 60 percent to about 10 percent on 2026-07-04, then reported the system had already reached about 91 percent used after the first budget update. All lanes should use standard speed, finish only current atomic slices, write compact PM status, and pause for supervisor triggers until usage is reset or the user explicitly authorizes higher burn.
+
+## Emergency-Budget Defaults
+
+| Lane | Mission | Default model | Default effort | Escalation |
+| --- | --- | --- | --- | --- |
+| Lane_1 | Main Flow architecture and workflow graph wiring | `gpt-5.4` | `medium` | Escalate only for actual Main Flow edit or graph repair. |
+| Lane_2 | Spatial, pose, mask, contact, depth, and soft-body controls | `gpt-5.4` | `medium` | Escalate only for strict visual hand/contact validity or irreversible asset decision. |
+| Lane_3 | Models, LoRAs, Civitai assets, and self-hosted LLM route | `gpt-5.4` | `low` | Use `medium` for taxonomy; escalate only before EC2 model-ingest launch decisions or risky compatibility claims. |
+| Lane_4 | EC2 runtime, deployment, sync, live validation, and cost control | `gpt-5.5` | `medium` | Escalate for active EC2 lease, cleanup apply, stop-state ambiguity, or EC2-only model-download execution. |
+| Lane_5 | QA, evidence ingestion, tracker promotion, and re-blocking | `gpt-5.4` | `medium` | Escalate only for tracker mutation, re-block/promotion dispute, or visual QA acceptance. |
+| Lane_6 | Candidate generation, presets, tuning, and AI_Front self-hosted LLM integration | `gpt-5.4` | `medium` | Escalate only for candidate/media QA, hand review, or runtime-readiness acceptance. |
+| Lane_7 | Cross-lane integration, release history, usage/storage monitoring, and end-to-end dashboarding | `gpt-5.4` | `low` | Escalate only for release-critical contradiction, storage crisis, or usage-limit resume planning. |
 
 ## Critical-Budget Defaults
 
@@ -38,7 +50,7 @@ When usage is safely above 40 percent or the user explicitly authorizes higher u
 
 ## Dynamic Adjustment Policy
 
-The critical-budget table above is the current baseline. The supervisor must watch lane progress and adjust model/effort when the work changes shape.
+The emergency-budget table above is the current baseline. The supervisor must watch lane progress and adjust model/effort when the work changes shape.
 
 Escalate to `xhigh` when a lane is doing any of the following:
 
@@ -58,8 +70,9 @@ Do not downgrade below the critical-budget table unless the user explicitly auth
 
 ## Current Supervisor Defaults
 
-- Current mode is critical budget mode.
+- Current mode is emergency budget mode.
 - All lanes should run at standard speed.
+- Lanes should finish current atomic slices, write compact PM status, then pause for a supervisor trigger.
 - Hand review, candidate/media QA, Main Flow edits, EC2 live-window work, tracker truth decisions, cleanup apply, and model-ingest launch decisions must escalate to `xhigh`.
 - Routine polling, inventory, report formatting, model-card generation, and no-op status reports should not use `xhigh`.
 - The supervisor should record any intentional temporary escalation in a lane report or coordination summary.

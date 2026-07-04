@@ -10,7 +10,7 @@
       "lane_id": "Lane_1",
       "name": "Main Flow Architecture",
       "model": "gpt-5.4",
-      "reasoning_effort": "high",
+      "reasoning_effort": "medium",
       "branch": "lane/lane-1-main-flow",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1",
       "owned_write_roots": [
@@ -25,7 +25,7 @@
       "lane_id": "Lane_2",
       "name": "Spatial Pose Mask Contact Controls",
       "model": "gpt-5.4",
-      "reasoning_effort": "high",
+      "reasoning_effort": "medium",
       "branch": "lane/lane-2-spatial-contact",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2",
       "owned_write_roots": [
@@ -42,7 +42,7 @@
       "lane_id": "Lane_3",
       "name": "Models LoRAs Civitai Assets",
       "model": "gpt-5.4",
-      "reasoning_effort": "medium",
+      "reasoning_effort": "low",
       "branch": "lane/lane-3-model-assets",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3",
       "owned_write_roots": [
@@ -63,7 +63,7 @@
       "lane_id": "Lane_4",
       "name": "EC2 Runtime Deployment Sync",
       "model": "gpt-5.5",
-      "reasoning_effort": "high",
+      "reasoning_effort": "medium",
       "branch": "lane/lane-4-runtime-ec2",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4",
       "owned_write_roots": [
@@ -83,7 +83,7 @@
       "lane_id": "Lane_5",
       "name": "QA Evidence Tracker Promotion",
       "model": "gpt-5.4",
-      "reasoning_effort": "high",
+      "reasoning_effort": "medium",
       "branch": "lane/lane-5-qa-tracker",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_5",
       "owned_write_roots": [
@@ -100,7 +100,7 @@
       "lane_id": "Lane_6",
       "name": "Generation Presets Candidate Media",
       "model": "gpt-5.4",
-      "reasoning_effort": "high",
+      "reasoning_effort": "medium",
       "branch": "lane/lane-6-generation-presets",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_6",
       "owned_write_roots": [
@@ -119,7 +119,7 @@
       "lane_id": "Lane_7",
       "name": "Integration Release History Operations Watch",
       "model": "gpt-5.4",
-      "reasoning_effort": "medium",
+      "reasoning_effort": "low",
       "branch": "lane/lane-7-integration-history",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_7",
       "owned_write_roots": [
