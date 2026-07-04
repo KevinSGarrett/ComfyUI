@@ -1,0 +1,53 @@
+{
+  "response_id": "lane2_to_lane1_contact_mask_pixel_qa_response_20260704_163800",
+  "responding_lane": "Lane_2",
+  "target_lane": "Lane_1",
+  "created_at_utc": "2026-07-04T16:38:00Z",
+  "source_observation": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane2_per_hand_placeholder_observation_20260704_163216.json",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+  "pixel_qa_artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_163800\\lane2_contact_mask_pixel_qa_20260704_163800.json",
+  "pixel_qa_sha256": "C03962B44576F7F7444CB29BCB0788E3D5A3FD8695D3BB4F7D5E97E86E845207",
+  "summary": {
+    "provisional_mask_geometry_edges": [
+      "fallback_actor_hand_to_receiver_butt",
+      "fallback_actor_hand_to_receiver_breast"
+    ],
+    "blocked_named_per_hand_edges": [
+      "B.left_to_A.left_breast_side_push",
+      "B.right_to_A.right_breast_side_push",
+      "B.left_to_A.left_butt_squeeze",
+      "B.right_to_A.right_butt_squeeze"
+    ],
+    "zero_mask_ids": [
+      "character_a_left_hand",
+      "character_a_right_hand",
+      "character_b_left_hand",
+      "character_b_right_hand",
+      "character_b_body"
+    ]
+  },
+  "key_metrics": {
+    "fallback_actor_hand_to_receiver_butt": {
+      "actor_contact_overlap_over_actor": 1.0,
+      "receiver_contact_overlap_over_contact": 0.92388479,
+      "contact_zone_contained_by_dilated_actor_receiver_shadow": 0.99916814,
+      "pressure_inside_character_a_body_and_receiver": 0.92468361,
+      "indentation_inside_character_a_body_and_receiver": 0.96368337
+    },
+    "fallback_actor_hand_to_receiver_breast": {
+      "actor_contact_overlap_over_actor": 1.0,
+      "receiver_contact_overlap_over_contact": 1.0,
+      "contact_zone_contained_by_dilated_actor_receiver_shadow": 1.0,
+      "pressure_inside_character_a_body_and_receiver": 1.0,
+      "indentation_inside_character_a_body_and_receiver": 1.0
+    }
+  },
+  "limitations": [
+    "Fallback edges are provisional mask-geometry checks only, not visual/runtime acceptance.",
+    "Named left/right per-hand edges remain blocked because nodes 1051-1054 are zero/off placeholders.",
+    "The current combined actor-hand mask has no reliable Character A/B left/right labels, so Lane 2 did not split it into nonzero per-hand masks.",
+    "Node 1009 remains zero/off for actor body segmentation."
+  ],
+  "requested_lane1_action": "No graph change is requested from this artifact. Preserve the current placeholder semantics and route runtime validation through Lane 4; future Lane 2 work should replace placeholders only when a same-scene nonzero split source exists."
+}

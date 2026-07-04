@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "issue_id": "lane2_named_per_hand_edges_blocked_20260704_163800",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:38:00Z",
+  "status": "open",
+  "category": "contact_pair_graph",
+  "summary": "Fallback actor-hand-only contact edges have provisional mask geometry, but the named left/right per-hand contact-pair edges remain blocked because nodes 1051-1054 are zero/off placeholders.",
+  "evidence": {
+    "pixel_qa_artifact": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_163800\\lane2_contact_mask_pixel_qa_20260704_163800.json",
+    "pixel_qa_sha256": "C03962B44576F7F7444CB29BCB0788E3D5A3FD8695D3BB4F7D5E97E86E845207",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9"
+  },
+  "provisional": [
+    "fallback_actor_hand_to_receiver_butt",
+    "fallback_actor_hand_to_receiver_breast"
+  ],
+  "blocked_edges": [
+    "B.left_to_A.left_breast_side_push",
+    "B.right_to_A.right_breast_side_push",
+    "B.left_to_A.left_butt_squeeze",
+    "B.right_to_A.right_butt_squeeze"
+  ],
+  "next_action": "Provide same-scene nonzero left/right per-hand masks before claiming named per-hand edge QA, or keep actor-hand-only mode and mark named per-hand edges inactive."
+}

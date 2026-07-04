@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "review_id": "lane2_contact_mask_pixel_qa_hand_review_20260704_163800",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:38:00Z",
+  "scope": "Pixel QA of current strict body-contact masks, actor-hand fallback edge, and per-hand placeholder edges.",
+  "review_basis": [
+    "Local mask/component/overlap metrics from contact_mask_pixel_qa.py.",
+    "Current Main Flow hash 5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9.",
+    "Active body_contact_slots masks and depth/normal references."
+  ],
+  "verdict": "manual_review_required",
+  "checks": [
+    {
+      "name": "fallback_actor_hand_contact_overlap",
+      "result": "provisional",
+      "notes": "Fallback actor-hand mask overlaps contact zone with actor_contact_overlap_over_actor=1.0 for butt and breast receiver surfaces."
+    },
+    {
+      "name": "per_hand_left_right_identity",
+      "result": "blocked",
+      "notes": "Nodes 1051-1054 are zero/off placeholders; no same-scene left/right hand identity is proven."
+    },
+    {
+      "name": "combined_actor_hand_split_feasibility",
+      "result": "blocked",
+      "notes": "Combined actor-hand mask has components but no reliable Character A/B left/right labels, so nonzero split would be speculative."
+    },
+    {
+      "name": "pressure_and_indentation_containment",
+      "result": "provisional",
+      "notes": "Pressure and indentation mostly sit inside receiver masks for fallback butt and fully inside broad receiver breast mask; runtime/visual context is still required."
+    },
+    {
+      "name": "depth_occlusion_consistency",
+      "result": "manual_review_required",
+      "notes": "Depth luma and occlusion overlap were measured, but absolute foreground/background interpretation requires runtime context and visual review."
+    },
+    {
+      "name": "final_hand_quality",
+      "result": "manual_review_required",
+      "notes": "No generated output was reviewed; this is not a hand anatomy acceptance artifact."
+    }
+  ],
+  "limitations": [
+    "No live ComfyUI runtime execution.",
+    "No generated output or crop was visually accepted.",
+    "Mask geometry cannot prove final hand anatomy, collision, or deformation quality."
+  ],
+  "next_action": "Use this artifact as Lane 2 pixel-level preflight for Lane 4 runtime validation and Lane 5 QA; replace zero/off per-hand placeholders when same-scene split masks are available."
+}

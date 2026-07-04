@@ -1,0 +1,165 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_contact_mask_pixel_qa_evidence_20260704_163800",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:38:00Z",
+  "claim": {
+    "summary": "Lane 2 produced a local pixel-level mask/contact/depth preflight for the current Main Flow body-contact assets. The fallback actor-hand-to-receiver butt and breast edges have provisional mask-geometry support, while named left/right per-hand contact edges remain blocked because nodes 1051-1054 resolve to zero/off placeholder masks.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_contact_mask_pixel_qa_20260704_163800",
+      "main_flow_current_hash_spatial_contact_preflight",
+      "lane1_to_lane2_per_hand_placeholder_observation_20260704_163216",
+      "main_flow_nodes_1051_1054_per_hand_placeholder_masks"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "settings": {
+      "slot_root": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots",
+      "lane1_observation": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane2_per_hand_placeholder_observation_20260704_163216.json",
+      "contact_mode": "actor_hand_only_fallback_with_named_per_hand_edges_blocked",
+      "budget_mode": "critical",
+      "model_effort": "gpt-5.4/high default; no xhigh escalation for this mechanical evidence packaging"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "EC2 was not started or stopped; no live ComfyUI execution was performed."
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\tools\\contact_mask_pixel_qa.py",
+      "type": "reusable_contact_mask_pixel_qa_tool",
+      "size_bytes": 16144,
+      "sha256": "0CCF5F462C5A9A5B99F60CB95CCD87BFEB91C2D822A1506FF68A584E2665DFC3",
+      "description": "Reusable local QA tool that inventories active body-contact masks, connected components, overlap ratios, pressure/indent containment, occlusion overlap, and depth luma summaries."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_163800\\lane2_contact_mask_pixel_qa_20260704_163800.json",
+      "type": "contact_mask_pixel_qa_artifact",
+      "size_bytes": 25826,
+      "sha256": "C03962B44576F7F7444CB29BCB0788E3D5A3FD8695D3BB4F7D5E97E86E845207",
+      "description": "Full pixel QA artifact with per-mask metrics, per-hand split feasibility, contact-edge metrics, and blockers."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_responses\\lane2_to_lane1_contact_mask_pixel_qa_response_20260704_163800.json",
+      "type": "lane1_response",
+      "size_bytes": 2777,
+      "sha256": "6153B82ED05D2402A243081C891CC701AA12653BBEDCF2152D89E6AAC874D549",
+      "description": "Lane 2 response to Lane 1 summarizing fallback geometry support and named per-hand blockers."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\hand_reviews\\20260704_163800_lane2_contact_mask_pixel_qa_hand_review.json",
+      "type": "strict_hand_contact_review_record",
+      "size_bytes": 2424,
+      "sha256": "F6FD2B494EABC30D8D8AB076B6BE12490582E4E59209ADB69597A514CC43519D",
+      "description": "Hand/contact review record stating that pixel QA does not accept final hand anatomy or generated-output contact validity."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\issues\\20260704_163800_named_per_hand_edges_blocked.json",
+      "type": "contact_pair_graph_blocker",
+      "size_bytes": 1282,
+      "sha256": "7DC54F0324D9E225B9FF0C8F56B0D3560F1C61B049C43AE2BC6296EAB62D3457",
+      "description": "Open issue for named left/right per-hand contact-pair edges blocked by zero/off placeholders."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\reports\\20260704_163800_lane2_status.md",
+      "type": "compact_lane_status",
+      "size_bytes": 2044,
+      "sha256": "EA655F2DEB78FCC38005A6EDF148EB304EE3F9634913FF5316B7821D783E38EE",
+      "description": "Compact PM status report for this atomic slice with Done/In Progress/Blocked/Next Owner Action/Evidence sections."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\history\\20260704_lane2_work_journal.md",
+      "type": "lane_history",
+      "size_bytes": 5931,
+      "sha256": "B2681FA7276537F0551950D5305F52E54580E8FC74FFB871A3FA6A42A6813A38",
+      "description": "Lane 2 work journal updated with this pixel QA slice."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "workflow_hash_binding",
+        "result": "pass",
+        "notes": "The QA artifact binds to canonical Main Flow hash 5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9."
+      },
+      {
+        "name": "mask_inventory",
+        "result": "pass",
+        "notes": "The QA pass inventoried 15 body-contact masks and 4 image/depth/normal references from C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots."
+      },
+      {
+        "name": "fallback_actor_hand_to_receiver_butt",
+        "result": "provisional",
+        "notes": "Actor-contact overlap over actor is 1.0; receiver-contact overlap over contact is 0.92388479; contact zone containment by dilated actor/receiver/shadow is 0.99916814."
+      },
+      {
+        "name": "fallback_actor_hand_to_receiver_breast",
+        "result": "provisional",
+        "notes": "Actor-contact overlap over actor is 1.0; receiver-contact overlap over contact, containment, pressure containment, and indentation containment are all 1.0."
+      },
+      {
+        "name": "named_per_hand_contact_edges",
+        "result": "blocked",
+        "notes": "B.left/B.right named hand edges are blocked because character_b_left_hand_mask.png and character_b_right_hand_mask.png are zero/off placeholders."
+      },
+      {
+        "name": "per_hand_split_feasibility",
+        "result": "blocked",
+        "notes": "The combined actor-hand mask has 3 components but no reliable Character A/B left/right labels, so Lane 2 did not invent nonzero per-hand masks."
+      },
+      {
+        "name": "actor_body_collision_qa",
+        "result": "blocked",
+        "notes": "character_b_body_mask.png remains zero/off, so full actor-body collision QA is not proven."
+      },
+      {
+        "name": "runtime_visual_validation",
+        "result": "not_applicable",
+        "notes": "No live ComfyUI run or final output was reviewed; this artifact is a local mask/depth preflight only."
+      }
+    ],
+    "failure_reasons": [
+      "Named per-hand contact-pair edges require same-scene nonzero left/right hand masks.",
+      "Actor body segmentation remains zero/off for full actor-body collision checks.",
+      "Runtime visual/depth interpretation and final hand anatomy acceptance still require Lane 4/Lane 5 evidence."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "strict_visual_acceptance_rows",
+      "per_hand_anatomy_completion_rows",
+      "named_left_right_contact_pair_completion_rows",
+      "full_actor_body_collision_rows",
+      "runtime_generation_rows",
+      "tracker_promotion_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "The exact per-hand mask files exist but are zero/off placeholders, so named left/right contact-pair QA is blocked.",
+      "next_action": "Provide same-scene nonzero Character A/B left/right hand segmentation masks, or keep named per-hand edges inactive and rely only on actor-hand fallback mode."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "character_b_body_mask.png remains zero/off and cannot support full actor-body collision/deformation checks.",
+      "next_action": "Provide a trustworthy same-scene actor body segmentation source when full actor-body collision QA is required."
+    },
+    {
+      "category": "runtime_visual_validation",
+      "description": "The mask/depth preflight has not been validated by a live current-hash Main Flow execution or generated-output hand/contact review.",
+      "next_action": "Lane 4 should run current-hash runtime validation only inside an approved EC2 lease window, then Lane 5 should evaluate visual hand/contact evidence."
+    }
+  ]
+}

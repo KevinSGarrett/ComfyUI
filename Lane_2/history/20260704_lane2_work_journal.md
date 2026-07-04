@@ -42,3 +42,12 @@
 - Re-ran the Lane 2 spatial asset audit against the current canonical Main Flow. Result: `missing_assets` is now `0`; `zero_masks` is `5` because the four per-hand override placeholders and node 1009 are intentionally zero.
 - Prepared a Lane 4 runtime request for strict body-contact validation after Lane 1 re-runs graph/reference validation.
 - Did not edit Main Flow, start or stop EC2, promote tracker rows, or commit binary masks.
+
+## 2026-07-04T16:38:00Z - Contact mask pixel QA
+
+- Consumed Lane 1 current-hash placeholder observation `lane1_to_lane2_per_hand_placeholder_observation_20260704_163216`, which confirmed nodes 1051-1054 now resolve to exact-name 1024x1024 zero/off masks and current validation has zero missing LoadImage/model references.
+- Added reusable Lane 2 tool `Lane_2\tools\contact_mask_pixel_qa.py` for pixel-level strict body-contact mask QA.
+- Ran contact mask pixel QA against current workflow hash `5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9` and active `body_contact_slots`.
+- Result: fallback actor-hand-only geometry has provisional mask overlap for receiver butt and receiver breast surfaces; named per-hand contact edges remain blocked because nodes 1051-1054 are zero/off placeholders.
+- Recorded that the combined actor-hand mask has three connected components but no trustworthy Character A/B left/right labels, so Lane 2 still cannot honestly split it into per-hand masks.
+- Did not run live ComfyUI, edit Main Flow, start or stop EC2, or promote tracker rows.
