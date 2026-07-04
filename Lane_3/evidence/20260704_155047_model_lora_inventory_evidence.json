@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "Lane_3_model_lora_inventory_20260704_155047",
+  "lane_id": "Lane_3",
+  "created_at_utc": "2026-07-04T15:50:47Z",
+  "claim": {
+    "summary": "Local LoRA inventory was classified by compatibility family and hash-verified where expected Civitai hashes exist.",
+    "status": "passed",
+    "requirement_ids": [
+      "Lane_3_model_inventory",
+      "Lane_3_hash_verification",
+      "Lane_3_compatibility_classification"
+    ]
+  },
+  "inputs": {
+    "settings": {
+      "civitai_install_manifest": "C:\\Comfy_UI\\Implementation\\manifests\\civitai_model_acquisition\\civitai_lora_install_20260702_000428.json",
+      "civitai_install_manifest_sha256": "9350EDAB82DFD3957A78B5AA2433B7D4FA557217E0217B0095E896804C3F7C6E",
+      "civitai_search_manifest": "C:\\Comfy_UI\\Implementation\\manifests\\civitai_model_acquisition\\civitai_targeted_lora_search_20260702_000001.json",
+      "civitai_search_manifest_sha256": "DEEDD03BB7943C85AA08B947D969252DC8704B78015895C9AFC600F6F07CF0BE",
+      "runtime_model_root": "C:\\Comfy_UI\\Runtime_Data\\models",
+      "empty_taxonomy_roots_checked": [
+        "C:\\Comfy_UI_Lora\\models",
+        "C:\\Comfy_UI\\models"
+      ]
+    }
+  },
+  "models": [
+    {
+      "name": "Civitai SDXL LoRA batch",
+      "family": "sdxl",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\civitai_wave42\\sdxl",
+      "role": "lora_set",
+      "visibility_evidence": "10 files exist locally; all 10 match expected SHA256 from install manifest.",
+      "load_result": "runtime_visibility_pending_Lane_4"
+    },
+    {
+      "name": "Civitai Flux LoRA batch",
+      "family": "flux",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\civitai_wave42\\flux",
+      "role": "lora_set",
+      "visibility_evidence": "9 files exist locally; all 9 match expected SHA256 from install manifest.",
+      "load_result": "runtime_visibility_pending_Lane_4"
+    },
+    {
+      "name": "Existing Wave42 SDXL LoRA batch",
+      "family": "sdxl",
+      "path": "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl",
+      "role": "lora_set",
+      "visibility_evidence": "3 files exist locally; SHA256 values recorded in compatibility table.",
+      "load_result": "runtime_visibility_pending_Lane_4"
+    },
+    {
+      "name": "Flux / SDXL / video taxonomy folders",
+      "family": "mixed_empty_taxonomy",
+      "path": "C:\\Comfy_UI\\models",
+      "role": "folder_taxonomy",
+      "visibility_evidence": "Folders exist for Flux primary, SDXL specialty refinement, AnimateDiff fallback, HunyuanVideo, LTX, and Wan; no model files found.",
+      "load_result": "not_applicable_empty"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_155047_model_lora_compatibility_table.md",
+      "type": "compatibility_table",
+      "size_bytes": 9891,
+      "sha256": "69AACC2F3E72A718C8990A4DD64F8BF5A775A2D921697BDBAC5E300C29ECD296",
+      "description": "Human-readable compatibility table with per-family LoRA hash status and runtime relative names."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\manifests\\civitai_model_acquisition\\civitai_lora_install_20260702_000428.json",
+      "type": "source_manifest",
+      "size_bytes": 21698,
+      "sha256": "9350EDAB82DFD3957A78B5AA2433B7D4FA557217E0217B0095E896804C3F7C6E",
+      "description": "Civitai install manifest; token-safe, download URLs omitted."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\manifests\\civitai_model_acquisition\\civitai_targeted_lora_search_20260702_000001.json",
+      "type": "source_manifest",
+      "size_bytes": 498785,
+      "sha256": "DEEDD03BB7943C85AA08B947D969252DC8704B78015895C9AFC600F6F07CF0BE",
+      "description": "Civitai targeted search manifest summarized for family/category coverage."
+    }
+  ],
+  "qa": {
+    "verdict": "pass",
+    "checks": [
+      {
+        "name": "Civitai installed file presence",
+        "result": "pass",
+        "notes": "19/19 manifest-listed files exist under C:\\Comfy_UI\\Runtime_Data\\models\\loras\\civitai_wave42."
+      },
+      {
+        "name": "Civitai SHA256 verification",
+        "result": "pass",
+        "notes": "19/19 actual SHA256 values matched the expected manifest hash."
+      },
+      {
+        "name": "Family separation",
+        "result": "pass",
+        "notes": "SDXL and Flux LoRAs are in separate family folders and must not be mixed across checkpoints/workflows."
+      },
+      {
+        "name": "Runtime visibility",
+        "result": "provisional",
+        "notes": "Live ComfyUI `/object_info` visibility was not checked by Lane 3 because EC2/runtime validation belongs to Lane 4."
+      }
+    ],
+    "failure_reasons": []
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "Live ComfyUI model visibility",
+      "Any generated media quality result",
+      "Checkpoint/runtime load success"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "runtime_visibility",
+      "description": "LoRA files and hashes are proven locally, but live ComfyUI visibility/load has not been verified in a Lane 4 runtime window.",
+      "next_action": "Lane 4 should execute the runtime visibility request at Main\\shared_state\\ec2_requests\\20260704_155047_Lane_3_model_lora_llm_visibility.json."
+    }
+  ]
+}
