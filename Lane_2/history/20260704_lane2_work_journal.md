@@ -76,3 +76,11 @@
 - Produced a fresh evidence record: `Lane_2\\evidence_records\\lane2_contact_mask_pixel_qa_revalidation_evidence_20260704_174500.json`.
 - Mirrored both the revalidation run artifact and the fresh evidence into `C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_174500_lane2_contact_mask_pixel_qa`.
 - No runtime/visual acceptance decision was made in this lane; strict visual/contact final acceptance remains deferred to Lane 4/Lane 5 after approved live validation.
+
+## 2026-07-04T16:55:00Z - Spatial/contact periodic revalidation
+
+- Re-ran `main_flow_spatial_asset_audit.py` (`run_id=20260704_175000`) and `contact_mask_pixel_qa.py` (`run_id=20260704_175000`) to verify current hash stability.
+- Confirmed no workflow asset regressions for referenced spatial inputs (90 nodes, 0 missing assets, 5 zero masks), while per-hand split and actor-body blockers remain unchanged.
+- Added evidence record `Lane_2\\evidence_records\\lane2_spatial_contact_revalidation_evidence_20260704_175000.json`.
+- Mirrored evidence to `C:\Comfy_UI\Implementation\evidence\spatial_validation\20260704_175000_lane2_main_flow_spatial_asset_audit` and `C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_175000_lane2_contact_mask_pixel_qa`.
+- No new Lane 1 graph wiring request was needed; current blockers are unchanged and already represented in active wiring requests.
