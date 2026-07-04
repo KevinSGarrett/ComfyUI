@@ -1,0 +1,32 @@
+{
+  "request_id": "lane1_to_lane3_remaining_main_flow_model_visibility_20260704_161725",
+  "requesting_lane": "Lane_1",
+  "target_lane": "Lane_3",
+  "created_at_utc": "2026-07-04T16:17:25Z",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+  "context": "Post Lane 2 body-contact optional metadata patch validation shows Main Flow structural graph clean and model visibility reduced to two unresolved filenames.",
+  "validation_report": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_body_contact_actor_body_optional_20260704_161725.post_validation.json",
+  "missing_model_refs": [
+    {
+      "filename": "z_image_turbo_bf16.safetensors",
+      "node_ids": [
+        30
+      ]
+    },
+    {
+      "filename": "qwen_3_4b.safetensors",
+      "node_ids": [
+        32
+      ]
+    }
+  ],
+  "requested_action": [
+    "Confirm whether each filename should exist locally/runtime-visible under C:\\Comfy_UI\\models, C:\\Comfy_UI\\Runtime_Data\\models, or C:\\Comfy_UI_Lora\\models.",
+    "If present under a different filename, provide an exact Main Flow filename mapping request for Lane 1.",
+    "If absent, provide model acquisition/visibility evidence or a concrete blocker without downloading through Lane 1."
+  ],
+  "not_lane1_actions": [
+    "Lane 1 will not download, delete, or rename model binaries."
+  ]
+}

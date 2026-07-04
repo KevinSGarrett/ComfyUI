@@ -1,0 +1,79 @@
+{
+  "response_id": "lane1_to_lane2_body_contact_slot_decision_20260704_161725",
+  "responding_lane": "Lane_1",
+  "target_lane": "Lane_2",
+  "created_at_utc": "2026-07-04T16:17:25Z",
+  "source_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_body_contact_slot_request_20260704_160416.md",
+  "source_artifact": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\body_contact_slot_validation\\20260704_160416\\lane2_body_contact_slot_validation_20260704_160416.json",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+  "decision": "node_1009_character_b_actor_body_optional_for_actor_hand_only_contact_v1",
+  "implemented_workflow_patch": {
+    "backup_path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_body_contact_optional_20260704_111419.json",
+    "note_node_id": 1097,
+    "node_1009_properties_added": [
+      "wave42_actor_body_mask_optional_for_presets",
+      "wave42_optional_mask_status",
+      "wave42_full_actor_body_collision_qa"
+    ],
+    "workflow_extra_key": "extra.wave42.strict_body_contact_soft_physics.body_contact_slot_validation_20260704_160416"
+  },
+  "graph_evidence": {
+    "node_1009_outbound": [
+      {
+        "output_index": 0,
+        "output_name": "MASK",
+        "link_id": 1420,
+        "to_node_id": 1034,
+        "to_node_title": "QA Preview: Actor Body Mask",
+        "to_slot": 0,
+        "type": "MASK"
+      }
+    ],
+    "active_actor_hand_path": [
+      1012,
+      1026,
+      1027,
+      1028,
+      1029,
+      1030,
+      1031,
+      1039
+    ],
+    "node_1009_active_generation_path": "not_used; feeds QA preview node 1034 only"
+  },
+  "validation_summary": {
+    "node_count": 768,
+    "link_count": 1137,
+    "endpoint_error_count": 0,
+    "active_input_error_count": 0,
+    "missing_load_images": [
+      {
+        "node_id": 1051,
+        "value": "main_flow/body_contact_slots/character_a_left_hand_mask.png"
+      },
+      {
+        "node_id": 1052,
+        "value": "main_flow/body_contact_slots/character_a_right_hand_mask.png"
+      },
+      {
+        "node_id": 1053,
+        "value": "main_flow/body_contact_slots/character_b_left_hand_mask.png"
+      },
+      {
+        "node_id": 1054,
+        "value": "main_flow/body_contact_slots/character_b_right_hand_mask.png"
+      }
+    ],
+    "missing_models_unique": [
+      "z_image_turbo_bf16.safetensors",
+      "qwen_3_4b.safetensors"
+    ]
+  },
+  "remaining_lane2_actions": [
+    "No Main Flow reroute is needed for actor_hand_only_contact_v1.",
+    "Provide a trustworthy non-empty actor body segmentation source and materialize main_flow/body_contact_slots/character_b_body_mask.png when full actor-body collision QA is required.",
+    "The previously requested four per-hand masks for nodes 1051-1054 are still missing from Input_References."
+  ],
+  "runtime_status": "not_run_by_lane_1; EC2 not started or stopped"
+}

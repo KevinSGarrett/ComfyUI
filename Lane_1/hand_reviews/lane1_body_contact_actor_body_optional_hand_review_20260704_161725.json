@@ -1,0 +1,23 @@
+{
+  "review_id": "lane1_body_contact_actor_body_optional_hand_review_20260704_161725",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:17:25Z",
+  "scope": "Main Flow workflow wiring, body-contact mask metadata, and Lane 2 mask validation artifacts only",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+  "verdict": "not_visually_reviewed",
+  "review_basis": "workflow_structure_and_mask_metadata_only",
+  "actual_generated_media_reviewed": [],
+  "checks": {
+    "hand_count_and_left_right_identity": "manual_visual_review_required",
+    "finger_count_continuity_separation": "manual_visual_review_required",
+    "wrist_to_hand_connection": "manual_visual_review_required",
+    "per_hand_mask_alignment": "blocked_by_missing_nodes_1051_1054_mask_files",
+    "contact_zone_mask_alignment": "not_visually_reviewed",
+    "pose_depth_normal_consistency": "not_visually_reviewed",
+    "occlusion_ordering_at_contact_points": "not_visually_reviewed",
+    "collision_or_interpenetration": "full_actor_body_collision_qa_blocked_until_non_empty_character_b_body_mask",
+    "soft_body_deformation_consistency": "runtime_visual_review_required"
+  },
+  "notes": "Lane 1 did not inspect rendered media. The patch only documents graph behavior: node 1009 is optional for actor_hand_only_contact_v1 and active hand contact uses node 1012 through node 1026."
+}

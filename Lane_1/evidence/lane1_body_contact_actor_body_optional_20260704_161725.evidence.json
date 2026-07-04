@@ -1,0 +1,233 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane1_body_contact_actor_body_optional_20260704_161725",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:17:25Z",
+  "claim": {
+    "summary": "Lane 1 patched the canonical Main Flow to document that node 1009 Character B Actor Body is optional for actor_hand_only_contact_v1 because it feeds QA preview only; active hand-driven contact uses node 1012 through the combined mask chain. Structural validation passes with no endpoint or active-path input errors.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_to_lane1_body_contact_slot_request_20260704_160416",
+      "main_flow_actor_hand_only_contact_v1",
+      "main_flow_structural_validation"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+    "settings": {
+      "backup_path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_body_contact_optional_20260704_111419.json",
+      "source_lane2_request": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_body_contact_slot_request_20260704_160416.md",
+      "source_lane2_artifact": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\body_contact_slot_validation\\20260704_160416\\lane2_body_contact_slot_validation_20260704_160416.json",
+      "source_lane2_strict_hand_reference_evidence": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\evidence_records\\lane2_strict_hand_reference_evidence_20260704_160416.json",
+      "validation_command": "python validate_main_flow.py --workflow C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json --reference-root C:\\Comfy_UI\\Input_References --reference-root C:\\Comfy_UI\\input --reference-root C:\\Comfy_UI --model-root C:\\Comfy_UI\\models --model-root C:\\Comfy_UI\\Runtime_Data\\models --model-root C:\\Comfy_UI_Lora\\models"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_1",
+    "ec2_state_after": "not_checked_by_lane_1",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane1_runtime_action": "EC2 was not started or stopped; no live endpoint was called."
+  },
+  "models": [
+    {
+      "name": "z_image_turbo_bf16.safetensors",
+      "family": "unresolved Main Flow model reference",
+      "path": "not found under configured Lane 1 model roots",
+      "role": "Main Flow node 30 model reference"
+    },
+    {
+      "name": "qwen_3_4b.safetensors",
+      "family": "unresolved Main Flow model reference",
+      "path": "not found under configured Lane 1 model roots",
+      "role": "Main Flow node 32 model reference"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+      "type": "patched_canonical_workflow",
+      "size_bytes": 1300902,
+      "sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+      "description": "Canonical Main Flow after actor body optional metadata patch."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_body_contact_optional_20260704_111419.json",
+      "type": "pre_patch_workflow_backup",
+      "size_bytes": 1296262,
+      "sha256": "44f366f162a937b10c2d7157c5f0b668e1d27bdfdb93698a6181981ce4a3dd22",
+      "description": "Timestamped backup created immediately before modifying the canonical workflow."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_body_contact_actor_body_optional_20260704_161725.post_validation.json",
+      "type": "post_patch_validation_report",
+      "size_bytes": 60615,
+      "sha256": "98e57be269bab1496ca0c09c37611e7255837e744104b2d9951812c7590cd2fd",
+      "description": "Full structural validation output after patch."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_body_contact_actor_body_optional_20260704_161725.graph_trace.json",
+      "type": "graph_trace_report",
+      "size_bytes": 12370,
+      "sha256": "b936dcb6bb0d14ff6aa63523bc9bc6726cea8766a095c6831600e4cb3043a97e",
+      "description": "Focused trace proving node 1009 only feeds QA preview while actor hand path remains active."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\lane1_requests\\lane2_to_lane1_body_contact_slot_request_20260704_160416.md",
+      "type": "source_lane2_request",
+      "size_bytes": 1908,
+      "sha256": "d8d0c99a98df62ffa08e7bb1a882df9239dc39bae9dce8494cfdb9f80420d397",
+      "description": "Lane 2 request consumed by this patch."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\body_contact_slot_validation\\20260704_160416\\lane2_body_contact_slot_validation_20260704_160416.json",
+      "type": "source_lane2_validation_artifact",
+      "size_bytes": 15212,
+      "sha256": "e084c815289b07f14c392481c108c007277398089afce08d078f91ca16afdf80",
+      "description": "Lane 2 body-contact slot validation artifact."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane2_body_contact_slot_decision_20260704_161725.json",
+      "type": "lane2_response",
+      "size_bytes": 3108,
+      "sha256": "06f09b71bc1757cf42f115747b8e257a75ff75dadcb742644765f1cdb6b94456",
+      "description": "Lane 1 decision response to Lane 2 body-contact slot request."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane2_actor_body_segmentation_source_20260704_161725.json",
+      "type": "lane2_dependency_request",
+      "size_bytes": 1869,
+      "sha256": "7cb8e37123ed4460857fcfdcc555a374adc54de66e3851337ff4c08996e5edaf",
+      "description": "Conditional request for non-empty actor body segmentation source."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane3_remaining_main_flow_model_visibility_20260704_161725.json",
+      "type": "lane3_dependency_request",
+      "size_bytes": 1500,
+      "sha256": "2d9f5dc85fa6381381bac253ce07e1d0f18ef1bc1cb9432e94c42b0e5ea2e601",
+      "description": "Updated request for the remaining unresolved Main Flow model filenames."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\hand_reviews\\lane1_body_contact_actor_body_optional_hand_review_20260704_161725.json",
+      "type": "hand_review_record",
+      "size_bytes": 1517,
+      "sha256": "66df635c239b04c52394cd5b962b002d6f3d05bc2d8cdaed82acda9506a69472",
+      "description": "Strict hand/contact review limitation record for this workflow-structure-only patch."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "timestamped_backup_created",
+        "result": "pass",
+        "notes": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_body_contact_optional_20260704_111419.json"
+      },
+      {
+        "name": "workflow_json_valid",
+        "result": "pass",
+        "notes": "Workflow parsed successfully after patch."
+      },
+      {
+        "name": "node_and_link_counts",
+        "result": "pass",
+        "notes": "node_count=768; link_count=1137; last_node_id=1097; last_link_id=1506"
+      },
+      {
+        "name": "link_endpoint_errors",
+        "result": "pass",
+        "notes": "input_link_errors=0; output_link_errors=0; link_endpoint_errors=0"
+      },
+      {
+        "name": "active_path_dangling_inputs",
+        "result": "pass",
+        "notes": "active_input_errors=0; active_endpoint_errors=0"
+      },
+      {
+        "name": "node_1009_optional_metadata",
+        "result": "pass",
+        "notes": "Node 1009 now records actor_hand_only_contact_v1 optional/zero-mask policy."
+      },
+      {
+        "name": "node_1009_not_active_generation_path",
+        "result": "pass",
+        "notes": "Node 1009 outbound link goes only to node 1034 QA Preview: Actor Body Mask."
+      },
+      {
+        "name": "actor_hand_active_path",
+        "result": "pass",
+        "notes": "Node 1012 feeds node 1026 and continues through the combined mask chain into node 1039."
+      },
+      {
+        "name": "body_contact_slot_files_999_1017",
+        "result": "pass",
+        "notes": "Lane 2 artifact reports all 19 nodes 999-1017 exist and are 1024x1024; node 1009 remains zero-valued by design."
+      },
+      {
+        "name": "load_image_references",
+        "result": "provisional",
+        "notes": "4 missing LoadImage/LoadImageMask references remain: main_flow/body_contact_slots/character_a_left_hand_mask.png, main_flow/body_contact_slots/character_a_right_hand_mask.png, main_flow/body_contact_slots/character_b_left_hand_mask.png, main_flow/body_contact_slots/character_b_right_hand_mask.png"
+      },
+      {
+        "name": "model_filenames",
+        "result": "provisional",
+        "notes": "2 unique unresolved model filenames remain: z_image_turbo_bf16.safetensors, qwen_3_4b.safetensors"
+      },
+      {
+        "name": "strict_hand_reference_node_972",
+        "result": "pass",
+        "notes": "Lane 2 provided strict_hand_detail_input.png; validator no longer reports it missing."
+      },
+      {
+        "name": "runtime_validation",
+        "result": "not_applicable",
+        "notes": "Lane 1 did not start or stop EC2 and did not call live ComfyUI endpoints."
+      },
+      {
+        "name": "strict_hand_visual_review",
+        "result": "provisional",
+        "notes": "Workflow-structure-only patch; no rendered media reviewed, so hand/contact visual QA remains not_visually_reviewed/manual_review_required."
+      }
+    ],
+    "failure_reasons": [
+      "Nodes 1051-1054 per-hand mask files are still missing from configured reference roots.",
+      "Full actor-body collision QA remains blocked until a non-empty character_b_body_mask.png or trustworthy actor body segmentation source exists.",
+      "Main Flow model filename visibility still has unresolved z_image_turbo_bf16.safetensors and qwen_3_4b.safetensors references.",
+      "No live ComfyUI runtime validation was performed by Lane 1."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "runtime_generation_rows",
+      "strict_visual_acceptance_rows",
+      "full_actor_body_collision_qa_rows",
+      "tracker_promotion_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "missing_per_hand_masks",
+      "description": "New explicit per-hand mask slots nodes 1051-1054 still do not resolve in the configured reference roots.",
+      "next_action": "Lane 2 should provide character_a_left_hand_mask.png, character_a_right_hand_mask.png, character_b_left_hand_mask.png, and character_b_right_hand_mask.png under C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "character_b_body_mask.png exists but is zero-valued; it is optional for actor_hand_only_contact_v1 but not sufficient for full actor-body collision QA.",
+      "next_action": "Lane 2 should provide a trustworthy same-scene actor body segmentation source and materialize a non-empty 1024x1024 character_b_body_mask.png when full actor-body collision QA is required."
+    },
+    {
+      "category": "model_visibility",
+      "description": "Two unique Main Flow model filenames remain unresolved in Lane 1 configured model roots.",
+      "next_action": "Lane 3 should resolve or map z_image_turbo_bf16.safetensors and qwen_3_4b.safetensors."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "The patched workflow has not been executed in live ComfyUI after this change.",
+      "next_action": "After missing references/models are resolved, Lane 4 should run live Main Flow validation inside an EC2 lease window if runtime validation is requested."
+    }
+  ]
+}

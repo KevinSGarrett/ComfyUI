@@ -1,0 +1,32 @@
+{
+  "request_id": "lane1_to_lane2_actor_body_segmentation_source_20260704_161725",
+  "requesting_lane": "Lane_1",
+  "target_lane": "Lane_2",
+  "created_at_utc": "2026-07-04T16:17:25Z",
+  "priority": "conditional_for_full_actor_body_collision_qa",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+  "dependency": {
+    "node_id": 1009,
+    "node_title": "Mask: Character B Actor Body",
+    "widget_value": "main_flow/body_contact_slots/character_b_body_mask.png",
+    "current_status": "exists_1024x1024_but_zero_valued",
+    "current_zero_mask_sha256_from_lane2": "D69112264DB6C2C1B6F6BC930B7D7CF38C27A4FEAD1B5000259265C5405C66EF"
+  },
+  "accepted_resolution": {
+    "file_to_materialize": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png",
+    "requirements": [
+      "same-scene Character B actor body segmentation source",
+      "1024x1024 dimensions matching the current body_contact_slots set",
+      "non-zero mask with recorded nonzero_pixel_ratio",
+      "provenance path and SHA256 for source image/mask",
+      "explicit note if mask is only suitable for collision QA and not active generation"
+    ]
+  },
+  "lane1_current_workflow_decision": "node 1009 is optional for actor_hand_only_contact_v1 and not required for the active hand-driven contact path",
+  "full_actor_body_collision_qa_status": "blocked_until_this_dependency_is_provided",
+  "related_evidence": [
+    "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_body_contact_actor_body_optional_20260704_161725.evidence.json",
+    "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_body_contact_actor_body_optional_20260704_161725.graph_trace.json"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "issue_id": "lane1_body_contact_remaining_blockers_20260704_161725",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:17:25Z",
+  "status": "open",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+  "evidence": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_body_contact_actor_body_optional_20260704_161725.evidence.json",
+  "blockers": [
+    {
+      "category": "missing_per_hand_masks",
+      "description": "New explicit per-hand mask slots nodes 1051-1054 still do not resolve in the configured reference roots.",
+      "next_action": "Lane 2 should provide character_a_left_hand_mask.png, character_a_right_hand_mask.png, character_b_left_hand_mask.png, and character_b_right_hand_mask.png under C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots."
+    },
+    {
+      "category": "actor_body_segmentation",
+      "description": "character_b_body_mask.png exists but is zero-valued; it is optional for actor_hand_only_contact_v1 but not sufficient for full actor-body collision QA.",
+      "next_action": "Lane 2 should provide a trustworthy same-scene actor body segmentation source and materialize a non-empty 1024x1024 character_b_body_mask.png when full actor-body collision QA is required."
+    },
+    {
+      "category": "model_visibility",
+      "description": "Two unique Main Flow model filenames remain unresolved in Lane 1 configured model roots.",
+      "next_action": "Lane 3 should resolve or map z_image_turbo_bf16.safetensors and qwen_3_4b.safetensors."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "The patched workflow has not been executed in live ComfyUI after this change.",
+      "next_action": "After missing references/models are resolved, Lane 4 should run live Main Flow validation inside an EC2 lease window if runtime validation is requested."
+    }
+  ]
+}
