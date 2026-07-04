@@ -31,3 +31,13 @@
 - Preserved runtime/candidate/strict visual blockers because local ComfyUI `127.0.0.1:8188` was blocked and the hand-review record was `not_visually_reviewed`.
 - Evidence record: `C:\Comfy_UI\Implementation\evidence\promotion_quality_audit\lane5_continuous_evidence_intake_evidence_20260704_162908.json`
 - No tracker snapshot created.
+
+## 2026-07-04T16:36:56Z - Critical-Budget Compact No-Promotion Audit
+
+- Read updated `USAGE_BUDGET_POLICY.md` and `MODEL_EFFORT_ASSIGNMENTS.md`; switched Lane 5 routine no-promotion audit posture to `gpt-5.4/high`.
+- Audited new Lane 6 request-runner evidence and Lane 1 current-hash reference-closure evidence.
+- Validated both source records against the shared evidence schema.
+- Accepted bounded direct evidence for AI_Front local-only request-runner plumbing and current-hash local graph/file/model-reference closure.
+- No tracker snapshot created because generated prompt-plan manifests, replayable builder logs, runtime/catalog load, candidate media, strict visual hand/contact review, and actor-body collision QA remain unproven.
+- Evidence record: `C:\Comfy_UI\Implementation\evidence\promotion_quality_audit\lane5_continuous_evidence_intake_evidence_20260704_163656.json`
+- Emergency PM instruction received after validation; Lane 5 will commit this atomic slice and pause for supervisor trigger.

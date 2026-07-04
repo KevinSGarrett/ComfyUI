@@ -1,0 +1,29 @@
+{
+  "manifest_path": "C:\\Comfy_UI\\Implementation\\manifests\\promotion_quality_audit\\continuous_lane_evidence_intake_20260704_163656.json",
+  "evidence_record_path": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\lane5_continuous_evidence_intake_evidence_20260704_163656.json",
+  "doc_path": "C:\\Comfy_UI\\Implementation\\docs\\CONTINUOUS_LANE5_EVIDENCE_INTAKE_20260704_163656.md",
+  "csv_path": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\continuous_lane_evidence_intake_20260704_163656.csv",
+  "created_at_utc": "2026-07-04T16:36:56Z",
+  "budget_mode": "critical",
+  "model_effort": {
+    "model": "gpt-5.4",
+    "reasoning_effort": "medium"
+  },
+  "tracker_snapshot_created": false,
+  "tracker_rows_promoted": [],
+  "tracker_rows_reblocked": [],
+  "tracker_rows_preserved_blocked_or_not_proven": [
+    "SETUP-0127",
+    "IMPL-00419",
+    "current Main Flow runtime execution",
+    "runtime catalog/load visibility",
+    "final_candidate_media_quality",
+    "strict_visual_hand_quality"
+  ],
+  "current_canonical_workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+  "source_evidence": [
+    "C:\\Comfy_UI\\Implementation\\evidence\\generation_preset_lab\\wave42_ai_front_self_hosted_request_runner_evidence_20260704_163146.json",
+    "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_current_hash_reference_closure_20260704_163216.evidence.json"
+  ],
+  "lane5_decision": "compact_no_promotion_audit"
+}
