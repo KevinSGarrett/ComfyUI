@@ -1,0 +1,20 @@
+{
+  "manifest_path": "C:\\Comfy_UI\\Implementation\\manifests\\promotion_quality_audit\\continuous_lane_evidence_intake_20260704_161434.json",
+  "evidence_record_path": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\lane5_continuous_evidence_intake_evidence_20260704_161434.json",
+  "doc_path": "C:\\Comfy_UI\\Implementation\\docs\\CONTINUOUS_LANE5_EVIDENCE_INTAKE_20260704_161434.md",
+  "csv_path": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\continuous_lane_evidence_intake_20260704_161434.csv",
+  "created_at_utc": "2026-07-04T16:14:34.250419Z",
+  "tracker_snapshot_created": false,
+  "tracker_rows_promoted": [],
+  "tracker_rows_reblocked": [],
+  "tracker_rows_preserved_blocked_or_not_proven": [
+    "ART-0890",
+    "ART-0914",
+    "IMPL-00079",
+    "WFLOW-00053"
+  ],
+  "current_canonical_workflow_sha256": "44f366f162a937b10c2d7157c5f0b668e1d27bdfdb93698a6181981ce4a3dd22",
+  "schema_valid_records": 4,
+  "non_schema_or_support_artifacts": 6,
+  "main_flow_convergence_verdict": "Current Main Flow structural contact-control wiring advanced, but readiness remains blocked by missing per-hand masks, one zero body mask, model visibility, stale Lane 6 preset hash, and absent live runtime/candidate evidence."
+}
