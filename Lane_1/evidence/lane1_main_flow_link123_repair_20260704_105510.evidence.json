@@ -1,0 +1,873 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane1_main_flow_link123_repair_20260704_105510",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T15:55:10Z",
+  "claim": {
+    "summary": "Main Flow graph wiring repair for link 123 validated; active graph has zero dangling endpoint/input errors after patch. Runtime readiness remains provisional pending external reference/model visibility and Lane 4 live validation.",
+    "status": "provisional",
+    "requirement_ids": [
+      "Lane_1:Main Flow graph wiring",
+      "Lane_1:workflow JSON validation",
+      "Lane_1:active-path dangling-input validation"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+    "settings": {
+      "repair": {
+        "description": "Added existing link id 123 to node 417 CLIP output slot links list.",
+        "node_id": 417,
+        "node_title": "SDXL Mixer Slots 13-16",
+        "output_slot": 1,
+        "link_id": 123,
+        "link_record": [
+          123,
+          417,
+          1,
+          419,
+          0,
+          "CLIP"
+        ]
+      },
+      "backup_path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane1_link123_repair_20260704_105116.json",
+      "backup_sha256": "b8d0899ce45845f97f8540dfb379d9e8fd8987b42a65a123d67a249880e72e13",
+      "backup_matches_pre_repair_source": true,
+      "validator_script": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\validate_main_flow.py",
+      "reference_roots_checked": [
+        "C:\\Comfy_UI\\Input_References",
+        "C:\\Comfy_UI\\input",
+        "C:\\Comfy_UI"
+      ],
+      "model_roots_checked": [
+        "C:\\Comfy_UI\\models",
+        "C:\\Comfy_UI\\Runtime_Data\\models",
+        "C:\\Comfy_UI_Lora\\models"
+      ],
+      "counts": {
+        "initial": {
+          "workflow_sha256": "b8d0899ce45845f97f8540dfb379d9e8fd8987b42a65a123d67a249880e72e13",
+          "node_count": 721,
+          "link_count": 1081,
+          "endpoint_errors": 1,
+          "active_endpoint_errors": 1,
+          "missing_load_image_references": 1,
+          "missing_model_references": 65
+        },
+        "post_repair": {
+          "workflow_sha256": "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+          "node_count": 721,
+          "link_count": 1081,
+          "endpoint_errors": 0,
+          "active_endpoint_errors": 0,
+          "missing_load_image_references": 1,
+          "missing_model_references": 65
+        }
+      },
+      "missing_load_image_references": [
+        {
+          "exists": false,
+          "matches": [],
+          "node_id": 972,
+          "node_type": "LoadImage",
+          "title": "Strict Hand Base Image Input",
+          "value": "main_flow/strict_hand_detail_input.png"
+        }
+      ],
+      "unique_missing_model_references": [
+        {
+          "value": "RealESRGAN_x4plus.pth",
+          "count": 1,
+          "node_ids": [
+            60
+          ],
+          "node_types": [
+            "UpscaleModelLoader"
+          ]
+        },
+        {
+          "value": "RealVisXL_V5.0_fp16.safetensors",
+          "count": 6,
+          "node_ids": [
+            10,
+            413,
+            462,
+            643,
+            979,
+            1035
+          ],
+          "node_types": [
+            "CheckpointLoaderSimple"
+          ]
+        },
+        {
+          "value": "ae.safetensors",
+          "count": 1,
+          "node_ids": [
+            37
+          ],
+          "node_types": [
+            "VAELoader"
+          ]
+        },
+        {
+          "value": "controlnet-canny-sdxl-1.0-small.safetensors",
+          "count": 1,
+          "node_ids": [
+            120
+          ],
+          "node_types": [
+            "ControlNetLoader"
+          ]
+        },
+        {
+          "value": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+          "count": 1,
+          "node_ids": [
+            1043
+          ],
+          "node_types": [
+            "ControlNetLoader"
+          ]
+        },
+        {
+          "value": "controlnet-openpose-sdxl-1.0.safetensors",
+          "count": 2,
+          "node_ids": [
+            984,
+            1041
+          ],
+          "node_types": [
+            "ControlNetLoader"
+          ]
+        },
+        {
+          "value": "flux1-dev-fp8.safetensors",
+          "count": 2,
+          "node_ids": [
+            461,
+            642
+          ],
+          "node_types": [
+            "CheckpointLoaderSimple"
+          ]
+        },
+        {
+          "value": "flux1-schnell-fp8.safetensors",
+          "count": 2,
+          "node_ids": [
+            100,
+            425
+          ],
+          "node_types": [
+            "CheckpointLoaderSimple"
+          ]
+        },
+        {
+          "value": "qwen_3_4b.safetensors",
+          "count": 1,
+          "node_ids": [
+            32
+          ],
+          "node_types": [
+            "CLIPLoader"
+          ]
+        },
+        {
+          "value": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+          "count": 3,
+          "node_ids": [
+            503,
+            684,
+            740
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+          "count": 3,
+          "node_ids": [
+            504,
+            685,
+            741
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+          "count": 3,
+          "node_ids": [
+            503,
+            684,
+            740
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+          "count": 3,
+          "node_ids": [
+            503,
+            684,
+            740
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+          "count": 3,
+          "node_ids": [
+            503,
+            684,
+            740
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+          "count": 3,
+          "node_ids": [
+            504,
+            685,
+            741
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+          "count": 3,
+          "node_ids": [
+            499,
+            680,
+            736
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+          "count": 3,
+          "node_ids": [
+            499,
+            680,
+            736
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+          "count": 3,
+          "node_ids": [
+            499,
+            680,
+            736
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+          "count": 3,
+          "node_ids": [
+            499,
+            680,
+            736
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/skin/flux_skin_Bombshell_Flux_V3.safetensors",
+          "count": 1,
+          "node_ids": [
+            412
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/skin/flux_skin_FC-Bandeau.safetensors",
+          "count": 1,
+          "node_ids": [
+            412
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+          "count": 4,
+          "node_ids": [
+            412,
+            504,
+            685,
+            741
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+          "count": 3,
+          "node_ids": [
+            504,
+            685,
+            741
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+          "count": 3,
+          "node_ids": [
+            505,
+            686,
+            742
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)"
+          ]
+        },
+        {
+          "value": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+          "count": 5,
+          "node_ids": [
+            501,
+            682,
+            738,
+            980,
+            1036
+          ],
+          "node_types": [
+            "Lora Loader Stack (rgthree)",
+            "LoraLoader"
+          ]
+        },
+        {
+          "value": "z_image_turbo_bf16.safetensors",
+          "count": 1,
+          "node_ids": [
+            30
+          ],
+          "node_types": [
+            "UNETLoader"
+          ]
+        }
+      ],
+      "ec2_started_or_stopped_by_lane": false,
+      "validator_reports": {
+        "initial_canonical": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_main_flow_link123_repair_20260704_105510.initial_validation.json",
+        "post_canonical": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_main_flow_link123_repair_20260704_105510.post_validation.json",
+        "initial_worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_main_flow_link123_repair_20260704_105510.initial_validation.json",
+        "post_worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\evidence\\lane1_main_flow_link123_repair_20260704_105510.post_validation.json",
+        "initial_shared": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_main_flow_link123_repair_20260704_105510.initial_validation.json",
+        "post_shared": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_main_flow_link123_repair_20260704_105510.post_validation.json"
+      }
+    }
+  },
+  "models": [
+    {
+      "name": "RealVisXL_V5.0_fp16.safetensors",
+      "family": "sdxl",
+      "path": "RealVisXL_V5.0_fp16.safetensors",
+      "role": "CheckpointLoaderSimple",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        10,
+        413,
+        462,
+        643,
+        979,
+        1035
+      ]
+    },
+    {
+      "name": "sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        411,
+        505,
+        686,
+        742
+      ]
+    },
+    {
+      "name": "sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        411
+      ]
+    },
+    {
+      "name": "sdxl_adult_male_Double_Kiss_POV.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        411
+      ]
+    },
+    {
+      "name": "z_image_turbo_bf16.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "z_image_turbo_bf16.safetensors",
+      "role": "UNETLoader",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        30
+      ]
+    },
+    {
+      "name": "qwen_3_4b.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "qwen_3_4b.safetensors",
+      "role": "CLIPLoader",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        32
+      ]
+    },
+    {
+      "name": "ae.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "ae.safetensors",
+      "role": "VAELoader",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        37
+      ]
+    },
+    {
+      "name": "RealESRGAN_x4plus.pth",
+      "family": "upscale",
+      "path": "RealESRGAN_x4plus.pth",
+      "role": "UpscaleModelLoader",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        60
+      ]
+    },
+    {
+      "name": "flux1-schnell-fp8.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "flux1-schnell-fp8.safetensors",
+      "role": "CheckpointLoaderSimple",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        100,
+        425
+      ]
+    },
+    {
+      "name": "flux_skin_Bombshell_Flux_V3.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/skin/flux_skin_Bombshell_Flux_V3.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        412
+      ]
+    },
+    {
+      "name": "flux_skin_FC-Bandeau.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/skin/flux_skin_FC-Bandeau.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        412
+      ]
+    },
+    {
+      "name": "flux_skin_OiledSkin_FluxDev.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        412,
+        504,
+        685,
+        741
+      ]
+    },
+    {
+      "name": "controlnet-canny-sdxl-1.0-small.safetensors",
+      "family": "controlnet",
+      "path": "controlnet-canny-sdxl-1.0-small.safetensors",
+      "role": "ControlNetLoader",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        120
+      ]
+    },
+    {
+      "name": "flux1-dev-fp8.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "flux1-dev-fp8.safetensors",
+      "role": "CheckpointLoaderSimple",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        461,
+        642
+      ]
+    },
+    {
+      "name": "flux_hands_feminine_hands.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        499,
+        680,
+        736
+      ]
+    },
+    {
+      "name": "flux_hands_Detailed_Hands-000001.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        499,
+        680,
+        736
+      ]
+    },
+    {
+      "name": "flux_hands_Better_hands_flux_v1_0.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        499,
+        680,
+        736
+      ]
+    },
+    {
+      "name": "flux_hands_Hand_v2.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        499,
+        680,
+        736
+      ]
+    },
+    {
+      "name": "sdxl_jewelry_accessories_Hands.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        501,
+        682,
+        738,
+        980,
+        1036
+      ]
+    },
+    {
+      "name": "flux_fluids_flux_sweat_v2.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        503,
+        684,
+        740
+      ]
+    },
+    {
+      "name": "flux_fluids_SWEATY.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        503,
+        684,
+        740
+      ]
+    },
+    {
+      "name": "flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        503,
+        684,
+        740
+      ]
+    },
+    {
+      "name": "flux_fluids_Sweaty_1.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        503,
+        684,
+        740
+      ]
+    },
+    {
+      "name": "flux_fluids_Oily_skin_style_v1.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        504,
+        685,
+        741
+      ]
+    },
+    {
+      "name": "flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        504,
+        685,
+        741
+      ]
+    },
+    {
+      "name": "flux_fluids_mascara-tears-v2.safetensors",
+      "family": "flux_or_z_image_family",
+      "path": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        504,
+        685,
+        741
+      ]
+    },
+    {
+      "name": "sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "role": "Lora Loader Stack (rgthree)",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        505,
+        686,
+        742
+      ]
+    },
+    {
+      "name": "sdxl_jewelry_accessories_Hands.safetensors",
+      "family": "sdxl",
+      "path": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "role": "LoraLoader",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        501,
+        682,
+        738,
+        980,
+        1036
+      ]
+    },
+    {
+      "name": "controlnet-openpose-sdxl-1.0.safetensors",
+      "family": "controlnet",
+      "path": "controlnet-openpose-sdxl-1.0.safetensors",
+      "role": "ControlNetLoader",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        984,
+        1041
+      ]
+    },
+    {
+      "name": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "family": "controlnet",
+      "path": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "role": "ControlNetLoader",
+      "visibility_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1\\Lane_1\\scratch\\main_flow_validation_post_link123_repair_20260704_105127.json",
+      "load_result": "not_visible_in_checked_local_roots",
+      "referenced_by_node_ids": [
+        1043
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+      "type": "workflow_json",
+      "size_bytes": 1188058,
+      "sha256": "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+      "description": "Canonical Main Flow workflow after Lane 1 link 123 repair."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane1_link123_repair_20260704_105116.json",
+      "type": "workflow_backup_json",
+      "size_bytes": 1188040,
+      "sha256": "b8d0899ce45845f97f8540dfb379d9e8fd8987b42a65a123d67a249880e72e13",
+      "description": "Timestamped backup created before modifying the canonical workflow."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_main_flow_link123_repair_20260704_105510.initial_validation.json",
+      "type": "validator_report_json",
+      "size_bytes": 66125,
+      "sha256": "865bf2533cb2cfff2bf47dfc7a1b0ece587236f5f7a4ff6843b57901271ee3f7",
+      "description": "Read-only validator report before repair, copied to stable evidence path."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_main_flow_link123_repair_20260704_105510.post_validation.json",
+      "type": "validator_report_json",
+      "size_bytes": 65811,
+      "sha256": "8f82e37067ab8f575cd45a0576861b32ec6932d3b095cc4b53228c51d31d98c5",
+      "description": "Validator report after repair, copied to stable evidence path."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "workflow_json_parse",
+        "result": "pass",
+        "notes": "Workflow parsed as JSON before and after repair."
+      },
+      {
+        "name": "backup_before_workflow_edit",
+        "result": "pass",
+        "notes": "Backup hash matched initial workflow hash: b8d0899ce45845f97f8540dfb379d9e8fd8987b42a65a123d67a249880e72e13."
+      },
+      {
+        "name": "node_and_link_counts",
+        "result": "pass",
+        "notes": "Post repair: 721 nodes, 1081 links, last_node_id/max_node_id 1050, last_link_id/max_link_id 1450."
+      },
+      {
+        "name": "link_endpoint_integrity",
+        "result": "pass",
+        "notes": "Post repair endpoint error count is 0; initial endpoint error was link 123 missing from node 417 output slot 1 links list."
+      },
+      {
+        "name": "active_path_dangling_inputs",
+        "result": "pass",
+        "notes": "Post repair active input errors and active endpoint errors are both 0."
+      },
+      {
+        "name": "load_image_reference_visibility",
+        "result": "fail",
+        "notes": "One default-off strict-hand LoadImage reference is missing: node 972 main_flow/strict_hand_detail_input.png."
+      },
+      {
+        "name": "model_filename_visibility",
+        "result": "blocked",
+        "notes": "65 model references (26 unique values) were not visible under checked local model roots; Lane 3 validation/sync needed."
+      },
+      {
+        "name": "live_comfyui_runtime_validation",
+        "result": "not_applicable",
+        "notes": "Lane 1 did not start or stop EC2. Live endpoint validation remains Lane 4 work."
+      }
+    ],
+    "failure_reasons": [
+      "Missing default-off strict hand detail LoadImage reference: C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png.",
+      "Model/checkpoint/LoRA/control filenames are not fully visible in checked local roots; no path rewrites were made because Lane 3 owns model acquisition/visibility.",
+      "No live ComfyUI endpoint validation was run by Lane 1 per EC2 boundary."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "No tracker promotion attempted by Lane_1. Graph repair evidence does not prove live runtime generation or model-load readiness."
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "reference_asset",
+      "description": "Node 972 Strict Hand Base Image Input references main_flow/strict_hand_detail_input.png, which was not found under checked reference roots. The lane is default-off but will fail if enabled without a valid input image.",
+      "next_action": "Lane 2 should provide C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png or specify the exact existing strict-hand source image Lane 1 should bind node 972 to."
+    },
+    {
+      "category": "model_visibility",
+      "description": "26 unique model/checkpoint/LoRA/control/upscale/encoder filenames referenced by Main Flow were not visible under C:\\Comfy_UI\\models, C:\\Comfy_UI\\Runtime_Data\\models, or C:\\Comfy_UI_Lora\\models.",
+      "next_action": "Lane 3 should verify acquisition/deployment visibility or provide corrected ComfyUI dropdown-relative filenames for the missing values listed in this evidence record."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "Lane 1 performed offline JSON/graph validation only and did not start or stop EC2.",
+      "next_action": "Lane 4 should run live ComfyUI endpoint/model-load validation during an approved EC2 lease window if runtime proof is required."
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_spatial_contact_evidence_20260704_154905",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T15:49:05Z",
+  "claim": {
+    "summary": "Lane 2 produced a reusable structural contact-control artifact for mask, pose, contact, depth, normal, occlusion, collision, and soft-body controls. The artifact is provisional structural evidence only; no EC2 or live ComfyUI runtime validation was performed by Lane 2.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_mask_pose_contact_architecture",
+      "lane2_depth_normal_occlusion_requirements",
+      "lane2_contact_pair_graph",
+      "lane2_collision_deformation_checks",
+      "lane2_lane1_wiring_request"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "B8D0899CE45845F97F8540DFB379D9E8FD8987B42A65A123D67A249880E72E13",
+    "settings": {
+      "workflow_nodes_reviewed": "991-1050",
+      "source_docs_read": [
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\GLOBAL_INSTRUCTIONS.md",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\LANE_BOUNDARIES.md",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\EC2_LEASE_PROTOCOL.md",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\SELF_HOSTED_LLM_POLICY.md",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\MODEL_EFFORT_ASSIGNMENTS.md",
+        "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\LANE_INSTRUCTIONS.md",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Lane_2\\LANE_INSTRUCTIONS.md"
+      ],
+      "supporting_evidence_read": [
+        "C:\\Comfy_UI\\Implementation\\evidence\\tracker_promotion_boundary_intervention\\wave09_27_runtime_smoke_promotion_evidence_20260701_164322.json"
+      ],
+      "lane2_owned_output_dirs_created": [
+        "C:\\Comfy_UI\\Implementation\\evidence\\contact_physics\\20260704_154905_lane2_contact_control",
+        "C:\\Comfy_UI\\Implementation\\evidence\\mask_validation\\20260704_154905_lane2_contact_control",
+        "C:\\Comfy_UI\\Implementation\\evidence\\spatial_validation\\20260704_154905_lane2_contact_control"
+      ]
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "EC2 was not started or stopped; no endpoint was called."
+  },
+  "models": [
+    {
+      "name": "RealVisXL_V5.0_fp16.safetensors",
+      "family": "SDXL",
+      "path": "ComfyUI/models/checkpoints/RealVisXL_V5.0_fp16.safetensors",
+      "role": "strict body contact inpaint checkpoint",
+      "load_result": "not loaded by Lane_2 in this pass"
+    },
+    {
+      "name": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "family": "SDXL LoRA",
+      "path": "ComfyUI/models/loras/wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "role": "strict hand readability LoRA",
+      "strength": 0.16,
+      "load_result": "not loaded by Lane_2 in this pass"
+    },
+    {
+      "name": "controlnet-openpose-sdxl-1.0.safetensors",
+      "family": "SDXL ControlNet",
+      "path": "ComfyUI/models/controlnet/controlnet-openpose-sdxl-1.0.safetensors",
+      "role": "pose lock for body and hand placement",
+      "strength": 0.74,
+      "load_result": "not loaded by Lane_2 in this pass"
+    },
+    {
+      "name": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "family": "SDXL ControlNet",
+      "path": "ComfyUI/models/controlnet/controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "role": "depth and soft-volume guidance",
+      "strength": 0.48,
+      "load_result": "not loaded by Lane_2 in this pass"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_control\\20260704_154905\\lane2_contact_control_artifact_20260704_154905.json",
+      "type": "contact_control_artifact",
+      "size_bytes": 19451,
+      "sha256": "435E73C2E4D1F536F07C33B770F08875D1DC8A8EC0C41DB891EB5BAFF8FFCC8B",
+      "description": "Canonical reusable mask, pose, depth, normal, occlusion, contact-pair, soft-body, and QA artifact."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_control\\20260704_154905\\lane2_contact_control_readme_20260704_154905.md",
+      "type": "readme",
+      "size_bytes": 1118,
+      "sha256": "BA87C3B49E86321623449890A2366029AD9DF4228CD1C0CF9308A14C5D127068",
+      "description": "Human-readable package summary."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_contact_control_wiring_request_20260704_154905.md",
+      "type": "lane1_wiring_request",
+      "size_bytes": 2749,
+      "sha256": "F8FE6021C875A16764FFC99328571DA4B564F8E04B495C9C7CF7B5F1EEEBC435",
+      "description": "Precise Lane 1 graph-wiring request for per-hand masks, QA previews, soft-body controls, metadata, and API/runtime binding."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\contact_physics\\20260704_154905_lane2_contact_control\\lane2_contact_control_artifact_20260704_154905.json",
+      "type": "contact_physics_evidence_copy",
+      "size_bytes": 19451,
+      "sha256": "435E73C2E4D1F536F07C33B770F08875D1DC8A8EC0C41DB891EB5BAFF8FFCC8B",
+      "description": "Project evidence mirror of the canonical contact-control artifact."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\mask_validation\\20260704_154905_lane2_contact_control\\lane2_contact_control_artifact_20260704_154905.json",
+      "type": "mask_validation_evidence_copy",
+      "size_bytes": 19451,
+      "sha256": "435E73C2E4D1F536F07C33B770F08875D1DC8A8EC0C41DB891EB5BAFF8FFCC8B",
+      "description": "Project evidence mirror containing explicit per-character, per-hand, and contact-zone mask requirements."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\spatial_validation\\20260704_154905_lane2_contact_control\\lane2_contact_control_artifact_20260704_154905.json",
+      "type": "spatial_validation_evidence_copy",
+      "size_bytes": 19451,
+      "sha256": "435E73C2E4D1F536F07C33B770F08875D1DC8A8EC0C41DB891EB5BAFF8FFCC8B",
+      "description": "Project evidence mirror containing pose, depth, normal, occlusion, collision, and deformation requirements."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "shared_instructions_read",
+        "result": "pass",
+        "notes": "Required shared docs, model/effort assignment, and Lane 2 instructions were read before evidence edits."
+      },
+      {
+        "name": "main_flow_not_edited_by_lane2",
+        "result": "pass",
+        "notes": "Lane 2 did not directly modify WAVE42_MAIN_FLOW_20260702.json."
+      },
+      {
+        "name": "ec2_not_started_or_stopped",
+        "result": "pass",
+        "notes": "No EC2 lease, start, stop, or endpoint action was performed by Lane 2."
+      },
+      {
+        "name": "artifact_json_parse",
+        "result": "pass",
+        "notes": "The canonical artifact parsed successfully with PowerShell ConvertFrom-Json."
+      },
+      {
+        "name": "runtime_generation_proof",
+        "result": "not_applicable",
+        "notes": "This pass produced architecture/evidence artifacts only; runtime proof belongs to Lane 4."
+      },
+      {
+        "name": "actual_mask_image_existence",
+        "result": "provisional",
+        "notes": "No actual per-hand or contact mask image files were generated because no source image was provided and placeholder masks would be misleading."
+      }
+    ],
+    "failure_reasons": [
+      "Per-hand mask slots are not yet wired directly in Main Flow; Lane 1 wiring request created.",
+      "No live runtime validation was performed; Lane 4 must run the wired graph before tracker promotion."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "ART-0914",
+      "WFLOW-00053",
+      "runtime_generation_rows",
+      "tracker_promotion_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "graph_wiring",
+      "description": "Main Flow has combined hand/contact masks but does not yet expose left/right per-hand mask slots required by the Lane 2 contact-pair graph.",
+      "next_action": "Lane 1 should implement the wiring request and back up WAVE42_MAIN_FLOW_20260702.json before editing."
+    },
+    {
+      "category": "runtime_validation",
+      "description": "The strict body contact graph has not been live-run with the new contact-control artifact and actual mask inputs.",
+      "next_action": "After Lane 1 wiring, Lane 4 should run a short live validation window and return endpoint/output evidence."
+    },
+    {
+      "category": "qa_promotion",
+      "description": "No tracker row can be promoted from structural artifacts alone.",
+      "next_action": "Lane 5 should ingest the artifact as provisional evidence and wait for Lane 4 runtime outputs before promotion."
+    }
+  ]
+}
