@@ -3,6 +3,7 @@ Main/shared_state/ec2_lease.json
 Main/shared_state/*.lock
 Main/shared_state/claims/*.json
 Main/shared_state/ec2_requests/*.json
+Main/shared_state/model_ingest_requests/*.json
 Main/shared_state/lane_status/*.json
 
 # Lane scratch/output areas
@@ -53,4 +54,3 @@ node_modules/
 Thumbs.db
 .vscode/
 .idea/
-

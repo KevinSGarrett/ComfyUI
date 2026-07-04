@@ -36,6 +36,7 @@ Each session must start by reading:
 
 - Do not print, log, commit, upload, or package secret values from `.env`, AWS credentials, GitHub tokens, Civitai tokens, SSH keys, presigned URLs, or provider keys.
 - Do not stage or commit model files, generated media, credentials, EC2 mirrors, raw downloads, or local cache files.
+- Do not download Civitai/model binaries to local project roots. `C:\Comfy_UI_Lora\downloads\models` CSVs are read-only local metadata sources; model downloads must run on EC2 through Lane 4 after Lane 3 produces a storage-gated manifest.
 - Do not claim completion from plans, packets, placeholder media, untested graph connectivity, or nonblank outputs.
 - Do not promote tracker rows unless direct evidence proves the row requirement.
 - Do not keep a row blocked merely because it was blocked before if current direct evidence proves it.
@@ -44,6 +45,7 @@ Each session must start by reading:
 - Every generated artifact, runtime result, model test, preset, or promotion must be evidence-backed.
 - Every lane must maintain continuous history and status reporting as defined in `STRICT_AUTONOMOUS_QA_PROTOCOL.md`.
 - Any hand, finger, contact, pose, mask, body-interaction, candidate media, or hand-adjacent claim must include strict hand review or an explicit `not_visually_reviewed` / `manual_review_required` limitation.
+- Follow `USAGE_BUDGET_POLICY.md`. When usage is low, use standard speed, reduce no-op polling, avoid blanket `xhigh`, prefer deterministic scripts for mechanical work, and wake only owner lanes with concrete next actions.
 
 ## AI/LLM Provider Policy
 
@@ -52,6 +54,24 @@ For `C:\Comfy_UI_Lora\AI_LLM_Intelligence_Plan`, `C:\Comfy_UI_Lora\AI_Front`, an
 External providers such as OpenAI, Grok, Anthropic, or other paid/cloud APIs are fallback routes only. Do not make them the default architecture, do not require their credentials for normal operation, and do not send project prompts, media metadata, private files, or tracker content to an external provider without an explicit approved reason and secret-safe evidence.
 
 See `SELF_HOSTED_LLM_POLICY.md`.
+
+## EC2 Model Ingestion Policy
+
+For model ingestion from `C:\Comfy_UI_Lora\downloads\models`, follow:
+
+`C:\Comfy_UI_Lora\5_sessions\Main\EC2_MODEL_INGESTION_POLICY.md`
+
+Lane 3 may parse the CSV files locally, create dry manifests, organize target taxonomy, and draft model cards. Lane 4 is the only lane that may run Civitai downloads, and those downloads must happen on EC2 or another explicitly approved remote target with enough storage. Lane 5 must audit evidence before any tracker or readiness claim. Lane 7 must track storage and usage-limit risk.
+
+The token variable name is `CIVITAI_TOKEN`, stored in `C:\Comfy_UI\.env`. Never print its value, commit it, include it in a URL, or persist it in SSM output, reports, model cards, manifests, or evidence.
+
+## Usage Budget Policy
+
+When usage is low or the user requests budget control, follow:
+
+`C:\Comfy_UI_Lora\5_sessions\Main\USAGE_BUDGET_POLICY.md`
+
+Autonomy still matters, but it must be budget-aware. Continuous mode means lanes keep resumable goals and owner-lane readiness, not that every lane should burn high-speed or high-effort reasoning on every heartbeat.
 
 ## Safety Boundary
 

@@ -68,6 +68,8 @@ Minimum outcome: mask/pose/contact evidence, a Lane 1 wiring request, or exact b
 
 Mission: verify, acquire, classify, hash, deploy-readiness-check, and compatibility-test model assets.
 
+For `C:\Comfy_UI_Lora\downloads\models`, Lane 3 may parse CSV metadata locally and create dry EC2 ingest manifests, target folder taxonomy, model-card drafts, storage projections, and Lane 4 download requests. Lane 3 must not download the listed model binaries locally.
+
 Owned write areas:
 
 - `C:\Comfy_UI\Implementation\manifests\civitai_model_acquisition`
@@ -87,6 +89,7 @@ Forbidden without request/claim:
 - Tracker promotions.
 - EC2 start/stop.
 - Broad Civitai mirroring.
+- Local Civitai/model binary downloads from the CSV inventory.
 - Committing model binaries.
 
 Minimum outcome: model existence/load/visibility evidence, model-test evidence, a clean blocker, or a compatibility table update.
@@ -96,6 +99,8 @@ LLM note: Lane 3 owns self-hosted LLM model selection, local model inventory, co
 ## Lane 4: EC2 Runtime, Deployment, Sync
 
 Mission: own all live EC2 runtime windows, deployment, sync, ComfyUI endpoint validation, and cost-control state.
+
+Lane 4 also owns EC2-only Civitai/model download execution when requested by Lane 3. It must follow `EC2_MODEL_INGESTION_POLICY.md`, acquire the EC2 lease, verify storage before and after each batch, use `CIVITAI_TOKEN` without logging it, and produce per-batch download/hash/catalog evidence before stopping EC2 and releasing the lease.
 
 Owned write areas:
 
@@ -114,6 +119,7 @@ Exclusive authority:
 - Start EC2.
 - Stop EC2.
 - Run deployment or live ComfyUI endpoint checks.
+- Run EC2-only Civitai/model download batches requested by Lane 3.
 
 Forbidden:
 
@@ -127,6 +133,8 @@ Minimum outcome: live validation evidence, stopped-cost state proof, or exact AW
 ## Lane 5: QA, Evidence, Tracker Promotion
 
 Mission: enforce strict QA, evidence ingestion, tracker promotion, rolling promotion-quality audit, and honest re-blocking.
+
+For EC2 model ingestion, Lane 5 audits model-card completeness, download/hash/catalog evidence, storage reports, scan/license fields, and direct tracker impact. CSV metadata alone proves planning only, not downloaded readiness.
 
 Owned write areas:
 
@@ -149,6 +157,8 @@ Minimum outcome: QA verdicts, evidence-to-tracker mapping, audited promotions, r
 ## Lane 6: Candidate Generation, Presets, Tuning
 
 Mission: produce, compare, score, tune, and preserve image/video/audio generation candidates and settings presets.
+
+Lane 6 may consume the model catalog only after Lane 3/Lane 4/Lane 5 evidence distinguishes planned, downloaded, hash-verified, catalog-visible, load-tested, and generation-tested states.
 
 Owned write areas:
 
@@ -175,6 +185,8 @@ LLM note: Lane 6 may integrate AI front-end behavior and prompt/preset assistanc
 ## Lane 7: Integration, Release History, Operations Watch
 
 Mission: keep the end-to-end picture coherent across all lanes: continuous history, release readiness, usage-limit resume packets, storage-pressure reports, dashboard summaries, and cross-lane issue tracking.
+
+For EC2 model ingestion, Lane 7 tracks the dashboard, usage-limit resume packet, storage risk, and owner-lane next actions only. It must not download, delete, retag, or claim readiness for models.
 
 Owned write areas:
 

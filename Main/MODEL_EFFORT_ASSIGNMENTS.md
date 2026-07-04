@@ -2,37 +2,64 @@
 
 These are the intended Codex Desktop model and reasoning effort settings for the Wave42 lanes.
 
-Use the strongest model for lanes where mistakes can corrupt shared architecture, QA status, runtime state, or evidence claims.
+Use the strongest model for lanes where mistakes can corrupt shared architecture, QA status, runtime state, or evidence claims. When usage is low, follow `USAGE_BUDGET_POLICY.md` and reserve the strongest settings for high-risk decisions.
 
-| Lane | Mission | Model | Reasoning effort |
-| --- | --- | --- | --- |
-| Lane_1 | Main Flow architecture and workflow graph wiring | `gpt-5.5` | `xhigh` |
-| Lane_2 | Spatial, pose, mask, contact, depth, and soft-body controls | `gpt-5.5` | `xhigh` |
-| Lane_3 | Models, LoRAs, Civitai assets, and self-hosted LLM route | `gpt-5.5` | `xhigh` |
-| Lane_4 | EC2 runtime, deployment, sync, live validation, and cost control | `gpt-5.5` | `xhigh` |
-| Lane_5 | QA, evidence ingestion, tracker promotion, and re-blocking | `gpt-5.5` | `xhigh` |
-| Lane_6 | Candidate generation, presets, tuning, and AI_Front self-hosted LLM integration | `gpt-5.5` | `xhigh` |
-| Lane_7 | Cross-lane integration, release history, usage/storage monitoring, and end-to-end dashboarding | `gpt-5.5` | `xhigh` |
+## Current Mode
+
+Current mode is **critical budget mode**.
+
+Reason: the user reported usage dropping from about 60 percent to about 10 percent on 2026-07-04. All lanes should use standard speed, reduced default effort, and targeted escalation until usage is reset or the user explicitly authorizes higher burn.
+
+## Critical-Budget Defaults
+
+| Lane | Mission | Default model | Default effort | Escalation |
+| --- | --- | --- | --- | --- |
+| Lane_1 | Main Flow architecture and workflow graph wiring | `gpt-5.4` | `high` | `gpt-5.5/xhigh` for Main Flow edits, graph repair, contradictory workflow evidence. |
+| Lane_2 | Spatial, pose, mask, contact, depth, and soft-body controls | `gpt-5.4` | `high` | `gpt-5.5/xhigh` for strict hand/contact visual validity or irreversible asset decisions. |
+| Lane_3 | Models, LoRAs, Civitai assets, and self-hosted LLM route | `gpt-5.4` | `medium` | `gpt-5.4/high` for taxonomy; `gpt-5.5/xhigh` before EC2 model-ingest launch requests or risky compatibility claims. |
+| Lane_4 | EC2 runtime, deployment, sync, live validation, and cost control | `gpt-5.5` | `high` | `gpt-5.5/xhigh` for EC2 live windows, cleanup apply, stop-state ambiguity, or model-download execution. |
+| Lane_5 | QA, evidence ingestion, tracker promotion, and re-blocking | `gpt-5.4` | `high` | `gpt-5.5/xhigh` for tracker mutations, re-blocks, promotion disputes, or strict visual QA acceptance. |
+| Lane_6 | Candidate generation, presets, tuning, and AI_Front self-hosted LLM integration | `gpt-5.4` | `high` | `gpt-5.5/xhigh` for candidate/media QA, hand review, or runtime-readiness acceptance. |
+| Lane_7 | Cross-lane integration, release history, usage/storage monitoring, and end-to-end dashboarding | `gpt-5.4` | `medium` | `gpt-5.5/high` or `xhigh` only for release-critical contradiction, storage crisis, or usage-limit resume planning. |
+
+## Normal-Budget Maximums
+
+When usage is safely above 40 percent or the user explicitly authorizes higher usage, these are the maximum defaults:
+
+| Lane | Model | Reasoning effort |
+| --- | --- | --- |
+| Lane_1 | `gpt-5.5` | `xhigh` |
+| Lane_2 | `gpt-5.5` | `xhigh` |
+| Lane_3 | `gpt-5.5` | `xhigh` |
+| Lane_4 | `gpt-5.5` | `xhigh` |
+| Lane_5 | `gpt-5.5` | `xhigh` |
+| Lane_6 | `gpt-5.5` | `xhigh` |
+| Lane_7 | `gpt-5.5` | `xhigh` |
 
 ## Dynamic Adjustment Policy
 
-The table above is the baseline. The supervisor must watch lane progress and adjust model/effort when the work changes shape.
+The critical-budget table above is the current baseline. The supervisor must watch lane progress and adjust model/effort when the work changes shape.
 
 Escalate to `xhigh` when a lane is doing any of the following:
 
 - editing or validating `C:\Comfy_UI\Implementation\workflows\ui\WAVE42_MAIN_FLOW_20260702.json`
 - deciding whether evidence justifies a tracker promotion or re-block
 - opening, extending, or closing an EC2 live runtime window
+- approving or applying EC2 mirror cleanup
+- launching EC2-only Civitai/model download batches
 - resolving cross-lane conflicts, shared claims, or contradictory evidence
 - making model/runtime visibility decisions that affect Main Flow readiness
 - making a safety, content, privacy, credential, or cost-control decision
+- performing strict hand/anatomy/candidate-media QA
 
-Under strict autonomous QA mode, all lanes use `xhigh` by default. If the user later relaxes strict mode, the supervisor may keep `high` for bounded inventory, formatting, manifest writing, or non-destructive evidence packaging in lanes whose baseline is changed back to `high`.
+Strict autonomous QA still applies, but it no longer means blanket `xhigh` while usage is critical. It means every claim needs evidence, and risky decisions must escalate. Bounded inventory, formatting, manifest writing, model-card generation, and non-destructive evidence packaging should use lower effort.
 
-Do not downgrade below the baseline table unless the user explicitly authorizes it. If a lane was initially created with the app default settings, immediately send a follow-up prompt with the model and effort above before allowing substantive work to continue.
+Do not downgrade below the critical-budget table unless the user explicitly authorizes it. If a lane was initially created with higher settings, send a budget update before allowing low-value autonomous loops to continue.
 
 ## Current Supervisor Defaults
 
-- All lanes should run at `xhigh` during strict autonomous QA mode.
-- Hand review, candidate/media QA, Main Flow validation, EC2 live-window work, tracker truth decisions, and model/runtime visibility decisions must always run at `xhigh`.
+- Current mode is critical budget mode.
+- All lanes should run at standard speed.
+- Hand review, candidate/media QA, Main Flow edits, EC2 live-window work, tracker truth decisions, cleanup apply, and model-ingest launch decisions must escalate to `xhigh`.
+- Routine polling, inventory, report formatting, model-card generation, and no-op status reports should not use `xhigh`.
 - The supervisor should record any intentional temporary escalation in a lane report or coordination summary.

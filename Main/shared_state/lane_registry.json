@@ -9,8 +9,8 @@
     {
       "lane_id": "Lane_1",
       "name": "Main Flow Architecture",
-      "model": "gpt-5.5",
-      "reasoning_effort": "xhigh",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high",
       "branch": "lane/lane-1-main-flow",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_1",
       "owned_write_roots": [
@@ -24,8 +24,8 @@
     {
       "lane_id": "Lane_2",
       "name": "Spatial Pose Mask Contact Controls",
-      "model": "gpt-5.5",
-      "reasoning_effort": "xhigh",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high",
       "branch": "lane/lane-2-spatial-contact",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2",
       "owned_write_roots": [
@@ -41,8 +41,8 @@
     {
       "lane_id": "Lane_3",
       "name": "Models LoRAs Civitai Assets",
-      "model": "gpt-5.5",
-      "reasoning_effort": "xhigh",
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium",
       "branch": "lane/lane-3-model-assets",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3",
       "owned_write_roots": [
@@ -63,7 +63,7 @@
       "lane_id": "Lane_4",
       "name": "EC2 Runtime Deployment Sync",
       "model": "gpt-5.5",
-      "reasoning_effort": "xhigh",
+      "reasoning_effort": "high",
       "branch": "lane/lane-4-runtime-ec2",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4",
       "owned_write_roots": [
@@ -74,15 +74,16 @@
         "C:\\Comfy_UI\\EC2_Mirror",
         "C:\\Comfy_UI\\_ec2sd",
         "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests",
+        "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\model_ingest_requests",
         "C:\\Comfy_UI_Lora\\5_sessions\\Lane_4"
       ],
-      "exclusive_actions": ["ec2_lease", "ec2_start", "ec2_stop", "live_comfyui_validation"]
+      "exclusive_actions": ["ec2_lease", "ec2_start", "ec2_stop", "live_comfyui_validation", "ec2_only_model_download"]
     },
     {
       "lane_id": "Lane_5",
       "name": "QA Evidence Tracker Promotion",
-      "model": "gpt-5.5",
-      "reasoning_effort": "xhigh",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high",
       "branch": "lane/lane-5-qa-tracker",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_5",
       "owned_write_roots": [
@@ -98,8 +99,8 @@
     {
       "lane_id": "Lane_6",
       "name": "Generation Presets Candidate Media",
-      "model": "gpt-5.5",
-      "reasoning_effort": "xhigh",
+      "model": "gpt-5.4",
+      "reasoning_effort": "high",
       "branch": "lane/lane-6-generation-presets",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_6",
       "owned_write_roots": [
@@ -117,8 +118,8 @@
     {
       "lane_id": "Lane_7",
       "name": "Integration Release History Operations Watch",
-      "model": "gpt-5.5",
-      "reasoning_effort": "xhigh",
+      "model": "gpt-5.4",
+      "reasoning_effort": "medium",
       "branch": "lane/lane-7-integration-history",
       "worktree": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_7",
       "owned_write_roots": [

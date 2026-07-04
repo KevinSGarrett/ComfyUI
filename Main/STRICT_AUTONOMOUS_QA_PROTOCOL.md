@@ -96,6 +96,8 @@ Append to the journal:
 
 Status reports should summarize what was performed, what was completed, what is in progress, what is about to be completed, issues found, fixes implemented, blockers, evidence paths, and next lane actions.
 
+When `USAGE_BUDGET_POLICY.md` is in conservation or critical mode, history must remain continuous but compact. Write a journal/status update for meaningful state changes, commits, blockers, runtime windows, QA verdicts, cleanup decisions, and hand-review outcomes. Do not spend high-effort reasoning on repetitive no-op reports.
+
 ## Testing Requirements By Lane
 
 Lane 1 must validate workflow JSON, graph links, active-path inputs, model references, LoadImage references, backups, and exact diff scope.
@@ -130,7 +132,8 @@ Every pushed commit should be referenced in the lane status report.
 The supervisor must:
 
 - poll all lanes continuously
-- escalate lanes to `gpt-5.5/xhigh` for strict QA/review/testing and all hand-review work
+- follow `USAGE_BUDGET_POLICY.md`, including standard speed, critical-budget model defaults, and targeted escalation
+- escalate lanes to `gpt-5.5/xhigh` only for high-risk strict QA/review/testing decisions, tracker truth changes, EC2 live/cleanup/model-download actions, Main Flow edits, and hand/candidate-media acceptance
 - re-prompt idle lanes with the next Main Flow-facing task
 - monitor EC2 live windows until stopped and released
 - require history/report artifacts, not just chat summaries
