@@ -94,3 +94,14 @@
   - `Lane_2\\lane1_requests\\lane2_to_lane1_contact_pair_graph_update_20260704_175000.md`
 - Mirrored contact-pair evidence and graph into:
   - `C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_175000_lane2_contact_pair_graph`.
+
+## 2026-07-04T17:20:00Z - Collision/deformation requirements packet
+
+- Built collision/deformation preflight artifacts from `20260704_175000` local QA:
+  - `Lane_2\\evidence_records\\lane2_collision_deformation_requirements_update_20260704_175500.json`
+  - `Lane_2\\lane1_requests\\lane2_to_lane1_collision_deformation_requirements_20260704_175500.md`
+- Added explicit local thresholds and blocker status:
+  - fallback actor-hand edges use provisional preflight rules.
+  - named per-hand and full actor-body edges remain blocked from runtime acceptance.
+- Mirrored the package into:
+  - `C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_175500_lane2_collision_deformation`.
