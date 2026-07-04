@@ -1,0 +1,22 @@
+{
+    "issue_id":  "lane1_current_hash_aux_runtime_visibility_check_pending_20260704_164740",
+    "created_at_utc":  "2026-07-04T16:47:40Z",
+    "lane_id":  "Lane_1",
+    "status":  "open_external_dependencies",
+    "objective":  "Main Flow current hash runtime readiness verification for unresolved model/model-like refs",
+    "workflow_path":  "C:\\\\Comfy_UI\\\\Implementation\\\\workflows\\\\ui\\\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256":  "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9",
+    "blockers":  [
+                     {
+                         "category":  "runtime_visibility_missing",
+                         "severity":  "high",
+                         "description":  "No runtime visibility evidence returned yet for consolidated missing/critical refs despite repeated Lane 4 requests (auxiliary detector/preprocessor + hand LoRA files).",
+                         "evidence":  [
+                                          "C:\\\\Comfy_UI\\\\5_sessions\\\\Main\\\\shared_state\\\\ec2_requests\\\\lane1_to_lane4_current_hash_auxiliary_runtime_visibility_reprompt_20260704_114429.json",
+                                          "C:\\\\Comfy_UI\\\\5_sessions\\\\Main\\\\shared_state\\\\ec2_requests\\\\lane1_to_lane4_current_hash_aux_runtime_and_model_visibility_20260704_164737.json",
+                                          "C:\\\\Comfy_UI\\\\5_session_worktrees\\\\Lane_1\\\\Lane_1\\\\evidence\\\\lane1_current_slice_dependency_closure_20260704_20260704_164626.evidence.json"
+                                      ],
+                         "next_action":  "Lane 4 should execute one current-hash ComfyUI runtime check window, return per-reference presence+sha/size+load/test outcome, or explicit sanctioned source/install route and owner."
+                     }
+                 ]
+}
