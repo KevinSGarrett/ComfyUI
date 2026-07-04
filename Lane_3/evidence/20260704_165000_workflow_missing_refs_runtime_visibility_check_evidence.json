@@ -1,0 +1,108 @@
+{
+    "schema_version":  "1.0",
+    "evidence_id":  "Lane_3_workflow_missing_refs_runtime_visibility_check_20260704_165000",
+    "lane_id":  "Lane_3",
+    "created_at_utc":  "2026-07-04T16:47:30.1126329Z",
+    "claim":  {
+                  "summary":  "Re-check of the 9 workflow refs previously reported as missing versus local Runtime_Data and downloads",
+                  "status":  "blocked"
+              },
+    "refs":  {
+                 "present_in_runtime":  0,
+                 "present_in_downloads_only":  5,
+                 "missing_all":  4,
+                 "total":  9
+             },
+    "detail":  [
+                   {
+                       "ref":  "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+                       "status":  "missing_all",
+                       "runtime_name_hits":  0,
+                       "runtime_locations":  "",
+                       "downloads_name_hits":  0,
+                       "downloads_locations":  ""
+                   },
+                   {
+                       "ref":  "bbox/hand_yolov8n.pt",
+                       "status":  "missing_all",
+                       "runtime_name_hits":  0,
+                       "runtime_locations":  "",
+                       "downloads_name_hits":  0,
+                       "downloads_locations":  ""
+                   },
+                   {
+                       "ref":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Better hands flux v1.0.safetensors",
+                       "status":  "present_in_downloads_only",
+                       "runtime_name_hits":  0,
+                       "runtime_locations":  "",
+                       "downloads_name_hits":  1,
+                       "downloads_locations":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Better hands flux v1.0.safetensors"
+                   },
+                   {
+                       "ref":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Detailed_Hands-000001.safetensors",
+                       "status":  "present_in_downloads_only",
+                       "runtime_name_hits":  0,
+                       "runtime_locations":  "",
+                       "downloads_name_hits":  1,
+                       "downloads_locations":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Detailed_Hands-000001.safetensors"
+                   },
+                   {
+                       "ref":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\feminine_hands.safetensors",
+                       "status":  "present_in_downloads_only",
+                       "runtime_name_hits":  0,
+                       "runtime_locations":  "",
+                       "downloads_name_hits":  1,
+                       "downloads_locations":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\feminine_hands.safetensors"
+                   },
+                   {
+                       "ref":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hand v2.safetensors",
+                       "status":  "present_in_downloads_only",
+                       "runtime_name_hits":  0,
+                       "runtime_locations":  "",
+                       "downloads_name_hits":  1,
+                       "downloads_locations":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hand v2.safetensors"
+                   },
+                   {
+                       "ref":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hands.safetensors",
+                       "status":  "present_in_downloads_only",
+                       "runtime_name_hits":  0,
+                       "runtime_locations":  "",
+                       "downloads_name_hits":  1,
+                       "downloads_locations":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hands.safetensors"
+                   },
+                   {
+                       "ref":  "dw-ll_ucoco_384_bs5.torchscript.pt",
+                       "status":  "missing_all",
+                       "runtime_name_hits":  0,
+                       "runtime_locations":  "",
+                       "downloads_name_hits":  0,
+                       "downloads_locations":  ""
+                   },
+                   {
+                       "ref":  "sam_vit_b_01ec64.pth",
+                       "status":  "missing_all",
+                       "runtime_name_hits":  0,
+                       "runtime_locations":  "",
+                       "downloads_name_hits":  0,
+                       "downloads_locations":  ""
+                   }
+               ],
+    "qa":  {
+               "verdict":  "blocked",
+               "failure_reasons":  [
+                                       "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt; bbox/hand_yolov8n.pt; dw-ll_ucoco_384_bs5.torchscript.pt; sam_vit_b_01ec64.pth"
+                                   ],
+               "checks":  [
+                              {
+                                  "result":  "blocked",
+                                  "name":  "Runtime_Data model files by basename",
+                                  "notes":  "Missing in runtime after full scan: 4"
+                              },
+                              {
+                                  "result":  "informational",
+                                  "name":  "Downloads-only availability",
+                                  "notes":  "Files found in downloads are not mapped into Runtime_Data unless referenced/linked."
+                              }
+                          ]
+           }
+}
