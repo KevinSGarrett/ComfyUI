@@ -16,3 +16,12 @@
 - Remaining blockers: nodes 1051-1054 per-hand masks missing; full actor body collision QA needs non-empty character_b_body_mask.png; Lane 3 must resolve z_image_turbo_bf16.safetensors and qwen_3_4b.safetensors; runtime validation remains Lane 4.
 - Evidence: `C:\Comfy_UI_Lora\5_sessions\Lane_1\evidence\lane1_body_contact_actor_body_optional_20260704_161725.evidence.json`
 - Evidence schema validation: valid.
+
+
+## 2026-07-04T16:21:37Z - Lane 4 hash-change blocker reconciled
+
+- Read Lane 4 runtime visibility evidence and processed resolution.
+- Reconciled hashes: pre-contact backup `eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0`, current workflow `273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d`.
+- Outcome: Lane 4 LoRA visibility evidence remains useful for model/runtime visibility, but not graph-version-specific Main Flow execution proof.
+- Wrote schema-valid evidence `C:\Comfy_UI_Lora\5_sessions\Lane_1\evidence\lane1_main_flow_hash_reconciliation_20260704_162137.evidence.json` and Lane 5 audit request `C:\Comfy_UI_Lora\5_sessions\Lane_1\requests\lane1_to_lane5_main_flow_hash_reconciliation_audit_20260704_162137.json`.
+- Evidence schema validation: valid.

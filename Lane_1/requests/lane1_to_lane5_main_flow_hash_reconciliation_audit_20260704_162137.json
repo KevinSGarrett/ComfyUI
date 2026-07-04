@@ -1,0 +1,16 @@
+{
+  "request_id": "lane1_to_lane5_main_flow_hash_reconciliation_audit_20260704_162137",
+  "requesting_lane": "Lane_1",
+  "target_lane": "Lane_5",
+  "created_at_utc": "2026-07-04T16:21:37Z",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "current_workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+  "lane1_evidence": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_main_flow_hash_reconciliation_20260704_162137.evidence.json",
+  "hash_chronology": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\evidence\\lane1_main_flow_hash_reconciliation_20260704_162137.hash_chronology.json",
+  "source_lane4_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.json",
+  "requested_audit_decision": [
+    "Treat Lane 4 20260704T161522Z evidence as valid for /object_info and LoRA visibility only.",
+    "Do not promote current Main Flow graph execution/runtime-generation rows from that Lane 4 evidence because the workflow hash changed during the live-window slice.",
+    "Use Lane 1 current structural validation/evidence for graph shape and blockers, then require a fresh Lane 4 runtime run after per-hand masks and remaining model visibility blockers are resolved."
+  ]
+}

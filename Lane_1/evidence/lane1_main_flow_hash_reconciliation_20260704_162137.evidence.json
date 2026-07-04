@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane1_main_flow_hash_reconciliation_20260704_162137",
+  "lane_id": "Lane_1",
+  "created_at_utc": "2026-07-04T16:21:37Z",
+  "claim": {
+    "summary": "Lane 1 reconciled Lane 4 Main Flow hash-change blocker: Lane 4 initial/remote hash matches the pre-contact-control backup, while current hash 273158b6... matches the current Lane 1 structurally validated workflow after backed-up Lane 1 patches. Lane 4 evidence remains valid for LoRA object_info visibility but not graph-version-specific execution proof.",
+    "status": "passed",
+    "requirement_ids": [
+      "lane4_main_flow_hash_changed_blocker",
+      "main_flow_hash_reconciliation",
+      "lane5_audit_handoff"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+    "settings": {
+      "lane4_resolution": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\shared_state\\ec2_requests\\processed\\20260704_155047_Lane_3_model_lora_llm_visibility.resolution.json",
+      "lane4_evidence": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.json",
+      "lane4_runtime_summary": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.runtime_summary.json",
+      "current_structural_validation": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_body_contact_actor_body_optional_20260704_161725.post_validation.json"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_1",
+    "ec2_state_after": "not_checked_by_lane_1",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane1_runtime_action": "Lane 1 did not start or stop EC2 and did not call live runtime endpoints."
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+      "type": "current_canonical_workflow",
+      "size_bytes": 1300902,
+      "sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+      "description": "Current Main Flow after Lane 1 actor-body optional metadata patch."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_contact_control_wiring_20260704_110410.json",
+      "type": "pre_contact_control_backup",
+      "size_bytes": 1188058,
+      "sha256": "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+      "description": "Backup matching Lane 4 initial/remote script hash observation."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_body_contact_optional_20260704_111419.json",
+      "type": "pre_actor_body_optional_backup",
+      "size_bytes": 1296262,
+      "sha256": "44f366f162a937b10c2d7157c5f0b668e1d27bdfdb93698a6181981ce4a3dd22",
+      "description": "Backup after contact-control wiring and before actor-body optional metadata patch."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_main_flow_hash_reconciliation_20260704_162137.hash_chronology.json",
+      "type": "hash_chronology",
+      "size_bytes": 3188,
+      "sha256": "cb575bb63251f101561b2f07183b09638a95dbced945c975cc377b11860c588e",
+      "description": "Lane 1 reconciliation of Lane 4 hash observations against Lane 1 patches."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.json",
+      "type": "source_lane4_runtime_visibility_evidence",
+      "size_bytes": 27420,
+      "sha256": "9fd8cbcb1fb8a7b2ec5be98cc5bed725fb183b9a9e3ea5aa78f77865346bf8d6",
+      "description": "Lane 4 evidence that raised the Main Flow hash-change blocker."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_4\\Lane_4\\evidence\\lane4_main_flow_lora_runtime_visibility_20260704T161522Z.runtime_summary.json",
+      "type": "source_lane4_runtime_summary",
+      "size_bytes": 13334,
+      "sha256": "780e04ab92b74251d4eb4a8f2055e073c709da82c3bbf9833588d8769fb018bc",
+      "description": "Lane 4 compact runtime summary with endpoint and hash observations."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_body_contact_actor_body_optional_20260704_161725.post_validation.json",
+      "type": "current_hash_structural_validation",
+      "size_bytes": 60615,
+      "sha256": "98e57be269bab1496ca0c09c37611e7255837e744104b2d9951812c7590cd2fd",
+      "description": "Lane 1 structural validation of the current hash."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\responses\\lane1_to_lane4_main_flow_hash_reconciliation_20260704_162137.json",
+      "type": "lane4_response",
+      "size_bytes": 3558,
+      "sha256": "21a57ec129f95d1818c64b1bfbd63c6b9b277b8fcdca1d687d911aded6f094c2",
+      "description": "Lane 1 response to Lane 4 hash-change blocker."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_sessions\\Lane_1\\requests\\lane1_to_lane5_main_flow_hash_reconciliation_audit_20260704_162137.json",
+      "type": "lane5_audit_request",
+      "size_bytes": 1350,
+      "sha256": "b1640f36dc73c7ab068bad3adc3d4128d5979e05ec8934db28bad0908b8e82c8",
+      "description": "Lane 1 request for Lane 5 to audit tracker implications of the hash reconciliation."
+    }
+  ],
+  "qa": {
+    "verdict": "pass",
+    "checks": [
+      {
+        "name": "current_workflow_hash",
+        "result": "pass",
+        "notes": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d"
+      },
+      {
+        "name": "lane4_initial_hash_matches_pre_contact_backup",
+        "result": "pass",
+        "notes": "Lane4 initial=eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0; backup=eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0"
+      },
+      {
+        "name": "lane4_remote_script_hash_matches_pre_contact_backup",
+        "result": "pass",
+        "notes": "Lane4 remote_script_recorded=eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0; backup=eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0"
+      },
+      {
+        "name": "lane4_current_hash_matches_current_workflow",
+        "result": "pass",
+        "notes": "Lane4 current_local=273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d; current=273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d"
+      },
+      {
+        "name": "current_structural_validation",
+        "result": "pass",
+        "notes": "node_count=768; link_count=1137; endpoint_errors=0; active_input_errors=0"
+      },
+      {
+        "name": "runtime_interpretation_guard",
+        "result": "pass",
+        "notes": "Lane 4 LoRA visibility evidence should not be treated as current workflow execution proof."
+      }
+    ],
+    "failure_reasons": []
+  },
+  "tracker_mapping": {
+    "proves_rows": [
+      "Main Flow hash reconciliation for Lane 4 20260704T161522Z runtime visibility evidence"
+    ],
+    "does_not_prove_rows": [
+      "current Main Flow runtime generation execution",
+      "current Main Flow visual quality",
+      "tracker promotion without Lane 5 audit"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "runtime_generation_proof",
+      "description": "Lane 4 20260704T161522Z evidence proves LoRA runtime visibility, not execution of the current canonical Main Flow hash.",
+      "next_action": "After Lane 2 and Lane 3 resolve missing references/models, Lane 4 should run a fresh current-hash Main Flow execution proof inside a lease window."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-07-04T16:21:37Z",
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "current_workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+  "lane4_hash_observations": {
+    "initial_observed": "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+    "current_local": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+    "remote_script_recorded": "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0"
+  },
+  "hash_timeline": [
+    {
+      "sha256": "eee910f1d00a6858abc67a27ea783c43c8ad876fd60f6b26865bced39bc647c0",
+      "meaning": "canonical workflow before Lane 1 Lane 2 contact-control wiring patch",
+      "path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_contact_control_wiring_20260704_110410.json",
+      "evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_lane2_contact_control_wiring_20260704_111053.evidence.json",
+      "lane4_observation_relation": "matches Lane 4 initial_observed and remote_script_recorded hash"
+    },
+    {
+      "sha256": "44f366f162a937b10c2d7157c5f0b668e1d27bdfdb93698a6181981ce4a3dd22",
+      "meaning": "canonical workflow after Lane 1 Lane 2 contact-control patch and immediately before actor-body optional metadata patch",
+      "path": "C:\\Comfy_UI\\Implementation\\workflow_backups\\WAVE42_MAIN_FLOW_20260702.pre_lane2_body_contact_optional_20260704_111419.json",
+      "evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_body_contact_actor_body_optional_20260704_161725.evidence.json"
+    },
+    {
+      "sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d",
+      "meaning": "current canonical workflow after Lane 1 actor-body optional metadata patch",
+      "path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+      "evidence": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_body_contact_actor_body_optional_20260704_161725.evidence.json",
+      "validation": "C:\\Comfy_UI\\Implementation\\evidence\\workflow_validation\\lane1_body_contact_actor_body_optional_20260704_161725.post_validation.json",
+      "lane4_observation_relation": "matches Lane 4 current_local hash and Lane 1 post-patch structural validation hash"
+    }
+  ],
+  "lane1_reconciliation": {
+    "hash_change_explained": true,
+    "cause": "Lane 1 backed-up Main Flow patches during/around the Lane 4 runtime visibility window changed the canonical workflow from the pre-contact-control hash to the current actor-body optional metadata hash.",
+    "runtime_visibility_interpretation": "Lane 4 evidence proves live ComfyUI endpoint/object_info and requested LoRA visibility; it should not be treated as current-hash workflow execution proof.",
+    "current_graph_validation_summary": {
+      "node_count": 768,
+      "link_count": 1137,
+      "endpoint_errors": 0,
+      "active_input_errors": 0,
+      "workflow_sha256": "273158b6b84cefc67a706ac1c4656d90cfbebf04f0890a9230dd526475d5b96d"
+    }
+  }
+}
