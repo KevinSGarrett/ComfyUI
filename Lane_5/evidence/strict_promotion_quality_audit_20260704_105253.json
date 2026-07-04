@@ -1,0 +1,66 @@
+{
+  "generated_at_utc": "2026-07-04T15:54:48Z",
+  "lane_id": "Lane_5",
+  "shared_outputs": {
+    "audit_csv": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\strict_promotion_quality_audit_20260704_105253.csv",
+    "reblock_csv": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\strict_promotion_reblocks_20260704_105253.csv",
+    "candidate_csv": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\evidence_to_row_candidates_20260704_105253.csv",
+    "evidence_record": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\lane5_strict_promotion_audit_evidence_20260704_105253.json",
+    "report": "C:\\Comfy_UI\\Implementation\\docs\\STRICT_PROMOTION_QA_AUDIT_20260704_105253.md",
+    "corrected_tracker": "C:\\Comfy_UI\\Implementation\\trackers\\wave42_working_tracker_20260704_105253.csv"
+  },
+  "summary": {
+    "promoted_since_baseline": 557,
+    "reblocked": 30,
+    "preserved_scoped_manual": 5,
+    "counts_before": {
+      "Verified Complete": 12112,
+      "Blocked - Model Asset": 717,
+      "Blocked - External API": 58
+    },
+    "counts_after": {
+      "Verified Complete": 12082,
+      "Blocked - Model Asset": 744,
+      "Blocked - External API": 61
+    }
+  },
+  "reblocked_rows": [
+    "ART-0679",
+    "ART-0706",
+    "ART-0826",
+    "ART-0843",
+    "ART-2367",
+    "ART-2368",
+    "ART-2397",
+    "ART-2412",
+    "ART-2413",
+    "ART-2636",
+    "ART-2645",
+    "CHECK-0029",
+    "CHECK-0030",
+    "CHECK-0124",
+    "CHECK-0212",
+    "ENTRY-0004",
+    "ENTRY-0006",
+    "IMPL-00079",
+    "IMPL-00290",
+    "IMPL-00297",
+    "IMPL-00323",
+    "SETUP-0146",
+    "WAVE-0182",
+    "WAVE-0193",
+    "WAVE-0205",
+    "WAVE-0230",
+    "WAVE-0288",
+    "WAVE-0408",
+    "WFLOW-00227",
+    "WFLOW-00229"
+  ],
+  "preserved_scoped_manual_rows": [
+    "CHECK-0214",
+    "CHECK-0217",
+    "SETUP-0107",
+    "WAVE-0175",
+    "WAVE-0403"
+  ]
+}
