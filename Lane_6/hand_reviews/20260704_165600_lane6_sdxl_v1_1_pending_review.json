@@ -1,0 +1,32 @@
+{
+  "review_id": "20260704_165600_lane6_sdxl_v1_1_pending_review",
+  "lane_id": "Lane_6",
+  "created_at_utc": "2026-07-04T16:56:00Z",
+  "scope": "v1.1 SDXL safe adult clothed runtime request status check",
+  "verdict": "not_visually_reviewed",
+  "actual_media_reviewed": false,
+  "media_paths": [],
+  "checks": [
+    {
+      "name": "request_processed",
+      "result": "blocked",
+      "notes": "`20260704_162157_Lane_6_sdxl_safe_adult_clothed_low_vram_v1_1_candidate.json` still not in processed queue."
+    },
+    {
+      "name": "visual_qa",
+      "result": "blocked",
+      "notes": "No new v1.1 local or remote image available for review in this slice."
+    },
+    {
+      "name": "aws_stop_state",
+      "result": "blocked",
+      "notes": "Prior v1.1-related runtime path still requires auth refresh and terminal-state confirmation if required by policy."
+    }
+  ],
+  "limitations": [
+    "No candidate media for v1.1 to inspect",
+    "No fresh lane-owned verification run performed in this turn",
+    "Acceptance remains pending on external runtime completion"
+  ],
+  "next_action": "Requested Lane 4 output/resolve evidence for v1.1 request, then run strict visual hand/anatomy check and clear blocker status."
+}

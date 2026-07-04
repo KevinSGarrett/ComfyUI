@@ -25,6 +25,8 @@ Lane 6 created a compact Lane 5 audit handoff manifest that collects the current
   - `20260704_164600_lane6_sdxl_candidate_runtime_hand_review.json`
   - `20260704_165000_lane6_sdxl_v1_1_request_pending_status.md`
   - `20260704_165000_lane6_sdxl_v1_1_request_pending_hand_review.json`
+  - `20260704_165600_lane6_sdxl_v1_1_pending_status.md`
+  - `20260704_165600_lane6_sdxl_v1_1_pending_review.json`
 
 ## Boundary
 
