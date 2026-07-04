@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "record_id": "lane7_no_media_review_20260704_162442",
+  "lane_id": "Lane_7",
+  "created_at_utc": "2026-07-04T16:24:42Z",
+  "verdict": "not_visually_reviewed",
+  "scope": "Lane 7 integration dashboard and operations reporting",
+  "actual_media_reviewed": false,
+  "reason": "Lane 7 did not inspect generated image/video media in this slice and makes no hand, anatomy, adult/clothed, or candidate media quality claim.",
+  "coverage_source": [
+    "Lane 1 hand-review/status records",
+    "Lane 2 hand-review/status records",
+    "Lane 5 QA enforcement records",
+    "Lane 6 hand-review/status records",
+    "Lane 4 thread tail indicating candidate evidence exists but still needs owner-lane visual QA"
+  ],
+  "required_downstream_action": "Lane 6 and Lane 5 must perform strict visual hand/anatomy/adult-clothed review on any returned candidate media before final candidate or tracker claims."
+}

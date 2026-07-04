@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "record_type": "lane7_storage_pressure_cleanup_request",
+  "created_at_utc": "2026-07-04T16:24:42Z",
+  "requesting_lane": "Lane_7",
+  "owner_lane": "Lane_4",
+  "severity": "critical",
+  "summary": "C: drive free space is critically low. Lane 7 requests Lane 4 dry-run and, only if safe, apply cleanup for stale date-stamped EC2 mirror snapshots after the active EC2 lease is released.",
+  "observed_storage": {
+    "c_free_gb": 8.99,
+    "c_free_percent": 0.94,
+    "ec2_mirror_size_gb": 202.351,
+    "_ec2sd_size_gb": 12.479,
+    "estimated_reclaim_gb_if_candidates_safe": 214.83
+  },
+  "active_ec2_constraint": {
+    "earlier_observed_lease_state": "held",
+    "latest_observed_lease_state": "free",
+    "owner_lane": null,
+    "purpose": null,
+    "last_heartbeat_utc": null,
+    "latest_lease_check_local": "2026-07-04T11:28:57-05:00",
+    "lane4_thread_note": "Lane 4 reported AWS RequestExpired/expired credentials after the stop request; final EC2 terminal-state proof still needs owner-lane verification or blocker record.",
+    "cleanup_apply_allowed_while_held": false
+  },
+  "candidate_snapshots": [
+    {
+      "path": "C:\\Comfy_UI\\EC2_Mirror\\20260628_211600",
+      "size_gb": 202.351,
+      "last_write_local": "2026-06-28T16:46:06",
+      "candidate_reason": "date-stamped EC2_Mirror snapshot observed by supervisor and confirmed by Lane 7 size scan"
+    },
+    {
+      "path": "C:\\Comfy_UI\\_ec2sd\\20260701_125027",
+      "size_gb": 12.479,
+      "last_write_local": "2026-07-01T07:50:27",
+      "candidate_reason": "date-stamped _ec2sd snapshot observed by supervisor and confirmed by Lane 7 size scan"
+    }
+  ],
+  "required_constraints": [
+    "Lane 4 only",
+    "No cleanup apply while EC2 lease is held",
+    "Stop EC2, verify stopped/no public network fields, and release lease first when AWS credentials permit; otherwise record the exact AWS state-proof blocker",
+    "Dry-run first",
+    "Confirm candidates are under allowed cleanup roots",
+    "Confirm candidates are not under protected roots",
+    "Confirm candidates are stale snapshots and not part of active EC2 lease/live sync",
+    "Cleanup evidence manifest required",
+    "Do not delete protected roots, model files, workflows, trackers, evidence, generated media, credentials, SSH keys, or secret-bearing files"
+  ],
+  "requested_commands_after_lease_release": {
+    "dry_run": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\scripts\\safe_cleanup.ps1 -Lane Lane_4 -OlderThanDays 1 -IncludeEc2MirrorSnapshots -SummaryOnly",
+    "apply_if_safe": "C:\\Comfy_UI_Lora\\5_sessions\\Main\\scripts\\safe_cleanup.ps1 -Lane Lane_4 -OlderThanDays 1 -IncludeEc2MirrorSnapshots -SummaryOnly -Apply"
+  },
+  "lane7_actions": [
+    "reported storage pressure",
+    "created owner-lane cleanup request",
+    "did not run cleanup dry-run",
+    "did not delete anything"
+  ]
+}

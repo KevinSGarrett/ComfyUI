@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "issue_id": "lane7_storage_pressure_cleanup_blocker_20260704_162442",
+  "lane_id": "Lane_7",
+  "created_at_utc": "2026-07-04T16:24:42Z",
+  "status": "blocked_owner_action_required",
+  "category": "storage_pressure",
+  "severity": "critical",
+  "summary": "C: drive free space is critically low. The local lease is now free, but cleanup apply remains owner-lane gated until Lane 4 finishes dry-run review and proves or blocks EC2 final-state safety under CLEANUP_POLICY.md.",
+  "observations": {
+    "c_free_gb": 8.99,
+    "c_free_percent": 0.94,
+    "earlier_observed_ec2_lease_state": "held",
+    "latest_observed_ec2_lease_state": "free",
+    "latest_observed_lease_owner": null,
+    "latest_observed_lease_purpose": null,
+    "lane4_thread_note": "AWS RequestExpired/expired credentials prevented final terminal EC2-state proof after stop request; cleanup dry-run was reported in progress."
+  },
+  "candidate_cleanup_targets": [
+    {
+      "path": "C:\\Comfy_UI\\EC2_Mirror\\20260628_211600",
+      "size_gb": 202.351
+    },
+    {
+      "path": "C:\\Comfy_UI\\_ec2sd\\20260701_125027",
+      "size_gb": 12.479
+    }
+  ],
+  "why_lane7_did_not_fix": "Lane 7 is forbidden from EC2 mirror cleanup apply runs and must route cleanup authority to Lane 4. Lane 4 must own dry-run review, final state safety, and cleanup evidence.",
+  "owner_next_action": "Lane 4 must finish the safe_cleanup.ps1 dry-run with -IncludeEc2MirrorSnapshots -SummaryOnly, verify stale allowed-root candidates and protected-root exclusions, prove or block EC2 final-state safety, then apply only if safe and record cleanup evidence.",
+  "lane7_actions": [
+    "reported storage pressure",
+    "created cleanup request",
+    "created dashboard/storage report",
+    "did not run cleanup",
+    "did not delete files"
+  ]
+}
