@@ -7,6 +7,18 @@
 | Runtime hits | 34 |
 | Missing refs | 5 |
 
+## Family mix
+
+- Flux: 17
+- SDXL: 10
+- Other: 6
+- Vision-Control: 5
+- LLM: 1
+
+## Missing by family
+
+- Vision-Control: 5
+
 ## Unresolved blockers (current)
 
 - `/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt`
