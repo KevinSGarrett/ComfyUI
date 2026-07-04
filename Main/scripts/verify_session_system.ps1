@@ -5,6 +5,7 @@ $requiredFiles = @(
   "README.md",
   "Main\GLOBAL_INSTRUCTIONS.md",
   "Main\LANE_BOUNDARIES.md",
+  "Main\MODEL_EFFORT_ASSIGNMENTS.md",
   "Main\EC2_LEASE_PROTOCOL.md",
   "Main\SELF_HOSTED_LLM_POLICY.md",
   "Main\CLEANUP_POLICY.md",

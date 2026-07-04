@@ -6,6 +6,7 @@ Important files:
 
 - `GLOBAL_INSTRUCTIONS.md`: shared operating rules.
 - `LANE_BOUNDARIES.md`: hard write boundaries and ownership.
+- `MODEL_EFFORT_ASSIGNMENTS.md`: intended Codex Desktop model/effort for each lane.
 - `EC2_LEASE_PROTOCOL.md`: live EC2 coordination rules.
 - `SELF_HOSTED_LLM_POLICY.md`: local/EC2 LLM-first policy for AI intelligence and front-end AI features.
 - `CLEANUP_POLICY.md`: safe cleanup allowlist and protected paths.
