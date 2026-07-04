@@ -114,3 +114,13 @@
   - `lane2_contact_wiring_checklist_evidence_20260704_172500.json` (SHA256 `ECC79637B925B8C536CDEF5743D11A9C06BA16EAE364F3096BA2F4E5E9BC70A3`)
   - `lane2_to_lane1_contact_wiring_checklist_20260704_172500.md` (SHA256 `1E54BDF03F2AFD2C6357626B966E114328A18A9EBC2057A4AD8ADC0EF1D3F80D`)
 - Added a lane status packet summarizing the updated Done / In Progress / Blocked / Next owner action / evidence state.
+
+## 2026-07-04T16:52:00Z - Contact revalidation checkpoint refresh
+
+- Ran a fresh spatial/contact QA pass at run 20260704_180500 (hash-stable):
+  - main_flow_spatial_asset_audit/20260704_180500/lane2_main_flow_spatial_asset_audit_20260704_180500.json
+  - contact_mask_pixel_qa/20260704_180500/lane2_contact_mask_pixel_qa_20260704_180500.json
+- Added evidence wrapper lane2_spatial_contact_revalidation_evidence_20260704_180500.json and mirrored package into:
+  - C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_180500_lane2_spatial_contact_revalidation
+- Added and sent refreshed Lane 1 revalidation request lane2_to_lane1_contact_revalidation_20260704_180500.md.
+- No new blockers introduced; unresolved blockers remain same-scene per-hand split and actor-body segmentation for full contact/deformation closure.

@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_spatial_contact_revalidation_evidence_20260704_180500",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:52:20Z",
+  "claim": {
+    "summary": "Periodic hash-stable revalidation confirms local contact geometry and asset integrity after lane-2 checkpoint packaging, with no new blockers introduced.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_main_flow_spatial_asset_audit_20260704_180500",
+      "lane2_contact_mask_pixel_qa_20260704_180500",
+      "lane2_collision_deformation_requirements_update_20260704_175500"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "slot_root": "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots",
+    "settings": {
+      "mode": "periodic_revalidation",
+      "revalidation_reason": "refresh current state after runtime handoff request cycle",
+      "runtime_required": "current-hash runtime and visual acceptance still required"
+    }
+  },
+  "runtime": {
+    "ec2_instance_id": "i-0560bf8d143f93bb1",
+    "ec2_state_before": "not_checked_by_lane_2",
+    "ec2_state_after": "not_checked_by_lane_2",
+    "endpoints_checked": [],
+    "aws_auth_status": "not_used",
+    "lane2_runtime_action": "local revalidation only; no ComfyUI execution"
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\main_flow_spatial_asset_audit\\20260704_180500\\lane2_main_flow_spatial_asset_audit_20260704_180500.json",
+      "type": "main_flow_spatial_asset_audit",
+      "size_bytes": 140517,
+      "sha256": "426A912E8C43F6BA3D1EDB5F248363498659635EBE37895D8857E5069B1AAC54",
+      "description": "Spatial asset audit snapshot at run 20260704_180500"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\contact_mask_pixel_qa\\20260704_180500\\lane2_contact_mask_pixel_qa_20260704_180500.json",
+      "type": "contact_mask_pixel_qa_artifact",
+      "size_bytes": 25826,
+      "sha256": "D84063C48C80259B44F969B2B92BC5E35646A06BF5EC946E4059315956597211",
+      "description": "Pixel contact QA snapshot at run 20260704_180500"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\tools\\main_flow_spatial_asset_audit.py",
+      "type": "reusable_main_flow_spatial_asset_audit_tool",
+      "size_bytes": 11779,
+      "sha256": "9087BBB3EC22B64A78361965FA51D4747615088E4BB819BDE08F03DEF08355CA",
+      "description": "Reusable local asset-audit script"
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\tools\\contact_mask_pixel_qa.py",
+      "type": "reusable_contact_mask_pixel_qa_tool",
+      "size_bytes": 16144,
+      "sha256": "0CCF5F462C5A9A5B99F60CB95CCD87BFEB91C2D822A1506FF68A584E2665DFC3",
+      "description": "Reusable local pixel QA script"
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "checks": [
+      {
+        "name": "spatial_asset_integrity",
+        "result": "pass",
+        "notes": "90 spatial nodes, 0 missing assets, 5 zero masks"
+      },
+      {
+        "name": "named_per_hand_and_body_blockers",
+        "result": "blocked",
+        "notes": "Named per-hand contacts remain zero/off placeholders; actor body mask node 1009 remains zero/off"
+      },
+      {
+        "name": "fallback_actor_hand_edges",
+        "result": "provisional",
+        "notes": "Fallback edges pass local overlap checks: ['fallback_actor_hand_to_receiver_butt', 'fallback_actor_hand_to_receiver_breast']"
+      },
+      {
+        "name": "runtime_visual_acceptance",
+        "result": "not_applicable",
+        "notes": "No live execution or strict hand/contact visual review performed in this slice"
+      }
+    ],
+    "failure_reasons": [
+      "Left/right per-hand split masks remain zero/off placeholders.",
+      "character_b_body_mask remains zero/off."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "strict_visual_acceptance_rows",
+      "named_left_right_contact_pair_completion_rows",
+      "full_actor_body_collision_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "Named per-hand edges remain blocked due to zero/off left/right hand placeholder masks.",
+      "next_action": "Supply same-scene nonzero character B left/right hand masks."
+    },
+    {
+      "category": "actor_body_segmentation_source",
+      "description": "character_b_body_mask remains zero/off for node 1009.",
+      "next_action": "Supply a nonzero actor body segmentation source for full actor-body collision/deformation checks."
+    },
+    {
+      "category": "runtime_visual_validation",
+      "description": "Runtime/visual strict hand/contact acceptance is still missing.",
+      "next_action": "Lane 4 runtime handoff and Lane 5 strict visual review remain required."
+    }
+  ]
+}
