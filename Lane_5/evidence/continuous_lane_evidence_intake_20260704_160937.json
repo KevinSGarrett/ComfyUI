@@ -1,0 +1,21 @@
+{
+  "manifest_path": "C:\\Comfy_UI\\Implementation\\manifests\\promotion_quality_audit\\continuous_lane_evidence_intake_20260704_160937.json",
+  "evidence_record_path": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\lane5_continuous_evidence_intake_evidence_20260704_160937.json",
+  "doc_path": "C:\\Comfy_UI\\Implementation\\docs\\CONTINUOUS_LANE5_EVIDENCE_INTAKE_20260704_160937.md",
+  "csv_path": "C:\\Comfy_UI\\Implementation\\evidence\\promotion_quality_audit\\continuous_lane_evidence_intake_20260704_160937.csv",
+  "created_at_utc": "2026-07-04T16:09:37.287242Z",
+  "tracker_snapshot_created": false,
+  "tracker_rows_promoted": [],
+  "tracker_rows_reblocked": [],
+  "tracker_rows_preserved_blocked_or_not_proven": [
+    "ART-0914",
+    "WFLOW-00053"
+  ],
+  "schema_valid_records": 3,
+  "non_schema_or_support_artifacts": 9,
+  "main_flow_convergence_verdict": "Evidence advances dependencies and blockers, but does not yet prove canonical Main Flow runtime readiness, model visibility, or production candidate generation.",
+  "schema_enforcement_notes": [
+    "Lane 4 EC2 cost-state JSON parsed but failed schema: artifacts must be an array. Treated as support/cost-control context, not schema-conformant evidence.",
+    "Lane 1 initial/post validation, Lane 2 strict-hand reference/response, Lane 4 side-push runtime files, and Lane 6 manifest are non-schema support artifacts."
+  ]
+}
