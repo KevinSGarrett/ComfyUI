@@ -62,7 +62,7 @@ The handoff recommends preserving provisional status for the SDXL preset until L
 
 ## Added Handoff Update (2026-07-04T17:38:00Z)
 
-- `C:\Comfy_UI\5_session_worktrees\Lane_6\Lane_6\reports\20260704_173800_lane6_to_lane5_audit_handoff_update.json`
+- `C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_6\\Lane_6\\reports\\20260704_173800_lane6_to_lane5_audit_handoff_update.json`
 
 ## v1.1 Follow-up (2026-07-04T17:38:00Z)
 
