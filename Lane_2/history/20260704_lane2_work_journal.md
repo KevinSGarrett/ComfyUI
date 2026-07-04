@@ -57,3 +57,14 @@
 - Emitted a Lane 1 strict semantics update preserving off-control behavior for zero/off per-hand placeholders and explicit blocker boundaries around named per-hand edges and node 1009.
 - Emitted a Lane 1 pose/depth requirements update that documents provisional threshold-based preflight acceptance and the requirement for runtime/visual proof before final acceptance.
 - Issued a refined Lane 4 runtime acceptance request with explicit checks for node 1051-1054 behavior, node 1009 semantics, previews, and auxiliary asset visibility.
+
+## 2026-07-04T16:47:00Z - Pose/depth evidence normalization and shareout
+
+- Replaced placeholder hashes and sizes in `lane2_pose_depth_requirements_update_evidence_20260704_164200.json` with measured SHA256/byte counts and kept `Lane_2` evidence schema compliance.
+- Mirrored the pose/depth requirement handoff pack into `C:\Comfy_UI\Implementation\evidence\contact_physics\20260704_164200_lane2_pose_depth_requirements` for cross-lane discoverability:
+  - `lane2_pose_depth_requirements_update_evidence_20260704_164200.json`
+  - `lane2_to_lane1_pose_depth_control_requirements_update_20260704_164200.md`
+  - `lane2_to_lane1_strict_body_contact_semantics_update_20260704_164031.md`
+  - `lane2_to_lane4_strict_body_contact_runtime_acceptance_20260704_164031.json`
+  - `20260704_164031_lane2_runtime_handoff_pm_status.md`
+- Did not run any new contact geometry tests; this is a packaging/hand-off evidence normalization slice pending existing Lane 1/Lane 4 runtime acceptance.

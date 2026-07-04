@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "evidence_id": "lane2_pose_depth_requirements_update_evidence_20260704_164200",
+  "lane_id": "Lane_2",
+  "created_at_utc": "2026-07-04T16:42:00Z",
+  "claim": {
+    "summary": "Lane 2 emitted updated pose/depth control semantics for strict body-contact wiring: local overlap/containment metrics are provisional preflight checks only, while named per-hand edges and actor-body collision remain blocked without trustworthy same-scene masks.",
+    "status": "provisional",
+    "requirement_ids": [
+      "lane2_to_lane1_pose_depth_control_requirements_update_20260704_164200",
+      "lane2_to_lane1_strict_body_contact_semantics_update_20260704_164031",
+      "lane2_to_lane4_strict_body_contact_runtime_acceptance_20260704_164031",
+      "main_flow_current_hash_spatial_contact_preflight"
+    ]
+  },
+  "inputs": {
+    "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+    "workflow_sha256": "5C67A23D1F70A6E7A5687E99E58F73EA475A172B4736F32D192AB3929BC35EC9",
+    "prompt_path": null,
+    "prompt_text": "Contact control and pose/depth preflight constraints for strict body-contact.",
+    "settings": {
+      "runtime_required": "current-hash runtime validation required for acceptance",
+      "model_effort_context": "critical-mode documentation handoff only"
+    }
+  },
+  "artifacts": [
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_pose_depth_control_requirements_update_20260704_164200.md",
+      "type": "lane1_pose_depth_requirements_request",
+      "size_bytes": 2359,
+      "sha256": "F35C1E438B6EB79079829EBB758217E5CFC666460CA44556B969D12B69665F8E",
+      "description": "Lane 1 wiring packet documenting provisional pose/depth thresholds and explicit non-proven claims."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane1_requests\\lane2_to_lane1_strict_body_contact_semantics_update_20260704_164031.md",
+      "type": "lane1_semantics_request",
+      "size_bytes": 1833,
+      "sha256": "4660204EB5FD544CE38C64ED12F3B8563E79E67B5B339359B9B6E22819B3729F",
+      "description": "Lane 1 request preserving placeholder/off semantics and blocker boundaries."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\lane4_requests\\lane2_to_lane4_strict_body_contact_runtime_acceptance_20260704_164031.json",
+      "type": "lane4_runtime_acceptance_request",
+      "size_bytes": 4376,
+      "sha256": "3A493256097CE014D1F508F91B9CDD1F2CAC0FCD6725F0FC2BFF4B9CF54D4393",
+      "description": "Refined runtime acceptance request with explicit checks for placeholders, node 1009 handling, previews, and aux-asset visibility."
+    },
+    {
+      "path": "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_2\\Lane_2\\reports\\20260704_164031_lane2_runtime_handoff_pm_status.md",
+      "type": "compact_lane_status",
+      "size_bytes": 1539,
+      "sha256": "06EAF5D49CE24499002789493744DA95D5E43ED5FA52B218CE9C9B9735B8CB4B",
+      "description": "Compact status for the runtime handoff slice."
+    },
+    {
+      "path": "C:\\Comfy_UI\\Implementation\\evidence\\mask_validation\\20260704_163800_lane2_contact_mask_pixel_qa\\lane2_contact_mask_pixel_qa_20260704_163800.json",
+      "type": "contact_mask_pixel_qa_artifact",
+      "size_bytes": 25826,
+      "sha256": "C03962B44576F7F7444CB29BCB0788E3D5A3FD8695D3BB4F7D5E97E86E845207",
+      "description": "Base pixel QA output referenced by the handoff."
+    }
+  ],
+  "qa": {
+    "verdict": "provisional",
+    "score": 0.58,
+    "checks": [
+      {
+        "name": "pose_depth_thresholds_declared",
+        "result": "pass",
+        "notes": "Overlap and containment thresholds are declared for provisional preflight and tied to runtime acceptance."
+      },
+      {
+        "name": "per_hand_named_edges_blocked",
+        "result": "pass",
+        "notes": "Named left/right per-hand edges are explicitly blocked in wiring documents until same-scene split masks arrive."
+      },
+      {
+        "name": "actor_body_zero_control_preserved",
+        "result": "pass",
+        "notes": "Actor-body zero-off behavior at node 1009 is preserved as intentional fallback control."
+      },
+      {
+        "name": "runtime_visual_dependency_preserved",
+        "result": "pass",
+        "notes": "No final visual/contact acceptance is claimed without runtime proof and Lane 5 visual review."
+      },
+      {
+        "name": "handoff_coverage",
+        "result": "provisional",
+        "notes": "Lane 1 receives explicit semantics and thresholds; runtime lane still needs evidence collection."
+      }
+    ],
+    "failure_reasons": [
+      "Same-scene nonzero per-hand left/right split masks remain unavailable.",
+      "Same-scene actor-body mask for node 1009 remains unavailable."
+    ]
+  },
+  "tracker_mapping": {
+    "proves_rows": [],
+    "does_not_prove_rows": [
+      "strict_visual_acceptance_rows",
+      "named_left_right_contact_pair_completion_rows",
+      "full_actor_body_collision_rows",
+      "runtime_generation_rows"
+    ],
+    "promotion_decision": "needs_more_evidence"
+  },
+  "blockers": [
+    {
+      "category": "same_scene_per_hand_split_source",
+      "description": "Per-hand split mask source remains missing; named per-hand edges cannot be validated.",
+      "next_action": "Provide same-scene nonzero Character A/B left/right hand segmentation or keep edge mode blocked."
+    },
+    {
+      "category": "actor_body_segmentation_source",
+      "description": "Node 1009 remains zero/off and full actor-body collision/deformation validation is incomplete.",
+      "next_action": "Provide same-scene actor-body source before lifting actor-body collision blockers."
+    }
+  ]
+}
