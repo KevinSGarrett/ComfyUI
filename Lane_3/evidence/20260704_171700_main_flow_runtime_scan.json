@@ -1,0 +1,392 @@
+[
+    {
+        "reference":  "/home/ubuntu/ComfyUI/models/ultralytics/bbox/hand_yolov8n.pt",
+        "file":  "hand_yolov8n.pt",
+        "family":  "Vision-Control",
+        "category":  "ModelRef",
+        "load_result":  "missing",
+        "runtime_hit_count":  0,
+        "runtime_locations":  "",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "ae.safetensors",
+        "file":  "ae.safetensors",
+        "family":  "Other",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\vae\\ae.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "bbox/hand_yolov8n.pt",
+        "file":  "hand_yolov8n.pt",
+        "family":  "Vision-Control",
+        "category":  "ModelRef",
+        "load_result":  "missing",
+        "runtime_hit_count":  0,
+        "runtime_locations":  "",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Better hands flux v1.0.safetensors",
+        "file":  "Better hands flux v1.0.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "missing",
+        "runtime_hit_count":  0,
+        "runtime_locations":  "",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Detailed_Hands-000001.safetensors",
+        "file":  "Detailed_Hands-000001.safetensors",
+        "family":  "Other",
+        "category":  "ModelRef",
+        "load_result":  "missing",
+        "runtime_hit_count":  0,
+        "runtime_locations":  "",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\feminine_hands.safetensors",
+        "file":  "feminine_hands.safetensors",
+        "family":  "Other",
+        "category":  "ModelRef",
+        "load_result":  "missing",
+        "runtime_hit_count":  0,
+        "runtime_locations":  "",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hand v2.safetensors",
+        "file":  "Hand v2.safetensors",
+        "family":  "Other",
+        "category":  "ModelRef",
+        "load_result":  "missing",
+        "runtime_hit_count":  0,
+        "runtime_locations":  "",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "C:\\Comfy_UI_Lora\\downloads\\Hands\\Hands.safetensors",
+        "file":  "Hands.safetensors",
+        "family":  "Other",
+        "category":  "ModelRef",
+        "load_result":  "missing",
+        "runtime_hit_count":  0,
+        "runtime_locations":  "",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "controlnet-canny-sdxl-1.0-small.safetensors",
+        "file":  "controlnet-canny-sdxl-1.0-small.safetensors",
+        "family":  "SDXL",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\controlnet\\controlnet-canny-sdxl-1.0-small.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+        "file":  "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+        "family":  "SDXL",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\controlnet\\controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "controlnet-openpose-sdxl-1.0.safetensors",
+        "file":  "controlnet-openpose-sdxl-1.0.safetensors",
+        "family":  "SDXL",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\controlnet\\controlnet-openpose-sdxl-1.0.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "dw-ll_ucoco_384_bs5.torchscript.pt",
+        "file":  "dw-ll_ucoco_384_bs5.torchscript.pt",
+        "family":  "Vision-Control",
+        "category":  "ModelRef",
+        "load_result":  "missing",
+        "runtime_hit_count":  0,
+        "runtime_locations":  "",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "flux1-dev-fp8.safetensors",
+        "file":  "flux1-dev-fp8.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\checkpoints\\flux1-dev-fp8.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "flux1-schnell-fp8.safetensors",
+        "file":  "flux1-schnell-fp8.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\checkpoints\\flux1-schnell-fp8.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "qwen_3_4b.safetensors",
+        "file":  "qwen_3_4b.safetensors",
+        "family":  "LLM",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\text_encoders\\qwen_3_4b.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "RealESRGAN_x4plus.pth",
+        "file":  "RealESRGAN_x4plus.pth",
+        "family":  "Other",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\upscale_models\\RealESRGAN_x4plus.pth",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "RealVisXL_V5.0_fp16.safetensors",
+        "file":  "RealVisXL_V5.0_fp16.safetensors",
+        "family":  "Other",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\checkpoints\\RealVisXL_V5.0_fp16.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "sam_vit_b_01ec64.pth",
+        "file":  "sam_vit_b_01ec64.pth",
+        "family":  "Vision-Control",
+        "category":  "ModelRef",
+        "load_result":  "missing",
+        "runtime_hit_count":  0,
+        "runtime_locations":  "",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+        "file":  "flux_fluids_Dirty_Sweat_Movie.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_Dirty_Sweat_Movie.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+        "file":  "flux_fluids_flux_sweat_v2.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_flux_sweat_v2.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+        "file":  "flux_fluids_mascara-tears-v2.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_mascara-tears-v2.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+        "file":  "flux_fluids_Oily_skin_style_v1.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_Oily_skin_style_v1.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+        "file":  "flux_fluids_SWEATY.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_SWEATY.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+        "file":  "flux_fluids_Sweaty_1.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\fluids\\flux_fluids_Sweaty_1.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+        "file":  "flux_hands_Better_hands_flux_v1_0.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Better_hands_flux_v1_0.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+        "file":  "flux_hands_Detailed_Hands-000001.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Detailed_Hands-000001.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+        "file":  "flux_hands_feminine_hands.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_feminine_hands.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+        "file":  "flux_hands_Hand_v2.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\hands\\flux_hands_Hand_v2.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/skin/flux_skin_Bombshell_Flux_V3.safetensors",
+        "file":  "flux_skin_Bombshell_Flux_V3.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\skin\\flux_skin_Bombshell_Flux_V3.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/skin/flux_skin_FC-Bandeau.safetensors",
+        "file":  "flux_skin_FC-Bandeau.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\skin\\flux_skin_FC-Bandeau.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+        "file":  "flux_skin_OiledSkin_FluxDev.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\skin\\flux_skin_OiledSkin_FluxDev.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+        "file":  "flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+        "family":  "Flux",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\flux\\style\\flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+        "file":  "sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+        "family":  "SDXL",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\fluids\\sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+        "file":  "sdxl_jewelry_accessories_Hands.safetensors",
+        "family":  "SDXL",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\jewelry_accessories\\sdxl_jewelry_accessories_Hands.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+        "file":  "sdxl_adult_male_Double_Kiss_POV.safetensors",
+        "family":  "SDXL",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\pose_camera\\sdxl_adult_male_Double_Kiss_POV.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+        "file":  "sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+        "family":  "SDXL",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\skin_imperfections\\sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+        "file":  "sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+        "family":  "SDXL",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\loras\\wave42\\sdxl\\skin_texture\\sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "yolox_l.onnx",
+        "file":  "yolox_l.onnx",
+        "family":  "Vision-Control",
+        "category":  "ModelRef",
+        "load_result":  "missing",
+        "runtime_hit_count":  0,
+        "runtime_locations":  "",
+        "mapped_to":  null
+    },
+    {
+        "reference":  "z_image_turbo_bf16.safetensors",
+        "file":  "z_image_turbo_bf16.safetensors",
+        "family":  "Other",
+        "category":  "ModelRef",
+        "load_result":  "found",
+        "runtime_hit_count":  1,
+        "runtime_locations":  "C:\\Comfy_UI\\Runtime_Data\\models\\diffusion_models\\z_image_turbo_bf16.safetensors",
+        "mapped_to":  null
+    }
+]

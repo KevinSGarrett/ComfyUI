@@ -1,0 +1,23 @@
+[
+    {
+        "url":  "http://127.0.0.1:11434/v1/models",
+        "status":  200,
+        "len":  265,
+        "ok":  true,
+        "body_head":  "{\"object\":\"list\",\"data\":[{\"id\":\"llava:13b\",\"object\":\"model\",\"created\":1783040593,\"owned_by\":\"library\"},{\"id\":\"qwen2.5:14b\",\"object\":\"model\",\"created\":1782592311,\"owned_by\":\"library\"},{\"id\":\"qwen2.5:32b\",\"object\":\"model\",\"created\":1782587072,\"owned_by\":\"library\"}]}\n"
+    },
+    {
+        "url":  "http://127.0.0.1:11434/api/tags",
+        "status":  200,
+        "len":  1251,
+        "ok":  true,
+        "body_head":  "{\"models\":[{\"name\":\"llava:13b\",\"model\":\"llava:13b\",\"modified_at\":\"2026-07-02T20:03:13.0927324-05:00\",\"size\":8011256494,\"digest\":\"0d0eb4d7f485d7d0a21fd9b0c1d5b04da481d2150a097e81b64acb59758fdef6\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"llama\",\"families\":[\"llama\",\"clip\"],\"parameter_size\":\"13B\",\"quantization_level\":\"Q4_0\",\"context_length\":4096,\"embedding_length\":5120},\"capabilities\":[\"completion\",\"vision\"]},{\"name\":\"qwen2.5:14b\",\"model\":\"qwen2.5:14b\",\"modified_at\":\"2026-06-27T15:31:51.2655895-05:00\",\"size\":8988124069,\"digest\":\"7cdf5a0187d5c58cc5d369b255592f7841d1c4696d45a8c8a9489440385b22f6\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"qwen2\",\"families\":[\"qwen2\"],\"parameter_size\":\"14.8B\",\"quantization_level\":\"Q4_K_M\",\"context_length\":32768,\"embedding_length\":5120},\"capabilities\":[\"completion\",\"tools\"]},{\"name\":\"qwen2.5:32b\",\"model\":\"qwen2.5:32b\",\"modified_at\":\"2026-06-27T14:04:32.2206251-05:00\",\"size\":19851349669,\"digest\":\"9f13ba1299afea09d9a956fc6a85becc99115a6d596fae201a5487a03bdc4368\",\"details\":{\"parent_model\":\"\",\"format\":\"gguf\",\"family\":\"qwen2\",\"families\":[\"qwen2\"],\"parameter_size\":\"32.8B\",\"quantization_level\":\"Q4_K_M\",\"context_length\":32768,\"embedding_length\":5120},\"capabilities\":[\"completion\",\"tools\"]}]}"
+    },
+    {
+        "url":  "http://127.0.0.1:11434/v1/chat/completions",
+        "status":  "fail",
+        "len":  0,
+        "ok":  false,
+        "error":  "The remote server returned an error: (405) Method Not Allowed."
+    }
+]

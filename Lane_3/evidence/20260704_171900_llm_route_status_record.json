@@ -1,0 +1,110 @@
+{
+    "schema_version":  "1.0",
+    "evidence_id":  "Lane_3_llm_route_status_20260704_171900",
+    "lane_id":  "Lane_3",
+    "created_at_utc":  "2026-07-04T16:59:09.1084581Z",
+    "claim":  {
+                  "summary":  "Local Ollama endpoint remains reachable and models present; OpenAI-compatible chat smoke now passes after retries.",
+                  "status":  "provisional",
+                  "requirement_ids":  [
+                                          "SELF_HOSTED_LLM_ROUTE",
+                                          "AI_LLM_Intelligence_Plan"
+                                      ]
+              },
+    "inputs":  {
+                   "version_endpoint":  "http://127.0.0.1:11434/api/version",
+                   "endpoint":  "http://127.0.0.1:11434",
+                   "chat_endpoint":  "http://127.0.0.1:11434/v1/chat/completions",
+                   "tags_endpoint":  "http://127.0.0.1:11434/v1/models"
+               },
+    "runtime":  {
+                    "endpoints_checked":  [
+                                              "http://127.0.0.1:11434",
+                                              "http://127.0.0.1:11434/v1/models",
+                                              "http://127.0.0.1:11434/api/tags",
+                                              "http://127.0.0.1:11434/v1/chat/completions"
+                                          ],
+                    "aws_auth_status":  "not_checked_no_ec2_start_stop_by_Lane_3"
+                },
+    "models":  [
+                   {
+                       "name":  "qwen2.5:14b",
+                       "load_result":  "passed_smoke_test",
+                       "family":  "qwen",
+                       "path":  "local",
+                       "role":  "default_route_candidate",
+                       "visibility_evidence":  "v1/models + successful chat"
+                   },
+                   {
+                       "name":  "qwen2.5:32b",
+                       "load_result":  "not_tested",
+                       "family":  "qwen",
+                       "path":  "local",
+                       "role":  "heavier_candidate",
+                       "visibility_evidence":  "v1/models"
+                   },
+                   {
+                       "name":  "llava:13b",
+                       "load_result":  "not_tested",
+                       "family":  "llava",
+                       "path":  "local",
+                       "role":  "vision_experimental",
+                       "visibility_evidence":  "api/tags"
+                   }
+               ],
+    "qa":  {
+               "verdict":  "provisional",
+               "failure_reasons":  [
+                                       "qwen3-class route target not yet installed locally"
+                                   ],
+               "checks":  [
+                              {
+                                  "result":  "pass",
+                                  "name":  "GET /api/version",
+                                  "notes":  "reachable"
+                              },
+                              {
+                                  "result":  "pass",
+                                  "name":  "GET /api/tags",
+                                  "notes":  "3 models exposed (llava:13b, qwen2.5:14b, qwen2.5:32b)"
+                              },
+                              {
+                                  "result":  "pass",
+                                  "name":  "GET /v1/models",
+                                  "notes":  "model list includes qwen2.5:14b/qwen2.5:32b"
+                              },
+                              {
+                                  "result":  "pass",
+                                  "name":  "POST /v1/chat/completions",
+                                  "notes":  "qwen2.5:14b returned response"
+                              }
+                          ]
+           },
+    "blockers":  [
+                     {
+                         "next_action":  "Track EC2-local or approved local install for qwen3 target if AI_LLM route strategy changes.",
+                         "category":  "missing_target_llm",
+                         "description":  "Qwen3-family local model still not installed"
+                     }
+                 ],
+    "tracker_mapping":  {
+                            "does_not_prove_rows":  [
+                                                        "Can confirm qwen3-class route capability without install"
+                                                    ],
+                            "proves_rows":  [
+                                                "AI_LLM_Intelligence_Plan has a working local Ollama-compatible route via qwen2.5:14b"
+                                            ],
+                            "promotion_decision":  "needs_more_evidence"
+                        },
+    "artifacts":  [
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\evidence\\20260704_171900_llm_local_smoke_check2.json",
+                          "description":  "Raw endpoint checks",
+                          "type":  "llm_route_status_raw"
+                      },
+                      {
+                          "path":  "C:\\Comfy_UI_Lora\\5_session_worktrees\\Lane_3\\Lane_3\\reports\\20260704_171900_llm_route_notes.md",
+                          "type":  "llm_route_notes"
+                      }
+                  ]
+}
