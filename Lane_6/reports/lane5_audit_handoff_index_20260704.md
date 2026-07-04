@@ -22,6 +22,7 @@ Lane 6 created a compact Lane 5 audit handoff manifest that collects the current
 - `wave42_request_runner_bundle_verification_20260704_164142.json`
 - `wave42_request_runner_bundle_verification_20260704_175200.json`
 - `wave42_ai_front_self_hosted_request_runner_bundle_refresh_evidence_20260704_175200.json`
+- `wave42_sdxl_safe_adult_clothed_low_vram_v1_1_runtime_status_20260704_175900.json`
 - `lane6` runtime handoff and pending-state reports:
   - `20260704_164600_lane6_sdxl_candidate_runtime_handoff.md`
   - `20260704_164600_lane6_sdxl_candidate_runtime_hand_review.json`
