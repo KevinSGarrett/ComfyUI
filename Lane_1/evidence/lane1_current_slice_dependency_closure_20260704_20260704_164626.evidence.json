@@ -1,0 +1,2020 @@
+﻿{
+  "created_at_utc": "2026-07-04T16:46:33Z",
+  "graph": {
+    "active_endpoint_errors": [],
+    "active_input_errors": [],
+    "active_terminal_count": 28,
+    "active_terminal_node_ids": [
+      19,
+      20,
+      39,
+      40,
+      62,
+      63,
+      87,
+      88,
+      95,
+      96,
+      107,
+      108,
+      118,
+      119,
+      128,
+      129,
+      423,
+      424,
+      436,
+      437,
+      565,
+      566,
+      637,
+      638,
+      824,
+      825,
+      955,
+      956
+    ],
+    "active_upstream_link_count": 192,
+    "active_upstream_node_count": 141,
+    "duplicate_link_ids": [],
+    "duplicate_node_ids": [],
+    "input_link_errors": [],
+    "invalid_link_records": [],
+    "last_link_id": 1506,
+    "last_node_id": 1098,
+    "link_count": 1137,
+    "link_endpoint_errors": [],
+    "max_link_id": 1506,
+    "max_node_id": 1098,
+    "node_count": 769,
+    "output_link_errors": [],
+    "parsed_link_count": 1137
+  },
+  "load_image_references": [
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\inpaint_detail_repair_reference.png"
+      ],
+      "node_id": 80,
+      "node_type": "LoadImage",
+      "title": "Active Category Ref: Inpaint / Detail Repair",
+      "value": "main_flow/category_reference_slots/inpaint_detail_repair_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\wave42_inpaint_mask.png"
+      ],
+      "node_id": 81,
+      "node_type": "LoadImageMask",
+      "title": null,
+      "value": "main_flow/wave42_inpaint_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\face_identity_reference.png"
+      ],
+      "node_id": 111,
+      "node_type": "LoadImage",
+      "title": "Active Category Ref: Face / Identity",
+      "value": "main_flow/category_reference_slots/face_identity_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\pose_camera_reference.png"
+      ],
+      "node_id": 121,
+      "node_type": "LoadImage",
+      "title": "Active Category Ref: Pose / Camera",
+      "value": "main_flow/category_reference_slots/pose_camera_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\face_identity_reference.png"
+      ],
+      "node_id": 441,
+      "node_type": "LoadImage",
+      "title": "Ref: Face / Identity / Expression",
+      "value": "main_flow/category_reference_slots/face_identity_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\hair_reference.png"
+      ],
+      "node_id": 442,
+      "node_type": "LoadImage",
+      "title": "Ref: Hair",
+      "value": "main_flow/category_reference_slots/hair_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\skin_detail_reference.png"
+      ],
+      "node_id": 443,
+      "node_type": "LoadImage",
+      "title": "Ref: Skin / Detail / Texture",
+      "value": "main_flow/category_reference_slots/skin_detail_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\body_shape_reference.png"
+      ],
+      "node_id": 444,
+      "node_type": "LoadImage",
+      "title": "Ref: Body Shape",
+      "value": "main_flow/category_reference_slots/body_shape_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\body_type_reference.png"
+      ],
+      "node_id": 445,
+      "node_type": "LoadImage",
+      "title": "Ref: Body Type / BBW / Latina / Cellulite",
+      "value": "main_flow/category_reference_slots/body_type_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\breast_size_reference.png"
+      ],
+      "node_id": 446,
+      "node_type": "LoadImage",
+      "title": "Ref: Breast Size",
+      "value": "main_flow/category_reference_slots/breast_size_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\breast_saggy_reference.png"
+      ],
+      "node_id": 447,
+      "node_type": "LoadImage",
+      "title": "Ref: Breast Firmness / Sagginess",
+      "value": "main_flow/category_reference_slots/breast_saggy_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\areola_nipple_body_part_reference.png"
+      ],
+      "node_id": 448,
+      "node_type": "LoadImage",
+      "title": "Ref: Areola / Nipple / Body-Part Detail",
+      "value": "main_flow/category_reference_slots/areola_nipple_body_part_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\butt_hips_thighs_reference.png"
+      ],
+      "node_id": 449,
+      "node_type": "LoadImage",
+      "title": "Ref: Butt / Hips / Thighs",
+      "value": "main_flow/category_reference_slots/butt_hips_thighs_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\pose_camera_reference.png"
+      ],
+      "node_id": 450,
+      "node_type": "LoadImage",
+      "title": "Ref: Pose / Camera",
+      "value": "main_flow/category_reference_slots/pose_camera_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\action_interaction_reference.png"
+      ],
+      "node_id": 451,
+      "node_type": "LoadImage",
+      "title": "Ref: Action / Interaction",
+      "value": "main_flow/category_reference_slots/action_interaction_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\fluids_reference.png"
+      ],
+      "node_id": 452,
+      "node_type": "LoadImage",
+      "title": "Ref: Fluids",
+      "value": "main_flow/category_reference_slots/fluids_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\clothing_fabric_reference.png"
+      ],
+      "node_id": 453,
+      "node_type": "LoadImage",
+      "title": "Ref: Clothing / Fabric",
+      "value": "main_flow/category_reference_slots/clothing_fabric_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\inpaint_detail_repair_reference.png"
+      ],
+      "node_id": 454,
+      "node_type": "LoadImage",
+      "title": "Ref: Inpaint / Detail Repair",
+      "value": "main_flow/category_reference_slots/inpaint_detail_repair_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\lighting_style_reference.png"
+      ],
+      "node_id": 455,
+      "node_type": "LoadImage",
+      "title": "Ref: Lighting / Style / Realism",
+      "value": "main_flow/category_reference_slots/lighting_style_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\accessories_reference.png"
+      ],
+      "node_id": 456,
+      "node_type": "LoadImage",
+      "title": "Ref: Jewelry / Accessories",
+      "value": "main_flow/category_reference_slots/accessories_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\category_reference_slots\\experimental_review_reference.png"
+      ],
+      "node_id": 457,
+      "node_type": "LoadImage",
+      "title": "Ref: Experimental / Review / Disabled",
+      "value": "main_flow/category_reference_slots/experimental_review_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\body_type_details_reference.png"
+      ],
+      "node_id": 568,
+      "node_type": "LoadImage",
+      "title": "Body Type / Details Reference Image",
+      "value": "main_flow/body_part_reference_slots/body_type_details_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\hair_reference.png"
+      ],
+      "node_id": 570,
+      "node_type": "LoadImage",
+      "title": "Hair Reference Image",
+      "value": "main_flow/body_part_reference_slots/hair_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\face_reference.png"
+      ],
+      "node_id": 572,
+      "node_type": "LoadImage",
+      "title": "Face Reference Image",
+      "value": "main_flow/body_part_reference_slots/face_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\breasts_reference.png"
+      ],
+      "node_id": 574,
+      "node_type": "LoadImage",
+      "title": "Breasts Reference Image",
+      "value": "main_flow/body_part_reference_slots/breasts_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\stomach_reference.png"
+      ],
+      "node_id": 576,
+      "node_type": "LoadImage",
+      "title": "Stomach / Abdomen Reference Image",
+      "value": "main_flow/body_part_reference_slots/stomach_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\pelvic_region_reference.png"
+      ],
+      "node_id": 578,
+      "node_type": "LoadImage",
+      "title": "Pelvic Region Reference Image",
+      "value": "main_flow/body_part_reference_slots/pelvic_region_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\butt_reference.png"
+      ],
+      "node_id": 580,
+      "node_type": "LoadImage",
+      "title": "Butt / Hips Reference Image",
+      "value": "main_flow/body_part_reference_slots/butt_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\legs_reference.png"
+      ],
+      "node_id": 582,
+      "node_type": "LoadImage",
+      "title": "Legs / Thighs Reference Image",
+      "value": "main_flow/body_part_reference_slots/legs_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\feet_reference.png"
+      ],
+      "node_id": 584,
+      "node_type": "LoadImage",
+      "title": "Feet Reference Image",
+      "value": "main_flow/body_part_reference_slots/feet_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\hands_reference.png"
+      ],
+      "node_id": 586,
+      "node_type": "LoadImage",
+      "title": "Hands Reference Image",
+      "value": "main_flow/body_part_reference_slots/hands_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\fluids_reference.png"
+      ],
+      "node_id": 588,
+      "node_type": "LoadImage",
+      "title": "Fluids Reference Image",
+      "value": "main_flow/body_part_reference_slots/fluids_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\pose_reference.png"
+      ],
+      "node_id": 590,
+      "node_type": "LoadImage",
+      "title": "Pose Reference Image",
+      "value": "main_flow/body_part_reference_slots/pose_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\action_reference.png"
+      ],
+      "node_id": 592,
+      "node_type": "LoadImage",
+      "title": "Action Reference Image",
+      "value": "main_flow/body_part_reference_slots/action_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\camera_reference.png"
+      ],
+      "node_id": 594,
+      "node_type": "LoadImage",
+      "title": "Camera Reference Image",
+      "value": "main_flow/body_part_reference_slots/camera_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\environment_reference.png"
+      ],
+      "node_id": 596,
+      "node_type": "LoadImage",
+      "title": "Environment Reference Image",
+      "value": "main_flow/body_part_reference_slots/environment_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_part_reference_slots\\expression_reference.png"
+      ],
+      "node_id": 598,
+      "node_type": "LoadImage",
+      "title": "Expression Reference Image",
+      "value": "main_flow/body_part_reference_slots/expression_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\body_type_details_reference.png"
+      ],
+      "node_id": 832,
+      "node_type": "LoadImage",
+      "title": "Character A Body Type / Details Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/body_type_details_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\hair_reference.png"
+      ],
+      "node_id": 834,
+      "node_type": "LoadImage",
+      "title": "Character A Hair Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/hair_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\face_reference.png"
+      ],
+      "node_id": 836,
+      "node_type": "LoadImage",
+      "title": "Character A Face Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/face_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\breasts_reference.png"
+      ],
+      "node_id": 838,
+      "node_type": "LoadImage",
+      "title": "Character A Breasts Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/breasts_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\stomach_reference.png"
+      ],
+      "node_id": 840,
+      "node_type": "LoadImage",
+      "title": "Character A Stomach / Abdomen Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/stomach_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\pelvic_region_reference.png"
+      ],
+      "node_id": 842,
+      "node_type": "LoadImage",
+      "title": "Character A Pelvic Region Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/pelvic_region_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\butt_reference.png"
+      ],
+      "node_id": 844,
+      "node_type": "LoadImage",
+      "title": "Character A Butt / Hips Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/butt_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\legs_reference.png"
+      ],
+      "node_id": 846,
+      "node_type": "LoadImage",
+      "title": "Character A Legs / Thighs Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/legs_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\feet_reference.png"
+      ],
+      "node_id": 848,
+      "node_type": "LoadImage",
+      "title": "Character A Feet Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/feet_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\hands_reference.png"
+      ],
+      "node_id": 850,
+      "node_type": "LoadImage",
+      "title": "Character A Hands Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/hands_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\fluids_reference.png"
+      ],
+      "node_id": 852,
+      "node_type": "LoadImage",
+      "title": "Character A Fluids Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/fluids_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\pose_reference.png"
+      ],
+      "node_id": 854,
+      "node_type": "LoadImage",
+      "title": "Character A Pose Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/pose_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\action_reference.png"
+      ],
+      "node_id": 856,
+      "node_type": "LoadImage",
+      "title": "Character A Action Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/action_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_a\\expression_reference.png"
+      ],
+      "node_id": 858,
+      "node_type": "LoadImage",
+      "title": "Character A Expression Reference Image",
+      "value": "main_flow/multi_character_slots/character_a/expression_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\body_type_details_reference.png"
+      ],
+      "node_id": 860,
+      "node_type": "LoadImage",
+      "title": "Character B Body Type / Details Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/body_type_details_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\hair_reference.png"
+      ],
+      "node_id": 862,
+      "node_type": "LoadImage",
+      "title": "Character B Hair Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/hair_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\face_reference.png"
+      ],
+      "node_id": 864,
+      "node_type": "LoadImage",
+      "title": "Character B Face Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/face_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\breasts_reference.png"
+      ],
+      "node_id": 866,
+      "node_type": "LoadImage",
+      "title": "Character B Breasts Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/breasts_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\stomach_reference.png"
+      ],
+      "node_id": 868,
+      "node_type": "LoadImage",
+      "title": "Character B Stomach / Abdomen Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/stomach_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\pelvic_region_reference.png"
+      ],
+      "node_id": 870,
+      "node_type": "LoadImage",
+      "title": "Character B Pelvic Region Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/pelvic_region_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\butt_reference.png"
+      ],
+      "node_id": 872,
+      "node_type": "LoadImage",
+      "title": "Character B Butt / Hips Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/butt_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\legs_reference.png"
+      ],
+      "node_id": 874,
+      "node_type": "LoadImage",
+      "title": "Character B Legs / Thighs Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/legs_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\feet_reference.png"
+      ],
+      "node_id": 876,
+      "node_type": "LoadImage",
+      "title": "Character B Feet Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/feet_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\hands_reference.png"
+      ],
+      "node_id": 878,
+      "node_type": "LoadImage",
+      "title": "Character B Hands Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/hands_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\fluids_reference.png"
+      ],
+      "node_id": 880,
+      "node_type": "LoadImage",
+      "title": "Character B Fluids Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/fluids_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\pose_reference.png"
+      ],
+      "node_id": 882,
+      "node_type": "LoadImage",
+      "title": "Character B Pose Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/pose_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\action_reference.png"
+      ],
+      "node_id": 884,
+      "node_type": "LoadImage",
+      "title": "Character B Action Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/action_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_slots\\character_b\\expression_reference.png"
+      ],
+      "node_id": 886,
+      "node_type": "LoadImage",
+      "title": "Character B Expression Reference Image",
+      "value": "main_flow/multi_character_slots/character_b/expression_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\multi_character_interaction_slots\\interaction_choreography_reference.png"
+      ],
+      "node_id": 966,
+      "node_type": "LoadImage",
+      "title": "Interaction / Choreography Reference Image",
+      "value": "main_flow/multi_character_interaction_slots/interaction_choreography_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\strict_hand_detail_input.png"
+      ],
+      "node_id": 972,
+      "node_type": "LoadImage",
+      "title": "Strict Hand Base Image Input",
+      "value": "main_flow/strict_hand_detail_input.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\body_contact_base_input.png"
+      ],
+      "node_id": 999,
+      "node_type": "LoadImage",
+      "title": "Strict Body Contact Base Image Input",
+      "value": "main_flow/body_contact_slots/body_contact_base_input.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_pose_reference.png"
+      ],
+      "node_id": 1000,
+      "node_type": "LoadImage",
+      "title": "Ref: Body+Hand Contact Pose",
+      "value": "main_flow/body_contact_slots/contact_pose_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_contact_depth_reference.png"
+      ],
+      "node_id": 1001,
+      "node_type": "LoadImage",
+      "title": "Ref: Soft Body Contact Depth",
+      "value": "main_flow/body_contact_slots/soft_body_contact_depth_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\breast_contact_mask.png"
+      ],
+      "node_id": 1002,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Breast Contact Zones",
+      "value": "main_flow/body_contact_slots/breast_contact_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\butt_contact_mask.png"
+      ],
+      "node_id": 1003,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Butt Contact Zones",
+      "value": "main_flow/body_contact_slots/butt_contact_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\hand_contact_mask.png"
+      ],
+      "node_id": 1004,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Hand Contact Zones",
+      "value": "main_flow/body_contact_slots/hand_contact_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_hand_mask.png"
+      ],
+      "node_id": 1005,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Hands",
+      "value": "main_flow/body_contact_slots/character_a_hand_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_hand_mask.png"
+      ],
+      "node_id": 1006,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Hands",
+      "value": "main_flow/body_contact_slots/character_b_hand_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_zone_mask.png"
+      ],
+      "node_id": 1007,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Explicit Contact Zone",
+      "value": "main_flow/body_contact_slots/contact_zone_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_body_mask.png"
+      ],
+      "node_id": 1008,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Receiver Body",
+      "value": "main_flow/body_contact_slots/character_a_body_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_body_mask.png"
+      ],
+      "node_id": 1009,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Actor Body",
+      "value": "main_flow/body_contact_slots/character_b_body_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_receiver_breast_mask.png"
+      ],
+      "node_id": 1010,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Receiver Breasts",
+      "value": "main_flow/body_contact_slots/character_a_receiver_breast_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_receiver_butt_mask.png"
+      ],
+      "node_id": 1011,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Receiver Butt",
+      "value": "main_flow/body_contact_slots/character_a_receiver_butt_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_actor_hand_mask.png"
+      ],
+      "node_id": 1012,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Actor Hands",
+      "value": "main_flow/body_contact_slots/character_b_actor_hand_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\interaction_occlusion_order_mask.png"
+      ],
+      "node_id": 1013,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Interaction Occlusion Order",
+      "value": "main_flow/body_contact_slots/interaction_occlusion_order_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_pressure_map.png"
+      ],
+      "node_id": 1014,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Soft-Body Pressure Map",
+      "value": "main_flow/body_contact_slots/soft_body_pressure_map.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_indentation_mask.png"
+      ],
+      "node_id": 1015,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Indentation Zones",
+      "value": "main_flow/body_contact_slots/soft_body_indentation_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\contact_shadow_mask.png"
+      ],
+      "node_id": 1016,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Contact Shadow Zones",
+      "value": "main_flow/body_contact_slots/contact_shadow_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\soft_body_normal_reference.png"
+      ],
+      "node_id": 1017,
+      "node_type": "LoadImage",
+      "title": "Ref: Soft Body Normal Map",
+      "value": "main_flow/body_contact_slots/soft_body_normal_reference.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_left_hand_mask.png"
+      ],
+      "node_id": 1051,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Left Hand",
+      "value": "main_flow/body_contact_slots/character_a_left_hand_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_a_right_hand_mask.png"
+      ],
+      "node_id": 1052,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character A Right Hand",
+      "value": "main_flow/body_contact_slots/character_a_right_hand_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_left_hand_mask.png"
+      ],
+      "node_id": 1053,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Left Hand",
+      "value": "main_flow/body_contact_slots/character_b_left_hand_mask.png"
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI\\Input_References\\main_flow\\body_contact_slots\\character_b_right_hand_mask.png"
+      ],
+      "node_id": 1054,
+      "node_type": "LoadImageMask",
+      "title": "Mask: Character B Right Hand",
+      "value": "main_flow/body_contact_slots/character_b_right_hand_mask.png"
+    }
+  ],
+  "missing_load_image_references": [],
+  "missing_model_references": [
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 10,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 30,
+      "node_type": "UNETLoader",
+      "value": "z_image_turbo_bf16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 32,
+      "node_type": "CLIPLoader",
+      "value": "qwen_3_4b.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 37,
+      "node_type": "VAELoader",
+      "value": "ae.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 60,
+      "node_type": "UpscaleModelLoader",
+      "value": "RealESRGAN_x4plus.pth",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 100,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "flux1-schnell-fp8.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 120,
+      "node_type": "ControlNetLoader",
+      "value": "controlnet-canny-sdxl-1.0-small.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 413,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 425,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "flux1-schnell-fp8.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 461,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "flux1-dev-fp8.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 462,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 499,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 499,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 499,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 499,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 503,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 503,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 503,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 503,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 504,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 504,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 505,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 642,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "flux1-dev-fp8.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 643,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 680,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 680,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 680,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 680,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 684,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 684,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 684,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 684,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 685,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 685,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 686,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 736,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 736,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 736,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 736,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 740,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 740,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 740,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 740,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 741,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 741,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 742,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 979,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 984,
+      "node_type": "ControlNetLoader",
+      "value": "controlnet-openpose-sdxl-1.0.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 1035,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 1041,
+      "node_type": "ControlNetLoader",
+      "value": "controlnet-openpose-sdxl-1.0.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 1043,
+      "node_type": "ControlNetLoader",
+      "value": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "widget_index": 0
+    }
+  ],
+  "model_references": [
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 10,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\skin_texture\\sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors"
+      ],
+      "node_id": 411,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\skin_imperfections\\sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors"
+      ],
+      "node_id": 411,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/skin_imperfections/sdxl_hair_heavily_freckled_SDXL_NSFW.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\pose_camera\\sdxl_adult_male_Double_Kiss_POV.safetensors"
+      ],
+      "node_id": 411,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/pose_camera/sdxl_adult_male_Double_Kiss_POV.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 30,
+      "node_type": "UNETLoader",
+      "value": "z_image_turbo_bf16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 32,
+      "node_type": "CLIPLoader",
+      "value": "qwen_3_4b.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 37,
+      "node_type": "VAELoader",
+      "value": "ae.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 60,
+      "node_type": "UpscaleModelLoader",
+      "value": "RealESRGAN_x4plus.pth",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 100,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "flux1-schnell-fp8.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\flux\\skin\\flux_skin_Bombshell_Flux_V3.safetensors"
+      ],
+      "node_id": 412,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/skin/flux_skin_Bombshell_Flux_V3.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\flux\\skin\\flux_skin_FC-Bandeau.safetensors"
+      ],
+      "node_id": 412,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/skin/flux_skin_FC-Bandeau.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\flux\\skin\\flux_skin_OiledSkin_FluxDev.safetensors"
+      ],
+      "node_id": 412,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 120,
+      "node_type": "ControlNetLoader",
+      "value": "controlnet-canny-sdxl-1.0-small.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 413,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 425,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "flux1-schnell-fp8.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 461,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "flux1-dev-fp8.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 462,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 499,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 499,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 499,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 499,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\jewelry_accessories\\sdxl_jewelry_accessories_Hands.safetensors"
+      ],
+      "node_id": 501,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 503,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 503,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 503,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 503,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\flux\\skin\\flux_skin_OiledSkin_FluxDev.safetensors"
+      ],
+      "node_id": 504,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 504,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\flux\\style\\flux_style_Hair_Style_Wet_Hair-Weak.safetensors"
+      ],
+      "node_id": 504,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 504,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 505,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\skin_texture\\sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors"
+      ],
+      "node_id": 505,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 642,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "flux1-dev-fp8.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 643,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 680,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 680,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 680,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 680,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\jewelry_accessories\\sdxl_jewelry_accessories_Hands.safetensors"
+      ],
+      "node_id": 682,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 684,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 684,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 684,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 684,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\flux\\skin\\flux_skin_OiledSkin_FluxDev.safetensors"
+      ],
+      "node_id": 685,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 685,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\flux\\style\\flux_style_Hair_Style_Wet_Hair-Weak.safetensors"
+      ],
+      "node_id": 685,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 685,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 686,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\skin_texture\\sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors"
+      ],
+      "node_id": 686,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 736,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_feminine_hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 736,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Detailed_Hands-000001.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 736,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Better_hands_flux_v1_0.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 736,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/hands/flux_hands_Hand_v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\jewelry_accessories\\sdxl_jewelry_accessories_Hands.safetensors"
+      ],
+      "node_id": 738,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 740,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_flux_sweat_v2.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 740,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_SWEATY.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 740,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Dirty_Sweat_Movie.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 740,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Sweaty_1.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\flux\\skin\\flux_skin_OiledSkin_FluxDev.safetensors"
+      ],
+      "node_id": 741,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/skin/flux_skin_OiledSkin_FluxDev.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 741,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_Oily_skin_style_v1.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\flux\\style\\flux_style_Hair_Style_Wet_Hair-Weak.safetensors"
+      ],
+      "node_id": 741,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/style/flux_style_Hair_Style_Wet_Hair-Weak.safetensors",
+      "widget_index": 4
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 741,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/flux/fluids/flux_fluids_mascara-tears-v2.safetensors",
+      "widget_index": 6
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 742,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/fluids/sdxl_fluids_Sweaty_Realism_4-000006.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\skin_texture\\sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors"
+      ],
+      "node_id": 742,
+      "node_type": "Lora Loader Stack (rgthree)",
+      "value": "wave42/sdxl/skin_texture/sdxl_skin_texture_Wet_Makeup__Runny_Mascara-000006.safetensors",
+      "widget_index": 2
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 979,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\jewelry_accessories\\sdxl_jewelry_accessories_Hands.safetensors"
+      ],
+      "node_id": 980,
+      "node_type": "LoraLoader",
+      "value": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 984,
+      "node_type": "ControlNetLoader",
+      "value": "controlnet-openpose-sdxl-1.0.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 1035,
+      "node_type": "CheckpointLoaderSimple",
+      "value": "RealVisXL_V5.0_fp16.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": true,
+      "matches": [
+        "C:\\Comfy_UI_Lora\\Model_Organize\\staging\\wave42\\sdxl\\jewelry_accessories\\sdxl_jewelry_accessories_Hands.safetensors"
+      ],
+      "node_id": 1036,
+      "node_type": "LoraLoader",
+      "value": "wave42/sdxl/jewelry_accessories/sdxl_jewelry_accessories_Hands.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 1041,
+      "node_type": "ControlNetLoader",
+      "value": "controlnet-openpose-sdxl-1.0.safetensors",
+      "widget_index": 0
+    },
+    {
+      "exists": false,
+      "matches": [],
+      "node_id": 1043,
+      "node_type": "ControlNetLoader",
+      "value": "controlnet-depth-sdxl-1.0-small.fp16.safetensors",
+      "widget_index": 0
+    }
+  ],
+  "node_type_counts": {
+    "BboxDetectorSEGS": 1,
+    "CLIPLoader": 1,
+    "CLIPTextEncode": 69,
+    "CLIPTextEncodeFlux": 51,
+    "CheckpointLoaderSimple": 10,
+    "ConditioningCombine": 4,
+    "ConditioningConcat": 90,
+    "ConditioningSetAreaPercentage": 4,
+    "ConditioningZeroOut": 4,
+    "ControlNetApplyAdvanced": 4,
+    "ControlNetLoader": 4,
+    "DWPreprocessor": 2,
+    "EmptyLatentImage": 4,
+    "EmptySD3LatentImage": 5,
+    "IPAdapter": 46,
+    "IPAdapterUnifiedLoader": 4,
+    "ImageUpscaleWithModel": 1,
+    "InpaintModelConditioning": 2,
+    "KSampler": 15,
+    "LoadImage": 70,
+    "LoadImageMask": 20,
+    "Lora Loader Stack (rgthree)": 190,
+    "LoraLoader": 2,
+    "MaskComposite": 31,
+    "MaskToImage": 16,
+    "ModelSamplingAuraFlow": 1,
+    "ModelSamplingFlux": 4,
+    "Note": 38,
+    "PreviewImage": 14,
+    "SAMDetectorCombined": 1,
+    "SAMLoader": 1,
+    "SaveImage": 33,
+    "SolidMask": 4,
+    "UNETLoader": 1,
+    "UltralyticsDetectorProvider": 1,
+    "UpscaleModelLoader": 1,
+    "VAEDecode": 15,
+    "VAEEncode": 3,
+    "VAEEncodeForInpaint": 1,
+    "VAELoader": 1
+  },
+  "workflow_path": "C:\\Comfy_UI\\Implementation\\workflows\\ui\\WAVE42_MAIN_FLOW_20260702.json",
+  "workflow_sha256": "5c67a23d1f70a6e7a5687e99e58f73ea475a172b4736f32d192ab3929bc35ec9"
+}
